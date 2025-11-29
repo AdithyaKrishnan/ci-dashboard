@@ -63,7 +63,7 @@
       <div class="filters">
         <div class="search-box">
           <span class="search-icon">🔍</span>
-          <input type="text" id="search-tests" placeholder="Search tests...">
+          <input type="text" id="search-tests" placeholder="Search jobs...">
         </div>
         <div class="filter-buttons">
           <button class="filter-btn active" data-filter="all">All</button>
@@ -77,6 +77,31 @@
             <span class="dot dot-passed"></span> Passed (<span id="filter-passed-count">114</span>)
           </button>
         </div>
+      </div>
+
+      <!-- Job Category Filters -->
+      <div class="category-filters">
+        <div class="category-toggle">
+          <button class="category-btn active" data-category="all">All</button>
+          <button class="category-btn" data-category="required">Required</button>
+        </div>
+        <div class="category-quick-filters">
+          <button class="quick-filter-btn" data-category="tee">
+            <span class="quick-filter-icon">🔐</span>
+            <span class="quick-filter-label">TEE</span>
+            <span class="quick-filter-desc">HW / Dev</span>
+          </button>
+          <button class="quick-filter-btn" data-category="nvidia">
+            <span class="quick-filter-icon nvidia-icon"></span>
+            <span class="quick-filter-label">NVIDIA</span>
+            <span class="quick-filter-desc">GPU & CC</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Job Count -->
+      <div class="job-count-display">
+        <span id="job-count-text">Showing <strong id="visible-jobs">0</strong> of <strong id="total-jobs">0</strong> jobs</span>
       </div>
 
       <!-- Date Display -->

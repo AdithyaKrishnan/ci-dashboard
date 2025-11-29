@@ -348,6 +348,127 @@ body {
 .dot-not-run { background: var(--text-muted); }
 
 /* ============================================
+   Job Category Filters
+   ============================================ */
+.category-filters {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-lg);
+  margin-bottom: var(--space-md);
+  padding: var(--space-md) var(--space-lg);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-lg);
+}
+
+.category-toggle {
+  display: flex;
+  gap: 0;
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-md);
+  padding: 3px;
+}
+
+.category-btn {
+  padding: var(--space-sm) var(--space-lg);
+  border: none;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--text-secondary);
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.category-btn:hover {
+  color: var(--text-primary);
+}
+
+.category-btn.active {
+  background: var(--color-accent);
+  color: white;
+}
+
+.category-quick-filters {
+  display: flex;
+  gap: var(--space-sm);
+}
+
+.quick-filter-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: var(--space-sm) var(--space-lg);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-md);
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  min-width: 100px;
+}
+
+.quick-filter-btn:hover {
+  border-color: var(--color-accent);
+  background: var(--bg-hover);
+}
+
+.quick-filter-btn.active {
+  border-color: var(--color-accent);
+  background: var(--color-accent);
+  color: white;
+}
+
+.quick-filter-icon {
+  font-size: 1.2rem;
+}
+
+/* NVIDIA icon using inline SVG */
+.quick-filter-icon.nvidia-icon {
+  display: inline-block;
+  width: 1.4rem;
+  height: 1.4rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2376b900'%3E%3Cpath d='M8.948 8.798v-1.43a6.7 6.7 0 0 1 .424-.018c3.922-.124 6.493 3.374 6.493 3.374s-2.774 3.851-5.75 3.851c-.44 0-.862-.063-1.167-.156V9.35c1.528.131 1.838.987 2.755 2.137l2.043-1.713s-1.632-2.018-4.398-2.018c-.163 0-.319.007-.4.042zm0-4.595v2.062l.424-.024c5.41-.18 8.948 4.49 8.948 4.49s-4.062 5.018-8.322 5.018a5.7 5.7 0 0 1-1.05-.099v1.141c.32.037.65.067.986.067 3.866 0 6.66-1.966 9.36-4.252.22.177 1.12.947 1.305 1.123-2.49 2.093-8.272 4.158-10.617 4.158-.345 0-.68-.027-1.034-.074v1.462h12.08V4.203H8.948zm0 12.086v1.12c-4.354-.558-5.49-4.805-5.49-4.805s1.863-2.074 5.49-2.396v1.235c-2.04.218-3.63 1.49-3.63 1.49s.862 2.554 3.63 3.356z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.quick-filter-btn.active .quick-filter-icon.nvidia-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M8.948 8.798v-1.43a6.7 6.7 0 0 1 .424-.018c3.922-.124 6.493 3.374 6.493 3.374s-2.774 3.851-5.75 3.851c-.44 0-.862-.063-1.167-.156V9.35c1.528.131 1.838.987 2.755 2.137l2.043-1.713s-1.632-2.018-4.398-2.018c-.163 0-.319.007-.4.042zm0-4.595v2.062l.424-.024c5.41-.18 8.948 4.49 8.948 4.49s-4.062 5.018-8.322 5.018a5.7 5.7 0 0 1-1.05-.099v1.141c.32.037.65.067.986.067 3.866 0 6.66-1.966 9.36-4.252.22.177 1.12.947 1.305 1.123-2.49 2.093-8.272 4.158-10.617 4.158-.345 0-.68-.027-1.034-.074v1.462h12.08V4.203H8.948zm0 12.086v1.12c-4.354-.558-5.49-4.805-5.49-4.805s1.863-2.074 5.49-2.396v1.235c-2.04.218-3.63 1.49-3.63 1.49s.862 2.554 3.63 3.356z'/%3E%3C/svg%3E");
+}
+
+.quick-filter-label {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.quick-filter-desc {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+.quick-filter-btn.active .quick-filter-desc {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Job Count Display */
+.job-count-display {
+  margin-bottom: var(--space-md);
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.job-count-display strong {
+  color: var(--text-primary);
+}
+
+/* ============================================
    Date Header
    ============================================ */
 .date-header {

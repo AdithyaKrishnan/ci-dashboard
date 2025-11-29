@@ -185,9 +185,54 @@ const configuredJobs = [];
   (section.jobs || []).forEach(job => {
     const jobName = typeof job === 'string' ? job : job.name;
     const jobDesc = typeof job === 'object' ? job.description : jobName;
-    configuredJobs.push({ name: jobName, description: jobDesc, section: section.id });
+    const jobMaintainers = typeof job === 'object' ? (job.maintainers || []) : [];
+    configuredJobs.push({ name: jobName, description: jobDesc, section: section.id, maintainers: jobMaintainers });
   });
 });
+
+// Get required jobs from config
+const requiredJobs = config.required_jobs || [];
+
+// Get category patterns from config
+const categoryPatterns = config.job_categories || {};
+
+/**
+ * Determine which categories a job belongs to
+ */
+function getJobCategories(jobName) {
+  const categories = [];
+  const nameLower = jobName.toLowerCase();
+  
+  // Check each category
+  Object.keys(categoryPatterns).forEach(category => {
+    const patterns = categoryPatterns[category].patterns || [];
+    if (patterns.some(p => nameLower.includes(p.toLowerCase()))) {
+      categories.push(category);
+    }
+  });
+  
+  // Check if it's a required job
+  if (requiredJobs.some(req => nameLower.includes(req.toLowerCase()) || req.toLowerCase().includes(nameLower))) {
+    categories.push('required');
+  }
+  
+  return categories;
+}
+
+/**
+ * Get all unique job names from raw data
+ */
+function getAllUniqueJobNames() {
+  const jobNames = new Set();
+  allJobs.forEach(job => {
+    if (job.name) {
+      jobNames.add(job.name);
+    }
+  });
+  return Array.from(jobNames).sort();
+}
+
+console.log(`Found ${getAllUniqueJobNames().length} unique job names in raw data`);
 
 /**
  * Global index of failed tests across all jobs
@@ -616,12 +661,142 @@ function enrichFailedTestsIndex() {
 
 enrichFailedTestsIndex();
 
+// Build "All Jobs" section from all unique job names
+const allJobNames = getAllUniqueJobNames();
+console.log(`Building 'All Jobs' section with ${allJobNames.length} jobs...`);
+
+const allJobsSection = {
+  id: 'all-jobs',
+  name: 'All Jobs',
+  description: 'All nightly CI jobs',
+  tests: allJobNames.map(jobName => {
+    // Check if this job is configured (has custom description/maintainers)
+    const configuredJob = configuredJobs.find(cj => cj.name === jobName);
+    const displayName = configuredJob?.description || simplifyJobName(jobName);
+    const maintainers = configuredJob?.maintainers || [];
+    const testId = jobName.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase();
+    const categories = getJobCategories(jobName);
+    
+    // Find jobs matching this name
+    const matchingJobs = allJobs.filter(job => job.name === jobName)
+      .sort((a, b) => new Date(b.started_at || b.created_at) - new Date(a.started_at || a.created_at));
+    
+    // Get latest job
+    const latestJob = matchingJobs[0];
+    let status = 'not_run';
+    
+    if (latestJob) {
+      if (latestJob.conclusion === 'success') {
+        status = 'passed';
+      } else if (latestJob.conclusion === 'failure') {
+        // Check if failure is in a fatal step
+        const failedStep = latestJob.steps?.find(s => s.conclusion === 'failure');
+        if (failedStep) {
+          const isFatal = fatalStepPatterns.some(p => p.test(failedStep.name));
+          status = isFatal ? 'failed' : 'not_run';
+        } else {
+          status = 'failed';
+        }
+      } else if (latestJob.status === 'in_progress' || latestJob.status === 'queued') {
+        status = 'running';
+      }
+    }
+    
+    // Build weather history (simplified - just last 10 days)
+    const weatherHistory = [];
+    const anchorDate = new Date();
+    for (let i = 0; i < 10; i++) {
+      const date = new Date(anchorDate);
+      date.setDate(date.getDate() - (9 - i));
+      date.setHours(0, 0, 0, 0);
+      
+      const dayJobs = matchingJobs.filter(job => {
+        const jobDate = new Date(job.started_at || job.created_at);
+        return jobDate.toDateString() === date.toDateString();
+      });
+      
+      // Pick the first job that has a "Run tests" step
+      const dayJob = dayJobs.find(job => {
+        return job.steps?.some(s => fatalStepPatterns.some(p => p.test(s.name)));
+      }) || dayJobs[0] || null;
+      
+      let dayStatus = 'none';
+      if (dayJob) {
+        if (dayJob.conclusion === 'success') {
+          dayStatus = 'passed';
+        } else if (dayJob.conclusion === 'failure') {
+          dayStatus = 'failed';
+        }
+      }
+      
+      weatherHistory.push({
+        date: date.toISOString(),
+        status: dayStatus,
+        runId: dayJob?.workflow_run_id || dayJob?.run_id?.toString() || null,
+        jobId: dayJob?.id?.toString() || null,
+        duration: dayJob ? formatDuration(dayJob.started_at, dayJob.completed_at) : null
+      });
+    }
+    
+    // Find last failure and success
+    const lastFailureJob = matchingJobs.find(j => j.conclusion === 'failure');
+    const lastSuccessJob = matchingJobs.find(j => j.conclusion === 'success');
+    
+    return {
+      id: testId,
+      name: displayName,
+      jobName: jobName, // Full job name for filtering
+      fullName: jobName,
+      status: status,
+      categories: categories,
+      isRequired: categories.includes('required'),
+      duration: latestJob ? formatDuration(latestJob.started_at, latestJob.completed_at) : 'N/A',
+      lastFailure: lastFailureJob ? formatRelativeTime(lastFailureJob.started_at) : 'Never',
+      lastSuccess: lastSuccessJob ? formatRelativeTime(lastSuccessJob.started_at) : 'Never',
+      weatherHistory: weatherHistory,
+      failureCount: weatherHistory.filter(w => w.status === 'failed').length,
+      retried: latestJob?.run_attempt > 1 ? latestJob.run_attempt - 1 : 0,
+      runId: latestJob?.workflow_run_id || latestJob?.run_id?.toString() || null,
+      jobId: latestJob?.id?.toString() || null,
+      maintainers: maintainers
+    };
+  })
+};
+
+console.log(`All Jobs section: ${allJobsSection.tests.length} jobs`);
+console.log(`  Required: ${allJobsSection.tests.filter(t => t.isRequired).length}`);
+console.log(`  TEE: ${allJobsSection.tests.filter(t => t.categories.includes('tee')).length}`);
+console.log(`  NVIDIA: ${allJobsSection.tests.filter(t => t.categories.includes('nvidia')).length}`);
+
+/**
+ * Simplify long job names for display
+ */
+function simplifyJobName(fullName) {
+  if (!fullName) return 'Unknown';
+  
+  // Split by " / " and take the last meaningful part
+  const parts = fullName.split(' / ');
+  
+  // Get the last part (usually the most specific)
+  let name = parts[parts.length - 1];
+  
+  // If there are 3+ parts, the last one is usually the job with params
+  if (parts.length >= 2) {
+    name = parts[parts.length - 1];
+  }
+  
+  return name;
+}
+
 // Build output data
 const outputData = {
   lastRefresh: new Date().toISOString(),
   sections: sections,
-  failedTestsIndex: failedTestsIndex, // NEW: global index of all failed tests
-  maintainersDirectory: config.maintainers_directory || {} // Include maintainers directory for UI
+  allJobsSection: allJobsSection, // NEW: all jobs for the "All" view
+  requiredJobs: requiredJobs,
+  jobCategories: categoryPatterns,
+  failedTestsIndex: failedTestsIndex,
+  maintainersDirectory: config.maintainers_directory || {}
 };
 
 // Write data.json

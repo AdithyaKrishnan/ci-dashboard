@@ -10,6 +10,39 @@ settings:
   refresh_interval: 60
   source_repo: "kata-containers/kata-containers"
 
+# Job categories for filtering
+# Each job can belong to multiple categories
+job_categories:
+  # TEE (Trusted Execution Environment) - Hardware and Development tests
+  tee:
+    name: "TEE"
+    description: "HW / Dev"
+    icon: "🔐"
+    # Job name patterns to match
+    patterns:
+      - "tdx"
+      - "snp"
+      - "sev"
+      - "zvsi"
+      - "coco"
+      - "se"
+  
+  # NVIDIA GPU tests
+  nvidia:
+    name: "NVIDIA"
+    description: "GPU & CC"
+    icon: "🎮"
+    patterns:
+      - "nvidia"
+      - "gpu"
+
+# Required jobs (jobs that must pass for PRs to merge)
+required_jobs:
+  - "kata-containers-ci-on-push / run-k8s-tests-on-aks"
+  - "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev, nydus, guest-pull)"
+  - "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)"
+  - "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)"
+
 # Slack notifications (disabled for now - enable when Slack app is set up)
 notifications:
   slack:

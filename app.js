@@ -12,6 +12,7 @@ let state = {
   loading: true,
   error: null,
   filter: 'all',
+  categoryFilter: 'all', // 'all', 'required', 'tee', 'nvidia'
   searchQuery: '',
   expandedSections: new Set(),
   expandedGroups: new Set(),
@@ -38,7 +39,7 @@ async function loadData() {
     state.data = await response.json();
     
     // Auto-expand sections with failures
-    state.data.sections.forEach(section => {
+  state.data.sections.forEach(section => {
       const hasFailures = section.tests.some(t => t.status === 'failed');
       if (hasFailures) {
         state.expandedSections.add(section.id);
@@ -132,29 +133,84 @@ function getSectionStats(tests) {
 
 function getTotalStats() {
   if (!state.data) return { total: 0, failed: 0, passed: 0, notRun: 0, failureDays: 0 };
-  const allTests = state.data.sections.flatMap(s => s.tests);
   
-  // Count failure DAYS across all tests (sum of days each test failed)
-  const failureDays = allTests.reduce((sum, t) => {
+  // Get tests from the appropriate source based on category
+  let testsToCount = [];
+  
+  if (state.categoryFilter === 'tee') {
+    const section = state.data.sections?.find(s => s.id === 'tee');
+    testsToCount = section?.tests || [];
+  } else if (state.categoryFilter === 'nvidia') {
+    const section = state.data.sections?.find(s => s.id === 'nvidia-gpu');
+    testsToCount = section?.tests || [];
+  } else {
+    // For 'all' and 'required', use allJobsSection
+    const allTests = state.data.allJobsSection?.tests || state.data.sections?.flatMap(s => s.tests) || [];
+    testsToCount = state.categoryFilter === 'required' 
+      ? allTests.filter(t => matchesCategory(t, 'required'))
+      : allTests;
+  }
+  
+  // Apply status and search filters
+  const filteredTests = filterTests(testsToCount);
+  
+  // Count failure DAYS across filtered tests (sum of days each test failed)
+  const failureDays = filteredTests.reduce((sum, t) => {
     return sum + (t.weatherHistory || []).filter(w => w.status === 'failed').length;
   }, 0);
   
   return {
-    total: allTests.length,
-    failed: allTests.filter(t => t.status === 'failed').length, // Only current failures
-    passed: allTests.filter(t => t.status === 'passed').length,
-    notRun: allTests.filter(t => t.status === 'not_run').length,
+    total: filteredTests.length,
+    failed: filteredTests.filter(t => t.status === 'failed').length,
+    passed: filteredTests.filter(t => t.status === 'passed').length,
+    notRun: filteredTests.filter(t => t.status === 'not_run').length,
     failureDays: failureDays
   };
+}
+
+/**
+ * Check if a job matches a category filter
+ */
+function matchesCategory(test, category) {
+  if (category === 'all') return true;
+  
+  const jobName = test.jobName || test.fullName || test.name || '';
+  
+  // For 'tee' and 'nvidia', use the configured sections (exact match)
+  if (category === 'tee' || category === 'nvidia') {
+    // Check if this job is in the configured section
+    const sectionId = category === 'tee' ? 'tee' : 'nvidia-gpu';
+    const section = state.data?.sections?.find(s => s.id === sectionId);
+    if (section) {
+      return section.tests.some(t => t.fullName === jobName || t.jobName === jobName);
+    }
+    return false;
+  }
+  
+  // Check required jobs
+  if (category === 'required') {
+    if (test.isRequired) return true;
+    const requiredJobs = state.data?.requiredJobs || [];
+    return requiredJobs.some(req => jobName === req || jobName.includes(req) || req.includes(jobName));
+  }
+  
+  return false;
 }
 
 function filterTests(tests) {
   let filtered = tests;
   
+  // Filter by category (only for 'required' since tee/nvidia use their own sections)
+  if (state.categoryFilter === 'required') {
+    filtered = filtered.filter(t => matchesCategory(t, 'required'));
+  }
+  
+  // Filter by status
   if (state.filter !== 'all') {
     filtered = filtered.filter(t => t.status === state.filter);
   }
   
+  // Filter by search query
   if (state.searchQuery) {
     const query = state.searchQuery.toLowerCase();
     filtered = filtered.filter(t => t.name.toLowerCase().includes(query));
@@ -282,6 +338,7 @@ function render() {
   
   updateStats();
   renderSections();
+  updateJobCount();
   
   // Update last refresh time
   if (state.data.lastRefresh) {
@@ -294,22 +351,74 @@ function renderSections() {
   const container = document.getElementById('sections-container');
   container.innerHTML = '';
   
-  if (!state.data || !state.data.sections || state.data.sections.length === 0) {
+  if (!state.data) {
     container.innerHTML = `
       <div class="empty-state">
-        <h3>No sections configured</h3>
-        <p>Add sections to config.yaml to start monitoring tests.</p>
+        <h3>No data available</h3>
+        <p>Waiting for data to load...</p>
       </div>
     `;
     return;
   }
   
-  state.data.sections.forEach(section => {
-    const filteredTests = filterTests(section.tests || []);
-    if (filteredTests.length === 0 && state.filter !== 'all') return;
+  // Determine which data source to use based on category filter
+  let sectionsToRender = [];
+  
+  if (state.categoryFilter === 'tee') {
+    // Use the configured TEE section
+    const teeSection = state.data.sections?.find(s => s.id === 'tee');
+    if (teeSection) {
+      const filteredTests = filterTests(teeSection.tests || []);
+      if (filteredTests.length > 0) {
+        sectionsToRender.push({ ...teeSection, tests: filteredTests });
+      }
+    }
+  } else if (state.categoryFilter === 'nvidia') {
+    // Use the configured NVIDIA section
+    const nvidiaSection = state.data.sections?.find(s => s.id === 'nvidia-gpu');
+    if (nvidiaSection) {
+      const filteredTests = filterTests(nvidiaSection.tests || []);
+      if (filteredTests.length > 0) {
+        sectionsToRender.push({ ...nvidiaSection, tests: filteredTests });
+      }
+    }
+  } else if (state.data.allJobsSection) {
+    // For 'all' and 'required', use allJobsSection
+    const allJobs = state.data.allJobsSection;
+    const filteredTests = filterTests(allJobs.tests || []);
     
-    const stats = getSectionStats(section.tests || []);
-    const isExpanded = state.expandedSections.has(section.id);
+    if (filteredTests.length > 0) {
+      sectionsToRender.push({
+        ...allJobs,
+        tests: filteredTests
+      });
+    }
+  } else if (state.data.sections && state.data.sections.length > 0) {
+    // Fallback to configured sections
+  state.data.sections.forEach(section => {
+      const filteredTests = filterTests(section.tests || []);
+      if (filteredTests.length > 0) {
+        sectionsToRender.push({ ...section, tests: filteredTests });
+      }
+    });
+  }
+  
+  if (sectionsToRender.length === 0) {
+    container.innerHTML = `
+      <div class="empty-state">
+        <h3>No jobs found</h3>
+        <p>No jobs match the current filter criteria.</p>
+      </div>
+    `;
+    return;
+  }
+  
+  sectionsToRender.forEach(section => {
+    const tests = section.tests || [];
+    if (tests.length === 0) return;
+    
+    const stats = getSectionStats(tests);
+    const isExpanded = state.expandedSections.has(section.id) || state.categoryFilter !== 'all' || state.searchQuery;
     
     const sectionEl = document.createElement('div');
     sectionEl.className = `section ${isExpanded ? 'expanded' : ''}`;
@@ -325,12 +434,22 @@ function renderSections() {
       statusBadges.push(`<span class="section-status all-green">All Green</span>`);
     }
     
+    // Build section title based on filter
+    let sectionTitle = section.name;
+    if (state.categoryFilter === 'required') {
+      sectionTitle = 'Required Jobs';
+    } else if (state.categoryFilter === 'tee') {
+      sectionTitle = section.name; // Use configured name
+    } else if (state.categoryFilter === 'nvidia') {
+      sectionTitle = section.name; // Use configured name
+    }
+    
     sectionEl.innerHTML = `
       <div class="section-header" data-section="${section.id}">
         <span class="section-toggle">▶</span>
-        <span class="section-name">${section.name}</span>
+        <span class="section-name">${sectionTitle}</span>
         <div class="section-meta">
-          <span class="section-count">${stats.total} tests</span>
+          <span class="section-count">${tests.length} jobs</span>
           <span class="section-weather">
             <span class="section-weather-icon">${stats.weatherEmoji}</span>
             ${stats.weatherPercent}%
@@ -339,7 +458,7 @@ function renderSections() {
         </div>
       </div>
       <div class="section-content">
-        ${renderTestGroups(section, filteredTests)}
+        ${renderTestGroups(section, tests)}
       </div>
     `;
     
@@ -488,7 +607,7 @@ function renderTestRow(sectionId, test) {
   const maintainersHtml = test.maintainers && test.maintainers.length > 0
     ? renderMaintainers(test.maintainers)
     : '<span class="no-maintainer">—</span>';
-
+  
   return `
     <div class="test-row ${test.status}">
       <div class="test-name-col">
@@ -538,11 +657,24 @@ function updateStats() {
   document.getElementById('not-run-tests').textContent = stats.notRun;
   document.getElementById('passed-tests').textContent = stats.passed;
   
-  // Filter counts should show tests in that current status
-  const allTests = state.data?.sections?.flatMap(s => s.tests) || [];
-  document.getElementById('filter-failed-count').textContent = allTests.filter(t => t.status === 'failed').length;
-  document.getElementById('filter-not-run-count').textContent = allTests.filter(t => t.status === 'not_run').length;
-  document.getElementById('filter-passed-count').textContent = allTests.filter(t => t.status === 'passed').length;
+  // Get tests based on current category for filter counts
+  let categoryTests = [];
+  if (state.categoryFilter === 'tee') {
+    const section = state.data?.sections?.find(s => s.id === 'tee');
+    categoryTests = section?.tests || [];
+  } else if (state.categoryFilter === 'nvidia') {
+    const section = state.data?.sections?.find(s => s.id === 'nvidia-gpu');
+    categoryTests = section?.tests || [];
+  } else if (state.categoryFilter === 'required') {
+    const allTests = state.data?.allJobsSection?.tests || [];
+    categoryTests = allTests.filter(t => matchesCategory(t, 'required'));
+  } else {
+    categoryTests = state.data?.allJobsSection?.tests || state.data?.sections?.flatMap(s => s.tests) || [];
+  }
+  
+  document.getElementById('filter-failed-count').textContent = categoryTests.filter(t => t.status === 'failed').length;
+  document.getElementById('filter-not-run-count').textContent = categoryTests.filter(t => t.status === 'not_run').length;
+  document.getElementById('filter-passed-count').textContent = categoryTests.filter(t => t.status === 'passed').length;
 }
 
 // ============================================
@@ -573,6 +705,52 @@ function setFilter(filter) {
     btn.classList.toggle('active', btn.dataset.filter === filter);
   });
   renderSections();
+  updateJobCount();
+}
+
+function setCategoryFilter(category) {
+  state.categoryFilter = category;
+  
+  // Update toggle buttons (All/Required)
+  document.querySelectorAll('.category-btn').forEach(btn => {
+    const btnCategory = btn.dataset.category;
+    btn.classList.toggle('active', btnCategory === category);
+  });
+  
+  // Update quick filter buttons (TEE/NVIDIA)
+  document.querySelectorAll('.quick-filter-btn').forEach(btn => {
+    const btnCategory = btn.dataset.category;
+    btn.classList.toggle('active', btnCategory === category);
+  });
+  
+  updateStats();
+  renderSections();
+  updateJobCount();
+}
+
+function updateJobCount() {
+  if (!state.data) return;
+  
+  // Get total count (all jobs)
+  const allTests = state.data.allJobsSection?.tests || state.data.sections?.flatMap(s => s.tests) || [];
+  
+  // Get visible count based on current category
+  let visibleTests = [];
+  if (state.categoryFilter === 'tee') {
+    const section = state.data.sections?.find(s => s.id === 'tee');
+    visibleTests = filterTests(section?.tests || []);
+  } else if (state.categoryFilter === 'nvidia') {
+    const section = state.data.sections?.find(s => s.id === 'nvidia-gpu');
+    visibleTests = filterTests(section?.tests || []);
+  } else {
+    visibleTests = filterTests(allTests);
+  }
+  
+  const visibleEl = document.getElementById('visible-jobs');
+  const totalEl = document.getElementById('total-jobs');
+  
+  if (visibleEl) visibleEl.textContent = visibleTests.length;
+  if (totalEl) totalEl.textContent = allTests.length;
 }
 
 function showWeatherModal(sectionId, testId) {
@@ -637,9 +815,9 @@ function showWeatherModal(sectionId, testId) {
           ${day.status === 'passed' ? '● Passed' : day.status === 'failed' ? '○ Failed' : '— No run'}
         </div>
         ${messageText ? `
-          <div class="weather-day-message ${day.status === 'failed' ? 'failure-note' : ''}">
+        <div class="weather-day-message ${day.status === 'failed' ? 'failure-note' : ''}">
             ${messageText}
-          </div>
+        </div>
         ` : ''}
         ${day.runId ? `
           <a href="https://github.com/kata-containers/kata-containers/actions/runs/${day.runId}${day.jobId ? '/job/' + day.jobId : ''}" 
@@ -770,10 +948,10 @@ function showWeatherModal(sectionId, testId) {
                 <div class="failing-test-header">
                   <span class="failing-test-name">${ft.name}${batsFileDisplay}</span>
                   <span class="failing-test-count">${dayCount}x in ${analysisDays} days</span>
-              </div>
+            </div>
                 <div class="failing-test-dates">
                   Failed on: ${formattedDates}
-                </div>
+            </div>
                 ${otherJobs.length > 0 ? `
                   <div class="failing-test-correlation">
                     <span class="correlation-label">Also failing in:</span>
@@ -781,17 +959,17 @@ function showWeatherModal(sectionId, testId) {
                       ${otherJobs.map(j => `
                         <span class="correlation-job">${j.jobName} (${j.count}x)</span>
             `).join('')}
+            </div>
           </div>
-        </div>
                 ` : `
                   <div class="failing-test-correlation">
                     <span class="correlation-label">Only happened with this test</span>
                   </div>
                 `}
-            </div>
-            `;
+        </div>
+      `;
           }).join('')}
-          </div>
+        </div>
       </div>
     `;
   }
@@ -803,12 +981,12 @@ function showWeatherModal(sectionId, testId) {
         <h4>${passedCount}/${weather.length} days passed</h4>
         <p>${getWeatherPercentage(test.weatherHistory)}% success rate over the last 10 days</p>
         ${maintainersSection}
-      </div>
+          </div>
           </div>
           
     <div class="weather-days-list">
       ${daysHtml}
-          </div>
+        </div>
           
     ${failingTestsSummaryHtml}
     
@@ -826,10 +1004,10 @@ function showWeatherModal(sectionId, testId) {
                 ${day.failureStep ? `<span class="failed-day-step">${day.failureStep}</span>` : '<span class="failed-day-step">(No details available)</span>'}
                 ${day.runId ? `<a href="https://github.com/kata-containers/kata-containers/actions/runs/${day.runId}${day.jobId ? '/job/' + day.jobId : ''}" target="_blank" class="failed-day-link">View Run</a>` : ''}
                 ${hasDetails ? `<span class="failed-day-note">(${day.failureDetails.failures.length} test${day.failureDetails.failures.length > 1 ? 's' : ''} failed - logs parsed)</span>` : ''}
-              </div>
+      </div>
             `;
           }).join('')}
-        </div>
+    </div>
         <p class="failure-note">Test details not available for this date. You can also click "View Run" to see the full logs on GitHub.</p>
             </div>
     ` : ''}
@@ -882,8 +1060,8 @@ function showFailingTestsModal(sectionId, testId) {
             <span class="failing-test-name">${ft.name}</span>
             </div>
           <span class="failing-test-badge">${ft.count}x failed</span>
-          </div>
-          
+    </div>
+    
         <div class="failing-test-card-body">
           <div class="failing-test-dates-section">
             <h6>Failed on these days:</h6>
@@ -1534,15 +1712,34 @@ function init() {
     tab.addEventListener('click', () => switchTab(tab.dataset.tab));
   });
   
-  // Filter buttons
+  // Filter buttons (status)
   document.querySelectorAll('.filter-btn').forEach(btn => {
     btn.addEventListener('click', () => setFilter(btn.dataset.filter));
+  });
+  
+  // Category filter buttons (All/Required toggle)
+  document.querySelectorAll('.category-btn').forEach(btn => {
+    btn.addEventListener('click', () => setCategoryFilter(btn.dataset.category));
+  });
+  
+  // Quick filter buttons (TEE/NVIDIA)
+  document.querySelectorAll('.quick-filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const category = btn.dataset.category;
+      // Toggle: if already active, go back to 'all'
+      if (state.categoryFilter === category) {
+        setCategoryFilter('all');
+      } else {
+        setCategoryFilter(category);
+      }
+    });
   });
   
   // Search
   document.getElementById('search-tests').addEventListener('input', (e) => {
     state.searchQuery = e.target.value;
     renderSections();
+    updateJobCount();
   });
   
   // Close modals on overlay click

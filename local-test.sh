@@ -64,16 +64,15 @@ fetch_nightly_data() {
             for run_id in $(jq -r ".[].id" nightly-runs.json | head -15); do
                 echo "Fetching jobs for run $run_id..."
                 
-                # Fetch SPECIFIC jobs for nightly dashboard (configured in config.yaml)
-                # NVIDIA GPU, TEE tests (TDX, SNP, SEV), CoCo tests, zVSI
+                # Fetch ALL jobs (no filter - we want everything for the dashboard)
                 gh api \
                     -H "Accept: application/vnd.github+json" \
                     --paginate \
                     "repos/kata-containers/kata-containers/actions/runs/$run_id/jobs?per_page=100" \
-                    --jq ".jobs[] | select(.name | test(\"run-nvidia-gpu|run-k8s-tests-on-nvidia|run-kata-coco|run-k8s-tests-coco|run-k8s-tests-on-tee|run-k8s-tests-on-zvsi\"; \"i\"))" | \
+                    --jq ".jobs[]" | \
                     jq -s --arg run_id "$run_id" "[.[] | . + {workflow_run_id: \$run_id}]" > run-jobs.json
                 
-                echo "  Found $(jq "length" run-jobs.json) test jobs"
+                echo "  Found $(jq "length" run-jobs.json) jobs"
                 
                 jq -s "add" all-jobs.json run-jobs.json > temp-jobs.json
                 mv temp-jobs.json all-jobs.json
