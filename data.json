@@ -1,5 +1,5 @@
 {
-  "lastRefresh": "2025-11-29T01:17:55.979Z",
+  "lastRefresh": "2025-11-29T03:44:45.962Z",
   "sections": [
     {
       "id": "nvidia-gpu",
@@ -16,7 +16,7 @@
           "status": "passed",
           "duration": "7m 0s",
           "lastFailure": "Never",
-          "lastSuccess": "Just now",
+          "lastSuccess": "3h ago",
           "weatherHistory": [
             {
               "date": "2025-11-20T00:00:00.000Z",
@@ -124,7 +124,7 @@
           "status": "passed",
           "duration": "15m 39s",
           "lastFailure": "11/20/2025",
-          "lastSuccess": "Just now",
+          "lastSuccess": "3h ago",
           "weatherHistory": [
             {
               "date": "2025-11-20T00:00:00.000Z",
@@ -239,20 +239,11 @@
           "id": "kata-containers-ci-on-push---run-kata-coco-tests---run-k8s-tests-coco-nontee--qemu-coco-dev--nydus--guest-pull-",
           "name": "non-TEE with nydus snapshotter",
           "fullName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev, nydus, guest-pull)",
-          "status": "not_run",
-          "duration": "N/A",
-          "lastFailure": "Never",
+          "status": "failed",
+          "duration": "61m 14s",
+          "lastFailure": "3h ago",
           "lastSuccess": "Yesterday",
           "weatherHistory": [
-            {
-              "date": "2025-11-19T00:00:00.000Z",
-              "status": "none",
-              "runId": null,
-              "jobId": null,
-              "duration": null,
-              "failureStep": null,
-              "failureDetails": null
-            },
             {
               "date": "2025-11-20T00:00:00.000Z",
               "status": "passed",
@@ -333,15 +324,86 @@
               "duration": "51m 56s",
               "failureStep": null,
               "failureDetails": null
+            },
+            {
+              "date": "2025-11-29T00:00:00.000Z",
+              "status": "failed",
+              "runId": "19776214950",
+              "jobId": "56669441505",
+              "duration": "61m 14s",
+              "failureStep": "k8s-oom.bats",
+              "failureDetails": {
+                "failures": [
+                  {
+                    "number": 1,
+                    "name": "Test OOM events for pods",
+                    "comment": "",
+                    "file": "k8s-oom.bats"
+                  },
+                  {
+                    "number": 1,
+                    "name": "Test OOM events for pods",
+                    "comment": "",
+                    "file": "##[group]k8s-oom.bats"
+                  }
+                ],
+                "stats": {
+                  "total": 250,
+                  "passed": 248,
+                  "failed": 2,
+                  "skipped": 0
+                },
+                "batsFiles": [
+                  "k8s-oom.bats"
+                ]
+              }
             }
           ],
-          "failureCount": 0,
-          "failedTestsInWeather": [],
+          "failureCount": 1,
+          "failedTestsInWeather": [
+            {
+              "name": "Test OOM events for pods",
+              "count": 1,
+              "dates": [
+                "2025-11-29"
+              ],
+              "files": [
+                "k8s-oom.bats"
+              ]
+            }
+          ],
           "retried": 0,
           "setupRetry": false,
           "runId": "19776214950",
           "jobId": "56669441505",
-          "error": null
+          "error": {
+            "step": "k8s-oom.bats, ##[group]k8s-oom.bats",
+            "batsFiles": [
+              "k8s-oom.bats",
+              "##[group]k8s-oom.bats"
+            ],
+            "testResults": {
+              "total": 250,
+              "passed": 248,
+              "failed": 2,
+              "skipped": 0
+            },
+            "failures": [
+              {
+                "number": 1,
+                "name": "Test OOM events for pods",
+                "comment": "",
+                "file": "k8s-oom.bats"
+              },
+              {
+                "number": 1,
+                "name": "Test OOM events for pods",
+                "comment": "",
+                "file": "##[group]k8s-oom.bats"
+              }
+            ],
+            "output": "not ok 1 - Test OOM events for pods\nnot ok 1 - Test OOM events for pods"
+          }
         },
         {
           "id": "kata-containers-ci-on-push---run-kata-coco-tests---run-k8s-tests-on-tee--sev-snp--qemu-snp-",
@@ -490,20 +552,11 @@
           "id": "kata-containers-ci-on-push---run-kata-coco-tests---run-k8s-tests-on-tee--tdx--qemu-tdx-",
           "name": "Intel TDX with nydus snapshotter",
           "fullName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
-          "status": "not_run",
-          "duration": "N/A",
+          "status": "passed",
+          "duration": "39m 33s",
           "lastFailure": "Never",
-          "lastSuccess": "2 days ago",
+          "lastSuccess": "3h ago",
           "weatherHistory": [
-            {
-              "date": "2025-11-19T00:00:00.000Z",
-              "status": "none",
-              "runId": null,
-              "jobId": null,
-              "duration": null,
-              "failureStep": null,
-              "failureDetails": null
-            },
             {
               "date": "2025-11-20T00:00:00.000Z",
               "status": "passed",
@@ -584,6 +637,15 @@
               "duration": null,
               "failureStep": null,
               "failureDetails": null
+            },
+            {
+              "date": "2025-11-29T00:00:00.000Z",
+              "status": "passed",
+              "runId": "19776214950",
+              "jobId": "56669441517",
+              "duration": "39m 33s",
+              "failureStep": null,
+              "failureDetails": null
             }
           ],
           "failureCount": 0,
@@ -600,7 +662,7 @@
           "fullName": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (nydus, qemu-coco-dev, kubeadm)",
           "status": "failed",
           "duration": "25m 5s",
-          "lastFailure": "Just now",
+          "lastFailure": "3h ago",
           "lastSuccess": "Yesterday",
           "weatherHistory": [
             {
@@ -771,7 +833,7 @@
           "status": "passed",
           "duration": "15m 39s",
           "lastFailure": "11/20/2025",
-          "lastSuccess": "Just now",
+          "lastSuccess": "3h ago",
           "weatherHistory": [
             {
               "date": "2025-11-20T00:00:00.000Z",
@@ -879,7 +941,7 @@
           "status": "passed",
           "duration": "44m 38s",
           "lastFailure": "Never",
-          "lastSuccess": "Just now",
+          "lastSuccess": "3h ago",
           "weatherHistory": [
             {
               "date": "2025-11-20T00:00:00.000Z",
@@ -984,20 +1046,11 @@
           "id": "kata-containers-ci-on-push---run-kata-coco-tests---run-k8s-tests-coco-nontee--qemu-coco-dev-runtime-rs--nydus--guest-pull-",
           "name": "non-TEE with runtime-rs and nydus snapshotter",
           "fullName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
-          "status": "not_run",
-          "duration": "N/A",
+          "status": "passed",
+          "duration": "52m 30s",
           "lastFailure": "Never",
-          "lastSuccess": "22h ago",
+          "lastSuccess": "3h ago",
           "weatherHistory": [
-            {
-              "date": "2025-11-19T00:00:00.000Z",
-              "status": "none",
-              "runId": null,
-              "jobId": null,
-              "duration": null,
-              "failureStep": null,
-              "failureDetails": null
-            },
             {
               "date": "2025-11-20T00:00:00.000Z",
               "status": "passed",
@@ -1078,6 +1131,15 @@
               "duration": "59m 24s",
               "failureStep": null,
               "failureDetails": null
+            },
+            {
+              "date": "2025-11-29T00:00:00.000Z",
+              "status": "passed",
+              "runId": "19776214950",
+              "jobId": "56669441513",
+              "duration": "52m 30s",
+              "failureStep": null,
+              "failureDetails": null
             }
           ],
           "failureCount": 0,
@@ -1095,7 +1157,7 @@
           "status": "passed",
           "duration": "18m 7s",
           "lastFailure": "Never",
-          "lastSuccess": "Just now",
+          "lastSuccess": "3h ago",
           "weatherHistory": [
             {
               "date": "2025-11-20T00:00:00.000Z",
@@ -1239,6 +1301,28 @@
           "latestDate": "2025-11-29T00:00:00.000Z",
           "jobIds": [
             "56669517016"
+          ]
+        }
+      ],
+      "uniqueJobsAffected": 1
+    },
+    "Test OOM events for pods": {
+      "occurrences": [
+        {
+          "date": "2025-11-29T00:00:00.000Z",
+          "jobName": "non-TEE with nydus snapshotter",
+          "jobId": "56669441505",
+          "runId": "19776214950"
+        }
+      ],
+      "totalCount": 1,
+      "affectedJobs": [
+        {
+          "jobName": "non-TEE with nydus snapshotter",
+          "count": 1,
+          "latestDate": "2025-11-29T00:00:00.000Z",
+          "jobIds": [
+            "56669441505"
           ]
         }
       ],
