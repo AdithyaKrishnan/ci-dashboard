@@ -156,6 +156,47 @@ function formatRelativeTime(dateString) {
   return date.toLocaleDateString();
 }
 
+/**
+ * Resolve maintainer handles to display names with GitHub links
+ * @param {string[]} handles - Array of maintainer handles (e.g., ["@fidencio"])
+ * @returns {string} - HTML string with maintainer links
+ */
+function renderMaintainers(handles) {
+  if (!handles || handles.length === 0) return '';
+  
+  const directory = state.data?.maintainersDirectory || {};
+  
+  const maintainerLinks = handles.map(handle => {
+    const maintainer = directory[handle];
+    if (!maintainer) {
+      // Fallback: just show the handle as a GitHub link
+      const username = handle.replace(/^@/, '');
+      return `<a href="https://github.com/${username}" target="_blank" class="maintainer-link">${handle}</a>`;
+    }
+    
+    const github = maintainer.github || handle.replace(/^@/, '');
+    const name = maintainer.name || handle;
+    
+    return `<a href="https://github.com/${github}" target="_blank" class="maintainer-link" title="${name}">${handle}</a>`;
+  });
+  
+  return maintainerLinks.join(', ');
+}
+
+/**
+ * Get maintainer names (without links) for compact display
+ */
+function getMaintainerNames(handles) {
+  if (!handles || handles.length === 0) return '';
+  
+  const directory = state.data?.maintainersDirectory || {};
+  
+  return handles.map(handle => {
+    const maintainer = directory[handle];
+    return maintainer?.name || handle;
+  }).join(', ');
+}
+
 // ============================================
 // Render Functions
 // ============================================
@@ -365,6 +406,7 @@ function renderTestGroup(section, tests, groupId, label, statusClass, isExpanded
         <div class="test-group-content">
             <div class="test-table-header">
               <span>Test Name</span>
+              <span>Maintainers</span>
               <span>Run</span>
               <span>Last Failure</span>
               <span>Last Success</span>
@@ -411,6 +453,10 @@ function renderTestRow(sectionId, test) {
     failureInfo.push(`${uniqueCount} unique failure${uniqueCount > 1 ? 's' : ''} in 10 days`);
   }
   
+  const maintainersHtml = test.maintainers && test.maintainers.length > 0
+    ? renderMaintainers(test.maintainers)
+    : '<span class="no-maintainer">—</span>';
+
   return `
     <div class="test-row ${test.status}">
       <div class="test-name-col">
@@ -423,6 +469,9 @@ function renderTestRow(sectionId, test) {
           </span>
         ` : ''}
         </div>
+      </div>
+      <div class="test-maintainers-col">
+        ${maintainersHtml}
       </div>
       <div class="test-run-col">
         <span class="test-run-status ${test.status}">${statusDisplay[test.status] || test.status}</span>
@@ -513,6 +562,14 @@ function showWeatherModal(sectionId, testId) {
   const failedCount = weather.filter(w => w === 'failed').length;
   
   title.textContent = `${test.name} — 10 Day History`;
+  
+  // Build maintainers section
+  const maintainersSection = test.maintainers && test.maintainers.length > 0
+    ? `<div class="weather-maintainers">
+         <span class="maintainers-label">Maintainers:</span>
+         ${renderMaintainers(test.maintainers)}
+       </div>`
+    : '';
   
   const daysHtml = [...test.weatherHistory].reverse().map((day, index) => {
     const date = new Date(day.date);
@@ -713,6 +770,7 @@ function showWeatherModal(sectionId, testId) {
       <div class="weather-detail-stats">
         <h4>${passedCount}/${weather.length} days passed</h4>
         <p>${getWeatherPercentage(test.weatherHistory)}% success rate over the last 10 days</p>
+        ${maintainersSection}
       </div>
           </div>
           
@@ -858,6 +916,14 @@ function showErrorModal(sectionId, testId) {
   title.textContent = `${test.name} — Error Details`;
   githubLink.href = `https://github.com/kata-containers/kata-containers/actions/runs/${test.runId}${test.jobId ? '/job/' + test.jobId : ''}`;
   
+  // Build maintainers section for error modal
+  const errorMaintainersHtml = test.maintainers && test.maintainers.length > 0
+    ? `<div class="error-maintainers">
+         <span class="maintainers-label">Maintainers:</span>
+         ${renderMaintainers(test.maintainers)}
+       </div>`
+    : '';
+  
   // Check if we have detailed test results
   const hasTestResults = test.error.testResults && test.error.failures?.length > 0;
   
@@ -893,6 +959,7 @@ function showErrorModal(sectionId, testId) {
     <div class="error-details">
       <div class="error-meta">
         <span>Duration: <strong>${test.duration || 'N/A'}</strong></span>
+        ${errorMaintainersHtml}
       </div>
       <div class="error-step">
         Failed Step: <strong>${test.error.step || 'Unknown'}</strong>

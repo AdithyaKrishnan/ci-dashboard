@@ -620,7 +620,8 @@ enrichFailedTestsIndex();
 const outputData = {
   lastRefresh: new Date().toISOString(),
   sections: sections,
-  failedTestsIndex: failedTestsIndex // NEW: global index of all failed tests
+  failedTestsIndex: failedTestsIndex, // NEW: global index of all failed tests
+  maintainersDirectory: config.maintainers_directory || {} // Include maintainers directory for UI
 };
 
 // Write data.json
