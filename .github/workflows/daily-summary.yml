@@ -193,13 +193,15 @@ jobs:
             weather_emoji=$(echo "$section" | jq -r '.weather_emoji')
             
             # Get failing tests for this section
-            failing_tests=$(echo "$section" | jq -r '.failing_tests | map("• \`\(.name)\` - \(.error_step) (\(.days_failing)d)") | join("\n")')
+            # Note: Using \u0060 for backticks to avoid bash escaping issues
+            failing_tests=$(echo "$section" | jq -r '.failing_tests | map("• \u0060\(.name)\u0060 - \(.error_step) (\(.days_failing)d)") | join("\n")')
             if [ -z "$failing_tests" ] || [ "$failing_tests" = "null" ]; then
               failing_tests="None! 🎉"
             fi
             
             # Get flaky tests for this section
-            flaky_tests=$(echo "$section" | jq -r '.flaky_tests | map("• \`\(.name)\` - \(.flaky_rate)% flaky") | join("\n")')
+            # Note: Using \u0060 for backticks to avoid bash escaping issues
+            flaky_tests=$(echo "$section" | jq -r '.flaky_tests | map("• \u0060\(.name)\u0060 - \(.flaky_rate)% flaky") | join("\n")')
             if [ -z "$flaky_tests" ] || [ "$flaky_tests" = "null" ]; then
               flaky_tests="None detected"
             fi
