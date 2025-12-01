@@ -61,7 +61,7 @@ fetch_nightly_data() {
             # Fetch jobs for each run
             echo "[]" > all-jobs.json
             
-            for run_id in $(jq -r ".[].id" nightly-runs.json | head -15); do
+            for run_id in $(jq -r ".[0:15] | .[].id" nightly-runs.json); do
                 echo "Fetching jobs for run $run_id..."
                 
                 # Fetch ALL jobs (no filter - we want everything for the dashboard)
@@ -92,7 +92,7 @@ fetch_nightly_data() {
             # Fetch jobs for each s390x run
             echo "[]" > s390x-jobs.json
             
-            for run_id in $(jq -r ".[].id" s390x-runs.json | head -15); do
+            for run_id in $(jq -r ".[0:15] | .[].id" s390x-runs.json); do
                 echo "Fetching jobs for s390x run $run_id..."
                 
                 gh api \
@@ -141,7 +141,7 @@ fetch_nightly_data() {
             # Fetch jobs for each CoCo Charts run
             echo "[]" > coco-charts-jobs.json
             
-            for run_id in $(jq -r ".[].id" coco-charts-runs.json | head -15); do
+            for run_id in $(jq -r ".[0:15] | .[].id" coco-charts-runs.json); do
                 echo "Fetching jobs for CoCo Charts run $run_id..."
                 
                 gh api \
@@ -173,7 +173,7 @@ fetch_nightly_data() {
             # Fetch jobs for each CAA run
             echo "[]" > coco-caa-jobs.json
             
-            for run_id in $(jq -r ".[].id" coco-caa-runs.json | head -15); do
+            for run_id in $(jq -r ".[0:15] | .[].id" coco-caa-runs.json); do
                 echo "Fetching jobs for CAA run $run_id..."
                 
                 gh api \
@@ -322,7 +322,7 @@ fetch_flaky_data() {
             echo "Fetching logs for failed PR jobs..."
             mkdir -p pr-job-logs
             
-            for job_id in $(jq -r ".jobs[] | select(.conclusion == \"failure\") | .id" raw-pr-runs.json | head -30); do
+            for job_id in $(jq -r "[.jobs[] | select(.conclusion == \"failure\") | .id][0:30] | .[]" raw-pr-runs.json); do
                 echo "Fetching log for job $job_id..."
                 curl -sL \
                     -H "Authorization: token $GH_TOKEN" \

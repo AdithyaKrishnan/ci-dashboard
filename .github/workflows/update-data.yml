@@ -57,7 +57,7 @@ jobs:
           echo "Fetching jobs for each run..."
           echo '[]' > all-jobs.json
           
-          for run_id in $(jq -r '.[].id' nightly-runs.json | head -15); do
+          for run_id in $(jq -r '.[0:15] | .[].id' nightly-runs.json); do
             echo "Fetching jobs for run $run_id..."
             
             # Use --paginate to get ALL jobs (no filter - we want everything for the dashboard)
@@ -84,7 +84,7 @@ jobs:
           
           # Show found jobs
           echo "Jobs found:"
-          jq '.jobs[] | {name: .name, conclusion: .conclusion, started_at: .started_at}' raw-runs.json | head -30
+          jq '.jobs[0:30] | .[] | {name: .name, conclusion: .conclusion, started_at: .started_at}' raw-runs.json
           
           # Fetch logs for ALL failed jobs to extract test failure details
           echo ""
@@ -150,7 +150,7 @@ jobs:
           # Fetch jobs for each run
           echo '[]' > s390x-jobs.json
           
-          for run_id in $(jq -r '.[].id' s390x-runs.json | head -15); do
+          for run_id in $(jq -r '.[0:15] | .[].id' s390x-runs.json); do
             echo "Fetching jobs for s390x run $run_id..."
             
             gh api \
@@ -204,7 +204,7 @@ jobs:
           # Fetch jobs for each run
           echo '[]' > coco-charts-jobs.json
           
-          for run_id in $(jq -r '.[].id' coco-charts-runs.json | head -15); do
+          for run_id in $(jq -r '.[0:15] | .[].id' coco-charts-runs.json); do
             echo "Fetching jobs for CoCo Charts run $run_id..."
             
             gh api \
@@ -240,7 +240,7 @@ jobs:
           # Fetch jobs for each run
           echo '[]' > coco-caa-jobs.json
           
-          for run_id in $(jq -r '.[].id' coco-caa-runs.json | head -15); do
+          for run_id in $(jq -r '.[0:15] | .[].id' coco-caa-runs.json); do
             echo "Fetching jobs for CAA run $run_id..."
             
             gh api \
