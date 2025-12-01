@@ -1,5 +1,5 @@
 {
-  "lastRefresh": "2025-12-01T13:48:35.949Z",
+  "lastRefresh": "2025-12-01T14:15:52.548Z",
   "sections": [
     {
       "id": "nvidia-gpu",
@@ -412,9 +412,9 @@
             {
               "date": "2025-11-24T00:00:00.000Z",
               "status": "passed",
-              "runId": "19587033590",
-              "jobId": "56243728797",
-              "duration": "38m 44s",
+              "runId": "19619518029",
+              "jobId": "56177625076",
+              "duration": "39m 50s",
               "failureStep": null,
               "failureDetails": null
             },
@@ -3954,36 +3954,12 @@
             },
             {
               "date": "2025-11-25T00:00:00.000Z",
-              "status": "failed",
+              "status": "none",
               "runId": "19653661555",
-              "jobId": "56286383891",
-              "duration": "59m 5s",
-              "failureStep": "k8s-liveness-probes.bats",
-              "failureDetails": {
-                "failures": [
-                  {
-                    "number": 3,
-                    "name": "Liveness tcp probe",
-                    "comment": "",
-                    "file": "k8s-liveness-probes.bats"
-                  },
-                  {
-                    "number": 3,
-                    "name": "Liveness tcp probe",
-                    "comment": "",
-                    "file": "##[group]k8s-liveness-probes.bats"
-                  }
-                ],
-                "stats": {
-                  "total": 250,
-                  "passed": 248,
-                  "failed": 2,
-                  "skipped": 0
-                },
-                "batsFiles": [
-                  "k8s-liveness-probes.bats"
-                ]
-              }
+              "jobId": "56303419587",
+              "duration": "0m 43s",
+              "failureStep": null,
+              "failureDetails": null
             },
             {
               "date": "2025-11-26T00:00:00.000Z",
@@ -3996,12 +3972,36 @@
             },
             {
               "date": "2025-11-27T00:00:00.000Z",
-              "status": "passed",
+              "status": "failed",
               "runId": "19721069021",
-              "jobId": "56511556095",
-              "duration": "59m 44s",
-              "failureStep": null,
-              "failureDetails": null
+              "jobId": "56504113652",
+              "duration": "87m 4s",
+              "failureStep": "k8s-openvpn.bats",
+              "failureDetails": {
+                "failures": [
+                  {
+                    "number": 1,
+                    "name": "Pods establishing a VPN connection using openvpn",
+                    "comment": "",
+                    "file": "k8s-openvpn.bats"
+                  },
+                  {
+                    "number": 1,
+                    "name": "Pods establishing a VPN connection using openvpn",
+                    "comment": "",
+                    "file": "##[group]k8s-openvpn.bats"
+                  }
+                ],
+                "stats": {
+                  "total": 250,
+                  "passed": 248,
+                  "failed": 2,
+                  "skipped": 0
+                },
+                "batsFiles": [
+                  "k8s-openvpn.bats"
+                ]
+              }
             },
             {
               "date": "2025-11-28T00:00:00.000Z",
@@ -4067,13 +4067,13 @@
           "failureCount": 2,
           "failedTestsInWeather": [
             {
-              "name": "Liveness tcp probe",
+              "name": "Pods establishing a VPN connection using openvpn",
               "count": 1,
               "dates": [
-                "2025-11-25"
+                "2025-11-27"
               ],
               "files": [
-                "k8s-liveness-probes.bats"
+                "k8s-openvpn.bats"
               ]
             },
             {
@@ -4237,6 +4237,457 @@
           ]
         }
       ]
+    },
+    {
+      "id": "ibm",
+      "name": "IBM",
+      "description": "IBM s390x tests including Secure Execution and VFIO-AP",
+      "tests": [
+        {
+          "id": "check-internal-test-result--kata-vfio-ap-e2e-tests-",
+          "name": "Kata VFIO-AP E2E tests",
+          "fullName": "check-internal-test-result (kata-vfio-ap-e2e-tests)",
+          "status": "passed",
+          "duration": "0m 7s",
+          "lastFailure": "5 days ago",
+          "lastSuccess": "9h ago",
+          "weatherHistory": [
+            {
+              "date": "2025-11-22T00:00:00.000Z",
+              "status": "none",
+              "runId": null,
+              "jobId": null,
+              "duration": null,
+              "failureStep": null,
+              "failureDetails": null
+            },
+            {
+              "date": "2025-11-23T00:00:00.000Z",
+              "status": "none",
+              "runId": null,
+              "jobId": null,
+              "duration": null,
+              "failureStep": null,
+              "failureDetails": null
+            },
+            {
+              "date": "2025-11-24T00:00:00.000Z",
+              "status": "none",
+              "runId": null,
+              "jobId": null,
+              "duration": null,
+              "failureStep": null,
+              "failureDetails": null
+            },
+            {
+              "date": "2025-11-25T00:00:00.000Z",
+              "status": "none",
+              "runId": null,
+              "jobId": null,
+              "duration": null,
+              "failureStep": null,
+              "failureDetails": null
+            },
+            {
+              "date": "2025-11-26T00:00:00.000Z",
+              "status": "none",
+              "runId": null,
+              "jobId": null,
+              "duration": null,
+              "failureStep": null,
+              "failureDetails": null
+            },
+            {
+              "date": "2025-11-27T00:00:00.000Z",
+              "status": "none",
+              "runId": null,
+              "jobId": null,
+              "duration": null,
+              "failureStep": null,
+              "failureDetails": null
+            },
+            {
+              "date": "2025-11-28T00:00:00.000Z",
+              "status": "none",
+              "runId": null,
+              "jobId": null,
+              "duration": null,
+              "failureStep": null,
+              "failureDetails": null
+            },
+            {
+              "date": "2025-11-29T00:00:00.000Z",
+              "status": "none",
+              "runId": null,
+              "jobId": null,
+              "duration": null,
+              "failureStep": null,
+              "failureDetails": null
+            },
+            {
+              "date": "2025-11-30T00:00:00.000Z",
+              "status": "none",
+              "runId": null,
+              "jobId": null,
+              "duration": null,
+              "failureStep": null,
+              "failureDetails": null
+            },
+            {
+              "date": "2025-12-01T00:00:00.000Z",
+              "status": "none",
+              "runId": null,
+              "jobId": null,
+              "duration": null,
+              "failureStep": null,
+              "failureDetails": null
+            }
+          ],
+          "failureCount": 0,
+          "failedTestsInWeather": [],
+          "retried": 0,
+          "setupRetry": false,
+          "runId": "19811913394",
+          "jobId": "56755922713",
+          "error": null,
+          "maintainers": [
+            "@BbolroC"
+          ]
+        },
+        {
+          "id": "check-internal-test-result--cc-vfio-ap-e2e-tests-",
+          "name": "CC VFIO-AP E2E tests",
+          "fullName": "check-internal-test-result (cc-vfio-ap-e2e-tests)",
+          "status": "passed",
+          "duration": "0m 7s",
+          "lastFailure": "11/22/2025",
+          "lastSuccess": "9h ago",
+          "weatherHistory": [
+            {
+              "date": "2025-11-22T00:00:00.000Z",
+              "status": "none",
+              "runId": null,
+              "jobId": null,
+              "duration": null,
+              "failureStep": null,
+              "failureDetails": null
+            },
+            {
+              "date": "2025-11-23T00:00:00.000Z",
+              "status": "none",
+              "runId": null,
+              "jobId": null,
+              "duration": null,
+              "failureStep": null,
+              "failureDetails": null
+            },
+            {
+              "date": "2025-11-24T00:00:00.000Z",
+              "status": "none",
+              "runId": null,
+              "jobId": null,
+              "duration": null,
+              "failureStep": null,
+              "failureDetails": null
+            },
+            {
+              "date": "2025-11-25T00:00:00.000Z",
+              "status": "none",
+              "runId": null,
+              "jobId": null,
+              "duration": null,
+              "failureStep": null,
+              "failureDetails": null
+            },
+            {
+              "date": "2025-11-26T00:00:00.000Z",
+              "status": "none",
+              "runId": null,
+              "jobId": null,
+              "duration": null,
+              "failureStep": null,
+              "failureDetails": null
+            },
+            {
+              "date": "2025-11-27T00:00:00.000Z",
+              "status": "none",
+              "runId": null,
+              "jobId": null,
+              "duration": null,
+              "failureStep": null,
+              "failureDetails": null
+            },
+            {
+              "date": "2025-11-28T00:00:00.000Z",
+              "status": "none",
+              "runId": null,
+              "jobId": null,
+              "duration": null,
+              "failureStep": null,
+              "failureDetails": null
+            },
+            {
+              "date": "2025-11-29T00:00:00.000Z",
+              "status": "none",
+              "runId": null,
+              "jobId": null,
+              "duration": null,
+              "failureStep": null,
+              "failureDetails": null
+            },
+            {
+              "date": "2025-11-30T00:00:00.000Z",
+              "status": "none",
+              "runId": null,
+              "jobId": null,
+              "duration": null,
+              "failureStep": null,
+              "failureDetails": null
+            },
+            {
+              "date": "2025-12-01T00:00:00.000Z",
+              "status": "none",
+              "runId": null,
+              "jobId": null,
+              "duration": null,
+              "failureStep": null,
+              "failureDetails": null
+            }
+          ],
+          "failureCount": 0,
+          "failedTestsInWeather": [],
+          "retried": 0,
+          "setupRetry": false,
+          "runId": "19811913394",
+          "jobId": "56755922715",
+          "error": null,
+          "maintainers": [
+            "@BbolroC"
+          ]
+        },
+        {
+          "id": "check-internal-test-result--cc-se-e2e-tests-go-",
+          "name": "CC Secure Execution E2E tests (Go)",
+          "fullName": "check-internal-test-result (cc-se-e2e-tests-go)",
+          "status": "passed",
+          "duration": "0m 8s",
+          "lastFailure": "Never",
+          "lastSuccess": "9h ago",
+          "weatherHistory": [
+            {
+              "date": "2025-11-22T00:00:00.000Z",
+              "status": "none",
+              "runId": null,
+              "jobId": null,
+              "duration": null,
+              "failureStep": null,
+              "failureDetails": null
+            },
+            {
+              "date": "2025-11-23T00:00:00.000Z",
+              "status": "none",
+              "runId": null,
+              "jobId": null,
+              "duration": null,
+              "failureStep": null,
+              "failureDetails": null
+            },
+            {
+              "date": "2025-11-24T00:00:00.000Z",
+              "status": "none",
+              "runId": null,
+              "jobId": null,
+              "duration": null,
+              "failureStep": null,
+              "failureDetails": null
+            },
+            {
+              "date": "2025-11-25T00:00:00.000Z",
+              "status": "none",
+              "runId": null,
+              "jobId": null,
+              "duration": null,
+              "failureStep": null,
+              "failureDetails": null
+            },
+            {
+              "date": "2025-11-26T00:00:00.000Z",
+              "status": "none",
+              "runId": null,
+              "jobId": null,
+              "duration": null,
+              "failureStep": null,
+              "failureDetails": null
+            },
+            {
+              "date": "2025-11-27T00:00:00.000Z",
+              "status": "none",
+              "runId": null,
+              "jobId": null,
+              "duration": null,
+              "failureStep": null,
+              "failureDetails": null
+            },
+            {
+              "date": "2025-11-28T00:00:00.000Z",
+              "status": "none",
+              "runId": null,
+              "jobId": null,
+              "duration": null,
+              "failureStep": null,
+              "failureDetails": null
+            },
+            {
+              "date": "2025-11-29T00:00:00.000Z",
+              "status": "none",
+              "runId": null,
+              "jobId": null,
+              "duration": null,
+              "failureStep": null,
+              "failureDetails": null
+            },
+            {
+              "date": "2025-11-30T00:00:00.000Z",
+              "status": "none",
+              "runId": null,
+              "jobId": null,
+              "duration": null,
+              "failureStep": null,
+              "failureDetails": null
+            },
+            {
+              "date": "2025-12-01T00:00:00.000Z",
+              "status": "none",
+              "runId": null,
+              "jobId": null,
+              "duration": null,
+              "failureStep": null,
+              "failureDetails": null
+            }
+          ],
+          "failureCount": 0,
+          "failedTestsInWeather": [],
+          "retried": 0,
+          "setupRetry": false,
+          "runId": "19811913394",
+          "jobId": "56755922717",
+          "error": null,
+          "maintainers": [
+            "@BbolroC"
+          ]
+        },
+        {
+          "id": "check-internal-test-result--cc-se-e2e-tests-rs-",
+          "name": "CC Secure Execution E2E tests (Rust)",
+          "fullName": "check-internal-test-result (cc-se-e2e-tests-rs)",
+          "status": "passed",
+          "duration": "0m 8s",
+          "lastFailure": "Never",
+          "lastSuccess": "9h ago",
+          "weatherHistory": [
+            {
+              "date": "2025-11-22T00:00:00.000Z",
+              "status": "none",
+              "runId": null,
+              "jobId": null,
+              "duration": null,
+              "failureStep": null,
+              "failureDetails": null
+            },
+            {
+              "date": "2025-11-23T00:00:00.000Z",
+              "status": "none",
+              "runId": null,
+              "jobId": null,
+              "duration": null,
+              "failureStep": null,
+              "failureDetails": null
+            },
+            {
+              "date": "2025-11-24T00:00:00.000Z",
+              "status": "none",
+              "runId": null,
+              "jobId": null,
+              "duration": null,
+              "failureStep": null,
+              "failureDetails": null
+            },
+            {
+              "date": "2025-11-25T00:00:00.000Z",
+              "status": "none",
+              "runId": null,
+              "jobId": null,
+              "duration": null,
+              "failureStep": null,
+              "failureDetails": null
+            },
+            {
+              "date": "2025-11-26T00:00:00.000Z",
+              "status": "none",
+              "runId": null,
+              "jobId": null,
+              "duration": null,
+              "failureStep": null,
+              "failureDetails": null
+            },
+            {
+              "date": "2025-11-27T00:00:00.000Z",
+              "status": "none",
+              "runId": null,
+              "jobId": null,
+              "duration": null,
+              "failureStep": null,
+              "failureDetails": null
+            },
+            {
+              "date": "2025-11-28T00:00:00.000Z",
+              "status": "none",
+              "runId": null,
+              "jobId": null,
+              "duration": null,
+              "failureStep": null,
+              "failureDetails": null
+            },
+            {
+              "date": "2025-11-29T00:00:00.000Z",
+              "status": "none",
+              "runId": null,
+              "jobId": null,
+              "duration": null,
+              "failureStep": null,
+              "failureDetails": null
+            },
+            {
+              "date": "2025-11-30T00:00:00.000Z",
+              "status": "none",
+              "runId": null,
+              "jobId": null,
+              "duration": null,
+              "failureStep": null,
+              "failureDetails": null
+            },
+            {
+              "date": "2025-12-01T00:00:00.000Z",
+              "status": "none",
+              "runId": null,
+              "jobId": null,
+              "duration": null,
+              "failureStep": null,
+              "failureDetails": null
+            }
+          ],
+          "failureCount": 0,
+          "failedTestsInWeather": [],
+          "retried": 0,
+          "setupRetry": false,
+          "runId": "19811913394",
+          "jobId": "56755922716",
+          "error": null,
+          "maintainers": [
+            "@BbolroC"
+          ]
+        }
+      ]
     }
   ],
   "allJobsSection": {
@@ -4247,486 +4698,469 @@
       {
         "id": "check-internal-test-result--cc-se-e2e-tests-go-",
         "name": "check-internal-test-result (cc-se-e2e-tests-go)",
-        "jobName": "check-internal-test-result (cc-se-e2e-tests-go)",
         "fullName": "check-internal-test-result (cc-se-e2e-tests-go)",
         "status": "passed",
-        "categories": [
-          "tee"
-        ],
-        "isRequired": false,
         "duration": "0m 8s",
         "lastFailure": "Never",
-        "lastSuccess": "8h ago",
+        "lastSuccess": "9h ago",
         "weatherHistory": [
           {
             "date": "2025-11-22T00:00:00.000Z",
-            "status": "passed",
-            "retried": false,
-            "runId": "19590637374",
-            "jobId": "56108124025",
-            "duration": "0m 8s",
+            "status": "none",
+            "runId": null,
+            "jobId": null,
+            "duration": null,
             "failureStep": null,
             "failureDetails": null
           },
           {
             "date": "2025-11-23T00:00:00.000Z",
-            "status": "passed",
-            "retried": false,
-            "runId": "19606200233",
-            "jobId": "56145429891",
-            "duration": "0m 9s",
+            "status": "none",
+            "runId": null,
+            "jobId": null,
+            "duration": null,
             "failureStep": null,
             "failureDetails": null
           },
           {
             "date": "2025-11-24T00:00:00.000Z",
-            "status": "passed",
-            "retried": false,
-            "runId": "19623866395",
-            "jobId": "56189057793",
-            "duration": "0m 8s",
+            "status": "none",
+            "runId": null,
+            "jobId": null,
+            "duration": null,
             "failureStep": null,
             "failureDetails": null
           },
           {
             "date": "2025-11-25T00:00:00.000Z",
-            "status": "passed",
-            "retried": false,
-            "runId": "19658801260",
-            "jobId": "56300982856",
-            "duration": "0m 7s",
+            "status": "none",
+            "runId": null,
+            "jobId": null,
+            "duration": null,
             "failureStep": null,
             "failureDetails": null
           },
           {
             "date": "2025-11-26T00:00:00.000Z",
-            "status": "passed",
-            "retried": true,
-            "runId": "19693046138",
-            "jobId": "56412647674",
-            "duration": "0m 7s",
+            "status": "none",
+            "runId": null,
+            "jobId": null,
+            "duration": null,
             "failureStep": null,
             "failureDetails": null
           },
           {
             "date": "2025-11-27T00:00:00.000Z",
-            "status": "passed",
-            "retried": false,
-            "runId": "19725715339",
-            "jobId": "56516708791",
-            "duration": "0m 9s",
+            "status": "none",
+            "runId": null,
+            "jobId": null,
+            "duration": null,
             "failureStep": null,
             "failureDetails": null
           },
           {
             "date": "2025-11-28T00:00:00.000Z",
-            "status": "passed",
-            "retried": false,
-            "runId": "19754556977",
-            "jobId": "56603736602",
-            "duration": "0m 8s",
+            "status": "none",
+            "runId": null,
+            "jobId": null,
+            "duration": null,
             "failureStep": null,
             "failureDetails": null
           },
           {
             "date": "2025-11-29T00:00:00.000Z",
-            "status": "passed",
-            "retried": false,
-            "runId": "19779260776",
-            "jobId": "56677077166",
-            "duration": "0m 9s",
+            "status": "none",
+            "runId": null,
+            "jobId": null,
+            "duration": null,
             "failureStep": null,
             "failureDetails": null
           },
           {
             "date": "2025-11-30T00:00:00.000Z",
-            "status": "passed",
-            "retried": false,
-            "runId": "19794112814",
-            "jobId": "56711932903",
-            "duration": "0m 9s",
+            "status": "none",
+            "runId": null,
+            "jobId": null,
+            "duration": null,
             "failureStep": null,
             "failureDetails": null
           },
           {
             "date": "2025-12-01T00:00:00.000Z",
-            "status": "passed",
-            "retried": false,
-            "runId": "19811913394",
-            "jobId": "56755922717",
-            "duration": "0m 8s",
+            "status": "none",
+            "runId": null,
+            "jobId": null,
+            "duration": null,
             "failureStep": null,
             "failureDetails": null
           }
         ],
         "failureCount": 0,
-        "retried": false,
-        "retriedAndPassed": false,
+        "failedTestsInWeather": [],
+        "retried": 0,
+        "setupRetry": false,
         "runId": "19811913394",
         "jobId": "56755922717",
-        "maintainers": []
+        "error": null,
+        "maintainers": [
+          "@BbolroC"
+        ],
+        "jobName": "check-internal-test-result (cc-se-e2e-tests-go)",
+        "categories": [
+          "tee",
+          "ibm"
+        ],
+        "isRequired": false
       },
       {
         "id": "check-internal-test-result--cc-se-e2e-tests-rs-",
         "name": "check-internal-test-result (cc-se-e2e-tests-rs)",
-        "jobName": "check-internal-test-result (cc-se-e2e-tests-rs)",
         "fullName": "check-internal-test-result (cc-se-e2e-tests-rs)",
         "status": "passed",
-        "categories": [
-          "tee"
-        ],
-        "isRequired": false,
         "duration": "0m 8s",
         "lastFailure": "Never",
-        "lastSuccess": "8h ago",
+        "lastSuccess": "9h ago",
         "weatherHistory": [
           {
             "date": "2025-11-22T00:00:00.000Z",
-            "status": "passed",
-            "retried": false,
-            "runId": "19590637374",
-            "jobId": "56108124016",
-            "duration": "0m 9s",
+            "status": "none",
+            "runId": null,
+            "jobId": null,
+            "duration": null,
             "failureStep": null,
             "failureDetails": null
           },
           {
             "date": "2025-11-23T00:00:00.000Z",
-            "status": "passed",
-            "retried": false,
-            "runId": "19606200233",
-            "jobId": "56145429911",
-            "duration": "0m 7s",
+            "status": "none",
+            "runId": null,
+            "jobId": null,
+            "duration": null,
             "failureStep": null,
             "failureDetails": null
           },
           {
             "date": "2025-11-24T00:00:00.000Z",
-            "status": "passed",
-            "retried": false,
-            "runId": "19623866395",
-            "jobId": "56189057786",
-            "duration": "0m 7s",
+            "status": "none",
+            "runId": null,
+            "jobId": null,
+            "duration": null,
             "failureStep": null,
             "failureDetails": null
           },
           {
             "date": "2025-11-25T00:00:00.000Z",
-            "status": "passed",
-            "retried": false,
-            "runId": "19658801260",
-            "jobId": "56300982985",
-            "duration": "0m 6s",
+            "status": "none",
+            "runId": null,
+            "jobId": null,
+            "duration": null,
             "failureStep": null,
             "failureDetails": null
           },
           {
             "date": "2025-11-26T00:00:00.000Z",
-            "status": "passed",
-            "retried": true,
-            "runId": "19693046138",
-            "jobId": "56412647683",
-            "duration": "0m 8s",
+            "status": "none",
+            "runId": null,
+            "jobId": null,
+            "duration": null,
             "failureStep": null,
             "failureDetails": null
           },
           {
             "date": "2025-11-27T00:00:00.000Z",
-            "status": "passed",
-            "retried": false,
-            "runId": "19725715339",
-            "jobId": "56516708788",
-            "duration": "0m 9s",
+            "status": "none",
+            "runId": null,
+            "jobId": null,
+            "duration": null,
             "failureStep": null,
             "failureDetails": null
           },
           {
             "date": "2025-11-28T00:00:00.000Z",
-            "status": "passed",
-            "retried": false,
-            "runId": "19754556977",
-            "jobId": "56603736608",
-            "duration": "0m 8s",
+            "status": "none",
+            "runId": null,
+            "jobId": null,
+            "duration": null,
             "failureStep": null,
             "failureDetails": null
           },
           {
             "date": "2025-11-29T00:00:00.000Z",
-            "status": "passed",
-            "retried": false,
-            "runId": "19779260776",
-            "jobId": "56677077161",
-            "duration": "0m 7s",
+            "status": "none",
+            "runId": null,
+            "jobId": null,
+            "duration": null,
             "failureStep": null,
             "failureDetails": null
           },
           {
             "date": "2025-11-30T00:00:00.000Z",
-            "status": "passed",
-            "retried": false,
-            "runId": "19794112814",
-            "jobId": "56711932905",
-            "duration": "0m 7s",
+            "status": "none",
+            "runId": null,
+            "jobId": null,
+            "duration": null,
             "failureStep": null,
             "failureDetails": null
           },
           {
             "date": "2025-12-01T00:00:00.000Z",
-            "status": "passed",
-            "retried": false,
-            "runId": "19811913394",
-            "jobId": "56755922716",
-            "duration": "0m 8s",
+            "status": "none",
+            "runId": null,
+            "jobId": null,
+            "duration": null,
             "failureStep": null,
             "failureDetails": null
           }
         ],
         "failureCount": 0,
-        "retried": false,
-        "retriedAndPassed": false,
+        "failedTestsInWeather": [],
+        "retried": 0,
+        "setupRetry": false,
         "runId": "19811913394",
         "jobId": "56755922716",
-        "maintainers": []
+        "error": null,
+        "maintainers": [
+          "@BbolroC"
+        ],
+        "jobName": "check-internal-test-result (cc-se-e2e-tests-rs)",
+        "categories": [
+          "tee",
+          "ibm"
+        ],
+        "isRequired": false
       },
       {
         "id": "check-internal-test-result--cc-vfio-ap-e2e-tests-",
         "name": "check-internal-test-result (cc-vfio-ap-e2e-tests)",
-        "jobName": "check-internal-test-result (cc-vfio-ap-e2e-tests)",
         "fullName": "check-internal-test-result (cc-vfio-ap-e2e-tests)",
         "status": "passed",
-        "categories": [],
-        "isRequired": false,
         "duration": "0m 7s",
         "lastFailure": "11/22/2025",
-        "lastSuccess": "8h ago",
+        "lastSuccess": "9h ago",
         "weatherHistory": [
           {
             "date": "2025-11-22T00:00:00.000Z",
-            "status": "failed",
-            "retried": false,
-            "runId": "19590637374",
-            "jobId": "56108124020",
-            "duration": "0m 6s",
-            "failureStep": "Fetch a test result for {{ matrix.test_title }}",
+            "status": "none",
+            "runId": null,
+            "jobId": null,
+            "duration": null,
+            "failureStep": null,
             "failureDetails": null
           },
           {
             "date": "2025-11-23T00:00:00.000Z",
-            "status": "passed",
-            "retried": false,
-            "runId": "19606200233",
-            "jobId": "56145429890",
-            "duration": "0m 6s",
+            "status": "none",
+            "runId": null,
+            "jobId": null,
+            "duration": null,
             "failureStep": null,
             "failureDetails": null
           },
           {
             "date": "2025-11-24T00:00:00.000Z",
-            "status": "passed",
-            "retried": false,
-            "runId": "19623866395",
-            "jobId": "56189057810",
-            "duration": "0m 6s",
+            "status": "none",
+            "runId": null,
+            "jobId": null,
+            "duration": null,
             "failureStep": null,
             "failureDetails": null
           },
           {
             "date": "2025-11-25T00:00:00.000Z",
-            "status": "passed",
-            "retried": false,
-            "runId": "19658801260",
-            "jobId": "56300982863",
-            "duration": "0m 5s",
+            "status": "none",
+            "runId": null,
+            "jobId": null,
+            "duration": null,
             "failureStep": null,
             "failureDetails": null
           },
           {
             "date": "2025-11-26T00:00:00.000Z",
-            "status": "passed",
-            "retried": true,
-            "runId": "19693046138",
-            "jobId": "56412647675",
-            "duration": "0m 5s",
+            "status": "none",
+            "runId": null,
+            "jobId": null,
+            "duration": null,
             "failureStep": null,
             "failureDetails": null
           },
           {
             "date": "2025-11-27T00:00:00.000Z",
-            "status": "passed",
-            "retried": false,
-            "runId": "19725715339",
-            "jobId": "56516708792",
-            "duration": "0m 7s",
+            "status": "none",
+            "runId": null,
+            "jobId": null,
+            "duration": null,
             "failureStep": null,
             "failureDetails": null
           },
           {
             "date": "2025-11-28T00:00:00.000Z",
-            "status": "passed",
-            "retried": false,
-            "runId": "19754556977",
-            "jobId": "56603736615",
-            "duration": "0m 8s",
+            "status": "none",
+            "runId": null,
+            "jobId": null,
+            "duration": null,
             "failureStep": null,
             "failureDetails": null
           },
           {
             "date": "2025-11-29T00:00:00.000Z",
-            "status": "passed",
-            "retried": false,
-            "runId": "19779260776",
-            "jobId": "56677077150",
-            "duration": "0m 7s",
+            "status": "none",
+            "runId": null,
+            "jobId": null,
+            "duration": null,
             "failureStep": null,
             "failureDetails": null
           },
           {
             "date": "2025-11-30T00:00:00.000Z",
-            "status": "passed",
-            "retried": false,
-            "runId": "19794112814",
-            "jobId": "56711932910",
-            "duration": "0m 6s",
+            "status": "none",
+            "runId": null,
+            "jobId": null,
+            "duration": null,
             "failureStep": null,
             "failureDetails": null
           },
           {
             "date": "2025-12-01T00:00:00.000Z",
-            "status": "passed",
-            "retried": false,
-            "runId": "19811913394",
-            "jobId": "56755922715",
-            "duration": "0m 7s",
+            "status": "none",
+            "runId": null,
+            "jobId": null,
+            "duration": null,
             "failureStep": null,
             "failureDetails": null
           }
         ],
-        "failureCount": 1,
-        "retried": false,
-        "retriedAndPassed": false,
+        "failureCount": 0,
+        "failedTestsInWeather": [],
+        "retried": 0,
+        "setupRetry": false,
         "runId": "19811913394",
         "jobId": "56755922715",
-        "maintainers": []
+        "error": null,
+        "maintainers": [
+          "@BbolroC"
+        ],
+        "jobName": "check-internal-test-result (cc-vfio-ap-e2e-tests)",
+        "categories": [
+          "tee",
+          "ibm"
+        ],
+        "isRequired": false
       },
       {
         "id": "check-internal-test-result--kata-vfio-ap-e2e-tests-",
         "name": "check-internal-test-result (kata-vfio-ap-e2e-tests)",
-        "jobName": "check-internal-test-result (kata-vfio-ap-e2e-tests)",
         "fullName": "check-internal-test-result (kata-vfio-ap-e2e-tests)",
         "status": "passed",
-        "categories": [],
-        "isRequired": false,
         "duration": "0m 7s",
         "lastFailure": "5 days ago",
-        "lastSuccess": "8h ago",
+        "lastSuccess": "9h ago",
         "weatherHistory": [
           {
             "date": "2025-11-22T00:00:00.000Z",
-            "status": "passed",
-            "retried": false,
-            "runId": "19590637374",
-            "jobId": "56108124022",
-            "duration": "0m 5s",
+            "status": "none",
+            "runId": null,
+            "jobId": null,
+            "duration": null,
             "failureStep": null,
             "failureDetails": null
           },
           {
             "date": "2025-11-23T00:00:00.000Z",
-            "status": "passed",
-            "retried": false,
-            "runId": "19606200233",
-            "jobId": "56145429897",
-            "duration": "0m 6s",
+            "status": "none",
+            "runId": null,
+            "jobId": null,
+            "duration": null,
             "failureStep": null,
             "failureDetails": null
           },
           {
             "date": "2025-11-24T00:00:00.000Z",
-            "status": "passed",
-            "retried": false,
-            "runId": "19623866395",
-            "jobId": "56189057787",
-            "duration": "0m 7s",
+            "status": "none",
+            "runId": null,
+            "jobId": null,
+            "duration": null,
             "failureStep": null,
             "failureDetails": null
           },
           {
             "date": "2025-11-25T00:00:00.000Z",
-            "status": "passed",
-            "retried": false,
-            "runId": "19658801260",
-            "jobId": "56300982855",
-            "duration": "0m 5s",
+            "status": "none",
+            "runId": null,
+            "jobId": null,
+            "duration": null,
             "failureStep": null,
             "failureDetails": null
           },
           {
             "date": "2025-11-26T00:00:00.000Z",
-            "status": "failed",
-            "retried": true,
-            "runId": "19693046138",
-            "jobId": "56412647676",
-            "duration": "0m 6s",
-            "failureStep": "Fetch a test result for {{ matrix.test_title }}",
+            "status": "none",
+            "runId": null,
+            "jobId": null,
+            "duration": null,
+            "failureStep": null,
             "failureDetails": null
           },
           {
             "date": "2025-11-27T00:00:00.000Z",
-            "status": "passed",
-            "retried": false,
-            "runId": "19725715339",
-            "jobId": "56516708795",
-            "duration": "0m 7s",
+            "status": "none",
+            "runId": null,
+            "jobId": null,
+            "duration": null,
             "failureStep": null,
             "failureDetails": null
           },
           {
             "date": "2025-11-28T00:00:00.000Z",
-            "status": "passed",
-            "retried": false,
-            "runId": "19754556977",
-            "jobId": "56603736604",
-            "duration": "0m 6s",
+            "status": "none",
+            "runId": null,
+            "jobId": null,
+            "duration": null,
             "failureStep": null,
             "failureDetails": null
           },
           {
             "date": "2025-11-29T00:00:00.000Z",
-            "status": "passed",
-            "retried": false,
-            "runId": "19779260776",
-            "jobId": "56677077159",
-            "duration": "0m 6s",
+            "status": "none",
+            "runId": null,
+            "jobId": null,
+            "duration": null,
             "failureStep": null,
             "failureDetails": null
           },
           {
             "date": "2025-11-30T00:00:00.000Z",
-            "status": "passed",
-            "retried": false,
-            "runId": "19794112814",
-            "jobId": "56711932901",
-            "duration": "0m 8s",
+            "status": "none",
+            "runId": null,
+            "jobId": null,
+            "duration": null,
             "failureStep": null,
             "failureDetails": null
           },
           {
             "date": "2025-12-01T00:00:00.000Z",
-            "status": "passed",
-            "retried": false,
-            "runId": "19811913394",
-            "jobId": "56755922713",
-            "duration": "0m 7s",
+            "status": "none",
+            "runId": null,
+            "jobId": null,
+            "duration": null,
             "failureStep": null,
             "failureDetails": null
           }
         ],
-        "failureCount": 1,
-        "retried": false,
-        "retriedAndPassed": false,
+        "failureCount": 0,
+        "failedTestsInWeather": [],
+        "retried": 0,
+        "setupRetry": false,
         "runId": "19811913394",
         "jobId": "56755922713",
-        "maintainers": []
+        "error": null,
+        "maintainers": [
+          "@BbolroC"
+        ],
+        "jobName": "check-internal-test-result (kata-vfio-ap-e2e-tests)",
+        "categories": [
+          "ibm"
+        ],
+        "isRequired": false
       },
       {
         "id": "kata-containers-ci-on-push---build-and-publish-tee-confidential-unencrypted-image",
@@ -4856,9 +5290,7 @@
         "jobName": "kata-containers-ci-on-push / build-kata-static-tarball-amd64 / build-asset (agent, test)",
         "fullName": "kata-containers-ci-on-push / build-kata-static-tarball-amd64 / build-asset (agent, test)",
         "status": "passed",
-        "categories": [
-          "tee"
-        ],
+        "categories": [],
         "isRequired": false,
         "duration": "0m 44s",
         "lastFailure": "Never",
@@ -4897,7 +5329,7 @@
           {
             "date": "2025-11-25T00:00:00.000Z",
             "status": "passed",
-            "retried": false,
+            "retried": true,
             "runId": "19653661555",
             "jobId": "56285740358",
             "duration": "0m 47s",
@@ -4979,7 +5411,6 @@
         "fullName": "kata-containers-ci-on-push / build-kata-static-tarball-amd64 / build-asset (agent-ctl, test)",
         "status": "passed",
         "categories": [
-          "tee",
           "required"
         ],
         "isRequired": true,
@@ -5101,9 +5532,7 @@
         "jobName": "kata-containers-ci-on-push / build-kata-static-tarball-amd64 / build-asset (busybox, test)",
         "fullName": "kata-containers-ci-on-push / build-kata-static-tarball-amd64 / build-asset (busybox, test)",
         "status": "passed",
-        "categories": [
-          "tee"
-        ],
+        "categories": [],
         "isRequired": false,
         "duration": "0m 40s",
         "lastFailure": "Never",
@@ -5224,7 +5653,6 @@
         "fullName": "kata-containers-ci-on-push / build-kata-static-tarball-amd64 / build-asset (cloud-hypervisor, test)",
         "status": "passed",
         "categories": [
-          "tee",
           "required"
         ],
         "isRequired": true,
@@ -5347,7 +5775,6 @@
         "fullName": "kata-containers-ci-on-push / build-kata-static-tarball-amd64 / build-asset (cloud-hypervisor-glibc, test)",
         "status": "passed",
         "categories": [
-          "tee",
           "required"
         ],
         "isRequired": true,
@@ -5591,9 +6018,7 @@
         "jobName": "kata-containers-ci-on-push / build-kata-static-tarball-amd64 / build-asset (csi-kata-directvolume, test)",
         "fullName": "kata-containers-ci-on-push / build-kata-static-tarball-amd64 / build-asset (csi-kata-directvolume, test)",
         "status": "passed",
-        "categories": [
-          "tee"
-        ],
+        "categories": [],
         "isRequired": false,
         "duration": "0m 53s",
         "lastFailure": "Never",
@@ -5714,7 +6139,6 @@
         "fullName": "kata-containers-ci-on-push / build-kata-static-tarball-amd64 / build-asset (firecracker, test)",
         "status": "passed",
         "categories": [
-          "tee",
           "required"
         ],
         "isRequired": true,
@@ -5836,9 +6260,7 @@
         "jobName": "kata-containers-ci-on-push / build-kata-static-tarball-amd64 / build-asset (genpolicy, test)",
         "fullName": "kata-containers-ci-on-push / build-kata-static-tarball-amd64 / build-asset (genpolicy, test)",
         "status": "passed",
-        "categories": [
-          "tee"
-        ],
+        "categories": [],
         "isRequired": false,
         "duration": "0m 54s",
         "lastFailure": "Never",
@@ -5959,7 +6381,6 @@
         "fullName": "kata-containers-ci-on-push / build-kata-static-tarball-amd64 / build-asset (kata-ctl, test)",
         "status": "passed",
         "categories": [
-          "tee",
           "required"
         ],
         "isRequired": true,
@@ -6081,9 +6502,7 @@
         "jobName": "kata-containers-ci-on-push / build-kata-static-tarball-amd64 / build-asset (kata-manager, test)",
         "fullName": "kata-containers-ci-on-push / build-kata-static-tarball-amd64 / build-asset (kata-manager, test)",
         "status": "passed",
-        "categories": [
-          "tee"
-        ],
+        "categories": [],
         "isRequired": false,
         "duration": "0m 43s",
         "lastFailure": "Never",
@@ -6204,7 +6623,6 @@
         "fullName": "kata-containers-ci-on-push / build-kata-static-tarball-amd64 / build-asset (kernel, test)",
         "status": "passed",
         "categories": [
-          "tee",
           "required"
         ],
         "isRequired": true,
@@ -6326,9 +6744,7 @@
         "jobName": "kata-containers-ci-on-push / build-kata-static-tarball-amd64 / build-asset (kernel-confidential, test)",
         "fullName": "kata-containers-ci-on-push / build-kata-static-tarball-amd64 / build-asset (kernel-confidential, test)",
         "status": "passed",
-        "categories": [
-          "tee"
-        ],
+        "categories": [],
         "isRequired": false,
         "duration": "0m 45s",
         "lastFailure": "Never",
@@ -6449,7 +6865,6 @@
         "fullName": "kata-containers-ci-on-push / build-kata-static-tarball-amd64 / build-asset (kernel-dragonball-experimental, test)",
         "status": "passed",
         "categories": [
-          "tee",
           "required"
         ],
         "isRequired": true,
@@ -6460,7 +6875,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098009949",
             "duration": "1m 2s",
@@ -6572,7 +6987,6 @@
         "fullName": "kata-containers-ci-on-push / build-kata-static-tarball-amd64 / build-asset (kernel-nvidia-gpu, test)",
         "status": "passed",
         "categories": [
-          "tee",
           "nvidia",
           "required"
         ],
@@ -6584,7 +6998,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098009962",
             "duration": "0m 54s",
@@ -6634,7 +7048,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56503576173",
             "duration": "0m 56s",
@@ -6696,7 +7110,6 @@
         "fullName": "kata-containers-ci-on-push / build-kata-static-tarball-amd64 / build-asset (kernel-nvidia-gpu-confidential, test)",
         "status": "passed",
         "categories": [
-          "tee",
           "nvidia"
         ],
         "isRequired": false,
@@ -6819,7 +7232,6 @@
         "fullName": "kata-containers-ci-on-push / build-kata-static-tarball-amd64 / build-asset (nydus, test)",
         "status": "passed",
         "categories": [
-          "tee",
           "required"
         ],
         "isRequired": true,
@@ -6830,7 +7242,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098009958",
             "duration": "0m 52s",
@@ -6942,7 +7354,6 @@
         "fullName": "kata-containers-ci-on-push / build-kata-static-tarball-amd64 / build-asset (ovmf, test)",
         "status": "passed",
         "categories": [
-          "tee",
           "required"
         ],
         "isRequired": true,
@@ -6953,7 +7364,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098009957",
             "duration": "0m 48s",
@@ -7003,7 +7414,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56503576189",
             "duration": "0m 52s",
@@ -7076,7 +7487,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098009975",
             "duration": "0m 48s",
@@ -7187,9 +7598,7 @@
         "jobName": "kata-containers-ci-on-push / build-kata-static-tarball-amd64 / build-asset (pause-image, test)",
         "fullName": "kata-containers-ci-on-push / build-kata-static-tarball-amd64 / build-asset (pause-image, test)",
         "status": "passed",
-        "categories": [
-          "tee"
-        ],
+        "categories": [],
         "isRequired": false,
         "duration": "0m 50s",
         "lastFailure": "Never",
@@ -7198,7 +7607,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098009968",
             "duration": "0m 52s",
@@ -7248,7 +7657,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56503576194",
             "duration": "0m 47s",
@@ -7310,7 +7719,6 @@
         "fullName": "kata-containers-ci-on-push / build-kata-static-tarball-amd64 / build-asset (qemu, test)",
         "status": "passed",
         "categories": [
-          "tee",
           "required"
         ],
         "isRequired": true,
@@ -7321,7 +7729,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098009973",
             "duration": "0m 48s",
@@ -7371,7 +7779,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56503576226",
             "duration": "0m 56s",
@@ -7444,7 +7852,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098009972",
             "duration": "0m 52s",
@@ -7494,7 +7902,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56503576211",
             "duration": "0m 44s",
@@ -7566,7 +7974,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098009959",
             "duration": "0m 45s",
@@ -7616,7 +8024,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56503576208",
             "duration": "0m 52s",
@@ -7678,7 +8086,6 @@
         "fullName": "kata-containers-ci-on-push / build-kata-static-tarball-amd64 / build-asset (trace-forwarder, test)",
         "status": "passed",
         "categories": [
-          "tee",
           "required"
         ],
         "isRequired": true,
@@ -7689,7 +8096,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098009969",
             "duration": "0m 52s",
@@ -7739,7 +8146,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56503576214",
             "duration": "0m 52s",
@@ -7801,7 +8208,6 @@
         "fullName": "kata-containers-ci-on-push / build-kata-static-tarball-amd64 / build-asset (virtiofsd, test)",
         "status": "passed",
         "categories": [
-          "tee",
           "required"
         ],
         "isRequired": true,
@@ -7812,7 +8218,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098009966",
             "duration": "0m 45s",
@@ -7862,7 +8268,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56503576204",
             "duration": "0m 43s",
@@ -7923,9 +8329,7 @@
         "jobName": "kata-containers-ci-on-push / build-kata-static-tarball-amd64 / build-asset-rootfs (rootfs-image)",
         "fullName": "kata-containers-ci-on-push / build-kata-static-tarball-amd64 / build-asset-rootfs (rootfs-image)",
         "status": "passed",
-        "categories": [
-          "tee"
-        ],
+        "categories": [],
         "isRequired": false,
         "duration": "1m 5s",
         "lastFailure": "Never",
@@ -7934,7 +8338,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098078383",
             "duration": "0m 59s",
@@ -7984,7 +8388,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56503641329",
             "duration": "1m 6s",
@@ -8045,9 +8449,7 @@
         "jobName": "kata-containers-ci-on-push / build-kata-static-tarball-amd64 / build-asset-rootfs (rootfs-image-confidential)",
         "fullName": "kata-containers-ci-on-push / build-kata-static-tarball-amd64 / build-asset-rootfs (rootfs-image-confidential)",
         "status": "passed",
-        "categories": [
-          "tee"
-        ],
+        "categories": [],
         "isRequired": false,
         "duration": "1m 1s",
         "lastFailure": "Never",
@@ -8056,7 +8458,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098078382",
             "duration": "1m 8s",
@@ -8106,7 +8508,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56503641341",
             "duration": "1m 32s",
@@ -8167,9 +8569,7 @@
         "jobName": "kata-containers-ci-on-push / build-kata-static-tarball-amd64 / build-asset-rootfs (rootfs-image-mariner)",
         "fullName": "kata-containers-ci-on-push / build-kata-static-tarball-amd64 / build-asset-rootfs (rootfs-image-mariner)",
         "status": "passed",
-        "categories": [
-          "tee"
-        ],
+        "categories": [],
         "isRequired": false,
         "duration": "1m 1s",
         "lastFailure": "Never",
@@ -8178,7 +8578,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098078393",
             "duration": "1m 9s",
@@ -8228,7 +8628,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56503641348",
             "duration": "0m 59s",
@@ -8290,7 +8690,6 @@
         "fullName": "kata-containers-ci-on-push / build-kata-static-tarball-amd64 / build-asset-rootfs (rootfs-image-nvidia-gpu)",
         "status": "passed",
         "categories": [
-          "tee",
           "nvidia"
         ],
         "isRequired": false,
@@ -8413,7 +8812,6 @@
         "fullName": "kata-containers-ci-on-push / build-kata-static-tarball-amd64 / build-asset-rootfs (rootfs-image-nvidia-gpu-confidential)",
         "status": "passed",
         "categories": [
-          "tee",
           "nvidia"
         ],
         "isRequired": false,
@@ -8535,9 +8933,7 @@
         "jobName": "kata-containers-ci-on-push / build-kata-static-tarball-amd64 / build-asset-rootfs (rootfs-initrd)",
         "fullName": "kata-containers-ci-on-push / build-kata-static-tarball-amd64 / build-asset-rootfs (rootfs-initrd)",
         "status": "passed",
-        "categories": [
-          "tee"
-        ],
+        "categories": [],
         "isRequired": false,
         "duration": "0m 57s",
         "lastFailure": "Never",
@@ -8546,7 +8942,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098078404",
             "duration": "0m 51s",
@@ -8596,7 +8992,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56503641350",
             "duration": "1m 0s",
@@ -8657,9 +9053,7 @@
         "jobName": "kata-containers-ci-on-push / build-kata-static-tarball-amd64 / build-asset-rootfs (rootfs-initrd-confidential)",
         "fullName": "kata-containers-ci-on-push / build-kata-static-tarball-amd64 / build-asset-rootfs (rootfs-initrd-confidential)",
         "status": "passed",
-        "categories": [
-          "tee"
-        ],
+        "categories": [],
         "isRequired": false,
         "duration": "0m 58s",
         "lastFailure": "Never",
@@ -8668,7 +9062,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098078394",
             "duration": "0m 52s",
@@ -8718,7 +9112,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56503641351",
             "duration": "0m 57s",
@@ -8780,7 +9174,6 @@
         "fullName": "kata-containers-ci-on-push / build-kata-static-tarball-amd64 / build-asset-rootfs (rootfs-initrd-nvidia-gpu)",
         "status": "passed",
         "categories": [
-          "tee",
           "nvidia"
         ],
         "isRequired": false,
@@ -8791,7 +9184,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098078391",
             "duration": "1m 11s",
@@ -8841,7 +9234,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56503641345",
             "duration": "0m 58s",
@@ -8903,7 +9296,6 @@
         "fullName": "kata-containers-ci-on-push / build-kata-static-tarball-amd64 / build-asset-rootfs (rootfs-initrd-nvidia-gpu-confidential)",
         "status": "passed",
         "categories": [
-          "tee",
           "nvidia"
         ],
         "isRequired": false,
@@ -8914,7 +9306,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098078389",
             "duration": "0m 59s",
@@ -8964,7 +9356,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56503641352",
             "duration": "1m 10s",
@@ -9025,9 +9417,7 @@
         "jobName": "kata-containers-ci-on-push / build-kata-static-tarball-amd64 / build-asset-shim-v2",
         "fullName": "kata-containers-ci-on-push / build-kata-static-tarball-amd64 / build-asset-shim-v2",
         "status": "passed",
-        "categories": [
-          "tee"
-        ],
+        "categories": [],
         "isRequired": false,
         "duration": "1m 12s",
         "lastFailure": "Never",
@@ -9036,7 +9426,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098148102",
             "duration": "0m 59s",
@@ -9086,7 +9476,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56503727082",
             "duration": "1m 14s",
@@ -9158,7 +9548,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098196039",
             "duration": "1m 23s",
@@ -9208,7 +9598,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56503792301",
             "duration": "1m 26s",
@@ -9278,7 +9668,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098137416",
             "duration": "0m 3s",
@@ -9328,7 +9718,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56503721455",
             "duration": "0m 5s",
@@ -9400,7 +9790,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098137427",
             "duration": "0m 3s",
@@ -9450,7 +9840,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56503721438",
             "duration": "0m 4s",
@@ -9522,7 +9912,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098137449",
             "duration": "0m 11s",
@@ -9572,7 +9962,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56503721445",
             "duration": "0m 4s",
@@ -9644,7 +10034,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098137439",
             "duration": "0m 3s",
@@ -9694,7 +10084,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56503721474",
             "duration": "0m 2s",
@@ -9755,9 +10145,7 @@
         "jobName": "kata-containers-ci-on-push / build-kata-static-tarball-amd64 / remove-rootfs-binary-artifacts (pause-image)",
         "fullName": "kata-containers-ci-on-push / build-kata-static-tarball-amd64 / remove-rootfs-binary-artifacts (pause-image)",
         "status": "passed",
-        "categories": [
-          "tee"
-        ],
+        "categories": [],
         "isRequired": false,
         "duration": "0m 4s",
         "lastFailure": "Never",
@@ -9766,7 +10154,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098137437",
             "duration": "0m 5s",
@@ -9816,7 +10204,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56503721482",
             "duration": "0m 5s",
@@ -9877,9 +10265,7 @@
         "jobName": "kata-containers-ci-on-push / build-kata-static-tarball-amd64 / remove-rootfs-binary-artifacts-for-release (agent)",
         "fullName": "kata-containers-ci-on-push / build-kata-static-tarball-amd64 / remove-rootfs-binary-artifacts-for-release (agent)",
         "status": "passed",
-        "categories": [
-          "tee"
-        ],
+        "categories": [],
         "isRequired": false,
         "duration": "0m 9s",
         "lastFailure": "Never",
@@ -9888,7 +10274,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098137418",
             "duration": "0m 9s",
@@ -9938,7 +10324,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56503721434",
             "duration": "0m 4s",
@@ -9999,9 +10385,7 @@
         "jobName": "kata-containers-ci-on-push / build-kata-static-tarball-arm64 / build-asset (agent)",
         "fullName": "kata-containers-ci-on-push / build-kata-static-tarball-arm64 / build-asset (agent)",
         "status": "passed",
-        "categories": [
-          "tee"
-        ],
+        "categories": [],
         "isRequired": false,
         "duration": "1m 6s",
         "lastFailure": "Never",
@@ -10060,7 +10444,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56503576051",
             "duration": "0m 54s",
@@ -10121,9 +10505,7 @@
         "jobName": "kata-containers-ci-on-push / build-kata-static-tarball-arm64 / build-asset (busybox)",
         "fullName": "kata-containers-ci-on-push / build-kata-static-tarball-arm64 / build-asset (busybox)",
         "status": "passed",
-        "categories": [
-          "tee"
-        ],
+        "categories": [],
         "isRequired": false,
         "duration": "0m 57s",
         "lastFailure": "Never",
@@ -10243,9 +10625,7 @@
         "jobName": "kata-containers-ci-on-push / build-kata-static-tarball-arm64 / build-asset (cloud-hypervisor)",
         "fullName": "kata-containers-ci-on-push / build-kata-static-tarball-arm64 / build-asset (cloud-hypervisor)",
         "status": "passed",
-        "categories": [
-          "tee"
-        ],
+        "categories": [],
         "isRequired": false,
         "duration": "0m 53s",
         "lastFailure": "Never",
@@ -10304,7 +10684,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56503576049",
             "duration": "0m 54s",
@@ -10365,9 +10745,7 @@
         "jobName": "kata-containers-ci-on-push / build-kata-static-tarball-arm64 / build-asset (firecracker)",
         "fullName": "kata-containers-ci-on-push / build-kata-static-tarball-arm64 / build-asset (firecracker)",
         "status": "passed",
-        "categories": [
-          "tee"
-        ],
+        "categories": [],
         "isRequired": false,
         "duration": "0m 54s",
         "lastFailure": "Never",
@@ -10426,7 +10804,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56503576061",
             "duration": "0m 55s",
@@ -10487,9 +10865,7 @@
         "jobName": "kata-containers-ci-on-push / build-kata-static-tarball-arm64 / build-asset (kernel)",
         "fullName": "kata-containers-ci-on-push / build-kata-static-tarball-arm64 / build-asset (kernel)",
         "status": "passed",
-        "categories": [
-          "tee"
-        ],
+        "categories": [],
         "isRequired": false,
         "duration": "0m 51s",
         "lastFailure": "Never",
@@ -10609,9 +10985,7 @@
         "jobName": "kata-containers-ci-on-push / build-kata-static-tarball-arm64 / build-asset (kernel-cca-confidential)",
         "fullName": "kata-containers-ci-on-push / build-kata-static-tarball-arm64 / build-asset (kernel-cca-confidential)",
         "status": "passed",
-        "categories": [
-          "tee"
-        ],
+        "categories": [],
         "isRequired": false,
         "duration": "9m 51s",
         "lastFailure": "Never",
@@ -10731,9 +11105,7 @@
         "jobName": "kata-containers-ci-on-push / build-kata-static-tarball-arm64 / build-asset (kernel-dragonball-experimental)",
         "fullName": "kata-containers-ci-on-push / build-kata-static-tarball-arm64 / build-asset (kernel-dragonball-experimental)",
         "status": "passed",
-        "categories": [
-          "tee"
-        ],
+        "categories": [],
         "isRequired": false,
         "duration": "1m 0s",
         "lastFailure": "Never",
@@ -10854,7 +11226,6 @@
         "fullName": "kata-containers-ci-on-push / build-kata-static-tarball-arm64 / build-asset (kernel-nvidia-gpu)",
         "status": "passed",
         "categories": [
-          "tee",
           "nvidia"
         ],
         "isRequired": false,
@@ -10976,9 +11347,7 @@
         "jobName": "kata-containers-ci-on-push / build-kata-static-tarball-arm64 / build-asset (nydus)",
         "fullName": "kata-containers-ci-on-push / build-kata-static-tarball-arm64 / build-asset (nydus)",
         "status": "passed",
-        "categories": [
-          "tee"
-        ],
+        "categories": [],
         "isRequired": false,
         "duration": "0m 51s",
         "lastFailure": "Never",
@@ -11098,9 +11467,7 @@
         "jobName": "kata-containers-ci-on-push / build-kata-static-tarball-arm64 / build-asset (ovmf)",
         "fullName": "kata-containers-ci-on-push / build-kata-static-tarball-arm64 / build-asset (ovmf)",
         "status": "passed",
-        "categories": [
-          "tee"
-        ],
+        "categories": [],
         "isRequired": false,
         "duration": "0m 59s",
         "lastFailure": "Never",
@@ -11220,9 +11587,7 @@
         "jobName": "kata-containers-ci-on-push / build-kata-static-tarball-arm64 / build-asset (qemu)",
         "fullName": "kata-containers-ci-on-push / build-kata-static-tarball-arm64 / build-asset (qemu)",
         "status": "passed",
-        "categories": [
-          "tee"
-        ],
+        "categories": [],
         "isRequired": false,
         "duration": "1m 15s",
         "lastFailure": "Never",
@@ -11342,9 +11707,7 @@
         "jobName": "kata-containers-ci-on-push / build-kata-static-tarball-arm64 / build-asset (virtiofsd)",
         "fullName": "kata-containers-ci-on-push / build-kata-static-tarball-arm64 / build-asset (virtiofsd)",
         "status": "passed",
-        "categories": [
-          "tee"
-        ],
+        "categories": [],
         "isRequired": false,
         "duration": "0m 57s",
         "lastFailure": "Never",
@@ -11464,9 +11827,7 @@
         "jobName": "kata-containers-ci-on-push / build-kata-static-tarball-arm64 / build-asset-rootfs (rootfs-image)",
         "fullName": "kata-containers-ci-on-push / build-kata-static-tarball-arm64 / build-asset-rootfs (rootfs-image)",
         "status": "passed",
-        "categories": [
-          "tee"
-        ],
+        "categories": [],
         "isRequired": false,
         "duration": "1m 8s",
         "lastFailure": "Never",
@@ -11475,7 +11836,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098485956",
             "duration": "1m 4s",
@@ -11525,7 +11886,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56504108797",
             "duration": "1m 13s",
@@ -11587,7 +11948,6 @@
         "fullName": "kata-containers-ci-on-push / build-kata-static-tarball-arm64 / build-asset-rootfs (rootfs-image-nvidia-gpu)",
         "status": "passed",
         "categories": [
-          "tee",
           "nvidia"
         ],
         "isRequired": false,
@@ -11709,9 +12069,7 @@
         "jobName": "kata-containers-ci-on-push / build-kata-static-tarball-arm64 / build-asset-rootfs (rootfs-initrd)",
         "fullName": "kata-containers-ci-on-push / build-kata-static-tarball-arm64 / build-asset-rootfs (rootfs-initrd)",
         "status": "passed",
-        "categories": [
-          "tee"
-        ],
+        "categories": [],
         "isRequired": false,
         "duration": "1m 3s",
         "lastFailure": "Never",
@@ -11720,7 +12078,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098485938",
             "duration": "1m 9s",
@@ -11770,7 +12128,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56504108767",
             "duration": "0m 58s",
@@ -11832,7 +12190,6 @@
         "fullName": "kata-containers-ci-on-push / build-kata-static-tarball-arm64 / build-asset-rootfs (rootfs-initrd-nvidia-gpu)",
         "status": "passed",
         "categories": [
-          "tee",
           "nvidia"
         ],
         "isRequired": false,
@@ -11843,7 +12200,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098485943",
             "duration": "1m 13s",
@@ -11893,7 +12250,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56504108781",
             "duration": "1m 20s",
@@ -11954,9 +12311,7 @@
         "jobName": "kata-containers-ci-on-push / build-kata-static-tarball-arm64 / build-asset-shim-v2",
         "fullName": "kata-containers-ci-on-push / build-kata-static-tarball-arm64 / build-asset-shim-v2",
         "status": "passed",
-        "categories": [
-          "tee"
-        ],
+        "categories": [],
         "isRequired": false,
         "duration": "1m 9s",
         "lastFailure": "Never",
@@ -11965,7 +12320,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098554170",
             "duration": "1m 21s",
@@ -12015,7 +12370,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56504189597",
             "duration": "1m 9s",
@@ -12085,7 +12440,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098619491",
             "duration": "0m 27s",
@@ -12135,7 +12490,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56504254998",
             "duration": "0m 34s",
@@ -12205,7 +12560,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098545774",
             "duration": "0m 4s",
@@ -12255,7 +12610,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56504182546",
             "duration": "0m 3s",
@@ -12327,7 +12682,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098545792",
             "duration": "0m 5s",
@@ -12377,7 +12732,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56504182535",
             "duration": "0m 3s",
@@ -12438,9 +12793,7 @@
         "jobName": "kata-containers-ci-on-push / build-kata-static-tarball-arm64 / remove-rootfs-binary-artifacts-for-release (agent)",
         "fullName": "kata-containers-ci-on-push / build-kata-static-tarball-arm64 / remove-rootfs-binary-artifacts-for-release (agent)",
         "status": "passed",
-        "categories": [
-          "tee"
-        ],
+        "categories": [],
         "isRequired": false,
         "duration": "0m 4s",
         "lastFailure": "Never",
@@ -12449,7 +12802,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098545768",
             "duration": "0m 4s",
@@ -12499,7 +12852,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56504182549",
             "duration": "0m 2s",
@@ -12560,9 +12913,7 @@
         "jobName": "kata-containers-ci-on-push / build-kata-static-tarball-ppc64le / build-asset (agent, test)",
         "fullName": "kata-containers-ci-on-push / build-kata-static-tarball-ppc64le / build-asset (agent, test)",
         "status": "passed",
-        "categories": [
-          "tee"
-        ],
+        "categories": [],
         "isRequired": false,
         "duration": "2m 36s",
         "lastFailure": "Never",
@@ -12682,9 +13033,7 @@
         "jobName": "kata-containers-ci-on-push / build-kata-static-tarball-ppc64le / build-asset (kernel, test)",
         "fullName": "kata-containers-ci-on-push / build-kata-static-tarball-ppc64le / build-asset (kernel, test)",
         "status": "passed",
-        "categories": [
-          "tee"
-        ],
+        "categories": [],
         "isRequired": false,
         "duration": "3m 47s",
         "lastFailure": "Never",
@@ -12804,9 +13153,7 @@
         "jobName": "kata-containers-ci-on-push / build-kata-static-tarball-ppc64le / build-asset (qemu, test)",
         "fullName": "kata-containers-ci-on-push / build-kata-static-tarball-ppc64le / build-asset (qemu, test)",
         "status": "passed",
-        "categories": [
-          "tee"
-        ],
+        "categories": [],
         "isRequired": false,
         "duration": "1m 38s",
         "lastFailure": "Never",
@@ -12926,9 +13273,7 @@
         "jobName": "kata-containers-ci-on-push / build-kata-static-tarball-ppc64le / build-asset (virtiofsd, test)",
         "fullName": "kata-containers-ci-on-push / build-kata-static-tarball-ppc64le / build-asset (virtiofsd, test)",
         "status": "passed",
-        "categories": [
-          "tee"
-        ],
+        "categories": [],
         "isRequired": false,
         "duration": "3m 8s",
         "lastFailure": "Never",
@@ -13048,9 +13393,7 @@
         "jobName": "kata-containers-ci-on-push / build-kata-static-tarball-ppc64le / build-asset-rootfs (rootfs-initrd, test)",
         "fullName": "kata-containers-ci-on-push / build-kata-static-tarball-ppc64le / build-asset-rootfs (rootfs-initrd, test)",
         "status": "not_run",
-        "categories": [
-          "tee"
-        ],
+        "categories": [],
         "isRequired": false,
         "duration": "5m 52s",
         "lastFailure": "13h ago",
@@ -13059,7 +13402,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098625733",
             "duration": "3m 19s",
@@ -13170,9 +13513,7 @@
         "jobName": "kata-containers-ci-on-push / build-kata-static-tarball-ppc64le / build-asset-shim-v2",
         "fullName": "kata-containers-ci-on-push / build-kata-static-tarball-ppc64le / build-asset-shim-v2",
         "status": "not_run",
-        "categories": [
-          "tee"
-        ],
+        "categories": [],
         "isRequired": false,
         "duration": "0m 0s",
         "lastFailure": "Never",
@@ -13181,7 +13522,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098783098",
             "duration": "3m 26s",
@@ -13211,7 +13552,7 @@
           {
             "date": "2025-11-25T00:00:00.000Z",
             "status": "none",
-            "retried": false,
+            "retried": true,
             "runId": "19653661555",
             "jobId": "56286662314",
             "duration": "N/A",
@@ -13231,7 +13572,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56503960255",
             "duration": "2m 6s",
@@ -13301,7 +13642,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098946568",
             "duration": "2m 46s",
@@ -13331,7 +13672,7 @@
           {
             "date": "2025-11-25T00:00:00.000Z",
             "status": "none",
-            "retried": false,
+            "retried": true,
             "runId": "19653661555",
             "jobId": "56286662379",
             "duration": "N/A",
@@ -13351,7 +13692,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56504088022",
             "duration": "0m 46s",
@@ -13541,7 +13882,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098779614",
             "duration": "0m 3s",
@@ -13570,11 +13911,11 @@
           },
           {
             "date": "2025-11-25T00:00:00.000Z",
-            "status": "none",
-            "retried": false,
-            "runId": null,
-            "jobId": null,
-            "duration": null,
+            "status": "passed",
+            "retried": true,
+            "runId": "19653661555",
+            "jobId": "56300171637",
+            "duration": "0m 3s",
             "failureStep": null,
             "failureDetails": null
           },
@@ -13591,7 +13932,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56503957350",
             "duration": "0m 2s",
@@ -13640,7 +13981,7 @@
           }
         ],
         "failureCount": 0,
-        "retried": true,
+        "retried": false,
         "retriedAndPassed": false,
         "runId": "19721069021",
         "jobId": "56503957350",
@@ -13653,7 +13994,7 @@
         "fullName": "kata-containers-ci-on-push / build-kata-static-tarball-s390x / build-asset (agent)",
         "status": "passed",
         "categories": [
-          "tee"
+          "ibm"
         ],
         "isRequired": false,
         "duration": "1m 7s",
@@ -13713,7 +14054,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56503576026",
             "duration": "1m 23s",
@@ -13775,7 +14116,8 @@
         "fullName": "kata-containers-ci-on-push / build-kata-static-tarball-s390x / build-asset (coco-guest-components)",
         "status": "passed",
         "categories": [
-          "tee"
+          "tee",
+          "ibm"
         ],
         "isRequired": false,
         "duration": "1m 12s",
@@ -13897,7 +14239,7 @@
         "fullName": "kata-containers-ci-on-push / build-kata-static-tarball-s390x / build-asset (kernel)",
         "status": "passed",
         "categories": [
-          "tee"
+          "ibm"
         ],
         "isRequired": false,
         "duration": "1m 10s",
@@ -14019,7 +14361,7 @@
         "fullName": "kata-containers-ci-on-push / build-kata-static-tarball-s390x / build-asset (kernel-confidential)",
         "status": "passed",
         "categories": [
-          "tee"
+          "ibm"
         ],
         "isRequired": false,
         "duration": "1m 8s",
@@ -14079,7 +14421,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56503576128",
             "duration": "1m 29s",
@@ -14141,7 +14483,7 @@
         "fullName": "kata-containers-ci-on-push / build-kata-static-tarball-s390x / build-asset (pause-image)",
         "status": "passed",
         "categories": [
-          "tee"
+          "ibm"
         ],
         "isRequired": false,
         "duration": "1m 5s",
@@ -14263,7 +14605,7 @@
         "fullName": "kata-containers-ci-on-push / build-kata-static-tarball-s390x / build-asset (qemu)",
         "status": "passed",
         "categories": [
-          "tee"
+          "ibm"
         ],
         "isRequired": false,
         "duration": "1m 15s",
@@ -14385,7 +14727,7 @@
         "fullName": "kata-containers-ci-on-push / build-kata-static-tarball-s390x / build-asset (virtiofsd)",
         "status": "passed",
         "categories": [
-          "tee"
+          "ibm"
         ],
         "isRequired": false,
         "duration": "1m 11s",
@@ -14507,7 +14849,7 @@
         "fullName": "kata-containers-ci-on-push / build-kata-static-tarball-s390x / build-asset-boot-image-se",
         "status": "passed",
         "categories": [
-          "tee"
+          "ibm"
         ],
         "isRequired": false,
         "duration": "1m 33s",
@@ -14517,7 +14859,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098262248",
             "duration": "1m 33s",
@@ -14567,7 +14909,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56503826894",
             "duration": "1m 40s",
@@ -14629,7 +14971,7 @@
         "fullName": "kata-containers-ci-on-push / build-kata-static-tarball-s390x / build-asset-rootfs",
         "status": "not_run",
         "categories": [
-          "tee"
+          "ibm"
         ],
         "isRequired": false,
         "duration": "N/A",
@@ -14751,7 +15093,7 @@
         "fullName": "kata-containers-ci-on-push / build-kata-static-tarball-s390x / build-asset-rootfs (rootfs-image)",
         "status": "passed",
         "categories": [
-          "tee"
+          "ibm"
         ],
         "isRequired": false,
         "duration": "1m 44s",
@@ -14761,7 +15103,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098172604",
             "duration": "1m 52s",
@@ -14873,7 +15215,7 @@
         "fullName": "kata-containers-ci-on-push / build-kata-static-tarball-s390x / build-asset-rootfs (rootfs-image-confidential)",
         "status": "passed",
         "categories": [
-          "tee"
+          "ibm"
         ],
         "isRequired": false,
         "duration": "1m 35s",
@@ -14883,7 +15225,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098172613",
             "duration": "1m 31s",
@@ -14933,7 +15275,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56503668806",
             "duration": "1m 58s",
@@ -14995,7 +15337,7 @@
         "fullName": "kata-containers-ci-on-push / build-kata-static-tarball-s390x / build-asset-rootfs (rootfs-initrd)",
         "status": "passed",
         "categories": [
-          "tee"
+          "ibm"
         ],
         "isRequired": false,
         "duration": "1m 42s",
@@ -15005,7 +15347,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098172620",
             "duration": "1m 53s",
@@ -15055,7 +15397,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56503668819",
             "duration": "1m 51s",
@@ -15117,7 +15459,7 @@
         "fullName": "kata-containers-ci-on-push / build-kata-static-tarball-s390x / build-asset-rootfs (rootfs-initrd-confidential)",
         "status": "passed",
         "categories": [
-          "tee"
+          "ibm"
         ],
         "isRequired": false,
         "duration": "1m 22s",
@@ -15127,7 +15469,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098172621",
             "duration": "1m 31s",
@@ -15177,7 +15519,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56503668814",
             "duration": "2m 2s",
@@ -15239,7 +15581,7 @@
         "fullName": "kata-containers-ci-on-push / build-kata-static-tarball-s390x / build-asset-shim-v2",
         "status": "passed",
         "categories": [
-          "tee"
+          "ibm"
         ],
         "isRequired": false,
         "duration": "1m 24s",
@@ -15249,7 +15591,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098342397",
             "duration": "1m 46s",
@@ -15299,7 +15641,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56503917809",
             "duration": "1m 22s",
@@ -15361,7 +15703,7 @@
         "fullName": "kata-containers-ci-on-push / build-kata-static-tarball-s390x / create-kata-tarball",
         "status": "passed",
         "categories": [
-          "tee"
+          "ibm"
         ],
         "isRequired": false,
         "duration": "0m 37s",
@@ -15371,7 +15713,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098426239",
             "duration": "0m 38s",
@@ -15421,7 +15763,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56503998279",
             "duration": "0m 43s",
@@ -15483,7 +15825,7 @@
         "fullName": "kata-containers-ci-on-push / build-kata-static-tarball-s390x / remove-rootfs-binary-artifacts",
         "status": "not_run",
         "categories": [
-          "tee"
+          "ibm"
         ],
         "isRequired": false,
         "duration": "N/A",
@@ -15605,7 +15947,7 @@
         "fullName": "kata-containers-ci-on-push / build-kata-static-tarball-s390x / remove-rootfs-binary-artifacts (agent)",
         "status": "passed",
         "categories": [
-          "tee"
+          "ibm"
         ],
         "isRequired": false,
         "duration": "0m 2s",
@@ -15615,7 +15957,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098337692",
             "duration": "0m 4s",
@@ -15665,7 +16007,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56503911502",
             "duration": "0m 3s",
@@ -15727,7 +16069,8 @@
         "fullName": "kata-containers-ci-on-push / build-kata-static-tarball-s390x / remove-rootfs-binary-artifacts (coco-guest-components)",
         "status": "passed",
         "categories": [
-          "tee"
+          "tee",
+          "ibm"
         ],
         "isRequired": false,
         "duration": "0m 5s",
@@ -15737,7 +16080,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098337703",
             "duration": "0m 4s",
@@ -15787,7 +16130,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56503911491",
             "duration": "0m 3s",
@@ -15849,7 +16192,7 @@
         "fullName": "kata-containers-ci-on-push / build-kata-static-tarball-s390x / remove-rootfs-binary-artifacts (pause-image)",
         "status": "passed",
         "categories": [
-          "tee"
+          "ibm"
         ],
         "isRequired": false,
         "duration": "0m 2s",
@@ -15859,7 +16202,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098337685",
             "duration": "0m 2s",
@@ -15909,7 +16252,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56503911505",
             "duration": "0m 4s",
@@ -15979,7 +16322,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098262587",
             "duration": "0m 50s",
@@ -16029,7 +16372,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56503867533",
             "duration": "0m 54s",
@@ -16101,7 +16444,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098262693",
             "duration": "5m 58s",
@@ -16151,7 +16494,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56503867652",
             "duration": "4m 48s",
@@ -16221,7 +16564,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098642813",
             "duration": "2m 31s",
@@ -16271,7 +16614,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56504287042",
             "duration": "2m 6s",
@@ -16461,7 +16804,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56099074221",
             "duration": "5m 3s",
@@ -16491,10 +16834,10 @@
           {
             "date": "2025-11-25T00:00:00.000Z",
             "status": "none",
-            "retried": false,
-            "runId": null,
-            "jobId": null,
-            "duration": null,
+            "retried": true,
+            "runId": "19653661555",
+            "jobId": "56302820332",
+            "duration": "0m 0s",
             "failureStep": null,
             "failureDetails": null
           },
@@ -16511,7 +16854,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56504148815",
             "duration": "2m 0s",
@@ -16560,7 +16903,7 @@
           }
         ],
         "failureCount": 0,
-        "retried": true,
+        "retried": false,
         "retriedAndPassed": false,
         "runId": "19721069021",
         "jobId": "56504148815",
@@ -16573,7 +16916,7 @@
         "fullName": "kata-containers-ci-on-push / publish-kata-deploy-payload-s390x",
         "status": "not_run",
         "categories": [
-          "tee"
+          "ibm"
         ],
         "isRequired": false,
         "duration": "0m 0s",
@@ -16695,7 +17038,7 @@
         "fullName": "kata-containers-ci-on-push / publish-kata-deploy-payload-s390x / kata-payload",
         "status": "passed",
         "categories": [
-          "tee"
+          "ibm"
         ],
         "isRequired": false,
         "duration": "3m 29s",
@@ -16705,7 +17048,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098456771",
             "duration": "3m 39s",
@@ -16755,7 +17098,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56504043362",
             "duration": "2m 53s",
@@ -16845,10 +17188,10 @@
           {
             "date": "2025-11-24T00:00:00.000Z",
             "status": "none",
-            "retried": true,
-            "runId": "19587033590",
-            "jobId": "56243723432",
-            "duration": "N/A",
+            "retried": false,
+            "runId": "19619518029",
+            "jobId": "56177441883",
+            "duration": "0m 0s",
             "failureStep": null,
             "failureDetails": null
           },
@@ -16875,7 +17218,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "none",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56503867643",
             "duration": "N/A",
@@ -16947,7 +17290,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098262820",
             "duration": "3m 22s",
@@ -16997,7 +17340,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56503867825",
             "duration": "3m 31s",
@@ -17069,7 +17412,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098262809",
             "duration": "3m 26s",
@@ -17119,7 +17462,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56503867843",
             "duration": "3m 37s",
@@ -17191,7 +17534,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098262812",
             "duration": "3m 19s",
@@ -17241,7 +17584,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56503867862",
             "duration": "3m 28s",
@@ -17313,7 +17656,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098262825",
             "duration": "3m 31s",
@@ -17363,7 +17706,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56503867847",
             "duration": "3m 19s",
@@ -17555,7 +17898,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098262802",
             "duration": "3m 38s",
@@ -17605,7 +17948,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56503867848",
             "duration": "3m 27s",
@@ -17677,7 +18020,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098262798",
             "duration": "3m 33s",
@@ -17727,7 +18070,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56503867835",
             "duration": "3m 42s",
@@ -17799,7 +18142,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098262815",
             "duration": "3m 8s",
@@ -17849,7 +18192,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56503867845",
             "duration": "3m 13s",
@@ -17921,7 +18264,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098262801",
             "duration": "3m 48s",
@@ -17971,7 +18314,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56503867836",
             "duration": "3m 17s",
@@ -18163,7 +18506,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098262725",
             "duration": "4m 3s",
@@ -18213,7 +18556,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56503867798",
             "duration": "4m 6s",
@@ -18283,7 +18626,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098262757",
             "duration": "1m 50s",
@@ -18333,7 +18676,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56503867812",
             "duration": "1m 17s",
@@ -18405,7 +18748,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098262764",
             "duration": "1m 41s",
@@ -18455,7 +18798,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56503867831",
             "duration": "1m 6s",
@@ -18527,7 +18870,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098262746",
             "duration": "1m 43s",
@@ -18577,7 +18920,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56503867832",
             "duration": "1m 21s",
@@ -18649,7 +18992,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098262758",
             "duration": "1m 11s",
@@ -18699,7 +19042,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56503867828",
             "duration": "1m 9s",
@@ -18889,7 +19232,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "failed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098262795",
             "duration": "1m 40s",
@@ -18939,7 +19282,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "failed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56503867822",
             "duration": "0m 59s",
@@ -19009,7 +19352,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "failed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098262808",
             "duration": "0m 48s",
@@ -19059,7 +19402,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "failed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56503867797",
             "duration": "1m 0s",
@@ -19129,7 +19472,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "failed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098262796",
             "duration": "1m 29s",
@@ -19179,7 +19522,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "failed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56503867790",
             "duration": "0m 49s",
@@ -19369,7 +19712,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "failed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098262806",
             "duration": "1m 56s",
@@ -19419,7 +19762,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "failed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56503867786",
             "duration": "1m 3s",
@@ -19489,7 +19832,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "failed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098262794",
             "duration": "1m 22s",
@@ -19539,7 +19882,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "failed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56503867792",
             "duration": "1m 23s",
@@ -19609,7 +19952,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "failed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098262767",
             "duration": "1m 40s",
@@ -19659,7 +20002,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "failed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56503867783",
             "duration": "1m 5s",
@@ -19869,10 +20212,10 @@
           {
             "date": "2025-11-24T00:00:00.000Z",
             "status": "none",
-            "retried": true,
-            "runId": "19587033590",
-            "jobId": "56243723499",
-            "duration": "N/A",
+            "retried": false,
+            "runId": "19619518029",
+            "jobId": "56177441871",
+            "duration": "0m 0s",
             "failureStep": null,
             "failureDetails": null
           },
@@ -19899,7 +20242,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "none",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56503867813",
             "duration": "N/A",
@@ -19989,9 +20332,9 @@
           {
             "date": "2025-11-24T00:00:00.000Z",
             "status": "none",
-            "retried": true,
-            "runId": "19587033590",
-            "jobId": "56243723437",
+            "retried": false,
+            "runId": "19619518029",
+            "jobId": "56177441998",
             "duration": "N/A",
             "failureStep": null,
             "failureDetails": null
@@ -20019,7 +20362,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "none",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56503867767",
             "duration": "N/A",
@@ -20109,10 +20452,10 @@
           {
             "date": "2025-11-24T00:00:00.000Z",
             "status": "none",
-            "retried": true,
-            "runId": "19587033590",
-            "jobId": "56243723434",
-            "duration": "N/A",
+            "retried": false,
+            "runId": "19619518029",
+            "jobId": "56177441965",
+            "duration": "0m 0s",
             "failureStep": null,
             "failureDetails": null
           },
@@ -20139,7 +20482,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "none",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56503867819",
             "duration": "N/A",
@@ -20201,7 +20544,7 @@
         "fullName": "kata-containers-ci-on-push / run-basic-s390x-tests",
         "status": "not_run",
         "categories": [
-          "tee"
+          "ibm"
         ],
         "isRequired": false,
         "duration": "0m 0s",
@@ -20323,7 +20666,7 @@
         "fullName": "kata-containers-ci-on-push / run-basic-s390x-tests / run-containerd-sandboxapi",
         "status": "not_run",
         "categories": [
-          "tee"
+          "ibm"
         ],
         "isRequired": false,
         "duration": "0m 0s",
@@ -20353,10 +20696,10 @@
           {
             "date": "2025-11-24T00:00:00.000Z",
             "status": "none",
-            "retried": true,
-            "runId": "19587033590",
-            "jobId": "56243721877",
-            "duration": "N/A",
+            "retried": false,
+            "runId": "19619518029",
+            "jobId": "56177932264",
+            "duration": "0m 0s",
             "failureStep": null,
             "failureDetails": null
           },
@@ -20383,7 +20726,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "none",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56504043376",
             "duration": "0m 0s",
@@ -20445,7 +20788,7 @@
         "fullName": "kata-containers-ci-on-push / run-basic-s390x-tests / run-containerd-stability (active, qemu)",
         "status": "passed",
         "categories": [
-          "tee"
+          "ibm"
         ],
         "isRequired": false,
         "duration": "3m 58s",
@@ -20455,7 +20798,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098456825",
             "duration": "3m 49s",
@@ -20505,7 +20848,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56504043349",
             "duration": "3m 47s",
@@ -20567,7 +20910,7 @@
         "fullName": "kata-containers-ci-on-push / run-basic-s390x-tests / run-containerd-stability (lts, qemu)",
         "status": "passed",
         "categories": [
-          "tee"
+          "ibm"
         ],
         "isRequired": false,
         "duration": "3m 46s",
@@ -20577,7 +20920,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098456798",
             "duration": "3m 40s",
@@ -20627,7 +20970,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56504043354",
             "duration": "3m 57s",
@@ -20699,7 +21042,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098262965",
             "duration": "4m 29s",
@@ -20749,7 +21092,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56503867995",
             "duration": "4m 13s",
@@ -20821,7 +21164,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098262979",
             "duration": "4m 29s",
@@ -20871,7 +21214,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56503867970",
             "duration": "5m 1s",
@@ -20943,7 +21286,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098262981",
             "duration": "4m 31s",
@@ -20993,7 +21336,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56503867988",
             "duration": "4m 19s",
@@ -21065,7 +21408,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098262967",
             "duration": "4m 31s",
@@ -21115,7 +21458,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56503868011",
             "duration": "4m 21s",
@@ -21187,7 +21530,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098263001",
             "duration": "4m 21s",
@@ -21237,7 +21580,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56503867938",
             "duration": "5m 0s",
@@ -21309,7 +21652,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098262971",
             "duration": "4m 15s",
@@ -21359,7 +21702,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56503867976",
             "duration": "4m 19s",
@@ -21431,7 +21774,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098262974",
             "duration": "4m 9s",
@@ -21481,7 +21824,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56503867985",
             "duration": "4m 49s",
@@ -21553,7 +21896,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098262968",
             "duration": "4m 44s",
@@ -21603,7 +21946,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56503867949",
             "duration": "4m 22s",
@@ -21675,7 +22018,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098262956",
             "duration": "4m 54s",
@@ -21725,7 +22068,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56503867989",
             "duration": "4m 57s",
@@ -21797,7 +22140,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098262961",
             "duration": "4m 16s",
@@ -21847,7 +22190,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56503867991",
             "duration": "4m 54s",
@@ -21909,7 +22252,7 @@
         "fullName": "kata-containers-ci-on-push / run-cri-containerd-s390x",
         "status": "not_run",
         "categories": [
-          "tee"
+          "ibm"
         ],
         "isRequired": false,
         "duration": "0m 0s",
@@ -22031,7 +22374,7 @@
         "fullName": "kata-containers-ci-on-push / run-cri-containerd-s390x (active, qemu) / run-cri-containerd-s390x (active, qemu)",
         "status": "passed",
         "categories": [
-          "tee",
+          "ibm",
           "required"
         ],
         "isRequired": true,
@@ -22042,7 +22385,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098456895",
             "duration": "5m 36s",
@@ -22092,7 +22435,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56504043403",
             "duration": "5m 48s",
@@ -22154,7 +22497,7 @@
         "fullName": "kata-containers-ci-on-push / run-cri-containerd-s390x (active, qemu-runtime-rs) / run-cri-containerd-s390x (active, qemu-runtime-rs)",
         "status": "passed",
         "categories": [
-          "tee"
+          "ibm"
         ],
         "isRequired": false,
         "duration": "6m 31s",
@@ -22164,7 +22507,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098456907",
             "duration": "5m 58s",
@@ -22214,7 +22557,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56504043407",
             "duration": "5m 23s",
@@ -22284,7 +22627,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098642801",
             "duration": "5m 0s",
@@ -22334,7 +22677,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56504287044",
             "duration": "4m 50s",
@@ -22524,7 +22867,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56099074266",
             "duration": "5m 52s",
@@ -22553,11 +22896,11 @@
           },
           {
             "date": "2025-11-25T00:00:00.000Z",
-            "status": "none",
-            "retried": false,
-            "runId": null,
-            "jobId": null,
-            "duration": null,
+            "status": "passed",
+            "retried": true,
+            "runId": "19653661555",
+            "jobId": "56302820340",
+            "duration": "5m 34s",
             "failureStep": null,
             "failureDetails": null
           },
@@ -22574,7 +22917,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56504148833",
             "duration": "5m 51s",
@@ -22623,7 +22966,7 @@
           }
         ],
         "failureCount": 0,
-        "retried": true,
+        "retried": false,
         "retriedAndPassed": false,
         "runId": "19721069021",
         "jobId": "56504148833",
@@ -22646,7 +22989,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098544206",
             "duration": "13m 43s",
@@ -22676,7 +23019,7 @@
           {
             "date": "2025-11-25T00:00:00.000Z",
             "status": "passed",
-            "retried": false,
+            "retried": true,
             "runId": "19653661555",
             "jobId": "56286383916",
             "duration": "17m 5s",
@@ -22696,7 +23039,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56504113699",
             "duration": "16m 39s",
@@ -22768,7 +23111,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098544329",
             "duration": "39m 52s",
@@ -22798,7 +23141,7 @@
           {
             "date": "2025-11-25T00:00:00.000Z",
             "status": "passed",
-            "retried": false,
+            "retried": true,
             "runId": "19653661555",
             "jobId": "56286383928",
             "duration": "35m 28s",
@@ -22818,7 +23161,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56504113712",
             "duration": "43m 27s",
@@ -22890,7 +23233,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098544188",
             "duration": "46m 54s",
@@ -22920,7 +23263,7 @@
           {
             "date": "2025-11-25T00:00:00.000Z",
             "status": "passed",
-            "retried": false,
+            "retried": true,
             "runId": "19653661555",
             "jobId": "56286383927",
             "duration": "40m 49s",
@@ -22940,7 +23283,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56504113694",
             "duration": "36m 23s",
@@ -23012,7 +23355,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098544136",
             "duration": "16m 53s",
@@ -23042,7 +23385,7 @@
           {
             "date": "2025-11-25T00:00:00.000Z",
             "status": "passed",
-            "retried": false,
+            "retried": true,
             "runId": "19653661555",
             "jobId": "56286383895",
             "duration": "18m 18s",
@@ -23062,7 +23405,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56504113671",
             "duration": "17m 0s",
@@ -23134,7 +23477,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098544170",
             "duration": "23m 32s",
@@ -23164,7 +23507,7 @@
           {
             "date": "2025-11-25T00:00:00.000Z",
             "status": "passed",
-            "retried": false,
+            "retried": true,
             "runId": "19653661555",
             "jobId": "56286383894",
             "duration": "25m 29s",
@@ -23184,7 +23527,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56504113678",
             "duration": "27m 56s",
@@ -23256,7 +23599,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098544217",
             "duration": "14m 54s",
@@ -23286,7 +23629,7 @@
           {
             "date": "2025-11-25T00:00:00.000Z",
             "status": "passed",
-            "retried": false,
+            "retried": true,
             "runId": "19653661555",
             "jobId": "56286383920",
             "duration": "16m 14s",
@@ -23306,7 +23649,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56504113701",
             "duration": "15m 32s",
@@ -23378,7 +23721,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098544229",
             "duration": "27m 41s",
@@ -23408,7 +23751,7 @@
           {
             "date": "2025-11-25T00:00:00.000Z",
             "status": "passed",
-            "retried": false,
+            "retried": true,
             "runId": "19653661555",
             "jobId": "56286383946",
             "duration": "23m 29s",
@@ -23428,7 +23771,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56504113698",
             "duration": "22m 57s",
@@ -23500,7 +23843,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098544154",
             "duration": "15m 27s",
@@ -23550,7 +23893,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56504113681",
             "duration": "15m 13s",
@@ -23622,7 +23965,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098544130",
             "duration": "23m 57s",
@@ -23652,7 +23995,7 @@
           {
             "date": "2025-11-25T00:00:00.000Z",
             "status": "passed",
-            "retried": false,
+            "retried": true,
             "runId": "19653661555",
             "jobId": "56286383939",
             "duration": "22m 42s",
@@ -23672,7 +24015,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56504113696",
             "duration": "22m 52s",
@@ -23744,7 +24087,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098544164",
             "duration": "15m 20s",
@@ -23774,7 +24117,7 @@
           {
             "date": "2025-11-25T00:00:00.000Z",
             "status": "passed",
-            "retried": false,
+            "retried": true,
             "runId": "19653661555",
             "jobId": "56286383933",
             "duration": "15m 21s",
@@ -23794,7 +24137,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56504113700",
             "duration": "16m 10s",
@@ -23866,7 +24209,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098544161",
             "duration": "31m 20s",
@@ -23916,7 +24259,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "failed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56504113679",
             "duration": "1m 43s",
@@ -23986,7 +24329,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098544212",
             "duration": "16m 53s",
@@ -24016,7 +24359,7 @@
           {
             "date": "2025-11-25T00:00:00.000Z",
             "status": "passed",
-            "retried": false,
+            "retried": true,
             "runId": "19653661555",
             "jobId": "56286383925",
             "duration": "14m 51s",
@@ -24036,7 +24379,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56504113709",
             "duration": "15m 17s",
@@ -24106,7 +24449,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "failed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098544141",
             "duration": "30m 39s",
@@ -24136,7 +24479,7 @@
           {
             "date": "2025-11-25T00:00:00.000Z",
             "status": "passed",
-            "retried": false,
+            "retried": true,
             "runId": "19653661555",
             "jobId": "56286383922",
             "duration": "21m 52s",
@@ -24156,7 +24499,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56504113695",
             "duration": "20m 5s",
@@ -24228,7 +24571,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098762617",
             "duration": "18m 48s",
@@ -24278,7 +24621,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56504401420",
             "duration": "19m 23s",
@@ -24612,7 +24955,7 @@
           {
             "date": "2025-11-25T00:00:00.000Z",
             "status": "none",
-            "retried": false,
+            "retried": true,
             "runId": "19653661555",
             "jobId": "56286662414",
             "duration": "0m 0s",
@@ -24702,7 +25045,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56099298575",
             "duration": "15m 55s",
@@ -24752,7 +25095,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56504273233",
             "duration": "15m 41s",
@@ -24801,7 +25144,7 @@
           }
         ],
         "failureCount": 0,
-        "retried": true,
+        "retried": false,
         "retriedAndPassed": false,
         "runId": "19721069021",
         "jobId": "56504273233",
@@ -24814,7 +25157,8 @@
         "fullName": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi",
         "status": "not_run",
         "categories": [
-          "tee"
+          "tee",
+          "ibm"
         ],
         "isRequired": false,
         "duration": "0m 0s",
@@ -24937,6 +25281,7 @@
         "status": "passed",
         "categories": [
           "tee",
+          "ibm",
           "required"
         ],
         "isRequired": true,
@@ -24947,7 +25292,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098624882",
             "duration": "15m 2s",
@@ -24997,7 +25342,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56504202371",
             "duration": "13m 31s",
@@ -25200,6 +25545,7 @@
         "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (nydus, qemu-coco-dev, kubeadm)",
         "categories": [
           "tee",
+          "ibm",
           "required"
         ],
         "isRequired": true
@@ -25211,7 +25557,8 @@
         "fullName": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (overlayfs, qemu-runtime-rs, kubeadm)",
         "status": "passed",
         "categories": [
-          "tee"
+          "tee",
+          "ibm"
         ],
         "isRequired": false,
         "duration": "13m 22s",
@@ -25221,7 +25568,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098624880",
             "duration": "11m 48s",
@@ -25271,7 +25618,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56504202380",
             "duration": "12m 26s",
@@ -25633,36 +25980,12 @@
           },
           {
             "date": "2025-11-25T00:00:00.000Z",
-            "status": "failed",
+            "status": "none",
             "runId": "19653661555",
-            "jobId": "56286383891",
-            "duration": "59m 5s",
-            "failureStep": "k8s-liveness-probes.bats",
-            "failureDetails": {
-              "failures": [
-                {
-                  "number": 3,
-                  "name": "Liveness tcp probe",
-                  "comment": "",
-                  "file": "k8s-liveness-probes.bats"
-                },
-                {
-                  "number": 3,
-                  "name": "Liveness tcp probe",
-                  "comment": "",
-                  "file": "##[group]k8s-liveness-probes.bats"
-                }
-              ],
-              "stats": {
-                "total": 250,
-                "passed": 248,
-                "failed": 2,
-                "skipped": 0
-              },
-              "batsFiles": [
-                "k8s-liveness-probes.bats"
-              ]
-            }
+            "jobId": "56303419587",
+            "duration": "0m 43s",
+            "failureStep": null,
+            "failureDetails": null
           },
           {
             "date": "2025-11-26T00:00:00.000Z",
@@ -25675,12 +25998,36 @@
           },
           {
             "date": "2025-11-27T00:00:00.000Z",
-            "status": "passed",
+            "status": "failed",
             "runId": "19721069021",
-            "jobId": "56511556095",
-            "duration": "59m 44s",
-            "failureStep": null,
-            "failureDetails": null
+            "jobId": "56504113652",
+            "duration": "87m 4s",
+            "failureStep": "k8s-openvpn.bats",
+            "failureDetails": {
+              "failures": [
+                {
+                  "number": 1,
+                  "name": "Pods establishing a VPN connection using openvpn",
+                  "comment": "",
+                  "file": "k8s-openvpn.bats"
+                },
+                {
+                  "number": 1,
+                  "name": "Pods establishing a VPN connection using openvpn",
+                  "comment": "",
+                  "file": "##[group]k8s-openvpn.bats"
+                }
+              ],
+              "stats": {
+                "total": 250,
+                "passed": 248,
+                "failed": 2,
+                "skipped": 0
+              },
+              "batsFiles": [
+                "k8s-openvpn.bats"
+              ]
+            }
           },
           {
             "date": "2025-11-28T00:00:00.000Z",
@@ -25746,13 +26093,13 @@
         "failureCount": 2,
         "failedTestsInWeather": [
           {
-            "name": "Liveness tcp probe",
+            "name": "Pods establishing a VPN connection using openvpn",
             "count": 1,
             "dates": [
-              "2025-11-25"
+              "2025-11-27"
             ],
             "files": [
-              "k8s-liveness-probes.bats"
+              "k8s-openvpn.bats"
             ]
           },
           {
@@ -25955,9 +26302,9 @@
           {
             "date": "2025-11-24T00:00:00.000Z",
             "status": "passed",
-            "runId": "19587033590",
-            "jobId": "56243728797",
-            "duration": "38m 44s",
+            "runId": "19619518029",
+            "jobId": "56177625076",
+            "duration": "39m 50s",
             "failureStep": null,
             "failureDetails": null
           },
@@ -29118,7 +29465,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098544207",
             "duration": "7m 8s",
@@ -29148,7 +29495,7 @@
           {
             "date": "2025-11-25T00:00:00.000Z",
             "status": "passed",
-            "retried": false,
+            "retried": true,
             "runId": "19653661555",
             "jobId": "56286383885",
             "duration": "7m 27s",
@@ -29168,7 +29515,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56504113677",
             "duration": "7m 36s",
@@ -29240,7 +29587,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098544216",
             "duration": "6m 48s",
@@ -29290,7 +29637,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56504113642",
             "duration": "6m 59s",
@@ -29362,7 +29709,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098544279",
             "duration": "5m 18s",
@@ -29412,7 +29759,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56504113657",
             "duration": "5m 4s",
@@ -29484,7 +29831,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098544246",
             "duration": "7m 40s",
@@ -29534,7 +29881,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56504113669",
             "duration": "7m 26s",
@@ -29606,7 +29953,7 @@
           {
             "date": "2025-11-22T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19587033590",
             "jobId": "56098262776",
             "duration": "2m 13s",
@@ -29656,7 +30003,7 @@
           {
             "date": "2025-11-27T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19721069021",
             "jobId": "56503867647",
             "duration": "2m 11s",
@@ -34049,7 +34396,7 @@
         "status": "passed",
         "duration": "29m 6s",
         "lastFailure": "Never",
-        "lastSuccess": "8h ago",
+        "lastSuccess": "9h ago",
         "weatherHistory": [
           {
             "date": "2025-11-22T00:00:00.000Z",
@@ -34147,7 +34494,7 @@
         "status": "passed",
         "duration": "36m 52s",
         "lastFailure": "Never",
-        "lastSuccess": "8h ago",
+        "lastSuccess": "9h ago",
         "weatherHistory": [
           {
             "date": "2025-11-22T00:00:00.000Z",
@@ -34245,7 +34592,7 @@
         "status": "passed",
         "duration": "0m 3s",
         "lastFailure": "Never",
-        "lastSuccess": "8h ago",
+        "lastSuccess": "9h ago",
         "weatherHistory": [
           {
             "date": "2025-11-22T00:00:00.000Z",
@@ -35029,7 +35376,7 @@
         "status": "passed",
         "duration": "30m 19s",
         "lastFailure": "Never",
-        "lastSuccess": "8h ago",
+        "lastSuccess": "9h ago",
         "weatherHistory": [
           {
             "date": "2025-11-22T00:00:00.000Z",
@@ -35127,7 +35474,7 @@
         "status": "passed",
         "duration": "32m 3s",
         "lastFailure": "2 days ago",
-        "lastSuccess": "8h ago",
+        "lastSuccess": "9h ago",
         "weatherHistory": [
           {
             "date": "2025-11-22T00:00:00.000Z",
@@ -35225,7 +35572,7 @@
         "status": "passed",
         "duration": "34m 32s",
         "lastFailure": "6 days ago",
-        "lastSuccess": "8h ago",
+        "lastSuccess": "9h ago",
         "weatherHistory": [
           {
             "date": "2025-11-22T00:00:00.000Z",
@@ -35323,7 +35670,7 @@
         "status": "passed",
         "duration": "28m 32s",
         "lastFailure": "2 days ago",
-        "lastSuccess": "8h ago",
+        "lastSuccess": "9h ago",
         "weatherHistory": [
           {
             "date": "2025-11-22T00:00:00.000Z",
@@ -36544,8 +36891,8 @@
         "sev",
         "zvsi",
         "coco",
-        "se",
-        "s390x"
+        "cc-se",
+        "cc-vfio-ap"
       ]
     },
     "nvidia": {
@@ -36555,6 +36902,17 @@
       "patterns": [
         "nvidia",
         "gpu"
+      ]
+    },
+    "ibm": {
+      "name": "IBM",
+      "description": "s390x",
+      "icon": "🖥️",
+      "patterns": [
+        "s390x",
+        "zvsi",
+        "vfio-ap",
+        "cc-se"
       ]
     }
   },
@@ -40827,9 +41185,15 @@
           "jobName": "AMD SEV-SNP with nydus snapshotter",
           "jobId": "56669441522",
           "runId": "19776214950"
+        },
+        {
+          "date": "2025-11-27T00:00:00.000Z",
+          "jobName": "non-TEE with runtime-rs and nydus snapshotter",
+          "jobId": "56504113652",
+          "runId": "19721069021"
         }
       ],
-      "totalCount": 9,
+      "totalCount": 10,
       "affectedJobs": [
         {
           "jobName": "AMD SEV-SNP with nydus snapshotter",
@@ -40846,9 +41210,17 @@
             "56704825821",
             "56669441522"
           ]
+        },
+        {
+          "jobName": "non-TEE with runtime-rs and nydus snapshotter",
+          "count": 1,
+          "latestDate": "2025-11-27T00:00:00.000Z",
+          "jobIds": [
+            "56504113652"
+          ]
         }
       ],
-      "uniqueJobsAffected": 1
+      "uniqueJobsAffected": 2
     },
     "Policy failure: unexpected projected volume": {
       "occurrences": [
