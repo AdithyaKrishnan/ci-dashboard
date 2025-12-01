@@ -783,20 +783,16 @@ const allJobsSection = {
     // Get the most recent job
     const latestJob = matchingJobs[0];
     
-    // GitHub API only returns the current state of each job (latest attempt).
-    // If run_attempt > 1, it means previous attempts failed.
-    // So: run_attempt > 1 AND conclusion == success means "failed then passed" = FLAKY = should show as FAILED
+    // Note: run_attempt indicates WORKFLOW retry count, not job-specific retries.
+    // A job can have run_attempt=6 and conclusion=success if the workflow was
+    // retried 5 times due to OTHER jobs failing, not this one.
+    // We can only know the job's actual result from its conclusion field.
     const retryCount = latestJob?.run_attempt > 1 ? latestJob.run_attempt - 1 : 0;
-    const retriedAndPassed = retryCount > 0 && latestJob?.conclusion === 'success';
     
     let status = 'not_run';
     
     if (latestJob) {
-      // If there were retries and it eventually passed, the FIRST attempt failed
-      // This is a flaky test and should be shown as FAILED (not passed)
-      if (retriedAndPassed) {
-        status = 'failed'; // First attempt failed, even though retry passed
-      } else if (latestJob.conclusion === 'success') {
+      if (latestJob.conclusion === 'success') {
         status = 'passed';
       } else if (latestJob.conclusion === 'failure') {
         // Check if failure is in a fatal step
@@ -826,22 +822,17 @@ const allJobsSection = {
       });
       
       // Pick the most recent job for this day
-      // GitHub API only gives us the latest attempt state per job
       const dayJob = dayJobs[0] || null;
       
-      // Check if there were retries (run_attempt > 1 means previous attempts failed)
+      // Note: run_attempt indicates WORKFLOW retry count, not job-specific retries
       const dayRetried = dayJob?.run_attempt > 1;
-      const dayRetriedAndPassed = dayRetried && dayJob?.conclusion === 'success';
       
       let dayStatus = 'none';
       let failureStep = null;
       let failureDetails = null;
       
       if (dayJob) {
-        // If retried and passed, the FIRST attempt failed - show as failed (flaky)
-        if (dayRetriedAndPassed) {
-          dayStatus = 'failed'; // First attempt failed
-        } else if (dayJob.conclusion === 'success') {
+        if (dayJob.conclusion === 'success') {
           dayStatus = 'passed';
         } else if (dayJob.conclusion === 'failure') {
           dayStatus = 'failed';
@@ -892,8 +883,7 @@ const allJobsSection = {
       lastSuccess: lastSuccessJob ? formatRelativeTime(lastSuccessJob.started_at) : 'Never',
       weatherHistory: weatherHistory,
       failureCount: weatherHistory.filter(w => w.status === 'failed').length,
-      retried: retryCount,
-      retriedAndPassed: retriedAndPassed, // First attempt failed but retry passed - this is flaky!
+      retried: retryCount, // Note: this is workflow retry count, not job-specific
       runId: latestJob?.workflow_run_id || latestJob?.run_id?.toString() || null,
       jobId: latestJob?.id?.toString() || null,
       maintainers: maintainers
@@ -902,7 +892,6 @@ const allJobsSection = {
 };
 
 console.log(`All Jobs section: ${allJobsSection.tests.length} jobs`);
-console.log(`  Retried and passed (flaky): ${allJobsSection.tests.filter(t => t.retriedAndPassed).length}`);
 console.log(`  Required: ${allJobsSection.tests.filter(t => t.isRequired).length}`);
 console.log(`  TEE: ${allJobsSection.tests.filter(t => t.categories.includes('tee')).length}`);
 console.log(`  NVIDIA: ${allJobsSection.tests.filter(t => t.categories.includes('nvidia')).length}`);

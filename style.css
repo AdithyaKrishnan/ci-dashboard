@@ -147,8 +147,16 @@ body {
   height: 28px;
 }
 
-.project-logo.coco-logo {
-  height: 28px;
+/* When CoCo button is active, don't apply any filter - show original colors */
+.project-btn.active .project-logo.coco-logo {
+  /* The CoCo logo has white fill with blue stroke - looks good on salmon background */
+  filter: none;
+}
+
+/* When CoCo button is NOT active (dark background), invert to show properly */
+.project-btn:not(.active) .project-logo.coco-logo {
+  /* Make the white hexagon visible on dark background */
+  filter: brightness(0.8);
 }
 
 .project-icon {
