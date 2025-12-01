@@ -2188,9 +2188,9 @@ function renderCocoSections() {
         </div>
       </div>
       <div class="section-content">
-        ${renderCocoTestGroup(failed, 'FAILED', 'failed', 'coco-charts-failed', true)}
-        ${renderCocoTestGroup(notRun, 'NOT RUN', 'not-run', 'coco-charts-not-run', false)}
-        ${renderCocoTestGroup(passed, 'PASSED', 'passed', 'coco-charts-passed', failed.length === 0 && notRun.length === 0)}
+        ${renderCocoTestGroup(failed, 'FAILED', 'failed', 'coco-charts-failed', state.expandedGroups.has('coco-charts-failed') || failed.length > 0)}
+        ${renderCocoTestGroup(notRun, 'NOT RUN', 'not-run', 'coco-charts-not-run', state.expandedGroups.has('coco-charts-not-run'))}
+        ${renderCocoTestGroup(passed, 'PASSED', 'passed', 'coco-charts-passed', state.expandedGroups.has('coco-charts-passed') || (failed.length === 0 && notRun.length === 0))}
       </div>
     </div>
   `;
@@ -2439,9 +2439,9 @@ function renderCAASections() {
         </div>
       </div>
       <div class="section-content">
-        ${renderCAATestGroup(failed, 'FAILED', 'failed', 'coco-caa-failed', true)}
-        ${renderCAATestGroup(notRun, 'NOT RUN', 'not-run', 'coco-caa-not-run', false)}
-        ${renderCAATestGroup(passed, 'PASSED', 'passed', 'coco-caa-passed', failed.length === 0 && notRun.length === 0)}
+        ${renderCAATestGroup(failed, 'FAILED', 'failed', 'coco-caa-failed', state.expandedGroups.has('coco-caa-failed') || failed.length > 0)}
+        ${renderCAATestGroup(notRun, 'NOT RUN', 'not-run', 'coco-caa-not-run', state.expandedGroups.has('coco-caa-not-run'))}
+        ${renderCAATestGroup(passed, 'PASSED', 'passed', 'coco-caa-passed', state.expandedGroups.has('coco-caa-passed') || (failed.length === 0 && notRun.length === 0))}
       </div>
     </div>
   `;
