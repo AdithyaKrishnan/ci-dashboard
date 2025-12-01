@@ -1120,11 +1120,254 @@ function simplifyJobName(fullName) {
   return name;
 }
 
+// ============================================
+// Process CoCo Charts E2E Tests (external repo)
+// ============================================
+
+let cocoChartsSection = null;
+try {
+  if (fs.existsSync('coco-charts-jobs.json')) {
+    const cocoChartsJobs = JSON.parse(fs.readFileSync('coco-charts-jobs.json', 'utf8'));
+    console.log(`Processing ${cocoChartsJobs.length} CoCo Charts E2E jobs...`);
+    
+    // Get unique job names from CoCo Charts, filtering out non-E2E jobs
+    const nonE2EJobs = ['Check What Changed', 'E2E Test Summary', 'Create Issue on E2E Failure'];
+    const cocoJobNames = [...new Set(cocoChartsJobs.map(j => j.name))]
+      .filter(name => !nonE2EJobs.includes(name))
+      .sort();
+    console.log(`  Found ${cocoJobNames.length} unique CoCo Charts E2E job names (filtered out ${nonE2EJobs.length} non-test jobs)`);
+    
+    cocoChartsSection = {
+      id: 'coco-charts',
+      name: 'CoCo',
+      description: 'Confidential Containers E2E Tests (Nightly)',
+      subProject: 'Charts',  // For future: Trustee, Guest Components
+      sourceRepo: 'confidential-containers/charts',
+      tests: cocoJobNames.map(jobName => {
+        const testId = jobName.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase();
+        
+        // Find jobs matching this name
+        const matchingJobs = cocoChartsJobs.filter(job => job.name === jobName)
+          .sort((a, b) => new Date(b.started_at || b.created_at) - new Date(a.started_at || a.created_at));
+        
+        const latestJob = matchingJobs[0];
+        let status = 'not_run';
+        
+        if (latestJob) {
+          if (latestJob.conclusion === 'success') {
+            status = 'passed';
+          } else if (latestJob.conclusion === 'failure') {
+            status = 'failed';
+          } else if (latestJob.status === 'in_progress' || latestJob.status === 'queued') {
+            status = 'running';
+          }
+        }
+        
+        // Build weather history (last 10 days)
+        const weatherHistory = [];
+        const anchorDate = new Date();
+        for (let i = 0; i < 10; i++) {
+          const date = new Date(anchorDate);
+          date.setDate(date.getDate() - (9 - i));
+          date.setHours(0, 0, 0, 0);
+          
+          const dayJobs = matchingJobs.filter(job => {
+            const jobDate = new Date(job.started_at || job.created_at);
+            return jobDate.toDateString() === date.toDateString();
+          });
+          
+          const dayJob = dayJobs[0] || null;
+          let dayStatus = 'none';
+          let failureStep = null;
+          
+          if (dayJob) {
+            if (dayJob.conclusion === 'success') {
+              dayStatus = 'passed';
+            } else if (dayJob.conclusion === 'failure') {
+              dayStatus = 'failed';
+              const failedStep = dayJob.steps?.find(s => s.conclusion === 'failure');
+              failureStep = failedStep?.name || 'Unknown step';
+            }
+          }
+          
+          weatherHistory.push({
+            date: date.toISOString(),
+            status: dayStatus,
+            runId: dayJob?.workflow_run_id || dayJob?.run_id?.toString() || null,
+            jobId: dayJob?.id?.toString() || null,
+            duration: dayJob ? formatDuration(dayJob.started_at, dayJob.completed_at) : null,
+            failureStep: failureStep
+          });
+        }
+        
+        // Simplify job name for display
+        // CoCo Charts job names are like: "E2E (ci / k3s / nydus / qemu-coco-dev)"
+        let displayName = jobName;
+        const match = jobName.match(/E2E \((.+)\)/);
+        if (match) {
+          displayName = match[1];
+        }
+        
+        // Find last failure and success
+        const lastFailureJob = matchingJobs.find(j => j.conclusion === 'failure');
+        const lastSuccessJob = matchingJobs.find(j => j.conclusion === 'success');
+        
+        return {
+          id: testId,
+          name: displayName,
+          jobName: jobName,
+          fullName: jobName,
+          status: status,
+          duration: latestJob ? formatDuration(latestJob.started_at, latestJob.completed_at) : 'N/A',
+          lastFailure: lastFailureJob ? formatRelativeTime(lastFailureJob.started_at) : 'Never',
+          lastSuccess: lastSuccessJob ? formatRelativeTime(lastSuccessJob.started_at) : 'Never',
+          weatherHistory: weatherHistory,
+          failureCount: weatherHistory.filter(w => w.status === 'failed').length,
+          retried: latestJob?.run_attempt > 1 ? latestJob.run_attempt - 1 : 0,
+          runId: latestJob?.workflow_run_id || latestJob?.run_id?.toString() || null,
+          jobId: latestJob?.id?.toString() || null,
+          sourceRepo: 'confidential-containers/charts',
+          maintainers: []
+        };
+      })
+    };
+    
+    console.log(`CoCo Charts section: ${cocoChartsSection.tests.length} jobs`);
+    const passed = cocoChartsSection.tests.filter(t => t.status === 'passed').length;
+    const failed = cocoChartsSection.tests.filter(t => t.status === 'failed').length;
+    console.log(`  ${passed} passed, ${failed} failed`);
+  } else {
+    console.log('No coco-charts-jobs.json found, skipping CoCo Charts section');
+  }
+} catch (e) {
+  console.warn('Failed to process CoCo Charts data:', e.message);
+}
+
+// ============================================
+// Process CoCo Cloud API Adaptor E2E Tests
+// ============================================
+
+let cocoCAASection = null;
+try {
+  if (fs.existsSync('coco-caa-jobs.json')) {
+    const caaJobs = JSON.parse(fs.readFileSync('coco-caa-jobs.json', 'utf8'));
+    console.log(`Processing ${caaJobs.length} Cloud API Adaptor E2E jobs...`);
+    
+    // Get unique job names, filtering out non-E2E jobs
+    const nonE2EJobs = ['build images'];
+    const caaJobNames = [...new Set(caaJobs.map(j => j.name))]
+      .filter(name => !nonE2EJobs.some(n => name.toLowerCase().includes(n.toLowerCase())))
+      .sort();
+    console.log(`  Found ${caaJobNames.length} unique CAA E2E job names`);
+    
+    cocoCAASection = {
+      id: 'coco-caa',
+      name: 'Cloud API Adaptor',
+      description: 'Cloud API Adaptor Daily E2E Tests',
+      subProject: 'CAA',
+      sourceRepo: 'confidential-containers/cloud-api-adaptor',
+      tests: caaJobNames.map(jobName => {
+        const testId = jobName.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase();
+        
+        // Find jobs matching this name
+        const matchingJobs = caaJobs.filter(job => job.name === jobName)
+          .sort((a, b) => new Date(b.started_at || b.created_at) - new Date(a.started_at || a.created_at));
+        
+        const latestJob = matchingJobs[0];
+        let status = 'not_run';
+        
+        if (latestJob) {
+          if (latestJob.conclusion === 'success') {
+            status = 'passed';
+          } else if (latestJob.conclusion === 'failure') {
+            status = 'failed';
+          } else if (latestJob.status === 'in_progress' || latestJob.status === 'queued') {
+            status = 'running';
+          }
+        }
+        
+        // Build weather history (last 10 days)
+        const weatherHistory = [];
+        const anchorDate = new Date();
+        for (let i = 0; i < 10; i++) {
+          const date = new Date(anchorDate);
+          date.setDate(date.getDate() - (9 - i));
+          date.setHours(0, 0, 0, 0);
+          
+          const dayJobs = matchingJobs.filter(job => {
+            const jobDate = new Date(job.started_at || job.created_at);
+            return jobDate.toDateString() === date.toDateString();
+          });
+          
+          const dayJob = dayJobs[0] || null;
+          let dayStatus = 'none';
+          let failureStep = null;
+          
+          if (dayJob) {
+            if (dayJob.conclusion === 'success') {
+              dayStatus = 'passed';
+            } else if (dayJob.conclusion === 'failure') {
+              dayStatus = 'failed';
+              const failedStep = dayJob.steps?.find(s => s.conclusion === 'failure');
+              failureStep = failedStep?.name || 'Unknown step';
+            }
+          }
+          
+          weatherHistory.push({
+            date: date.toISOString(),
+            status: dayStatus,
+            runId: dayJob?.workflow_run_id || dayJob?.run_id?.toString() || null,
+            jobId: dayJob?.id?.toString() || null,
+            duration: dayJob ? formatDuration(dayJob.started_at, dayJob.completed_at) : null,
+            failureStep: failureStep
+          });
+        }
+        
+        // Simplify job name for display
+        let displayName = jobName;
+        
+        // Find last failure and success
+        const lastFailureJob = matchingJobs.find(j => j.conclusion === 'failure');
+        const lastSuccessJob = matchingJobs.find(j => j.conclusion === 'success');
+        
+        return {
+          id: testId,
+          name: displayName,
+          jobName: jobName,
+          fullName: jobName,
+          status: status,
+          duration: latestJob ? formatDuration(latestJob.started_at, latestJob.completed_at) : 'N/A',
+          lastFailure: lastFailureJob ? formatRelativeTime(lastFailureJob.started_at) : 'Never',
+          lastSuccess: lastSuccessJob ? formatRelativeTime(lastSuccessJob.started_at) : 'Never',
+          weatherHistory: weatherHistory,
+          failureCount: weatherHistory.filter(w => w.status === 'failed').length,
+          retried: latestJob?.run_attempt > 1 ? latestJob.run_attempt - 1 : 0,
+          runId: latestJob?.workflow_run_id || latestJob?.run_id?.toString() || null,
+          jobId: latestJob?.id?.toString() || null,
+          sourceRepo: 'confidential-containers/cloud-api-adaptor',
+          maintainers: []
+        };
+      })
+    };
+    
+    console.log(`Cloud API Adaptor section: ${cocoCAASection.tests.length} jobs`);
+    const caaPassed = cocoCAASection.tests.filter(t => t.status === 'passed').length;
+    const caaFailed = cocoCAASection.tests.filter(t => t.status === 'failed').length;
+    console.log(`  ${caaPassed} passed, ${caaFailed} failed`);
+  } else {
+    console.log('No coco-caa-jobs.json found, skipping Cloud API Adaptor section');
+  }
+} catch (e) {
+  console.warn('Failed to process Cloud API Adaptor data:', e.message);
+}
+
 // Build output data
 const outputData = {
   lastRefresh: new Date().toISOString(),
   sections: sections,
   allJobsSection: allJobsSection, // NEW: all jobs for the "All" view
+  cocoChartsSection: cocoChartsSection, // CoCo Charts E2E tests
+  cocoCAASection: cocoCAASection, // CoCo Cloud API Adaptor E2E tests
   requiredTests: requiredTests,
   jobCategories: categoryPatterns,
   failedTestsIndex: failedTestsIndex,

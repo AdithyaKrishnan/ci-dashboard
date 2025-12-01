@@ -36,6 +36,17 @@ job_categories:
       - "nvidia"
       - "gpu"
 
+# External repositories to monitor
+external_repos:
+  coco-charts:
+    repo: "confidential-containers/charts"
+    workflow: "e2e-tests.yaml"
+    name: "CoCo Charts"
+    description: "Helm E2E"
+    icon: "⎈"
+    # Only monitor scheduled (nightly) runs
+    event_filter: "schedule"
+
 # Required jobs (jobs that must pass for PRs to merge)
 required_jobs:
   - "kata-containers-ci-on-push / run-k8s-tests-on-aks"

@@ -19,7 +19,14 @@ let state = {
   expandedGroups: new Set(),
   expandedFlakyTests: new Set(),
   activeTab: 'nightly',
-  flakyJobFilter: 'all'
+  flakyJobFilter: 'all',
+  // CoCo-specific state
+  activeProject: 'kata', // 'kata' or 'coco'
+  activeCocoTab: 'coco-charts', // 'coco-charts', 'coco-caa', etc.
+  cocoFilter: 'all',
+  cocoSearchQuery: '',
+  caaFilter: 'all',
+  caaSearchQuery: ''
 };
 
 // ============================================
@@ -80,7 +87,7 @@ function updateFlakyBadge() {
       badge.style.display = 'inline-flex';
     } else {
       badge.style.display = 'none';
-    }
+  }
   }
 }
 
@@ -144,13 +151,15 @@ function getTotalStats() {
   } else if (state.viewMode === 'nvidia') {
     const section = state.data.sections?.find(s => s.id === 'nvidia-gpu');
     testsToCount = section?.tests || [];
+  } else if (state.viewMode === 'coco-charts') {
+    testsToCount = state.data.cocoChartsSection?.tests || [];
   } else {
     // For 'all' and 'required' views, use allJobsSection
     testsToCount = state.data.allJobsSection?.tests || state.data.sections?.flatMap(s => s.tests) || [];
   }
   
-  // Apply required filter if enabled
-  if (state.showRequiredOnly) {
+  // Apply required filter if enabled (not applicable for coco-charts)
+  if (state.showRequiredOnly && state.viewMode !== 'coco-charts') {
     testsToCount = testsToCount.filter(t => matchesCategory(t, 'required'));
   }
   
@@ -457,6 +466,15 @@ function renderSections() {
         sectionsToRender.push({ ...nvidiaSection, tests: filteredTests });
       }
     }
+  } else if (state.viewMode === 'coco-charts') {
+    // Use the CoCo Charts section (external repo)
+    const cocoSection = state.data.cocoChartsSection;
+    if (cocoSection) {
+      const filteredTests = filterTests(cocoSection.tests || []);
+      if (filteredTests.length > 0) {
+        sectionsToRender.push({ ...cocoSection, tests: filteredTests });
+      }
+    }
   } else if (state.data.allJobsSection) {
     // For 'all' and 'required' views, use allJobsSection (flat list with simplified names)
     // The required filter is applied in filterTests() via showRequiredOnly flag
@@ -501,10 +519,10 @@ function renderSections() {
     // Build status badges for section
     const statusBadges = [];
     if (stats.failed > 0) {
-      statusBadges.push(`<span class="section-status has-failed">${stats.failed} failed</span>`);
+      statusBadges.push(`<span class="section-status has-failed">(${stats.failed} failed)</span>`);
     }
     if (stats.notRun > 0) {
-      statusBadges.push(`<span class="section-status has-not-run">${stats.notRun} not run</span>`);
+      statusBadges.push(`<span class="section-status has-not-run">(${stats.notRun} not run)</span>`);
     }
     if (statusBadges.length === 0 && stats.passed === stats.total) {
       statusBadges.push(`<span class="section-status all-green">All Green</span>`);
@@ -737,13 +755,15 @@ function updateStats() {
   } else if (state.viewMode === 'nvidia') {
     const section = state.data?.sections?.find(s => s.id === 'nvidia-gpu');
     viewTests = section?.tests || [];
+  } else if (state.viewMode === 'coco-charts') {
+    viewTests = state.data?.cocoChartsSection?.tests || [];
   } else {
     // For 'all' and 'required' views, use allJobsSection
     viewTests = state.data?.allJobsSection?.tests || state.data?.sections?.flatMap(s => s.tests) || [];
   }
   
-  // Apply required filter if enabled
-  if (state.showRequiredOnly) {
+  // Apply required filter if enabled (not applicable for coco-charts)
+  if (state.showRequiredOnly && state.viewMode !== 'coco-charts') {
     viewTests = viewTests.filter(t => matchesCategory(t, 'required'));
   }
   
@@ -849,6 +869,8 @@ function updateJobCount() {
   } else if (state.viewMode === 'nvidia') {
     const section = state.data.sections?.find(s => s.id === 'nvidia-gpu');
     visibleTests = filterTests(section?.tests || []);
+  } else if (state.viewMode === 'coco-charts') {
+    visibleTests = filterTests(state.data.cocoChartsSection?.tests || []);
   } else {
     // For 'all' and 'required' views, use allJobsSection
     visibleTests = filterTests(allTests);
@@ -862,12 +884,21 @@ function updateJobCount() {
 }
 
 function showWeatherModal(sectionId, testId) {
-  // Look in both regular sections and allJobsSection
+  // Look in regular sections, allJobsSection, cocoChartsSection, and cocoCAASection
   let section = state.data.sections.find(s => s.id === sectionId);
   if (!section && sectionId === 'all-jobs' && state.data.allJobsSection) {
     section = state.data.allJobsSection;
   }
+  if (!section && sectionId === 'coco-charts' && state.data.cocoChartsSection) {
+    section = state.data.cocoChartsSection;
+  }
+  if (!section && sectionId === 'coco-caa' && state.data.cocoCAASection) {
+    section = state.data.cocoCAASection;
+  }
   const test = section?.tests.find(t => t.id === testId);
+  
+  // Determine the GitHub repo for links
+  const sourceRepo = test?.sourceRepo || 'kata-containers/kata-containers';
   
   if (!test || !test.weatherHistory) {
     showToast('No weather history available', 'error');
@@ -932,7 +963,7 @@ function showWeatherModal(sectionId, testId) {
         </div>
         ` : ''}
         ${day.runId ? `
-          <a href="https://github.com/kata-containers/kata-containers/actions/runs/${day.runId}${day.jobId ? '/job/' + day.jobId : ''}" 
+          <a href="https://github.com/${sourceRepo}/actions/runs/${day.runId}${day.jobId ? '/job/' + day.jobId : ''}" 
              target="_blank" 
              class="weather-day-link">
             View Run
@@ -995,7 +1026,7 @@ function showWeatherModal(sectionId, testId) {
       files: Array.from(ft.files),
       dates: ft.dates.sort().reverse()
     })).sort((a, b) => b.count - a.count);
-  }
+      }
   
   // If still empty but we have failures, try to get from failedTestsIndex (global index)
   if (failingTestsForAnalysis.length === 0 && failedCount > 0 && state.data?.failedTestsIndex) {
@@ -1222,10 +1253,16 @@ function showFailingTestsModal(sectionId, testId) {
 }
 
 function showErrorModal(sectionId, testId) {
-  // Look in both regular sections and allJobsSection
+  // Look in regular sections, allJobsSection, cocoChartsSection, and cocoCAASection
   let section = state.data.sections.find(s => s.id === sectionId);
   if (!section && sectionId === 'all-jobs' && state.data.allJobsSection) {
     section = state.data.allJobsSection;
+  }
+  if (!section && sectionId === 'coco-charts' && state.data.cocoChartsSection) {
+    section = state.data.cocoChartsSection;
+  }
+  if (!section && sectionId === 'coco-caa' && state.data.cocoCAASection) {
+    section = state.data.cocoCAASection;
   }
   const test = section?.tests.find(t => t.id === testId);
   
@@ -1234,13 +1271,16 @@ function showErrorModal(sectionId, testId) {
     return;
   }
   
+  // Determine the GitHub repo for links
+  const sourceRepo = test?.sourceRepo || 'kata-containers/kata-containers';
+  
   const modal = document.getElementById('error-modal');
   const title = document.getElementById('modal-title');
   const body = document.getElementById('modal-body');
   const githubLink = document.getElementById('github-log-link');
   
   title.textContent = `${test.name} — Error Details`;
-  githubLink.href = `https://github.com/kata-containers/kata-containers/actions/runs/${test.runId}${test.jobId ? '/job/' + test.jobId : ''}`;
+  githubLink.href = `https://github.com/${sourceRepo}/actions/runs/${test.runId}${test.jobId ? '/job/' + test.jobId : ''}`;
   
   // Build maintainers section for error modal
   const errorMaintainersHtml = test.maintainers && test.maintainers.length > 0
@@ -1330,18 +1370,22 @@ function copyError() {
 function switchTab(tabName) {
   state.activeTab = tabName;
   
-  // Update tab buttons
-  document.querySelectorAll('.tab').forEach(tab => {
+  // Update tab buttons (only within Kata content)
+  document.querySelectorAll('#kata-content .tab').forEach(tab => {
     tab.classList.toggle('active', tab.dataset.tab === tabName);
   });
   
-  // Update tab content
-  document.querySelectorAll('.tab-content').forEach(content => {
+  // Update tab content (only within Kata content)
+  document.querySelectorAll('#kata-content .tab-content').forEach(content => {
     content.classList.toggle('active', content.id === `${tabName}-content`);
   });
   
   // Render appropriate content
-  if (tabName === 'prfailures') {
+  if (tabName === 'nightly') {
+    renderSections();
+    updateStats();
+    updateJobCount();
+  } else if (tabName === 'prfailures') {
     renderPRFailures();
   }
 }
@@ -1371,8 +1415,8 @@ function simplifyJobName(fullName) {
   }
   
   return name;
-}
-
+  }
+  
 function renderPRFailures() {
   const byTestList = document.getElementById('flaky-by-test-list');
   const byJobList = document.getElementById('flaky-by-job-list');
@@ -1415,7 +1459,7 @@ function renderPRFailures() {
           occurrences: jobOccs
         });
         jobStats[job.name].occurrences.push(...jobOccs);
-      }
+        }
     });
   });
   
@@ -1431,7 +1475,7 @@ function renderPRFailures() {
   // Render "By Test" view
   if (flakyTests.length === 0) {
     byTestList.innerHTML = '<p class="empty-message">No flaky tests detected! 🎉</p>';
-  } else {
+    } else {
     byTestList.innerHTML = flakyTests.map((test, i) => {
       const isExpanded = state.expandedFlakyTests.has(test.name);
       const flakyOccs = (test.recentOccurrences || []).filter(o => o.isFlaky);
@@ -1573,7 +1617,7 @@ function renderPRFailures() {
         const newItem = document.querySelector(`.flaky-job-item[data-job-name="${CSS.escape(jobName)}"]`);
         if (newItem) {
           newItem.scrollIntoView({ behavior: 'instant', block: 'nearest' });
-        }
+  }
       }, 0);
     });
   });
@@ -1827,6 +1871,8 @@ function toggleFlakyTest(testName) {
 function init() {
   // Set current date
   document.getElementById('current-date').textContent = formatDate();
+  const cocoDateEl = document.getElementById('coco-current-date');
+  if (cocoDateEl) cocoDateEl.textContent = formatDate();
   
   // Load data
   loadData();
@@ -1837,14 +1883,32 @@ function init() {
   
   document.getElementById('copy-error').addEventListener('click', copyError);
   
-  // Tab switching
-  document.querySelectorAll('.tab').forEach(tab => {
+  // Project switching (Kata vs CoCo)
+  document.querySelectorAll('.project-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const project = btn.dataset.project;
+      switchProject(project);
+    });
+  });
+  
+  // Tab switching (within Kata project)
+  document.querySelectorAll('#kata-content .tab').forEach(tab => {
     tab.addEventListener('click', () => switchTab(tab.dataset.tab));
   });
   
-  // Filter buttons (status)
-  document.querySelectorAll('.filter-btn').forEach(btn => {
+  // CoCo tab switching
+  document.querySelectorAll('#coco-content .tab:not(:disabled)').forEach(tab => {
+    tab.addEventListener('click', () => switchCocoTab(tab.dataset.tab));
+  });
+  
+  // Filter buttons (status) - Kata
+  document.querySelectorAll('.filter-btn:not(.coco-filter)').forEach(btn => {
     btn.addEventListener('click', () => setFilter(btn.dataset.filter));
+  });
+  
+  // Filter buttons (status) - CoCo
+  document.querySelectorAll('.filter-btn.coco-filter').forEach(btn => {
+    btn.addEventListener('click', () => setCocoFilter(btn.dataset.filter));
   });
   
   // Category filter buttons (All/Required toggle)
@@ -1877,12 +1941,37 @@ function init() {
     });
   });
   
-  // Search
+  // Search - Kata
   document.getElementById('search-tests').addEventListener('input', (e) => {
     state.searchQuery = e.target.value;
     renderSections();
     updateJobCount();
   });
+  
+  // Search - CoCo Charts
+  const cocoSearchEl = document.getElementById('search-coco-tests');
+  if (cocoSearchEl) {
+    cocoSearchEl.addEventListener('input', (e) => {
+      state.cocoSearchQuery = e.target.value;
+      renderCocoSections();
+      updateCocoJobCount();
+    });
+  }
+  
+  // Filter buttons - CAA
+  document.querySelectorAll('.filter-btn.caa-filter').forEach(btn => {
+    btn.addEventListener('click', () => setCAAFilter(btn.dataset.filter));
+  });
+  
+  // Search - CAA
+  const caaSearchEl = document.getElementById('search-caa-tests');
+  if (caaSearchEl) {
+    caaSearchEl.addEventListener('input', (e) => {
+      state.caaSearchQuery = e.target.value;
+      renderCAASections();
+      updateCAAJobCount();
+    });
+  }
   
   // Close modals on overlay click
   document.querySelectorAll('.modal').forEach(modal => {
@@ -1899,6 +1988,519 @@ function init() {
       document.querySelectorAll('.modal.active').forEach(m => m.classList.remove('active'));
     }
   });
+}
+
+// ============================================
+// Project Switching (Kata vs CoCo)
+// ============================================
+
+function switchProject(project) {
+  state.activeProject = project;
+  
+  // Update project buttons
+  document.querySelectorAll('.project-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.project === project);
+  });
+  
+  // Show/hide project content
+  document.querySelectorAll('.project-content').forEach(content => {
+    content.classList.toggle('active', content.id === `${project}-content`);
+  });
+  
+  if (project === 'kata') {
+    // Ensure a tab is active (default to nightly)
+    if (!state.activeTab) state.activeTab = 'nightly';
+    switchTab(state.activeTab);
+  } else if (project === 'coco') {
+    // Ensure a CoCo tab is active (default to coco-charts)
+    if (!state.activeCocoTab) state.activeCocoTab = 'coco-charts';
+    switchCocoTab(state.activeCocoTab);
+  }
+}
+
+function switchCocoTab(tabName) {
+  state.activeCocoTab = tabName;
+  
+  // Update tab buttons
+  document.querySelectorAll('#coco-content .tab').forEach(tab => {
+    tab.classList.toggle('active', tab.dataset.tab === tabName);
+  });
+  
+  // Show/hide tab content
+  document.querySelectorAll('#coco-content .tab-content').forEach(content => {
+    content.classList.toggle('active', content.id === `${tabName}-content`);
+  });
+  
+  // Render appropriate content
+  if (tabName === 'coco-charts') {
+    renderCocoSections();
+    updateCocoStats();
+    updateCocoJobCount();
+  } else if (tabName === 'coco-caa') {
+    renderCAASections();
+    updateCAAStats();
+    updateCAAJobCount();
+  }
+}
+
+function setCocoFilter(filter) {
+  state.cocoFilter = filter;
+  document.querySelectorAll('.filter-btn.coco-filter').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.filter === filter);
+  });
+  renderCocoSections();
+  updateCocoJobCount();
+}
+
+function setCAAFilter(filter) {
+  state.caaFilter = filter;
+  document.querySelectorAll('.filter-btn.caa-filter').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.filter === filter);
+  });
+  renderCAASections();
+  updateCAAJobCount();
+}
+
+function renderCocoSections() {
+  const container = document.getElementById('coco-sections-container');
+  if (!container) return;
+  
+  const cocoSection = state.data?.cocoChartsSection;
+  if (!cocoSection) {
+    container.innerHTML = '<p class="empty-message">No CoCo Charts data available</p>';
+    return;
+  }
+  
+  // Filter tests
+  let tests = cocoSection.tests || [];
+  
+  // Apply search filter
+  if (state.cocoSearchQuery) {
+    const query = state.cocoSearchQuery.toLowerCase();
+    tests = tests.filter(t => 
+      t.name.toLowerCase().includes(query) ||
+      t.jobName?.toLowerCase().includes(query)
+    );
+  }
+  
+  // Apply status filter
+  if (state.cocoFilter && state.cocoFilter !== 'all') {
+    tests = tests.filter(t => t.status === state.cocoFilter);
+  }
+  
+  if (tests.length === 0) {
+    container.innerHTML = '<p class="empty-message">No tests match your filters</p>';
+    return;
+  }
+  
+  // Group by status
+  const failed = tests.filter(t => t.status === 'failed');
+  const passed = tests.filter(t => t.status === 'passed');
+  const notRun = tests.filter(t => t.status === 'not_run' || t.status === 'none');
+  
+  // Calculate weather stats (same as Kata)
+  const weatherPercent = tests.length > 0 
+    ? Math.round((passed.length / tests.length) * 100) 
+    : 0;
+  const weatherEmoji = weatherPercent >= 90 ? '☀️' : weatherPercent >= 70 ? '⛅' : weatherPercent >= 50 ? '🌥️' : '🌧️';
+  
+  // Status badges (exactly like Kata: failed → not run → all green)
+  const statusBadges = [];
+  if (failed.length > 0) {
+    statusBadges.push(`<span class="section-status has-failed">(${failed.length} failed)</span>`);
+  }
+  if (notRun.length > 0) {
+    statusBadges.push(`<span class="section-status has-not-run">(${notRun.length} not run)</span>`);
+  }
+  if (statusBadges.length === 0 && passed.length === tests.length) {
+    statusBadges.push(`<span class="section-status all-green">All Green</span>`);
+  }
+  
+  // Helper to render a test group (exactly like Kata's renderTestGroup)
+  const renderCocoTestGroup = (groupTests, label, statusClass, groupId, isExpanded) => {
+    if (groupTests.length === 0) return '';
+    return `
+      <div class="test-group ${isExpanded ? 'expanded' : ''}" data-group-id="${groupId}">
+        <div class="test-group-header" data-group="${groupId}">
+          <div class="test-group-title">
+            <span class="test-group-toggle">▶</span>
+            <span class="dot dot-${statusClass}"></span>
+            ${label} (${groupTests.length})
+          </div>
+        </div>
+        <div class="test-group-content">
+          <div class="test-table-header">
+            <span>Test Name</span>
+            <span>Maintainers</span>
+            <span>Run</span>
+            <span>Last Failure</span>
+            <span>Last Success</span>
+            <span class="weather-header">Weather <span class="weather-range">(oldest ← 10 days → newest)</span></span>
+            <span>Retried</span>
+          </div>
+          ${groupTests.map(t => renderCocoTestRow(t, cocoSection.id, cocoSection.sourceRepo)).join('')}
+        </div>
+      </div>
+    `;
+  };
+  
+  container.innerHTML = `
+    <div class="section expanded">
+      <div class="section-header" data-section="coco-charts">
+        <span class="section-toggle">▶</span>
+        <span class="section-name">All Jobs</span>
+        <div class="section-meta">
+          <span class="section-count">${tests.length} jobs</span>
+          <span class="section-weather">
+            <span class="section-weather-icon">${weatherEmoji}</span>
+            ${weatherPercent}%
+          </span>
+          ${statusBadges.join('')}
+        </div>
+      </div>
+      <div class="section-content">
+        ${renderCocoTestGroup(failed, 'FAILED', 'failed', 'coco-charts-failed', true)}
+        ${renderCocoTestGroup(notRun, 'NOT RUN', 'not-run', 'coco-charts-not-run', false)}
+        ${renderCocoTestGroup(passed, 'PASSED', 'passed', 'coco-charts-passed', failed.length === 0 && notRun.length === 0)}
+      </div>
+    </div>
+  `;
+  
+  // Add click handler for section header (expand/collapse)
+  container.querySelectorAll('.section-header').forEach(header => {
+    header.addEventListener('click', () => {
+      const section = header.closest('.section');
+      const content = section.querySelector('.section-content');
+      const isExpanded = section.classList.contains('expanded');
+      
+      section.classList.toggle('expanded', !isExpanded);
+      content.style.display = isExpanded ? 'none' : '';
+    });
+  });
+  
+  // Add click handlers for group headers (use toggleGroup like Kata)
+  container.querySelectorAll('.test-group-header').forEach(header => {
+    header.addEventListener('click', (e) => {
+      if (e.target.closest('.btn')) return;
+      const groupId = header.dataset.group;
+      toggleGroup(groupId);
+    });
+  });
+  
+  // Add click handlers for weather columns
+  container.querySelectorAll('.test-weather-col[data-test-id]').forEach(col => {
+    col.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const testId = col.dataset.testId;
+      showWeatherModal('coco-charts', testId);
+    });
+  });
+}
+
+function renderCocoTestRow(test, sectionId, sourceRepo) {
+  const weather = getWeatherFromHistory(test.weatherHistory);
+  const weatherDots = weather.length > 0 
+    ? weather.map(w => `<span class="weather-dot ${w}"></span>`).join('')
+    : '<span class="weather-dot none"></span>'.repeat(10);
+  
+  const weatherEmoji = getWeatherEmoji(test.weatherHistory);
+  const passedCount = weather.filter(w => w === 'passed').length;
+  const failedCount = weather.filter(w => w === 'failed').length;
+  
+  const statusDisplay = {
+    'passed': '● Passed',
+    'failed': '○ Failed',
+    'not_run': '⊘ Not Run',
+    'running': '◌ Running'
+  };
+  
+  const repo = sourceRepo || 'confidential-containers/charts';
+  
+  // Match Kata's layout exactly
+  return `
+    <div class="test-row ${test.status}">
+      <div class="test-name-col">
+        <div class="test-name">
+          <span class="test-status-dot ${test.status}"></span>
+          <span class="test-name-text">${escapeHtml(test.name)}</span>
+        </div>
+      </div>
+      <div class="test-maintainers-col">
+        <span class="no-maintainer">—</span>
+      </div>
+      <div class="test-run-col">
+        <span class="test-run-status ${test.status}">${statusDisplay[test.status] || test.status}</span>
+        <span class="test-run-duration">${test.duration || 'N/A'}</span>
+      </div>
+      <div class="test-time-col">
+        ${test.lastFailure === 'Never' || !test.lastFailure ? '<span class="never">Never</span>' : test.lastFailure}
+      </div>
+      <div class="test-time-col">
+        ${test.lastSuccess || 'N/A'}
+      </div>
+      <div class="test-weather-col" data-test-id="${test.id}" data-section-id="${sectionId}" title="Click for 10-day history">
+        <div class="weather-dots">${weatherDots}</div>
+        <div class="weather-summary">
+          <span class="weather-icon">${weatherEmoji}</span>
+          ${passedCount}/${weather.length || 10}
+          ${failedCount > 0 ? `<span class="weather-failed-count">(${failedCount} ✗)</span>` : ''}
+        </div>
+      </div>
+      <div class="test-retried-col">
+        ${test.retried || 0}
+      </div>
+    </div>
+  `;
+}
+
+function updateCocoStats() {
+  const cocoSection = state.data?.cocoChartsSection;
+  if (!cocoSection) return;
+  
+  const tests = cocoSection.tests || [];
+  const total = tests.length;
+  const failed = tests.filter(t => t.status === 'failed').length;
+  const passed = tests.filter(t => t.status === 'passed').length;
+  
+  const totalEl = document.getElementById('coco-total-tests');
+  const failedEl = document.getElementById('coco-failed-tests');
+  const passedEl = document.getElementById('coco-passed-tests');
+  
+  if (totalEl) totalEl.textContent = total;
+  if (failedEl) failedEl.textContent = failed;
+  if (passedEl) passedEl.textContent = passed;
+  
+  // Update filter button counts
+  const notRun = tests.filter(t => t.status === 'not_run' || t.status === 'none').length;
+  const filterFailedEl = document.getElementById('coco-filter-failed-count');
+  const filterNotRunEl = document.getElementById('coco-filter-not-run-count');
+  const filterPassedEl = document.getElementById('coco-filter-passed-count');
+  
+  if (filterFailedEl) filterFailedEl.textContent = failed;
+  if (filterNotRunEl) filterNotRunEl.textContent = notRun;
+  if (filterPassedEl) filterPassedEl.textContent = passed;
+}
+
+function updateCocoJobCount() {
+  const cocoSection = state.data?.cocoChartsSection;
+  if (!cocoSection) return;
+  
+  let tests = cocoSection.tests || [];
+  const total = tests.length;
+  
+  // Apply filters
+  if (state.cocoSearchQuery) {
+    const query = state.cocoSearchQuery.toLowerCase();
+    tests = tests.filter(t => 
+      t.name.toLowerCase().includes(query) ||
+      t.jobName?.toLowerCase().includes(query)
+    );
+  }
+  
+  if (state.cocoFilter && state.cocoFilter !== 'all') {
+    tests = tests.filter(t => t.status === state.cocoFilter);
+  }
+  
+  const visibleEl = document.getElementById('coco-visible-jobs');
+  const totalEl = document.getElementById('coco-total-jobs');
+  
+  if (visibleEl) visibleEl.textContent = tests.length;
+  if (totalEl) totalEl.textContent = total;
+}
+
+// ============================================
+// Cloud API Adaptor (CAA) Functions
+// ============================================
+
+function renderCAASections() {
+  const container = document.getElementById('caa-sections-container');
+  if (!container) return;
+  
+  const caaSection = state.data?.cocoCAASection;
+  if (!caaSection) {
+    container.innerHTML = '<p class="empty-message">No Cloud API Adaptor data available</p>';
+    return;
+  }
+  
+  // Filter tests
+  let tests = caaSection.tests || [];
+  
+  // Apply search filter
+  if (state.caaSearchQuery) {
+    const query = state.caaSearchQuery.toLowerCase();
+    tests = tests.filter(t => 
+      t.name.toLowerCase().includes(query) ||
+      t.jobName?.toLowerCase().includes(query)
+    );
+  }
+  
+  // Apply status filter
+  if (state.caaFilter && state.caaFilter !== 'all') {
+    tests = tests.filter(t => t.status === state.caaFilter);
+  }
+  
+  if (tests.length === 0) {
+    container.innerHTML = '<p class="empty-message">No tests match your filters</p>';
+    return;
+  }
+  
+  // Group by status
+  const failed = tests.filter(t => t.status === 'failed');
+  const passed = tests.filter(t => t.status === 'passed');
+  const notRun = tests.filter(t => t.status === 'not_run' || t.status === 'none');
+  
+  // Calculate weather stats (same as Kata)
+  const weatherPercent = tests.length > 0 
+    ? Math.round((passed.length / tests.length) * 100) 
+    : 0;
+  const weatherEmoji = weatherPercent >= 90 ? '☀️' : weatherPercent >= 70 ? '⛅' : weatherPercent >= 50 ? '🌥️' : '🌧️';
+  
+  // Status badges (exactly like Kata: failed → not run → all green)
+  const statusBadges = [];
+  if (failed.length > 0) {
+    statusBadges.push(`<span class="section-status has-failed">(${failed.length} failed)</span>`);
+  }
+  if (notRun.length > 0) {
+    statusBadges.push(`<span class="section-status has-not-run">(${notRun.length} not run)</span>`);
+  }
+  if (statusBadges.length === 0 && passed.length === tests.length) {
+    statusBadges.push(`<span class="section-status all-green">All Green</span>`);
+  }
+  
+  // Helper to render a test group (exactly like Kata's renderTestGroup)
+  const renderCAATestGroup = (groupTests, label, statusClass, groupId, isExpanded) => {
+    if (groupTests.length === 0) return '';
+    return `
+      <div class="test-group ${isExpanded ? 'expanded' : ''}" data-group-id="${groupId}">
+        <div class="test-group-header" data-group="${groupId}">
+          <div class="test-group-title">
+            <span class="test-group-toggle">▶</span>
+            <span class="dot dot-${statusClass}"></span>
+            ${label} (${groupTests.length})
+          </div>
+        </div>
+        <div class="test-group-content">
+          <div class="test-table-header">
+            <span>Test Name</span>
+            <span>Maintainers</span>
+            <span>Run</span>
+            <span>Last Failure</span>
+            <span>Last Success</span>
+            <span class="weather-header">Weather <span class="weather-range">(oldest ← 10 days → newest)</span></span>
+            <span>Retried</span>
+          </div>
+          ${groupTests.map(t => renderCocoTestRow(t, caaSection.id, caaSection.sourceRepo)).join('')}
+        </div>
+      </div>
+    `;
+  };
+  
+  container.innerHTML = `
+    <div class="section expanded">
+      <div class="section-header" data-section="coco-caa">
+        <span class="section-toggle">▶</span>
+        <span class="section-name">All Jobs</span>
+        <div class="section-meta">
+          <span class="section-count">${tests.length} jobs</span>
+          <span class="section-weather">
+            <span class="section-weather-icon">${weatherEmoji}</span>
+            ${weatherPercent}%
+          </span>
+          ${statusBadges.join('')}
+        </div>
+      </div>
+      <div class="section-content">
+        ${renderCAATestGroup(failed, 'FAILED', 'failed', 'coco-caa-failed', true)}
+        ${renderCAATestGroup(notRun, 'NOT RUN', 'not-run', 'coco-caa-not-run', false)}
+        ${renderCAATestGroup(passed, 'PASSED', 'passed', 'coco-caa-passed', failed.length === 0 && notRun.length === 0)}
+      </div>
+    </div>
+  `;
+  
+  // Add click handler for section header (expand/collapse)
+  container.querySelectorAll('.section-header').forEach(header => {
+    header.addEventListener('click', () => {
+      const section = header.closest('.section');
+      const content = section.querySelector('.section-content');
+      const isExpanded = section.classList.contains('expanded');
+      
+      section.classList.toggle('expanded', !isExpanded);
+      content.style.display = isExpanded ? 'none' : '';
+    });
+  });
+  
+  // Add click handlers for group headers (use toggleGroup like Kata)
+  container.querySelectorAll('.test-group-header').forEach(header => {
+    header.addEventListener('click', (e) => {
+      if (e.target.closest('.btn')) return;
+      const groupId = header.dataset.group;
+      toggleGroup(groupId);
+    });
+  });
+  
+  // Add click handlers for weather columns
+  container.querySelectorAll('.test-weather-col[data-test-id]').forEach(col => {
+    col.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const testId = col.dataset.testId;
+      showWeatherModal('coco-caa', testId);
+    });
+  });
+}
+
+function updateCAAStats() {
+  const caaSection = state.data?.cocoCAASection;
+  if (!caaSection) return;
+  
+  const tests = caaSection.tests || [];
+  const total = tests.length;
+  const failed = tests.filter(t => t.status === 'failed').length;
+  const passed = tests.filter(t => t.status === 'passed').length;
+  
+  const totalEl = document.getElementById('caa-total-tests');
+  const failedEl = document.getElementById('caa-failed-tests');
+  const passedEl = document.getElementById('caa-passed-tests');
+  
+  if (totalEl) totalEl.textContent = total;
+  if (failedEl) failedEl.textContent = failed;
+  if (passedEl) passedEl.textContent = passed;
+  
+  // Update filter button counts
+  const notRun = tests.filter(t => t.status === 'not_run' || t.status === 'none').length;
+  const filterFailedEl = document.getElementById('caa-filter-failed-count');
+  const filterNotRunEl = document.getElementById('caa-filter-not-run-count');
+  const filterPassedEl = document.getElementById('caa-filter-passed-count');
+  
+  if (filterFailedEl) filterFailedEl.textContent = failed;
+  if (filterNotRunEl) filterNotRunEl.textContent = notRun;
+  if (filterPassedEl) filterPassedEl.textContent = passed;
+}
+
+function updateCAAJobCount() {
+  const caaSection = state.data?.cocoCAASection;
+  if (!caaSection) return;
+  
+  let tests = caaSection.tests || [];
+  const total = tests.length;
+  
+  // Apply filters
+  if (state.caaSearchQuery) {
+    const query = state.caaSearchQuery.toLowerCase();
+    tests = tests.filter(t => 
+      t.name.toLowerCase().includes(query) ||
+      t.jobName?.toLowerCase().includes(query)
+    );
+  }
+  
+  if (state.caaFilter && state.caaFilter !== 'all') {
+    tests = tests.filter(t => t.status === state.caaFilter);
+  }
+  
+  const visibleEl = document.getElementById('caa-visible-jobs');
+  const totalEl = document.getElementById('caa-total-jobs');
+  
+  if (visibleEl) visibleEl.textContent = tests.length;
+  if (totalEl) totalEl.textContent = total;
 }
 
 // Start the app

@@ -91,6 +91,70 @@ fetch_nightly_data() {
                 -o required-tests.yaml
             echo "  Downloaded required-tests.yaml ($(wc -c < required-tests.yaml) bytes)"
             
+            # Fetch CoCo Charts E2E test data (scheduled runs only)
+            echo ""
+            echo "Fetching CoCo Charts E2E test data (scheduled runs)..."
+            gh api \
+                -H "Accept: application/vnd.github+json" \
+                --paginate \
+                "repos/confidential-containers/charts/actions/workflows/e2e-tests.yaml/runs?event=schedule&created=>$(date -d "10 days ago" +%Y-%m-%d)" \
+                --jq ".workflow_runs" | jq -s "add // []" > coco-charts-runs.json
+            
+            echo "Found $(jq "length" coco-charts-runs.json) CoCo Charts scheduled runs"
+            
+            # Fetch jobs for each CoCo Charts run
+            echo "[]" > coco-charts-jobs.json
+            
+            for run_id in $(jq -r ".[].id" coco-charts-runs.json | head -15); do
+                echo "Fetching jobs for CoCo Charts run $run_id..."
+                
+                gh api \
+                    -H "Accept: application/vnd.github+json" \
+                    --paginate \
+                    "repos/confidential-containers/charts/actions/runs/$run_id/jobs?per_page=100" \
+                    --jq ".jobs[]" | \
+                    jq -s --arg run_id "$run_id" "[.[] | . + {workflow_run_id: \$run_id, source_repo: \"confidential-containers/charts\"}]" > run-jobs.json
+                
+                echo "  Found $(jq "length" run-jobs.json) jobs"
+                
+                jq -s "add" coco-charts-jobs.json run-jobs.json > temp-jobs.json
+                mv temp-jobs.json coco-charts-jobs.json
+            done
+            
+            echo "Total CoCo Charts jobs: $(jq "length" coco-charts-jobs.json)"
+            
+            # Fetch CoCo Cloud API Adaptor E2E test data (scheduled runs only)
+            echo ""
+            echo "Fetching Cloud API Adaptor daily E2E test data (scheduled runs)..."
+            gh api \
+                -H "Accept: application/vnd.github+json" \
+                --paginate \
+                "repos/confidential-containers/cloud-api-adaptor/actions/workflows/daily-e2e-tests.yaml/runs?event=schedule&created=>$(date -d "10 days ago" +%Y-%m-%d)" \
+                --jq ".workflow_runs" | jq -s "add // []" > coco-caa-runs.json
+            
+            echo "Found $(jq "length" coco-caa-runs.json) CAA scheduled runs"
+            
+            # Fetch jobs for each CAA run
+            echo "[]" > coco-caa-jobs.json
+            
+            for run_id in $(jq -r ".[].id" coco-caa-runs.json | head -15); do
+                echo "Fetching jobs for CAA run $run_id..."
+                
+                gh api \
+                    -H "Accept: application/vnd.github+json" \
+                    --paginate \
+                    "repos/confidential-containers/cloud-api-adaptor/actions/runs/$run_id/jobs?per_page=100" \
+                    --jq ".jobs[]" | \
+                    jq -s --arg run_id "$run_id" "[.[] | . + {workflow_run_id: \$run_id, source_repo: \"confidential-containers/cloud-api-adaptor\"}]" > run-jobs.json
+                
+                echo "  Found $(jq "length" run-jobs.json) jobs"
+                
+                jq -s "add" coco-caa-jobs.json run-jobs.json > temp-jobs.json
+                mv temp-jobs.json coco-caa-jobs.json
+            done
+            
+            echo "Total CAA jobs: $(jq "length" coco-caa-jobs.json)"
+            
             # Fetch logs for ALL failed jobs
             echo "Fetching logs for failed jobs..."
             mkdir -p job-logs

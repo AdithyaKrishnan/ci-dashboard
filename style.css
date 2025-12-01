@@ -98,6 +98,76 @@ body {
   gap: var(--space-lg);
 }
 
+.project-selector {
+  display: flex;
+  gap: var(--space-sm);
+}
+
+.project-btn {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-md);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-md);
+  background: var(--bg-tertiary);
+  color: var(--text-secondary);
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.project-btn:hover {
+  border-color: var(--color-accent);
+  background: var(--bg-hover);
+}
+
+.project-btn.active {
+  border-color: var(--color-accent);
+  background: var(--color-accent);
+  color: white;
+}
+
+.project-logo {
+  height: 24px;
+  width: auto;
+}
+
+.project-btn.active .project-logo {
+  filter: brightness(0) invert(1);
+}
+
+.project-logo.kata-icon {
+  height: 28px;
+}
+
+.project-logo.coco-logo {
+  height: 28px;
+}
+
+.project-logo.coco-logo {
+  height: 28px;
+}
+
+.project-icon {
+  font-size: 1.1rem;
+}
+
+.project-name {
+  white-space: nowrap;
+}
+
+/* Project Content Areas */
+.project-content {
+  display: none;
+}
+
+.project-content.active {
+  display: block;
+}
+
 .logo {
   display: flex;
   align-items: center;
@@ -220,6 +290,15 @@ body {
 
 .tab-icon {
   font-size: 1.1rem;
+}
+
+.tab-badge.coming-soon {
+  font-size: 0.65rem;
+  padding: 2px 6px;
+  background: var(--bg-hover);
+  color: var(--text-muted);
+  border-radius: var(--radius-sm);
+  font-weight: 500;
 }
 
 /* ============================================
@@ -455,6 +534,97 @@ body {
 
 .quick-filter-btn.active .quick-filter-desc {
   color: rgba(255, 255, 255, 0.8);
+}
+
+/* Quick Filter Dropdown */
+.quick-filter-dropdown {
+  position: relative;
+}
+
+.quick-filter-btn.has-dropdown {
+  position: relative;
+  padding-right: var(--space-xl);
+}
+
+.dropdown-arrow {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.6rem;
+  opacity: 0.6;
+  transition: transform var(--transition-fast);
+}
+
+.quick-filter-dropdown.open .dropdown-arrow {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.quick-filter-submenu {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  min-width: 140px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: all var(--transition-fast);
+}
+
+.quick-filter-dropdown.open .quick-filter-submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.submenu-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  width: 100%;
+  padding: var(--space-sm) var(--space-md);
+  border: none;
+  background: transparent;
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background var(--transition-fast);
+  text-align: left;
+}
+
+.submenu-item:hover {
+  background: var(--bg-hover);
+}
+
+.submenu-item.active {
+  background: var(--color-accent);
+  color: white;
+}
+
+.submenu-icon {
+  font-size: 1rem;
+  width: 20px;
+  text-align: center;
+}
+
+.submenu-label {
+  font-weight: 500;
+}
+
+.submenu-desc {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  margin-left: auto;
+}
+
+.submenu-item.active .submenu-desc {
+  color: rgba(255, 255, 255, 0.7);
 }
 
 /* Job Count Display */

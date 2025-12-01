@@ -14,9 +14,15 @@
     <!-- Header -->
     <header class="header">
       <div class="header-left">
-        <div class="logo">
-          <img src="kata-logo.svg" alt="Kata Containers" class="logo-image">
-          <h1>CI Dashboard</h1>
+        <div class="project-selector">
+          <button class="project-btn active" data-project="kata">
+            <img src="kata-icon.svg" alt="Kata Containers" class="project-logo kata-icon">
+            <span class="project-name">Kata Containers</span>
+          </button>
+          <button class="project-btn" data-project="coco">
+            <img src="coco-logo.svg" alt="Confidential Containers" class="project-logo coco-logo">
+            <span class="project-name">Confidential Containers</span>
+          </button>
         </div>
       </div>
       <div class="header-right">
@@ -24,18 +30,20 @@
       </div>
     </header>
 
-    <!-- Tabs -->
-    <nav class="tabs">
-      <button class="tab active" data-tab="nightly">
-        <span class="tab-icon">🌙</span>
-        Nightly CI
-      </button>
-      <button class="tab" data-tab="prfailures">
-        <span class="tab-icon">🔴</span>
-        PR Failures
-        <span class="tab-badge" id="flaky-count-badge" style="display: none;">0</span>
-      </button>
-    </nav>
+    <!-- Kata Containers Content -->
+    <div class="project-content active" id="kata-content">
+      <!-- Tabs -->
+      <nav class="tabs">
+        <button class="tab active" data-tab="nightly">
+          <span class="tab-icon">🌙</span>
+          Nightly CI
+        </button>
+        <button class="tab" data-tab="prfailures">
+          <span class="tab-icon">🔴</span>
+          PR Failures
+          <span class="tab-badge" id="flaky-count-badge" style="display: none;">0</span>
+        </button>
+      </nav>
 
     <!-- Rename Warnings (shown when job renames detected) -->
     <div id="rename-warnings" style="display: none;"></div>
@@ -164,6 +172,193 @@
         </div>
       </div>
     </main>
+    </div><!-- End Kata Containers Content -->
+
+    <!-- Confidential Containers Content -->
+    <div class="project-content" id="coco-content">
+      <!-- CoCo Sub-project Tabs -->
+      <nav class="tabs">
+        <button class="tab active" data-tab="coco-charts">
+          <span class="tab-icon">⎈</span>
+          Charts
+        </button>
+        <button class="tab" data-tab="coco-caa">
+          <span class="tab-icon">☁️</span>
+          Cloud API Adaptor
+        </button>
+      </nav>
+
+      <!-- CoCo Charts Content -->
+      <main class="content tab-content active" id="coco-charts-content">
+        <!-- Quick Stats -->
+        <div class="quick-stats">
+          <div class="stat">
+            <span class="stat-value" id="coco-total-tests">0</span>
+            <span class="stat-label">Total Tests</span>
+          </div>
+          <div class="stat stat-failed">
+            <span class="stat-value" id="coco-failed-tests">0</span>
+            <span class="stat-label">Failed</span>
+          </div>
+          <div class="stat stat-passed">
+            <span class="stat-value" id="coco-passed-tests">0</span>
+            <span class="stat-label">Passed</span>
+          </div>
+        </div>
+
+        <!-- Filters -->
+        <div class="filters">
+          <div class="search-box">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="search-coco-tests" placeholder="Search E2E tests...">
+          </div>
+          <div class="filter-buttons">
+            <button class="filter-btn coco-filter active" data-filter="all">All</button>
+            <button class="filter-btn coco-filter" data-filter="failed">
+              <span class="dot dot-failed"></span> Failed (<span id="coco-filter-failed-count">0</span>)
+            </button>
+            <button class="filter-btn coco-filter" data-filter="not_run">
+              <span class="dot dot-not-run"></span> Not Run (<span id="coco-filter-not-run-count">0</span>)
+            </button>
+            <button class="filter-btn coco-filter" data-filter="passed">
+              <span class="dot dot-passed"></span> Passed (<span id="coco-filter-passed-count">0</span>)
+            </button>
+          </div>
+        </div>
+
+        <!-- Job Count -->
+        <div class="job-count-display">
+          <span>Showing <strong id="coco-visible-jobs">0</strong> of <strong id="coco-total-jobs">0</strong> E2E tests</span>
+        </div>
+
+        <!-- Date Display -->
+        <div class="date-header">
+          <h2>Nightly E2E Runs — <span id="coco-current-date">November 28, 2025</span></h2>
+          <p class="section-subtitle">
+            <a href="https://github.com/confidential-containers/charts" target="_blank">confidential-containers/charts</a>
+          </p>
+        </div>
+
+        <!-- Sections -->
+        <div class="sections" id="coco-sections-container">
+          <!-- CoCo sections will be rendered by JavaScript -->
+        </div>
+      </main>
+
+      <!-- CoCo Cloud API Adaptor Content -->
+      <main class="content tab-content" id="coco-caa-content">
+        <!-- Quick Stats -->
+        <div class="quick-stats">
+          <div class="stat">
+            <span class="stat-value" id="caa-total-tests">0</span>
+            <span class="stat-label">Total Tests</span>
+          </div>
+          <div class="stat stat-failed">
+            <span class="stat-value" id="caa-failed-tests">0</span>
+            <span class="stat-label">Failed</span>
+          </div>
+          <div class="stat stat-passed">
+            <span class="stat-value" id="caa-passed-tests">0</span>
+            <span class="stat-label">Passed</span>
+          </div>
+        </div>
+
+        <!-- Filters -->
+        <div class="filters">
+          <div class="search-box">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="search-caa-tests" placeholder="Search E2E tests...">
+          </div>
+          <div class="filter-buttons">
+            <button class="filter-btn caa-filter active" data-filter="all">All</button>
+            <button class="filter-btn caa-filter" data-filter="failed">
+              <span class="dot dot-failed"></span> Failed (<span id="caa-filter-failed-count">0</span>)
+            </button>
+            <button class="filter-btn caa-filter" data-filter="not_run">
+              <span class="dot dot-not-run"></span> Not Run (<span id="caa-filter-not-run-count">0</span>)
+            </button>
+            <button class="filter-btn caa-filter" data-filter="passed">
+              <span class="dot dot-passed"></span> Passed (<span id="caa-filter-passed-count">0</span>)
+            </button>
+          </div>
+        </div>
+
+        <!-- Job Count -->
+        <div class="job-count-display">
+          <span>Showing <strong id="caa-visible-jobs">0</strong> of <strong id="caa-total-jobs">0</strong> E2E tests</span>
+        </div>
+
+        <!-- Date Display -->
+        <div class="date-header">
+          <h2>Daily E2E Runs — <span id="caa-current-date">November 28, 2025</span></h2>
+          <p class="section-subtitle">
+            <a href="https://github.com/confidential-containers/cloud-api-adaptor" target="_blank">confidential-containers/cloud-api-adaptor</a>
+          </p>
+        </div>
+
+        <!-- Sections -->
+        <div class="sections" id="caa-sections-container">
+          <!-- CAA sections will be rendered by JavaScript -->
+        </div>
+      </main>
+
+      <!-- CoCo Cloud API Adaptor Content -->
+      <main class="content tab-content" id="coco-caa-content">
+        <!-- Quick Stats -->
+        <div class="quick-stats">
+          <div class="stat">
+            <span class="stat-value" id="caa-total-tests">0</span>
+            <span class="stat-label">Total Tests</span>
+          </div>
+          <div class="stat stat-failed">
+            <span class="stat-value" id="caa-failed-tests">0</span>
+            <span class="stat-label">Failed</span>
+          </div>
+          <div class="stat stat-passed">
+            <span class="stat-value" id="caa-passed-tests">0</span>
+            <span class="stat-label">Passed</span>
+          </div>
+        </div>
+
+        <!-- Filters -->
+        <div class="filters">
+          <div class="search-box">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="search-caa-tests" placeholder="Search E2E tests...">
+          </div>
+          <div class="filter-buttons">
+            <button class="filter-btn caa-filter active" data-filter="all">All</button>
+            <button class="filter-btn caa-filter" data-filter="failed">
+              <span class="dot dot-failed"></span> Failed (<span id="caa-filter-failed-count">0</span>)
+            </button>
+            <button class="filter-btn caa-filter" data-filter="not_run">
+              <span class="dot dot-not-run"></span> Not Run (<span id="caa-filter-not-run-count">0</span>)
+            </button>
+            <button class="filter-btn caa-filter" data-filter="passed">
+              <span class="dot dot-passed"></span> Passed (<span id="caa-filter-passed-count">0</span>)
+            </button>
+          </div>
+        </div>
+
+        <!-- Job Count -->
+        <div class="job-count-display">
+          <span>Showing <strong id="caa-visible-jobs">0</strong> of <strong id="caa-total-jobs">0</strong> E2E tests</span>
+        </div>
+
+        <!-- Date Display -->
+        <div class="date-header">
+          <h2>Daily E2E Runs — <span id="caa-current-date">November 28, 2025</span></h2>
+          <p class="section-subtitle">
+            <a href="https://github.com/confidential-containers/cloud-api-adaptor" target="_blank">confidential-containers/cloud-api-adaptor</a>
+          </p>
+        </div>
+
+        <!-- Sections -->
+        <div class="sections" id="caa-sections-container">
+          <!-- CAA sections will be rendered by JavaScript -->
+        </div>
+      </main>
+    </div><!-- End CoCo Content -->
 
     <!-- Error Modal -->
     <div class="modal" id="error-modal">
