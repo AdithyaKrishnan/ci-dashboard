@@ -2289,18 +2289,20 @@ function updateCocoStats() {
   const tests = cocoSection.tests || [];
   const total = tests.length;
   const failed = tests.filter(t => t.status === 'failed').length;
+  const notRun = tests.filter(t => t.status === 'not_run' || t.status === 'none').length;
   const passed = tests.filter(t => t.status === 'passed').length;
   
   const totalEl = document.getElementById('coco-total-tests');
   const failedEl = document.getElementById('coco-failed-tests');
+  const notRunEl = document.getElementById('coco-not-run-tests');
   const passedEl = document.getElementById('coco-passed-tests');
   
   if (totalEl) totalEl.textContent = total;
   if (failedEl) failedEl.textContent = failed;
+  if (notRunEl) notRunEl.textContent = notRun;
   if (passedEl) passedEl.textContent = passed;
   
   // Update filter button counts
-  const notRun = tests.filter(t => t.status === 'not_run' || t.status === 'none').length;
   const filterFailedEl = document.getElementById('coco-filter-failed-count');
   const filterNotRunEl = document.getElementById('coco-filter-not-run-count');
   const filterPassedEl = document.getElementById('coco-filter-passed-count');
@@ -2484,18 +2486,20 @@ function updateCAAStats() {
   const tests = caaSection.tests || [];
   const total = tests.length;
   const failed = tests.filter(t => t.status === 'failed').length;
+  const notRun = tests.filter(t => t.status === 'not_run' || t.status === 'none').length;
   const passed = tests.filter(t => t.status === 'passed').length;
   
   const totalEl = document.getElementById('caa-total-tests');
   const failedEl = document.getElementById('caa-failed-tests');
+  const notRunEl = document.getElementById('caa-not-run-tests');
   const passedEl = document.getElementById('caa-passed-tests');
   
   if (totalEl) totalEl.textContent = total;
   if (failedEl) failedEl.textContent = failed;
+  if (notRunEl) notRunEl.textContent = notRun;
   if (passedEl) passedEl.textContent = passed;
   
   // Update filter button counts
-  const notRun = tests.filter(t => t.status === 'not_run' || t.status === 'none').length;
   const filterFailedEl = document.getElementById('caa-filter-failed-count');
   const filterNotRunEl = document.getElementById('caa-filter-not-run-count');
   const filterPassedEl = document.getElementById('caa-filter-passed-count');
