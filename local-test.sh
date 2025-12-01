@@ -78,6 +78,42 @@ fetch_nightly_data() {
                 mv temp-jobs.json all-jobs.json
             done
             
+            # Fetch s390x nightly workflow runs
+            echo ""
+            echo "Fetching s390x nightly workflow runs..."
+            gh api \
+                -H "Accept: application/vnd.github+json" \
+                --paginate \
+                "repos/kata-containers/kata-containers/actions/workflows/ci-nightly-s390x.yaml/runs?created=>$(date -d "10 days ago" +%Y-%m-%d)" \
+                --jq ".workflow_runs" | jq -s "add // []" > s390x-runs.json
+            
+            echo "Found $(jq "length" s390x-runs.json) s390x nightly runs"
+            
+            # Fetch jobs for each s390x run
+            echo "[]" > s390x-jobs.json
+            
+            for run_id in $(jq -r ".[].id" s390x-runs.json | head -15); do
+                echo "Fetching jobs for s390x run $run_id..."
+                
+                gh api \
+                    -H "Accept: application/vnd.github+json" \
+                    --paginate \
+                    "repos/kata-containers/kata-containers/actions/runs/$run_id/jobs?per_page=100" \
+                    --jq ".jobs[]" | \
+                    jq -s --arg run_id "$run_id" "[.[] | . + {workflow_run_id: \$run_id, source_workflow: \"ci-nightly-s390x\"}]" > run-jobs.json
+                
+                echo "  Found $(jq "length" run-jobs.json) jobs"
+                
+                jq -s "add" s390x-jobs.json run-jobs.json > temp-jobs.json
+                mv temp-jobs.json s390x-jobs.json
+            done
+            
+            echo "Total s390x jobs: $(jq "length" s390x-jobs.json)"
+            
+            # Merge s390x jobs into all-jobs.json
+            jq -s "add" all-jobs.json s390x-jobs.json > temp-jobs.json
+            mv temp-jobs.json all-jobs.json
+            
             # Create final format
             echo "{\"jobs\":" > raw-runs.json
             cat all-jobs.json >> raw-runs.json

@@ -133,6 +133,52 @@ jobs:
           echo "Log files fetched: $(ls job-logs/ 2>/dev/null | wc -l)"
           echo "Total log size: $(du -sh job-logs/ 2>/dev/null | cut -f1)"
       
+      - name: Fetch s390x nightly workflow runs and jobs
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Fetch s390x nightly workflow runs (last 10 days)
+          echo "Fetching s390x nightly workflow runs..."
+          gh api \
+            -H "Accept: application/vnd.github+json" \
+            --paginate \
+            "repos/kata-containers/kata-containers/actions/workflows/ci-nightly-s390x.yaml/runs?created=>$(date -d '10 days ago' +%Y-%m-%d)" \
+            --jq '.workflow_runs' | jq -s 'add // []' > s390x-runs.json
+          
+          echo "Found $(jq 'length' s390x-runs.json) s390x nightly runs"
+          
+          # Fetch jobs for each run
+          echo '[]' > s390x-jobs.json
+          
+          for run_id in $(jq -r '.[].id' s390x-runs.json | head -15); do
+            echo "Fetching jobs for s390x run $run_id..."
+            
+            gh api \
+              -H "Accept: application/vnd.github+json" \
+              --paginate \
+              "repos/kata-containers/kata-containers/actions/runs/$run_id/jobs?per_page=100" \
+              --jq '.jobs[]' | \
+              jq -s --arg run_id "$run_id" '[.[] | . + {workflow_run_id: $run_id, source_workflow: "ci-nightly-s390x"}]' > run-jobs.json
+            
+            echo "  Found $(jq 'length' run-jobs.json) jobs"
+            
+            jq -s 'add' s390x-jobs.json run-jobs.json > temp-jobs.json
+            mv temp-jobs.json s390x-jobs.json
+          done
+          
+          echo "Fetched $(jq 'length' s390x-jobs.json) s390x jobs total"
+          
+          # Merge s390x jobs into all-jobs.json
+          jq -s 'add' all-jobs.json s390x-jobs.json > temp-jobs.json
+          mv temp-jobs.json all-jobs.json
+          
+          # Recreate raw-runs.json with merged data
+          echo '{"jobs":' > raw-runs.json
+          cat all-jobs.json >> raw-runs.json
+          echo '}' >> raw-runs.json
+          
+          echo "Total jobs after s390x merge: $(jq '.jobs | length' raw-runs.json)"
+      
       - name: Fetch required tests from gatekeeper
         run: |
           # Fetch the authoritative list of required tests
