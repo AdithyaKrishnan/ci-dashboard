@@ -245,6 +245,22 @@ sections:
         maintainers:
           - "@stevenhorsman"
           - "@wainersm"
+      
+      # s390x CC tests (also in IBM section)
+      - name: "check-internal-test-result (cc-vfio-ap-e2e-tests)"
+        description: "CC VFIO-AP E2E tests (s390x)"
+        maintainers:
+          - "@BbolroC"
+      
+      - name: "check-internal-test-result (cc-se-e2e-tests-go)"
+        description: "CC Secure Execution E2E tests - Go (s390x)"
+        maintainers:
+          - "@BbolroC"
+      
+      - name: "check-internal-test-result (cc-se-e2e-tests-rs)"
+        description: "CC Secure Execution E2E tests - Rust (s390x)"
+        maintainers:
+          - "@BbolroC"
 
   # ===========================================
   # IBM Section - s390x tests (zVSI, SE, VFIO-AP)
@@ -284,3 +300,4 @@ sections:
 # Failures in any other step = "not run" (infrastructure issue)
 fatal_steps:
   - pattern: "Run tests.*"
+  - pattern: "Fetch a test result.*"
