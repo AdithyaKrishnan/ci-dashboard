@@ -780,37 +780,34 @@ const allJobsSection = {
     const matchingJobs = allJobs.filter(job => job.name === jobName)
       .sort((a, b) => new Date(b.started_at || b.created_at) - new Date(a.started_at || a.created_at));
     
-    // Get the most recent workflow run's jobs
+    // Get the most recent job
     const latestJob = matchingJobs[0];
-    const latestRunId = latestJob?.workflow_run_id;
     
-    // Find the FIRST attempt of the latest run (run_attempt === 1 or lowest)
-    // This is the true result - retries don't change the fact that it failed initially
-    const latestRunJobs = matchingJobs.filter(j => j.workflow_run_id === latestRunId);
-    const firstAttemptJob = latestRunJobs.sort((a, b) => (a.run_attempt || 1) - (b.run_attempt || 1))[0];
-    const lastAttemptJob = latestRunJobs.sort((a, b) => (b.run_attempt || 1) - (a.run_attempt || 1))[0];
-    
-    // Count retries
-    const retryCount = lastAttemptJob?.run_attempt > 1 ? lastAttemptJob.run_attempt - 1 : 0;
-    const retriedAndPassed = retryCount > 0 && lastAttemptJob?.conclusion === 'success' && firstAttemptJob?.conclusion === 'failure';
+    // GitHub API only returns the current state of each job (latest attempt).
+    // If run_attempt > 1, it means previous attempts failed.
+    // So: run_attempt > 1 AND conclusion == success means "failed then passed" = FLAKY = should show as FAILED
+    const retryCount = latestJob?.run_attempt > 1 ? latestJob.run_attempt - 1 : 0;
+    const retriedAndPassed = retryCount > 0 && latestJob?.conclusion === 'success';
     
     let status = 'not_run';
     
-    // Use FIRST attempt's result as the status - don't hide failures behind retries
-    const jobForStatus = firstAttemptJob || latestJob;
-    if (jobForStatus) {
-      if (jobForStatus.conclusion === 'success') {
+    if (latestJob) {
+      // If there were retries and it eventually passed, the FIRST attempt failed
+      // This is a flaky test and should be shown as FAILED (not passed)
+      if (retriedAndPassed) {
+        status = 'failed'; // First attempt failed, even though retry passed
+      } else if (latestJob.conclusion === 'success') {
         status = 'passed';
-      } else if (jobForStatus.conclusion === 'failure') {
+      } else if (latestJob.conclusion === 'failure') {
         // Check if failure is in a fatal step
-        const failedStep = jobForStatus.steps?.find(s => s.conclusion === 'failure');
+        const failedStep = latestJob.steps?.find(s => s.conclusion === 'failure');
         if (failedStep) {
           const isFatal = fatalStepPatterns.some(p => p.test(failedStep.name));
           status = isFatal ? 'failed' : 'not_run';
         } else {
           status = 'failed';
         }
-      } else if (jobForStatus.status === 'in_progress' || jobForStatus.status === 'queued') {
+      } else if (latestJob.status === 'in_progress' || latestJob.status === 'queued') {
         status = 'running';
       }
     }
@@ -828,45 +825,23 @@ const allJobsSection = {
         return jobDate.toDateString() === date.toDateString();
       });
       
-      // Group by workflow run and find first attempt for each run
-      const runGroups = {};
-      dayJobs.forEach(job => {
-        const runId = job.workflow_run_id;
-        if (!runGroups[runId]) runGroups[runId] = [];
-        runGroups[runId].push(job);
-      });
+      // Pick the most recent job for this day
+      // GitHub API only gives us the latest attempt state per job
+      const dayJob = dayJobs[0] || null;
       
-      // For each run, get the first attempt (lowest run_attempt number)
-      // This ensures we show the original result, not the retry result
-      let dayJob = null;
-      let dayRetried = false;
-      
-      // Find the most recent run's first attempt
-      const sortedRuns = Object.values(runGroups).sort((a, b) => {
-        const aDate = new Date(a[0].started_at || a[0].created_at);
-        const bDate = new Date(b[0].started_at || b[0].created_at);
-        return bDate - aDate;
-      });
-      
-      if (sortedRuns.length > 0) {
-        const latestRunJobs = sortedRuns[0];
-        // Sort by run_attempt to get first attempt
-        latestRunJobs.sort((a, b) => (a.run_attempt || 1) - (b.run_attempt || 1));
-        dayJob = latestRunJobs[0]; // First attempt
-        
-        // Check if there were retries
-        const lastAttempt = latestRunJobs[latestRunJobs.length - 1];
-        if (lastAttempt.run_attempt > 1) {
-          dayRetried = true;
-        }
-      }
+      // Check if there were retries (run_attempt > 1 means previous attempts failed)
+      const dayRetried = dayJob?.run_attempt > 1;
+      const dayRetriedAndPassed = dayRetried && dayJob?.conclusion === 'success';
       
       let dayStatus = 'none';
       let failureStep = null;
       let failureDetails = null;
       
       if (dayJob) {
-        if (dayJob.conclusion === 'success') {
+        // If retried and passed, the FIRST attempt failed - show as failed (flaky)
+        if (dayRetriedAndPassed) {
+          dayStatus = 'failed'; // First attempt failed
+        } else if (dayJob.conclusion === 'success') {
           dayStatus = 'passed';
         } else if (dayJob.conclusion === 'failure') {
           dayStatus = 'failed';
@@ -891,7 +866,7 @@ const allJobsSection = {
       weatherHistory.push({
         date: date.toISOString(),
         status: dayStatus,
-        retried: dayRetried, // True if this day had retries (flaky indicator)
+        retried: dayRetried, // True if run_attempt > 1 (previous attempts failed)
         runId: dayJob?.workflow_run_id || dayJob?.run_id?.toString() || null,
         jobId: dayJob?.id?.toString() || null,
         duration: dayJob ? formatDuration(dayJob.started_at, dayJob.completed_at) : null,
@@ -920,7 +895,7 @@ const allJobsSection = {
       retried: retryCount,
       retriedAndPassed: retriedAndPassed, // First attempt failed but retry passed - this is flaky!
       runId: latestJob?.workflow_run_id || latestJob?.run_id?.toString() || null,
-      jobId: firstAttemptJob?.id?.toString() || latestJob?.id?.toString() || null, // Link to first attempt
+      jobId: latestJob?.id?.toString() || null,
       maintainers: maintainers
     };
   })
