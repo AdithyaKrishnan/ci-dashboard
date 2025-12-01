@@ -68,7 +68,7 @@ fetch_nightly_data() {
                 gh api \
                     -H "Accept: application/vnd.github+json" \
                     --paginate \
-                    "repos/kata-containers/kata-containers/actions/runs/$run_id/jobs?per_page=100" \
+                    "repos/kata-containers/kata-containers/actions/runs/$run_id/jobs?per_page=100&filter=all" \
                     --jq ".jobs[]" | \
                     jq -s --arg run_id "$run_id" "[.[] | . + {workflow_run_id: \$run_id}]" > run-jobs.json
                 
@@ -98,7 +98,7 @@ fetch_nightly_data() {
                 gh api \
                     -H "Accept: application/vnd.github+json" \
                     --paginate \
-                    "repos/kata-containers/kata-containers/actions/runs/$run_id/jobs?per_page=100" \
+                    "repos/kata-containers/kata-containers/actions/runs/$run_id/jobs?per_page=100&filter=all" \
                     --jq ".jobs[]" | \
                     jq -s --arg run_id "$run_id" "[.[] | . + {workflow_run_id: \$run_id, source_workflow: \"ci-nightly-s390x\"}]" > run-jobs.json
                 
@@ -147,7 +147,7 @@ fetch_nightly_data() {
                 gh api \
                     -H "Accept: application/vnd.github+json" \
                     --paginate \
-                    "repos/confidential-containers/charts/actions/runs/$run_id/jobs?per_page=100" \
+                    "repos/confidential-containers/charts/actions/runs/$run_id/jobs?per_page=100&filter=all" \
                     --jq ".jobs[]" | \
                     jq -s --arg run_id "$run_id" "[.[] | . + {workflow_run_id: \$run_id, source_repo: \"confidential-containers/charts\"}]" > run-jobs.json
                 
@@ -179,7 +179,7 @@ fetch_nightly_data() {
                 gh api \
                     -H "Accept: application/vnd.github+json" \
                     --paginate \
-                    "repos/confidential-containers/cloud-api-adaptor/actions/runs/$run_id/jobs?per_page=100" \
+                    "repos/confidential-containers/cloud-api-adaptor/actions/runs/$run_id/jobs?per_page=100&filter=all" \
                     --jq ".jobs[]" | \
                     jq -s --arg run_id "$run_id" "[.[] | . + {workflow_run_id: \$run_id, source_repo: \"confidential-containers/cloud-api-adaptor\"}]" > run-jobs.json
                 
@@ -298,7 +298,7 @@ fetch_flaky_data() {
                 gh api \
                     -H "Accept: application/vnd.github+json" \
                     --paginate \
-                    "repos/kata-containers/kata-containers/actions/runs/$run_id/jobs?per_page=100" \
+                    "repos/kata-containers/kata-containers/actions/runs/$run_id/jobs?per_page=100&filter=all" \
                     --jq ".jobs[] | select(.name | test(\"run-k8s-tests|run-nvidia-gpu|run-kata-coco\"; \"i\"))" | \
                     jq -s --arg run_id "$run_id" --arg pr "$pr_number" --arg title "$pr_title" --arg sha "$head_sha" --arg attempt "$run_attempt" --arg created "$created_at" --arg merged "$pr_merged" --arg state "$pr_state" \
                     "[.[] | . + {workflow_run_id: \$run_id, pr_number: \$pr, pr_title: \$title, head_sha: \$sha, run_attempt: (\$attempt | tonumber), run_created_at: \$created, pr_merged: (\$merged == \"true\"), pr_state: \$state}]" > run-jobs.json

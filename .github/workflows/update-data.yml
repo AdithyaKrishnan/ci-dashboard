@@ -60,11 +60,12 @@ jobs:
           for run_id in $(jq -r '.[0:15] | .[].id' nightly-runs.json); do
             echo "Fetching jobs for run $run_id..."
             
-            # Use --paginate to get ALL jobs (no filter - we want everything for the dashboard)
+            # Use filter=all to get jobs from ALL attempts (not just latest)
+            # This is critical for tracking flaky tests that fail then pass on retry
             gh api \
               -H "Accept: application/vnd.github+json" \
               --paginate \
-              "repos/kata-containers/kata-containers/actions/runs/$run_id/jobs?per_page=100" \
+              "repos/kata-containers/kata-containers/actions/runs/$run_id/jobs?per_page=100&filter=all" \
               --jq '.jobs[]' | \
               jq -s --arg run_id "$run_id" '[.[] | . + {workflow_run_id: $run_id}]' > run-jobs.json
             
@@ -153,10 +154,11 @@ jobs:
           for run_id in $(jq -r '.[0:15] | .[].id' s390x-runs.json); do
             echo "Fetching jobs for s390x run $run_id..."
             
+            # Use filter=all to get jobs from ALL attempts
             gh api \
               -H "Accept: application/vnd.github+json" \
               --paginate \
-              "repos/kata-containers/kata-containers/actions/runs/$run_id/jobs?per_page=100" \
+              "repos/kata-containers/kata-containers/actions/runs/$run_id/jobs?per_page=100&filter=all" \
               --jq '.jobs[]' | \
               jq -s --arg run_id "$run_id" '[.[] | . + {workflow_run_id: $run_id, source_workflow: "ci-nightly-s390x"}]' > run-jobs.json
             
@@ -207,10 +209,11 @@ jobs:
           for run_id in $(jq -r '.[0:15] | .[].id' coco-charts-runs.json); do
             echo "Fetching jobs for CoCo Charts run $run_id..."
             
+            # Use filter=all to get jobs from ALL attempts
             gh api \
               -H "Accept: application/vnd.github+json" \
               --paginate \
-              "repos/confidential-containers/charts/actions/runs/$run_id/jobs?per_page=100" \
+              "repos/confidential-containers/charts/actions/runs/$run_id/jobs?per_page=100&filter=all" \
               --jq '.jobs[]' | \
               jq -s --arg run_id "$run_id" '[.[] | . + {workflow_run_id: $run_id, source_repo: "confidential-containers/charts"}]' > run-jobs.json
             
@@ -243,10 +246,11 @@ jobs:
           for run_id in $(jq -r '.[0:15] | .[].id' coco-caa-runs.json); do
             echo "Fetching jobs for CAA run $run_id..."
             
+            # Use filter=all to get jobs from ALL attempts
             gh api \
               -H "Accept: application/vnd.github+json" \
               --paginate \
-              "repos/confidential-containers/cloud-api-adaptor/actions/runs/$run_id/jobs?per_page=100" \
+              "repos/confidential-containers/cloud-api-adaptor/actions/runs/$run_id/jobs?per_page=100&filter=all" \
               --jq '.jobs[]' | \
               jq -s --arg run_id "$run_id" '[.[] | . + {workflow_run_id: $run_id, source_repo: "confidential-containers/cloud-api-adaptor"}]' > run-jobs.json
             

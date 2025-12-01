@@ -780,14 +780,46 @@ const allJobsSection = {
     const matchingJobs = allJobs.filter(job => job.name === jobName)
       .sort((a, b) => new Date(b.started_at || b.created_at) - new Date(a.started_at || a.created_at));
     
-    // Get the most recent job
-    const latestJob = matchingJobs[0];
+    // With filter=all, we get jobs from ALL attempts for each workflow run.
+    // Group by workflow_run_id to find the first attempt for each run.
+    const jobsByRun = {};
+    for (const job of matchingJobs) {
+      const runId = job.workflow_run_id;
+      if (!jobsByRun[runId]) {
+        jobsByRun[runId] = [];
+      }
+      jobsByRun[runId].push(job);
+    }
     
-    // Note: run_attempt indicates WORKFLOW retry count, not job-specific retries.
-    // A job can have run_attempt=6 and conclusion=success if the workflow was
-    // retried 5 times due to OTHER jobs failing, not this one.
-    // We can only know the job's actual result from its conclusion field.
-    const retryCount = latestJob?.run_attempt > 1 ? latestJob.run_attempt - 1 : 0;
+    // For each run, find the first attempt (run_attempt=1) - that's the real result
+    // A job that fails on attempt 1 but passes on retry is FLAKY
+    const getFirstAttemptJob = (runId) => {
+      const jobs = jobsByRun[runId] || [];
+      // Sort by run_attempt ascending to get first attempt
+      const sorted = [...jobs].sort((a, b) => (a.run_attempt || 1) - (b.run_attempt || 1));
+      return sorted[0] || null;
+    };
+    
+    const getLatestAttemptJob = (runId) => {
+      const jobs = jobsByRun[runId] || [];
+      // Sort by run_attempt descending to get latest attempt  
+      const sorted = [...jobs].sort((a, b) => (b.run_attempt || 1) - (a.run_attempt || 1));
+      return sorted[0] || null;
+    };
+    
+    // Get the most recent run's first attempt for current status
+    const mostRecentRunId = matchingJobs[0]?.workflow_run_id;
+    const firstAttemptJob = mostRecentRunId ? getFirstAttemptJob(mostRecentRunId) : null;
+    const latestAttemptJob = mostRecentRunId ? getLatestAttemptJob(mostRecentRunId) : null;
+    
+    // Use first attempt for status determination (shows real failures)
+    const latestJob = firstAttemptJob;
+    
+    // Check if there were retries that passed (flaky test indicator)
+    const hadRetries = latestAttemptJob && latestAttemptJob.run_attempt > 1;
+    const retriedAndPassed = hadRetries && 
+      firstAttemptJob?.conclusion === 'failure' && 
+      latestAttemptJob?.conclusion === 'success';
     
     let status = 'not_run';
     
@@ -821,11 +853,33 @@ const allJobsSection = {
         return jobDate.toDateString() === date.toDateString();
       });
       
-      // Pick the most recent job for this day
-      const dayJob = dayJobs[0] || null;
+      // Group day's jobs by workflow_run_id
+      const dayJobsByRun = {};
+      for (const job of dayJobs) {
+        const runId = job.workflow_run_id;
+        if (!dayJobsByRun[runId]) {
+          dayJobsByRun[runId] = [];
+        }
+        dayJobsByRun[runId].push(job);
+      }
       
-      // Note: run_attempt indicates WORKFLOW retry count, not job-specific retries
-      const dayRetried = dayJob?.run_attempt > 1;
+      // Get the most recent run for this day
+      const mostRecentDayJob = dayJobs[0];
+      const dayRunId = mostRecentDayJob?.workflow_run_id;
+      
+      // For this day's run, get the FIRST attempt (shows real result)
+      let dayJob = null;
+      let dayRetried = false;
+      
+      if (dayRunId && dayJobsByRun[dayRunId]) {
+        const runJobs = dayJobsByRun[dayRunId];
+        // Sort by run_attempt to get first and last
+        const sorted = [...runJobs].sort((a, b) => (a.run_attempt || 1) - (b.run_attempt || 1));
+        dayJob = sorted[0]; // First attempt
+        const lastAttempt = sorted[sorted.length - 1];
+        // Job was retried if there are multiple attempts
+        dayRetried = sorted.length > 1 || (lastAttempt?.run_attempt || 1) > 1;
+      }
       
       let dayStatus = 'none';
       let failureStep = null;
@@ -857,9 +911,9 @@ const allJobsSection = {
       weatherHistory.push({
         date: date.toISOString(),
         status: dayStatus,
-        retried: dayRetried, // True if run_attempt > 1 (previous attempts failed)
+        retried: dayRetried, // True if there were multiple attempts for this job
         runId: dayJob?.workflow_run_id || dayJob?.run_id?.toString() || null,
-        jobId: dayJob?.id?.toString() || null,
+        jobId: dayJob?.id?.toString() || null, // Links to FIRST attempt (the real result)
         duration: dayJob ? formatDuration(dayJob.started_at, dayJob.completed_at) : null,
         failureStep: failureStep,
         failureDetails: failureDetails
@@ -883,15 +937,17 @@ const allJobsSection = {
       lastSuccess: lastSuccessJob ? formatRelativeTime(lastSuccessJob.started_at) : 'Never',
       weatherHistory: weatherHistory,
       failureCount: weatherHistory.filter(w => w.status === 'failed').length,
-      retried: retryCount, // Note: this is workflow retry count, not job-specific
+      retried: hadRetries, // True if there were workflow retries
+      retriedAndPassed: retriedAndPassed, // True if first attempt failed but retry passed (FLAKY!)
       runId: latestJob?.workflow_run_id || latestJob?.run_id?.toString() || null,
-      jobId: latestJob?.id?.toString() || null,
+      jobId: latestJob?.id?.toString() || null, // Links to first attempt
       maintainers: maintainers
     };
   })
 };
 
 console.log(`All Jobs section: ${allJobsSection.tests.length} jobs`);
+console.log(`  Flaky (failed then passed on retry): ${allJobsSection.tests.filter(t => t.retriedAndPassed).length}`);
 console.log(`  Required: ${allJobsSection.tests.filter(t => t.isRequired).length}`);
 console.log(`  TEE: ${allJobsSection.tests.filter(t => t.categories.includes('tee')).length}`);
 console.log(`  NVIDIA: ${allJobsSection.tests.filter(t => t.categories.includes('nvidia')).length}`);
