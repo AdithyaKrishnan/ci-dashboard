@@ -1318,9 +1318,9 @@ try {
     const caaJobs = JSON.parse(fs.readFileSync('coco-caa-jobs.json', 'utf8'));
     console.log(`Processing ${caaJobs.length} Cloud API Adaptor E2E jobs...`);
     
-    // Get unique job names, filtering out non-E2E jobs
+    // Get unique job names, filtering out non-E2E jobs and undefined names
     const nonE2EJobs = ['build images'];
-    const caaJobNames = [...new Set(caaJobs.map(j => j.name))]
+    const caaJobNames = [...new Set(caaJobs.map(j => j.name).filter(name => name))]
       .filter(name => !nonE2EJobs.some(n => name.toLowerCase().includes(n.toLowerCase())))
       .sort();
     console.log(`  Found ${caaJobNames.length} unique CAA E2E job names`);
