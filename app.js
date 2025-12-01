@@ -2177,6 +2177,10 @@ function renderCocoSections() {
   // Use a separate flag to track if we've initialized this section
   if (!state.cocoChartsInitialized) {
     state.expandedSections.add('coco-charts');
+    // Auto-expand failed group if there are failures (same as Kata)
+    if (failed.length > 0) {
+      state.expandedGroups.add('coco-charts-failed');
+    }
     state.cocoChartsInitialized = true;
   }
   const isSectionExpanded = state.expandedSections.has('coco-charts');
@@ -2196,18 +2200,20 @@ function renderCocoSections() {
         </div>
       </div>
       <div class="section-content" style="${isSectionExpanded ? '' : 'display: none;'}">
-        ${renderCocoTestGroup(failed, 'FAILED', 'failed', 'coco-charts-failed', state.expandedGroups.has('coco-charts-failed') || failed.length > 0)}
-        ${renderCocoTestGroup(notRun, 'NOT RUN', 'not-run', 'coco-charts-not-run', state.expandedGroups.has('coco-charts-not-run'))}
-        ${renderCocoTestGroup(passed, 'PASSED', 'passed', 'coco-charts-passed', state.expandedGroups.has('coco-charts-passed') || (failed.length === 0 && notRun.length === 0))}
+        ${renderCocoTestGroup(failed, 'FAILED', 'failed', 'coco-charts-failed', state.expandedGroups.has('coco-charts-failed') || state.cocoFilter === 'failed')}
+        ${renderCocoTestGroup(notRun, 'NOT RUN', 'not-run', 'coco-charts-not-run', state.expandedGroups.has('coco-charts-not-run') || state.cocoFilter === 'not_run')}
+        ${renderCocoTestGroup(passed, 'PASSED', 'passed', 'coco-charts-passed', state.expandedGroups.has('coco-charts-passed') || state.cocoFilter === 'passed')}
       </div>
     </div>
   `;
   
   // Add click handler for section header (expand/collapse)
-  container.querySelectorAll('.section-header').forEach(header => {
-    header.addEventListener('click', () => {
-      const sectionId = header.dataset.section;
-      const section = header.closest('.section');
+  const sectionHeader = container.querySelector('.section-header[data-section="coco-charts"]');
+  if (sectionHeader) {
+    sectionHeader.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const sectionId = 'coco-charts';
+      const section = sectionHeader.closest('.section');
       const content = section.querySelector('.section-content');
       const isExpanded = section.classList.contains('expanded');
       
@@ -2221,12 +2227,13 @@ function renderCocoSections() {
       section.classList.toggle('expanded', !isExpanded);
       content.style.display = isExpanded ? 'none' : '';
     });
-  });
+  }
   
   // Add click handlers for group headers (use toggleGroup like Kata)
   container.querySelectorAll('.test-group-header').forEach(header => {
     header.addEventListener('click', (e) => {
       if (e.target.closest('.btn')) return;
+      if (e.target.closest('.section-header')) return; // Don't trigger on section header
       const groupId = header.dataset.group;
       toggleGroup(groupId);
     });
@@ -2445,6 +2452,10 @@ function renderCAASections() {
   // Check if section is expanded (default to true on first render)
   if (!state.cocoCAAInitialized) {
     state.expandedSections.add('coco-caa');
+    // Auto-expand failed group if there are failures (same as Kata)
+    if (failed.length > 0) {
+      state.expandedGroups.add('coco-caa-failed');
+    }
     state.cocoCAAInitialized = true;
   }
   const isSectionExpanded = state.expandedSections.has('coco-caa');
@@ -2464,18 +2475,20 @@ function renderCAASections() {
         </div>
       </div>
       <div class="section-content" style="${isSectionExpanded ? '' : 'display: none;'}">
-        ${renderCAATestGroup(failed, 'FAILED', 'failed', 'coco-caa-failed', state.expandedGroups.has('coco-caa-failed') || failed.length > 0)}
-        ${renderCAATestGroup(notRun, 'NOT RUN', 'not-run', 'coco-caa-not-run', state.expandedGroups.has('coco-caa-not-run'))}
-        ${renderCAATestGroup(passed, 'PASSED', 'passed', 'coco-caa-passed', state.expandedGroups.has('coco-caa-passed') || (failed.length === 0 && notRun.length === 0))}
+        ${renderCAATestGroup(failed, 'FAILED', 'failed', 'coco-caa-failed', state.expandedGroups.has('coco-caa-failed') || state.caaFilter === 'failed')}
+        ${renderCAATestGroup(notRun, 'NOT RUN', 'not-run', 'coco-caa-not-run', state.expandedGroups.has('coco-caa-not-run') || state.caaFilter === 'not_run')}
+        ${renderCAATestGroup(passed, 'PASSED', 'passed', 'coco-caa-passed', state.expandedGroups.has('coco-caa-passed') || state.caaFilter === 'passed')}
       </div>
     </div>
   `;
   
   // Add click handler for section header (expand/collapse)
-  container.querySelectorAll('.section-header').forEach(header => {
-    header.addEventListener('click', () => {
-      const sectionId = header.dataset.section;
-      const section = header.closest('.section');
+  const sectionHeader = container.querySelector('.section-header[data-section="coco-caa"]');
+  if (sectionHeader) {
+    sectionHeader.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const sectionId = 'coco-caa';
+      const section = sectionHeader.closest('.section');
       const content = section.querySelector('.section-content');
       const isExpanded = section.classList.contains('expanded');
       
@@ -2489,12 +2502,13 @@ function renderCAASections() {
       section.classList.toggle('expanded', !isExpanded);
       content.style.display = isExpanded ? 'none' : '';
     });
-  });
+  }
   
   // Add click handlers for group headers (use toggleGroup like Kata)
   container.querySelectorAll('.test-group-header').forEach(header => {
     header.addEventListener('click', (e) => {
       if (e.target.closest('.btn')) return;
+      if (e.target.closest('.section-header')) return; // Don't trigger on section header
       const groupId = header.dataset.group;
       toggleGroup(groupId);
     });
