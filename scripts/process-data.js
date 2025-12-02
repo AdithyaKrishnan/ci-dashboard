@@ -409,21 +409,27 @@ const sections = (config.sections || []).map(sectionConfig => {
       }
       
       if (job.conclusion === 'failure') {
-        // Check if failure is in a fatal step
-        const failedStep = job.steps?.find(s => s.conclusion === 'failure');
-        const failedStepName = failedStep?.name || 'Unknown step';
+        // Check if this job has any "fatal steps" (like "Run tests")
+        // If it does, only count failures in those steps (setup failures = not_run)
+        // If it doesn't (e.g., build jobs), any failure counts as failed
+        const hasFatalStep = job.steps?.some(s => 
+          fatalStepPatterns.some(p => p.test(s.name))
+        );
         
-        // If steps are not available (e.g. not fetched), assume it's a test failure to be safe?
-        // Or if we can't verify it's a fatal step, treat as fatal? 
-        // Better to check patterns.
-        
-        if (failedStep) {
-          const isFatal = fatalStepPatterns.some(p => p.test(failedStepName));
-          if (!isFatal) {
-            console.log(`  [Non-fatal failure] Job ${job.id} failed at "${failedStepName}" -> marked as not_run`);
-            return 'not_run_setup_failed'; // Internal status, maps to 'not_run'
+        if (hasFatalStep) {
+          // This is a test job - only count failures in fatal steps
+          const failedStep = job.steps?.find(s => s.conclusion === 'failure');
+          const failedStepName = failedStep?.name || 'Unknown step';
+          
+          if (failedStep) {
+            const isFatal = fatalStepPatterns.some(p => p.test(failedStepName));
+            if (!isFatal) {
+              console.log(`  [Non-fatal failure] Job ${job.id} failed at "${failedStepName}" -> marked as not_run`);
+              return 'not_run_setup_failed'; // Internal status, maps to 'not_run'
+            }
           }
         }
+        // Either no fatal steps (build job) or failed in a fatal step
         return 'failed';
       }
       
@@ -824,12 +830,24 @@ const allJobsSection = {
       if (latestJob.conclusion === 'success') {
         status = 'passed';
       } else if (latestJob.conclusion === 'failure') {
-        // Check if failure is in a fatal step
-        const failedStep = latestJob.steps?.find(s => s.conclusion === 'failure');
-        if (failedStep) {
-          const isFatal = fatalStepPatterns.some(p => p.test(failedStep.name));
-          status = isFatal ? 'failed' : 'not_run';
+        // Check if this job has any "fatal steps" (like "Run tests")
+        // If it does, only count failures in those steps
+        // If it doesn't (e.g., build jobs), any failure counts
+        const hasFatalStep = latestJob.steps?.some(s => 
+          fatalStepPatterns.some(p => p.test(s.name))
+        );
+        
+        if (hasFatalStep) {
+          // This is a test job - only count failures in fatal steps
+          const failedStep = latestJob.steps?.find(s => s.conclusion === 'failure');
+          if (failedStep) {
+            const isFatal = fatalStepPatterns.some(p => p.test(failedStep.name));
+            status = isFatal ? 'failed' : 'not_run';
+          } else {
+            status = 'failed';
+          }
         } else {
+          // This is a build/other job - any failure counts
           status = 'failed';
         }
       } else if (latestJob.status === 'in_progress' || latestJob.status === 'queued') {
