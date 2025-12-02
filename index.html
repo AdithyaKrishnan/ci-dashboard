@@ -88,6 +88,16 @@
             <span class="dot dot-passed"></span> Passed (<span id="filter-passed-count">114</span>)
           </button>
         </div>
+        <div class="sort-control">
+          <label for="sort-select">Sort:</label>
+          <select id="sort-select">
+            <option value="name">Name (A-Z)</option>
+            <option value="failures-desc" selected>Most Failures</option>
+            <option value="pass-rate-asc">Lowest Pass Rate</option>
+            <option value="last-failure">Recent Failure</option>
+            <option value="status">Status</option>
+          </select>
+        </div>
       </div>
 
       <!-- Job Category Filters -->

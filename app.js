@@ -15,6 +15,7 @@ let state = {
   viewMode: 'all', // 'all', 'tee', 'nvidia', 'ibm' - which section to show
   showRequiredOnly: false, // filter to show only required jobs
   searchQuery: '',
+  sortBy: 'failures-desc', // 'name', 'failures-desc', 'pass-rate-asc', 'last-failure', 'status'
   expandedSections: new Set(),
   expandedGroups: new Set(),
   expandedFlakyTests: new Set(),
@@ -238,7 +239,113 @@ function filterTests(tests) {
     });
   }
   
+  // Apply sorting
+  filtered = sortTests(filtered);
+  
   return filtered;
+}
+
+/**
+ * Sort tests based on current sort setting
+ */
+function sortTests(tests) {
+  const sorted = [...tests];
+  
+  switch (state.sortBy) {
+    case 'name':
+      // Alphabetical by name
+      sorted.sort((a, b) => (a.name || '').localeCompare(b.name || ''));
+      break;
+      
+    case 'failures-desc':
+      // Most failures first (from weather history)
+      sorted.sort((a, b) => {
+        const aFailures = getFailureCount(a);
+        const bFailures = getFailureCount(b);
+        // Secondary sort by name for ties
+        if (bFailures === aFailures) {
+          return (a.name || '').localeCompare(b.name || '');
+        }
+        return bFailures - aFailures;
+      });
+      break;
+      
+    case 'pass-rate-asc':
+      // Lowest pass rate first
+      sorted.sort((a, b) => {
+        const aRate = getPassRate(a);
+        const bRate = getPassRate(b);
+        // Secondary sort by name for ties
+        if (aRate === bRate) {
+          return (a.name || '').localeCompare(b.name || '');
+        }
+        return aRate - bRate;
+      });
+      break;
+      
+    case 'last-failure':
+      // Most recent failure first
+      sorted.sort((a, b) => {
+        const aDate = getLastFailureDate(a);
+        const bDate = getLastFailureDate(b);
+        // Tests with no failures go to the end
+        if (!aDate && !bDate) return (a.name || '').localeCompare(b.name || '');
+        if (!aDate) return 1;
+        if (!bDate) return -1;
+        return bDate - aDate;
+      });
+      break;
+      
+    case 'status':
+      // Failed first, then not_run, then passed
+      const statusOrder = { 'failed': 0, 'not_run': 1, 'running': 2, 'passed': 3 };
+      sorted.sort((a, b) => {
+        const aOrder = statusOrder[a.status] ?? 4;
+        const bOrder = statusOrder[b.status] ?? 4;
+        if (aOrder === bOrder) {
+          // Secondary sort by failure count
+          return getFailureCount(b) - getFailureCount(a);
+        }
+        return aOrder - bOrder;
+      });
+      break;
+      
+    default:
+      // No sorting
+      break;
+  }
+  
+  return sorted;
+}
+
+/**
+ * Get failure count from weather history
+ */
+function getFailureCount(test) {
+  if (!test.weatherHistory) return 0;
+  return test.weatherHistory.filter(w => w.status === 'failed').length;
+}
+
+/**
+ * Get pass rate (0-100) from weather history
+ */
+function getPassRate(test) {
+  if (!test.weatherHistory || test.weatherHistory.length === 0) return 100;
+  const total = test.weatherHistory.filter(w => w.status !== 'none').length;
+  if (total === 0) return 100;
+  const passed = test.weatherHistory.filter(w => w.status === 'passed').length;
+  return (passed / total) * 100;
+}
+
+/**
+ * Get last failure date from weather history
+ */
+function getLastFailureDate(test) {
+  if (!test.weatherHistory) return null;
+  const lastFailure = test.weatherHistory
+    .filter(w => w.status === 'failed')
+    .sort((a, b) => new Date(b.date) - new Date(a.date))[0];
+  return lastFailure ? new Date(lastFailure.date) : null;
 }
 
 function formatDate() {
@@ -1984,6 +2091,15 @@ function init() {
     renderSections();
     updateJobCount();
   });
+  
+  // Sort dropdown - Kata
+  const sortSelect = document.getElementById('sort-select');
+  if (sortSelect) {
+    sortSelect.addEventListener('change', (e) => {
+      state.sortBy = e.target.value;
+      renderSections();
+    });
+  }
   
   // Search - CoCo Charts
   const cocoSearchEl = document.getElementById('search-coco-tests');

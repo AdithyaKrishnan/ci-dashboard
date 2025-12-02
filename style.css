@@ -425,6 +425,52 @@ body {
 .dot-pending { background: var(--color-pending); }
 .dot-not-run { background: var(--text-muted); }
 
+/* Sort Control */
+.sort-control {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-left: auto;
+}
+
+.sort-control label {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  white-space: nowrap;
+}
+
+.sort-control select {
+  padding: var(--space-sm) var(--space-md);
+  padding-right: 32px;
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-md);
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%238b949e' d='M6 8L2 4h8z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  min-width: 160px;
+}
+
+.sort-control select:hover {
+  background-color: var(--bg-hover);
+  border-color: var(--text-muted);
+}
+
+.sort-control select:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+
+.sort-control select option {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
 /* ============================================
    Job Category Filters
    ============================================ */
