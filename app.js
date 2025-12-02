@@ -225,10 +225,17 @@ function filterTests(tests) {
     filtered = filtered.filter(t => t.status === state.filter);
   }
   
-  // Filter by search query
+  // Filter by search query - match against display name AND full job name
+  // This allows users to search by either the pretty name (e.g. "QEMU + CoCo dev")
+  // or the full job name (e.g. "qemu-coco-dev-kata-qemu")
   if (state.searchQuery) {
     const query = state.searchQuery.toLowerCase();
-    filtered = filtered.filter(t => t.name.toLowerCase().includes(query));
+    filtered = filtered.filter(t => {
+      const nameMatch = t.name?.toLowerCase().includes(query);
+      const jobNameMatch = t.jobName?.toLowerCase().includes(query);
+      const fullNameMatch = t.fullName?.toLowerCase().includes(query);
+      return nameMatch || jobNameMatch || fullNameMatch;
+    });
   }
   
   return filtered;
