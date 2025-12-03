@@ -2,11 +2,19 @@ name: Daily CI Summary
 
 on:
   schedule:
-    # Run at 8:00 AM UTC every day (after nightly tests complete)
+    # Try at 8 AM, 12 PM, and 4 PM UTC
+    # Send once per day - first successful attempt wins
     - cron: '0 8 * * *'
+    - cron: '0 12 * * *'
+    - cron: '0 16 * * *'
   
   workflow_dispatch:
     # Manual trigger for testing
+    inputs:
+      force:
+        description: 'Force send even if already sent today'
+        type: boolean
+        default: false
 
 jobs:
   daily-summary:
@@ -16,15 +24,63 @@ jobs:
       - name: Checkout dashboard repo
         uses: actions/checkout@v4
       
+      - name: Get today's date
+        id: date
+        run: |
+          TODAY=$(date -u '+%Y-%m-%d')
+          echo "today=$TODAY" >> $GITHUB_OUTPUT
+          echo "Today is: $TODAY"
+      
+      - name: Check if already sent today
+        id: check-sent
+        uses: actions/cache@v4
+        with:
+          path: .slack-sent-marker
+          key: slack-daily-summary-${{ steps.date.outputs.today }}
+          lookup-only: true
+      
+      - name: Skip if already sent today
+        if: steps.check-sent.outputs.cache-hit == 'true' && github.event.inputs.force != 'true'
+        run: |
+          echo "✅ Already sent notification for ${{ steps.date.outputs.today }}, skipping"
+          echo "Use 'force' option in manual trigger to send anyway"
+      
+      - name: Check if nightly ran today
+        id: check-nightly
+        if: steps.check-sent.outputs.cache-hit != 'true' || github.event.inputs.force == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "Checking if nightly workflow ran today..."
+          
+          TODAY="${{ steps.date.outputs.today }}"
+          
+          # Check for completed nightly runs that started today
+          NIGHTLY_RUN=$(gh api repos/kata-containers/kata-containers/actions/workflows/ci-nightly.yaml/runs \
+            -q ".workflow_runs[] | select(.created_at | startswith(\"$TODAY\")) | select(.status == \"completed\") | .id" | head -1)
+          
+          if [ -z "$NIGHTLY_RUN" ]; then
+            echo "⏳ No completed nightly run found for today ($TODAY)"
+            echo "Will retry at next scheduled time"
+            echo "nightly_ran=false" >> $GITHUB_OUTPUT
+          else
+            echo "✅ Found completed nightly run: $NIGHTLY_RUN"
+            echo "nightly_ran=true" >> $GITHUB_OUTPUT
+            echo "run_id=$NIGHTLY_RUN" >> $GITHUB_OUTPUT
+          fi
+      
       - name: Setup Node.js
+        if: (steps.check-sent.outputs.cache-hit != 'true' || github.event.inputs.force == 'true') && steps.check-nightly.outputs.nightly_ran == 'true'
         uses: actions/setup-node@v4
         with:
           node-version: '20'
       
       - name: Install dependencies
+        if: (steps.check-sent.outputs.cache-hit != 'true' || github.event.inputs.force == 'true') && steps.check-nightly.outputs.nightly_ran == 'true'
         run: npm install js-yaml
       
       - name: Fetch latest nightly data
+        if: (steps.check-sent.outputs.cache-hit != 'true' || github.event.inputs.force == 'true') && steps.check-nightly.outputs.nightly_ran == 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -53,6 +109,7 @@ jobs:
           echo "Data refresh complete!"
       
       - name: Generate summary
+        if: (steps.check-sent.outputs.cache-hit != 'true' || github.event.inputs.force == 'true') && steps.check-nightly.outputs.nightly_ran == 'true'
         id: summary
         run: |
           node scripts/generate-summary.js > summary.json
@@ -65,6 +122,7 @@ jobs:
           echo "passed=$(jq -r '.passed_count' summary.json)" >> $GITHUB_OUTPUT
       
       - name: Send Slack notification
+        if: (steps.check-sent.outputs.cache-hit != 'true' || github.event.inputs.force == 'true') && steps.check-nightly.outputs.nightly_ran == 'true'
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
         run: |
@@ -217,4 +275,16 @@ jobs:
           }
           EOF
           
-          echo "Slack notification sent!"
+          echo "✅ Slack notification sent!"
+      
+      - name: Create sent marker
+        if: (steps.check-sent.outputs.cache-hit != 'true' || github.event.inputs.force == 'true') && steps.check-nightly.outputs.nightly_ran == 'true'
+        run: |
+          echo "Sent notification for ${{ steps.date.outputs.today }} at $(date -u)" > .slack-sent-marker
+      
+      - name: Save sent marker to cache
+        if: (steps.check-sent.outputs.cache-hit != 'true' || github.event.inputs.force == 'true') && steps.check-nightly.outputs.nightly_ran == 'true'
+        uses: actions/cache/save@v4
+        with:
+          path: .slack-sent-marker
+          key: slack-daily-summary-${{ steps.date.outputs.today }}
