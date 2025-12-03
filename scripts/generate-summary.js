@@ -94,7 +94,7 @@ const failingTests = allTests
     
     // Get specific test failures if available (from bats/Go test output)
     const failureDetails = recentFailure?.failureDetails;
-    const specificFailures = failureDetails?.failures?.slice(0, 3).map(f => f.name) || [];
+    const specificFailures = failureDetails?.failures?.map(f => f.name) || [];
     
     return {
       name: t.name,
