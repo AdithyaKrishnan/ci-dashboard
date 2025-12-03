@@ -225,33 +225,6 @@ jobs:
                   "type": "mrkdwn",
                   "text": "*⚡ Flaky Tests*\n${flaky_tests}"
                 }
-              },
-              {
-                "type": "divider"
-              },
-              {
-                "type": "actions",
-                "elements": [
-                  {
-                    "type": "button",
-                    "text": {
-                      "type": "plain_text",
-                      "text": "📊 Open Dashboard",
-                      "emoji": true
-                    },
-                    "url": "https://kata-containers.github.io/ci-dashboard/",
-                    "style": "primary"
-                  },
-                  {
-                    "type": "button",
-                    "text": {
-                      "type": "plain_text",
-                      "text": "🔧 GitHub Actions",
-                      "emoji": true
-                    },
-                    "url": "https://github.com/kata-containers/kata-containers/actions/workflows/ci-nightly.yaml"
-                  }
-                ]
               }
             ]
           }
