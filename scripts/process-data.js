@@ -65,13 +65,13 @@ if (fs.existsSync(logsDir)) {
       
       // Debug: show log size and check for test failure lines (bats and Go)
       const notOkCount = (content.match(/not ok \d+/gi) || []).length;
-      const goFailCount = (content.match(/.*FAIL:/gi) || []).length;
+      const goFailCount = (content.match(/FAIL:\s+\S+/gi) || []).length;
       console.log(`  Log ${jobId}: ${content.length} bytes, ${notOkCount} "not ok" (bats), ${goFailCount} "FAIL:" (Go) lines found`);
       
       // Show sample failure lines if found
       if (notOkCount > 0 || goFailCount > 0) {
         const lines = content.split('\n');
-        const failLines = lines.filter(l => /not ok \d+/i.test(l) || /.*FAIL:/i.test(l)).slice(0, 3);
+        const failLines = lines.filter(l => /not ok \d+/i.test(l) || l.includes('FAIL:')).slice(0, 3);
         failLines.forEach(l => console.log(`    ${l.substring(0, 100)}`));
       }
     } catch (e) {
@@ -153,19 +153,21 @@ function parseTestFailures(jobId) {
     
     // Parse Go test output format:
     // "--- FAIL: TestName (0.00s)" or "=== FAIL: TestName/SubTest (0.00s)"
-    // Simplified regex: match any line with "FAIL:" followed by test name
-    const goFailMatch = line.match(/.*FAIL:\s+(\S+)/i);
-    if (goFailMatch) {
-      failedTests++;
-      totalTests++;
-      const testName = goFailMatch[1];
-      failures.push({
-        number: failedTests,
-        name: testName,
-        comment: '',
-        file: currentFile
-      });
-      continue;
+    // Use includes() for fast check, then extract test name
+    if (line.includes('FAIL:')) {
+      const goFailMatch = line.match(/FAIL:\s+(\S+)/i);
+      if (goFailMatch) {
+        failedTests++;
+        totalTests++;
+        const testName = goFailMatch[1];
+        failures.push({
+          number: failedTests,
+          name: testName,
+          comment: '',
+          file: currentFile
+        });
+        continue;
+      }
     }
     
     // Go test pass: "--- PASS: TestName (0.00s)" or "=== RUN   TestName"
