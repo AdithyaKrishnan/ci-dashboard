@@ -63,15 +63,16 @@ if (fs.existsSync(logsDir)) {
       const content = fs.readFileSync(path.join(logsDir, file), 'utf8');
       jobLogs[jobId] = content;
       
-      // Debug: show log size and check for "not ok" lines
+      // Debug: show log size and check for test failure lines (bats and Go)
       const notOkCount = (content.match(/not ok \d+/gi) || []).length;
-      console.log(`  Log ${jobId}: ${content.length} bytes, ${notOkCount} "not ok" lines found`);
+      const goFailCount = (content.match(/.*FAIL:/gi) || []).length;
+      console.log(`  Log ${jobId}: ${content.length} bytes, ${notOkCount} "not ok" (bats), ${goFailCount} "FAIL:" (Go) lines found`);
       
-      // Show sample "not ok" lines if found
-      if (notOkCount > 0) {
+      // Show sample failure lines if found
+      if (notOkCount > 0 || goFailCount > 0) {
         const lines = content.split('\n');
-        const notOkLines = lines.filter(l => /not ok \d+/i.test(l)).slice(0, 3);
-        notOkLines.forEach(l => console.log(`    ${l.substring(0, 100)}`));
+        const failLines = lines.filter(l => /not ok \d+/i.test(l) || /.*FAIL:/i.test(l)).slice(0, 3);
+        failLines.forEach(l => console.log(`    ${l.substring(0, 100)}`));
       }
     } catch (e) {
       console.warn(`Could not read log for job ${jobId}: ${e.message}`);
@@ -147,6 +148,47 @@ function parseTestFailures(jobId) {
     if (okMatch) {
       passedTests++;
       totalTests++;
+      continue;
+    }
+    
+    // Parse Go test output format:
+    // "--- FAIL: TestName (0.00s)" or "=== FAIL: TestName/SubTest (0.00s)"
+    // Simplified regex: match any line with "FAIL:" followed by test name
+    const goFailMatch = line.match(/.*FAIL:\s+(\S+)/i);
+    if (goFailMatch) {
+      failedTests++;
+      totalTests++;
+      const testName = goFailMatch[1];
+      failures.push({
+        number: failedTests,
+        name: testName,
+        comment: '',
+        file: currentFile
+      });
+      continue;
+    }
+    
+    // Go test pass: "--- PASS: TestName (0.00s)" or "=== RUN   TestName"
+    const goPassMatch = line.match(/(?:^\d{4}-\d{2}-\d{2}T[\d:\.]+Z\s+)?---\s*PASS:\s+\S+\s+\([\d.]+s\)/i);
+    if (goPassMatch) {
+      passedTests++;
+      totalTests++;
+      continue;
+    }
+    
+    // Go test package failure: "FAIL	package/path	0.123s"
+    // This indicates at least one test in the package failed (already counted above)
+    // We use this to track the package/file context
+    const goPackageFailMatch = line.match(/(?:^\d{4}-\d{2}-\d{2}T[\d:\.]+Z\s+)?FAIL\s+(\S+)\s+[\d.]+s/);
+    if (goPackageFailMatch) {
+      currentFile = goPackageFailMatch[1];
+      continue;
+    }
+    
+    // Go test package pass: "ok  	package/path	0.123s"
+    const goPackagePassMatch = line.match(/(?:^\d{4}-\d{2}-\d{2}T[\d:\.]+Z\s+)?ok\s+\S+\s+[\d.]+s/);
+    if (goPackagePassMatch) {
+      // Package passed - don't count individual tests here as they're counted above
       continue;
     }
     
@@ -659,7 +701,14 @@ const sections = (config.sections || []).map(sectionConfig => {
           batsFiles: batsFiles,
           testResults: testFailures.stats,
           failures: testFailures.failures.slice(0, 20), // Limit to first 20 failures
-          output: testFailures.failures.map(f => `not ok ${f.number} - ${f.name}${f.comment ? ' # ' + f.comment : ''}`).join('\n')
+          // Format output based on test type - Go tests start with capital letter (TestXxx)
+          output: testFailures.failures.map(f => {
+            const isGoTest = /^Test[A-Z]/.test(f.name) || f.name.includes('/');
+            if (isGoTest) {
+              return `--- FAIL: ${f.name}`;
+            }
+            return `not ok ${f.number} - ${f.name}${f.comment ? ' # ' + f.comment : ''}`;
+          }).join('\n')
         };
       } else {
         errorDetails = {
