@@ -239,6 +239,7 @@ jobs:
       
       - name: Save sent marker to cache
         if: (steps.check-sent.outputs.cache-hit != 'true' || github.event.inputs.force == 'true') && steps.check-nightly.outputs.nightly_ran == 'true'
+        continue-on-error: true  # Cache may already exist from concurrent run
         uses: actions/cache/save@v4
         with:
           path: .slack-sent-marker
