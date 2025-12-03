@@ -2,113 +2,127 @@ name: Daily CI Summary
 
 on:
   schedule:
-    # Run at 8:00 AM UTC every day
+    # Run at 8:00 AM UTC every day (after nightly tests complete)
     - cron: '0 8 * * *'
   
   workflow_dispatch:
     # Manual trigger for testing
-    inputs:
-      test_mode:
-        description: 'Send to test channel instead'
-        type: boolean
-        default: false
 
 jobs:
   daily-summary:
     runs-on: ubuntu-latest
-    # TODO: Re-enable once SLACK_BOT_TOKEN and SLACK_BOT_TOKEN_COCO secrets are configured
-    if: false
     
     steps:
       - name: Checkout dashboard repo
         uses: actions/checkout@v4
       
-      - name: Load config
-        run: |
-          # Using local config.yaml for now
-          echo "Using local config.yaml"
-          cat config.yaml
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
       
-      - name: Load current data
+      - name: Install dependencies
+        run: npm install js-yaml
+      
+      - name: Fetch latest nightly data
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          # data.json should already exist from hourly updates
-          if [ ! -f data.json ]; then
-            echo "No data.json found, fetching fresh data..."
-            node scripts/process-data.js
-          fi
+          echo "Fetching latest nightly run data..."
+          
+          # Fetch nightly workflow runs (last 10 days)
+          gh api repos/kata-containers/kata-containers/actions/workflows/ci-nightly.yaml/runs \
+            --paginate -q '.workflow_runs[:10]' > raw-runs.json
+          
+          # Fetch jobs for each run
+          echo "Fetching jobs for each run..."
+          for run_id in $(jq -r '.[].id' raw-runs.json); do
+            echo "  Fetching jobs for run $run_id..."
+            gh api "repos/kata-containers/kata-containers/actions/runs/${run_id}/jobs?filter=all&per_page=100" \
+              -q '.jobs' > "jobs-${run_id}.json" 2>/dev/null || echo "[]" > "jobs-${run_id}.json"
+          done
+          
+          # Merge all jobs into all-jobs.json
+          echo "Merging job data..."
+          cat jobs-*.json | jq -s 'add // []' > all-jobs.json
+          
+          # Process the data
+          echo "Processing data..."
+          node scripts/process-data.js
+          
+          echo "Data refresh complete!"
       
       - name: Generate summary
         id: summary
         run: |
           node scripts/generate-summary.js > summary.json
           cat summary.json
-      
-      - name: Send per-section daily summaries to Slack
-        env:
-          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
-          SLACK_BOT_TOKEN_COCO: ${{ secrets.SLACK_BOT_TOKEN_COCO }}
-        run: |
-          # Function to get token for a workspace
-          # Only kata-containers and confidential-containers workspaces are supported
-          get_token() {
-            local workspace=$1
-            case "$workspace" in
-              "coco") echo "$SLACK_BOT_TOKEN_COCO" ;;
-              *) echo "$SLACK_BOT_TOKEN" ;;  # default (kata-containers)
-            esac
-          }
           
-          # Function to send summary to a channel
-          send_summary() {
-            local token=$1
-            local channel=$2
-            local section_name=$3
-            local pass_rate=$4
-            local total=$5
-            local failed=$6
-            local passed=$7
-            local weather_emoji=$8
-            local failing_tests=$9
-            local flaky_tests=${10}
-            local slack_mentions=${11}
-            
-            # Determine status
-            local status_emoji status_text
-            if [ "$pass_rate" -ge 95 ]; then
-              status_emoji="☀️"
-              status_text="Excellent"
-            elif [ "$pass_rate" -ge 85 ]; then
-              status_emoji="🌤️"
-              status_text="Good"
-            elif [ "$pass_rate" -ge 70 ]; then
-              status_emoji="⛅"
-              status_text="Fair"
-            elif [ "$pass_rate" -ge 50 ]; then
-              status_emoji="🌧️"
-              status_text="Needs Attention"
-            else
-              status_emoji="⛈️"
-              status_text="Critical"
-            fi
-            
-            # Build maintainer mention if there are failures
-            local maintainer_block=""
-            if [ "$failed" -gt 0 ] && [ -n "$slack_mentions" ] && [ "$slack_mentions" != "null" ]; then
-              maintainer_block=",{\"type\": \"section\", \"text\": {\"type\": \"mrkdwn\", \"text\": \"*Maintainers:* ${slack_mentions}\"}}"
-            fi
-            
-            curl -s -X POST "https://slack.com/api/chat.postMessage" \
-              -H "Authorization: Bearer $token" \
-              -H "Content-Type: application/json" \
-              -d @- <<EOF
+          # Extract key stats for the message
+          echo "pass_rate=$(jq -r '.overall_pass_rate' summary.json)" >> $GITHUB_OUTPUT
+          echo "total=$(jq -r '.total_tests' summary.json)" >> $GITHUB_OUTPUT
+          echo "failed=$(jq -r '.failed_count' summary.json)" >> $GITHUB_OUTPUT
+          echo "passed=$(jq -r '.passed_count' summary.json)" >> $GITHUB_OUTPUT
+      
+      - name: Send Slack notification
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: |
+          # Skip if no webhook configured
+          if [ -z "$SLACK_WEBHOOK_URL" ]; then
+            echo "No SLACK_WEBHOOK_URL secret configured, skipping notification"
+            exit 0
+          fi
+          
+          # Calculate status emoji
+          pass_rate=${{ steps.summary.outputs.pass_rate }}
+          if [ "$pass_rate" -ge 95 ]; then
+            status_emoji="☀️"
+            status_text="Excellent"
+          elif [ "$pass_rate" -ge 85 ]; then
+            status_emoji="🌤️"
+            status_text="Good"
+          elif [ "$pass_rate" -ge 70 ]; then
+            status_emoji="⛅"
+            status_text="Fair"
+          elif [ "$pass_rate" -ge 50 ]; then
+            status_emoji="🌧️"
+            status_text="Needs Attention"
+          else
+            status_emoji="⛈️"
+            status_text="Critical"
+          fi
+          
+          # Build section breakdown
+          sections_text=$(jq -r '.sections | map("• *\(.name)*: \(.weather_emoji) \(.pass_rate)% (\(.failed) failed)") | join("\\n")' summary.json)
+          
+          # Build failing tests list (top 5)
+          failing_tests=$(jq -r '
+            .failing_tests[:5] | 
+            if length == 0 then "None! 🎉" 
+            else map("• `\(.name)` - \(.error_step) (\(.days_failing)d)") | join("\\n") 
+            end
+          ' summary.json)
+          
+          # Build flaky tests list (top 3)
+          flaky_tests=$(jq -r '
+            .flaky_tests[:3] | 
+            if length == 0 then "None detected" 
+            else map("• `\(.name)` - \(.flaky_rate)% flaky") | join("\\n") 
+            end
+          ' summary.json)
+          
+          # Send to Slack webhook
+          curl -X POST "$SLACK_WEBHOOK_URL" \
+            -H "Content-Type: application/json" \
+            -d @- <<EOF
           {
-            "channel": "${channel}",
             "blocks": [
               {
                 "type": "header",
                 "text": {
                   "type": "plain_text",
-                  "text": "${status_emoji} ${section_name} Daily Summary",
+                  "text": "${status_emoji} Kata CI Nightly Summary",
                   "emoji": true
                 }
               },
@@ -117,7 +131,7 @@ jobs:
                 "elements": [
                   {
                     "type": "mrkdwn",
-                    "text": "$(date -u '+%A, %B %d, %Y') • <https://kata-containers.github.io/ci-dashboard/|Open Dashboard>"
+                    "text": "$(date -u '+%A, %B %d, %Y') • <https://kata-containers.github.io/kata-ci-dashboard/|Open Dashboard>"
                   }
                 ]
               },
@@ -129,7 +143,7 @@ jobs:
                 "fields": [
                   {
                     "type": "mrkdwn",
-                    "text": "*Pass Rate*\n${weather_emoji} ${pass_rate}%"
+                    "text": "*Pass Rate*\n${status_emoji} ${pass_rate}%"
                   },
                   {
                     "type": "mrkdwn",
@@ -137,151 +151,11 @@ jobs:
                   },
                   {
                     "type": "mrkdwn",
-                    "text": "*Tests*\n${total} total"
+                    "text": "*Tests*\n${{ steps.summary.outputs.total }} total"
                   },
                   {
                     "type": "mrkdwn",
-                    "text": "*Results*\n🟢 ${passed} | 🔴 ${failed}"
-                  }
-                ]
-              },
-              {
-                "type": "divider"
-              },
-              {
-                "type": "section",
-                "text": {
-                  "type": "mrkdwn",
-                  "text": "*🔴 Failing Tests*\n${failing_tests}"
-                }
-              },
-              {
-                "type": "section",
-                "text": {
-                  "type": "mrkdwn",
-                  "text": "*⚡ Flaky Tests*\n${flaky_tests}"
-                }
-              }${maintainer_block},
-              {
-                "type": "divider"
-              },
-              {
-                "type": "actions",
-                "elements": [
-                  {
-                    "type": "button",
-                    "text": {
-                      "type": "plain_text",
-                      "text": "📊 Open Dashboard",
-                      "emoji": true
-                    },
-                    "url": "https://kata-containers.github.io/ci-dashboard/",
-                    "style": "primary"
-                  }
-                ]
-              }
-            ]
-          }
-          EOF
-          }
-          
-          # Process each section
-          jq -c '.sections[]' summary.json | while read -r section; do
-            section_name=$(echo "$section" | jq -r '.name')
-            pass_rate=$(echo "$section" | jq -r '.pass_rate')
-            total=$(echo "$section" | jq -r '.total')
-            failed=$(echo "$section" | jq -r '.failed')
-            passed=$(echo "$section" | jq -r '.passed')
-            weather_emoji=$(echo "$section" | jq -r '.weather_emoji')
-            
-            # Get slack mentions from section (resolved from maintainers)
-            slack_mentions=$(echo "$section" | jq -r '.slack_mentions // ""')
-            
-            # Get failing tests for this section
-            # Note: Using \u0060 for backticks to avoid bash escaping issues
-            failing_tests=$(echo "$section" | jq -r '.failing_tests | map("• \u0060\(.name)\u0060 - \(.error_step) (\(.days_failing)d)") | join("\n")')
-            if [ -z "$failing_tests" ] || [ "$failing_tests" = "null" ]; then
-              failing_tests="None! 🎉"
-            fi
-            
-            # Get flaky tests for this section
-            # Note: Using \u0060 for backticks to avoid bash escaping issues
-            flaky_tests=$(echo "$section" | jq -r '.flaky_tests | map("• \u0060\(.name)\u0060 - \(.flaky_rate)% flaky") | join("\n")')
-            if [ -z "$flaky_tests" ] || [ "$flaky_tests" = "null" ]; then
-              flaky_tests="None detected"
-            fi
-            
-            # Send to default channel (#kata-ci)
-            if [ -n "$SLACK_BOT_TOKEN" ]; then
-              echo "Sending ${section_name} summary to #kata-ci"
-              send_summary "$SLACK_BOT_TOKEN" "#kata-ci" "$section_name" "$pass_rate" "$total" "$failed" "$passed" "$weather_emoji" "$failing_tests" "$flaky_tests" "$slack_mentions"
-              sleep 1  # Rate limiting
-            fi
-          done
-          
-          echo "Per-section summaries sent"
-      
-      - name: Send global summary to main channel
-        env:
-          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
-        run: |
-          # Send overall summary to #kata-ci (default workspace)
-          overall_pass_rate=$(jq -r '.overall_pass_rate' summary.json)
-          total_tests=$(jq -r '.total_tests' summary.json)
-          failed_count=$(jq -r '.failed_count' summary.json)
-          passed_count=$(jq -r '.passed_count' summary.json)
-          
-          # Build section breakdown
-          sections_text=$(jq -r '.sections | map("• *\(.name)*: \(.weather_emoji) \(.pass_rate)% (\(.failed) failed)") | join("\n")' summary.json)
-          
-          # Determine overall status
-          if [ "$overall_pass_rate" -ge 95 ]; then
-            status_emoji="☀️"
-          elif [ "$overall_pass_rate" -ge 85 ]; then
-            status_emoji="🌤️"
-          elif [ "$overall_pass_rate" -ge 70 ]; then
-            status_emoji="⛅"
-          else
-            status_emoji="🌧️"
-          fi
-          
-          curl -s -X POST "https://slack.com/api/chat.postMessage" \
-            -H "Authorization: Bearer $SLACK_BOT_TOKEN" \
-            -H "Content-Type: application/json" \
-            -d @- <<EOF
-          {
-            "channel": "#kata-ci",
-            "blocks": [
-              {
-                "type": "header",
-                "text": {
-                  "type": "plain_text",
-                  "text": "${status_emoji} Kata CI Daily Overview",
-                  "emoji": true
-                }
-              },
-              {
-                "type": "context",
-                "elements": [
-                  {
-                    "type": "mrkdwn",
-                    "text": "$(date -u '+%A, %B %d, %Y') • <https://kata-containers.github.io/ci-dashboard/|Open Dashboard>"
-                  }
-                ]
-              },
-              {
-                "type": "divider"
-              },
-              {
-                "type": "section",
-                "fields": [
-                  {
-                    "type": "mrkdwn",
-                    "text": "*Overall Pass Rate*\n${overall_pass_rate}%"
-                  },
-                  {
-                    "type": "mrkdwn",
-                    "text": "*Results*\n🟢 ${passed_count} | 🔴 ${failed_count}"
+                    "text": "*Results*\n🟢 ${{ steps.summary.outputs.passed }} | 🔴 ${{ steps.summary.outputs.failed }}"
                   }
                 ]
               },
@@ -296,11 +170,46 @@ jobs:
                 }
               },
               {
-                "type": "context",
+                "type": "divider"
+              },
+              {
+                "type": "section",
+                "text": {
+                  "type": "mrkdwn",
+                  "text": "*🔴 Failing Tests (top 5)*\n${failing_tests}"
+                }
+              },
+              {
+                "type": "section",
+                "text": {
+                  "type": "mrkdwn",
+                  "text": "*⚡ Flaky Tests (top 3)*\n${flaky_tests}"
+                }
+              },
+              {
+                "type": "divider"
+              },
+              {
+                "type": "actions",
                 "elements": [
                   {
-                    "type": "mrkdwn",
-                    "text": "Detailed summaries sent to each section's channel"
+                    "type": "button",
+                    "text": {
+                      "type": "plain_text",
+                      "text": "📊 Open Dashboard",
+                      "emoji": true
+                    },
+                    "url": "https://kata-containers.github.io/kata-ci-dashboard/",
+                    "style": "primary"
+                  },
+                  {
+                    "type": "button",
+                    "text": {
+                      "type": "plain_text",
+                      "text": "🔧 GitHub Actions",
+                      "emoji": true
+                    },
+                    "url": "https://github.com/kata-containers/kata-containers/actions/workflows/ci-nightly.yaml"
                   }
                 ]
               }
@@ -308,5 +217,4 @@ jobs:
           }
           EOF
           
-          echo "Global summary sent to #kata-ci"
-
+          echo "Slack notification sent!"
