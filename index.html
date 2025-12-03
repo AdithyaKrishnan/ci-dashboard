@@ -244,6 +244,16 @@
               <span class="dot dot-passed"></span> Passed (<span id="coco-filter-passed-count">0</span>)
             </button>
           </div>
+          <div class="sort-control">
+            <label for="coco-sort-select">Sort:</label>
+            <select id="coco-sort-select" class="sort-select">
+              <option value="failures-desc" selected>Most Failures</option>
+              <option value="name">Name (A-Z)</option>
+              <option value="pass-rate-asc">Lowest Pass Rate</option>
+              <option value="last-failure">Recent Failure</option>
+              <option value="status">Status</option>
+            </select>
+          </div>
         </div>
 
         <!-- Job Count -->
@@ -304,6 +314,16 @@
             <button class="filter-btn caa-filter" data-filter="passed">
               <span class="dot dot-passed"></span> Passed (<span id="caa-filter-passed-count">0</span>)
             </button>
+          </div>
+          <div class="sort-control">
+            <label for="caa-sort-select">Sort:</label>
+            <select id="caa-sort-select" class="sort-select">
+              <option value="failures-desc" selected>Most Failures</option>
+              <option value="name">Name (A-Z)</option>
+              <option value="pass-rate-asc">Lowest Pass Rate</option>
+              <option value="last-failure">Recent Failure</option>
+              <option value="status">Status</option>
+            </select>
           </div>
         </div>
 

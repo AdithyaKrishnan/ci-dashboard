@@ -26,8 +26,10 @@ let state = {
   activeCocoTab: 'coco-charts', // 'coco-charts', 'coco-caa', etc.
   cocoFilter: 'all',
   cocoSearchQuery: '',
+  cocoSortBy: 'failures-desc',
   caaFilter: 'all',
-  caaSearchQuery: ''
+  caaSearchQuery: '',
+  caaSortBy: 'failures-desc'
 };
 
 // ============================================
@@ -254,10 +256,10 @@ function filterTests(tests) {
 /**
  * Sort tests based on current sort setting
  */
-function sortTests(tests) {
+function sortTests(tests, sortBy = state.sortBy) {
   const sorted = [...tests];
   
-  switch (state.sortBy) {
+  switch (sortBy) {
     case 'name':
       // Alphabetical by name
       sorted.sort((a, b) => (a.name || '').localeCompare(b.name || ''));
@@ -2117,6 +2119,15 @@ function init() {
     });
   }
   
+  // Sort dropdown - CoCo Charts
+  const cocoSortSelect = document.getElementById('coco-sort-select');
+  if (cocoSortSelect) {
+    cocoSortSelect.addEventListener('change', (e) => {
+      state.cocoSortBy = e.target.value;
+      renderCocoSections();
+    });
+  }
+  
   // Filter buttons - CAA
   document.querySelectorAll('.filter-btn.caa-filter').forEach(btn => {
     btn.addEventListener('click', () => setCAAFilter(btn.dataset.filter));
@@ -2129,6 +2140,15 @@ function init() {
       state.caaSearchQuery = e.target.value;
       renderCAASections();
       updateCAAJobCount();
+    });
+  }
+  
+  // Sort dropdown - CAA
+  const caaSortSelect = document.getElementById('caa-sort-select');
+  if (caaSortSelect) {
+    caaSortSelect.addEventListener('change', (e) => {
+      state.caaSortBy = e.target.value;
+      renderCAASections();
     });
   }
   
@@ -2247,12 +2267,15 @@ function renderCocoSections() {
     tests = tests.filter(t => t.status === state.cocoFilter);
   }
   
+  // Apply sorting
+  tests = sortTests(tests, state.cocoSortBy);
+  
   if (tests.length === 0) {
     container.innerHTML = '<p class="empty-message">No tests match your filters</p>';
     return;
   }
   
-  // Group by status
+  // Group by status (preserving sort order within each group)
   const failed = tests.filter(t => t.status === 'failed');
   const passed = tests.filter(t => t.status === 'passed');
   const notRun = tests.filter(t => t.status === 'not_run' || t.status === 'none');
@@ -2524,12 +2547,15 @@ function renderCAASections() {
     tests = tests.filter(t => t.status === state.caaFilter);
   }
   
+  // Apply sorting
+  tests = sortTests(tests, state.caaSortBy);
+  
   if (tests.length === 0) {
     container.innerHTML = '<p class="empty-message">No tests match your filters</p>';
     return;
   }
   
-  // Group by status
+  // Group by status (preserving sort order within each group)
   const failed = tests.filter(t => t.status === 'failed');
   const passed = tests.filter(t => t.status === 'passed');
   const notRun = tests.filter(t => t.status === 'not_run' || t.status === 'none');
