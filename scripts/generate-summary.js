@@ -172,12 +172,79 @@ const flakyArchSummary = Object.entries(flakyByArch)
   .map(([arch, count]) => `[${count}x ${arch}]`)
   .join(' ');
 
-// Calculate trend (compare with yesterday)
-// This would require historical data; for now, use a placeholder
-const trend = overallPassRate >= 90 ? 'Stable' : 
-              overallPassRate >= 80 ? 'Slightly down' : 'Needs attention';
-const trendEmoji = overallPassRate >= 90 ? '→' : 
-                   overallPassRate >= 80 ? '↘️' : '📉';
+// Calculate historical stats from weather history
+// Collect all dates from weather histories
+const allDates = new Set();
+allTests.forEach(t => {
+  (t.weatherHistory || []).forEach(w => {
+    if (w.date) allDates.add(w.date);
+  });
+});
+const sortedDates = Array.from(allDates).sort().reverse();
+const todayDate = sortedDates[0];
+
+// Calculate failures for each of the last 10 days
+const last10Days = sortedDates.slice(0, 10);
+const failuresByDay = {};
+
+last10Days.forEach(date => {
+  let failedOnDate = 0;
+  allTests.forEach(t => {
+    const weather = t.weatherHistory || [];
+    const entry = weather.find(w => w.date === date);
+    if (entry && entry.status === 'failed') {
+      failedOnDate++;
+    }
+  });
+  failuresByDay[date] = failedOnDate;
+});
+
+// Calculate 10-day average for failures (excluding today for comparison)
+const historicalDays = last10Days.slice(1); // Exclude today
+const historicalFailures = historicalDays.map(d => failuresByDay[d] || 0);
+const tenDayAvgFailed = historicalFailures.length > 0 
+  ? historicalFailures.reduce((a, b) => a + b, 0) / historicalFailures.length 
+  : 0;
+const tenDayAvgFailedRounded = Math.round(tenDayAvgFailed * 10) / 10; // One decimal place
+
+// Calculate trend vs 10-day average
+const failedDelta = failedCount - tenDayAvgFailedRounded;
+const trend = failedDelta < -0.5 ? 'Improving' : 
+              failedDelta > 0.5 ? 'Regressing' : 'Stable';
+const trendEmoji = failedDelta < -0.5 ? '↓' : 
+                   failedDelta > 0.5 ? '↑' : '→';
+
+// Calculate 10-day average for flaky jobs
+// For flaky, we need to calculate how many jobs were flaky on each historical day
+// Since flaky detection requires weather history, we estimate based on transitions
+const flakyByDay = {};
+historicalDays.forEach(date => {
+  let flakyOnDate = 0;
+  allTests.forEach(t => {
+    const weather = t.weatherHistory || [];
+    // Find index of this date in weather
+    const dateIndex = weather.findIndex(w => w.date === date);
+    if (dateIndex >= 4) { // Need at least 5 days of history up to this date
+      const recentWeather = weather.slice(0, dateIndex + 1).slice(-5);
+      let transitions = 0;
+      for (let i = 1; i < recentWeather.length; i++) {
+        if (recentWeather[i].status !== recentWeather[i-1].status) {
+          transitions++;
+        }
+      }
+      const flakyRate = Math.round((transitions / (recentWeather.length - 1)) * 100);
+      if (flakyRate > 30) flakyOnDate++;
+    }
+  });
+  flakyByDay[date] = flakyOnDate;
+});
+
+const historicalFlaky = historicalDays.map(d => flakyByDay[d] || 0);
+const tenDayAvgFlaky = historicalFlaky.length > 0 
+  ? historicalFlaky.reduce((a, b) => a + b, 0) / historicalFlaky.length 
+  : 0;
+const tenDayAvgFlakyRounded = Math.round(tenDayAvgFlaky * 10) / 10;
+const flakyDelta = flakyTests.length - tenDayAvgFlakyRounded;
 
 // Output summary
 const summary = {
@@ -189,6 +256,10 @@ const summary = {
   running_count: runningCount,
   passed_count: passedCount,
   flaky_count: flakyTests.length,
+  ten_day_avg_failed: tenDayAvgFailedRounded,
+  ten_day_avg_flaky: tenDayAvgFlakyRounded,
+  flaky_delta: flakyDelta,
+  failed_delta: failedDelta,
   trend,
   trend_emoji: trendEmoji,
   sections,

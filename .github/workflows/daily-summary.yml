@@ -139,34 +139,50 @@ jobs:
             status_text="Critical"
           fi
           
-          # Build section breakdown (only show groups with failures or not_run)
-          sections_text=$(jq -r '
-            .sections | 
-            map(select(.failed > 0 or .not_run > 0)) |
-            if length == 0 then "All groups passing! 🎉"
-            else map("• *\(.name)*: \(.weather_emoji) \(.pass_rate)% (🔴 \(.failed) | 🟡 \(.not_run // 0))") | join("\\n")
-            end
-          ' summary.json)
+          # Get arch breakdowns and 10-day averages from summary
+          failed_count=${{ steps.summary.outputs.failed }}
+          failing_arch=$(jq -r '.failing_arch_summary // ""' summary.json)
+          ten_day_avg_failed=$(jq -r '.ten_day_avg_failed // 0' summary.json)
+          failed_delta=$(jq -r '.failed_delta // 0' summary.json)
           
-          # Build failing tests list (all failures) with maintainer mentions and specific failures
-          failing_tests=$(jq -r '
-            .failing_tests | 
-            if length == 0 then "None! 🎉" 
-            else map(
-              "• `\(.name)` - \(.error_step) (\(.days_failing)d)" + 
-              (if .slack_mentions != "" then " → \(.slack_mentions)" else "" end) +
-              (if (.specific_failures | length) > 0 then "\\n    _" + (.specific_failures | join(", ")) + "_" else "" end)
-            ) | join("\\n") 
-            end
-          ' summary.json)
+          flaky_count=$(jq -r '.flaky_tests | length' summary.json)
+          flaky_arch=$(jq -r '.flaky_arch_summary // ""' summary.json)
+          ten_day_avg_flaky=$(jq -r '.ten_day_avg_flaky // 0' summary.json)
+          flaky_delta=$(jq -r '.flaky_delta // 0' summary.json)
           
-          # Build flaky tests list (all)
-          flaky_tests=$(jq -r '
-            .flaky_tests | 
-            if length == 0 then "None detected" 
-            else map("• `\(.name)` - \(.flaky_rate)% flaky") | join("\\n") 
-            end
-          ' summary.json)
+          # Build 10-day average comparison for failed jobs
+          # Use awk for floating point comparison
+          failed_cmp_dir=$(echo "$failed_delta" | awk '{if ($1 > 0.5) print "above"; else if ($1 < -0.5) print "below"; else print "at"}')
+          if [ "$failed_cmp_dir" = "above" ]; then
+            avg_cmp="(↑ 10d avg: ${ten_day_avg_failed})"
+          elif [ "$failed_cmp_dir" = "below" ]; then
+            avg_cmp="(↓ 10d avg: ${ten_day_avg_failed})"
+          else
+            avg_cmp="(→ 10d avg: ${ten_day_avg_failed})"
+          fi
+          
+          # Build 10-day average comparison for flaky jobs
+          flaky_cmp_dir=$(echo "$flaky_delta" | awk '{if ($1 > 0.5) print "above"; else if ($1 < -0.5) print "below"; else print "at"}')
+          if [ "$flaky_cmp_dir" = "above" ]; then
+            flaky_avg_cmp="(↑ 10d avg: ${ten_day_avg_flaky})"
+          elif [ "$flaky_cmp_dir" = "below" ]; then
+            flaky_avg_cmp="(↓ 10d avg: ${ten_day_avg_flaky})"
+          else
+            flaky_avg_cmp="(→ 10d avg: ${ten_day_avg_flaky})"
+          fi
+          
+          # Build summary lines
+          if [ "$failed_count" -eq 0 ]; then
+            failed_line="🔴 *0 jobs failed* 🎉 ${avg_cmp}"
+          else
+            failed_line="🔴 *${failed_count} jobs failed* ${failing_arch} ${avg_cmp}"
+          fi
+          
+          if [ "$flaky_count" -eq 0 ]; then
+            flaky_line="⚡ *0 jobs are flaky* ${flaky_avg_cmp}"
+          else
+            flaky_line="⚡ *${flaky_count} jobs are flaky* ${flaky_arch} ${flaky_avg_cmp}"
+          fi
           
           # Send to Slack webhook
           curl -X POST "$SLACK_WEBHOOK_URL" \
@@ -187,7 +203,7 @@ jobs:
                 "elements": [
                   {
                     "type": "mrkdwn",
-                    "text": "$(date -u '+%A, %B %d, %Y') • <https://kata-containers.github.io/ci-dashboard/|Open Dashboard>"
+                    "text": "$(date -u '+%A, %B %d, %Y')"
                   }
                 ]
               },
@@ -207,7 +223,7 @@ jobs:
                   },
                   {
                     "type": "mrkdwn",
-                    "text": "*Tests*\n${{ steps.summary.outputs.total }} total"
+                    "text": "*Jobs*\n${{ steps.summary.outputs.total }} total"
                   },
                   {
                     "type": "mrkdwn",
@@ -222,24 +238,7 @@ jobs:
                 "type": "section",
                 "text": {
                   "type": "mrkdwn",
-                  "text": "*📊 By Section*\n${sections_text}"
-                }
-              },
-              {
-                "type": "divider"
-              },
-              {
-                "type": "section",
-                "text": {
-                  "type": "mrkdwn",
-                  "text": "*${{ steps.summary.outputs.failing_header }}*\n${failing_tests}"
-                }
-              },
-              {
-                "type": "section",
-                "text": {
-                  "type": "mrkdwn",
-                  "text": "*${{ steps.summary.outputs.flaky_header }}*\n${flaky_tests}"
+                  "text": "${failed_line}\n${flaky_line}\n\n📊 <https://kata-containers.github.io/ci-dashboard/|View details on CI Dashboard>"
                 }
               }
             ]
