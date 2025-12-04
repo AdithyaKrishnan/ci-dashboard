@@ -100,6 +100,14 @@ jobs:
           else
             echo "failing_header=🔴 Failing Tests" >> $GITHUB_OUTPUT
           fi
+          
+          # Build flaky tests header with arch breakdown
+          flaky_arch_summary=$(jq -r '.flaky_arch_summary // ""' summary.json)
+          if [ -n "$flaky_arch_summary" ]; then
+            echo "flaky_header=⚡ Flaky Tests ${flaky_arch_summary}" >> $GITHUB_OUTPUT
+          else
+            echo "flaky_header=⚡ Flaky Tests" >> $GITHUB_OUTPUT
+          fi
       
       - name: Send Slack notification
         if: (steps.check-sent.outputs.cache-hit != 'true' || github.event.inputs.force == 'true') && steps.check-nightly.outputs.nightly_ran == 'true'
@@ -231,7 +239,7 @@ jobs:
                 "type": "section",
                 "text": {
                   "type": "mrkdwn",
-                  "text": "*⚡ Flaky Tests*\n${flaky_tests}"
+                  "text": "*${{ steps.summary.outputs.flaky_header }}*\n${flaky_tests}"
                 }
               }
             ]

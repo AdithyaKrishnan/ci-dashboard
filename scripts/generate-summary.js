@@ -142,10 +142,15 @@ const flakyTests = allTests
     
     // Consider flaky if more than 30% transitions
     if (flakyRate > 30) {
+      // Extract architecture from test name
+      const archMatch = t.name.match(/\[(s390x|ppc64le|amd64|arm64)\]/);
+      const arch = archMatch ? archMatch[1] : 'amd64';
+      
       return {
         name: t.name,
         flaky_rate: flakyRate,
         transitions,
+        arch,
         maintainers: t.maintainers || [],
         slack_mentions: resolveMaintainersToSlack(t.maintainers || [])
       };
@@ -154,6 +159,18 @@ const flakyTests = allTests
   })
   .filter(Boolean)
   .sort((a, b) => b.flaky_rate - a.flaky_rate);
+
+// Group flaky tests by architecture
+const flakyByArch = {};
+flakyTests.forEach(t => {
+  flakyByArch[t.arch] = (flakyByArch[t.arch] || 0) + 1;
+});
+
+// Create flaky arch summary string like "[2x s390x] [1x ppc64le]"
+const flakyArchSummary = Object.entries(flakyByArch)
+  .sort((a, b) => b[1] - a[1]) // Sort by count descending
+  .map(([arch, count]) => `[${count}x ${arch}]`)
+  .join(' ');
 
 // Calculate trend (compare with yesterday)
 // This would require historical data; for now, use a placeholder
@@ -178,7 +195,9 @@ const summary = {
   failing_tests: failingTests,
   failing_by_arch: failingByArch,
   failing_arch_summary: archSummary,
-  flaky_tests: flakyTests
+  flaky_tests: flakyTests,
+  flaky_by_arch: flakyByArch,
+  flaky_arch_summary: flakyArchSummary
 };
 
 console.log(JSON.stringify(summary, null, 2));
