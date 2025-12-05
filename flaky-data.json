@@ -1,20 +1,20 @@
 {
-  "lastRefresh": "2025-12-05T08:24:33.555Z",
+  "lastRefresh": "2025-12-05T12:32:33.733Z",
   "periodDays": 14,
-  "totalFailures": 57,
-  "totalPRs": 16,
-  "confirmedFlakyCount": 13,
+  "totalFailures": 56,
+  "totalPRs": 15,
+  "confirmedFlakyCount": 11,
   "mergedDespiteFailureCount": 0,
   "failedTests": [
     {
       "name": "CUDA Vector Addition Test",
       "file": "k8s-nvidia-cuda.bats",
-      "totalFailures": 12,
-      "flakyCount": 6,
+      "totalFailures": 14,
+      "flakyCount": 7,
       "mergedCount": 0,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": false,
-      "uniquePRs": 9,
+      "uniquePRs": 8,
       "uniqueDates": [
         "2025-12-05",
         "2025-12-04"
@@ -23,8 +23,8 @@
         {
           "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
           "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "count": 11,
-          "flakyCount": 5,
+          "count": 13,
+          "flakyCount": 6,
           "mergedCount": 0
         },
         {
@@ -54,10 +54,34 @@
           "prTitle": "runtime-rs: handle container missing during kill_process gracefully\nKata-deploy: Add tolerations to daemonset and cleanup job\nUpdate kata-rbac.yaml",
           "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
           "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "57230727112",
+          "runId": "19956830891",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": false
+        },
+        {
+          "date": "2025-12-05",
+          "prNumber": "12167\n12115\n12084",
+          "prTitle": "runtime-rs: handle container missing during kill_process gracefully\nKata-deploy: Add tolerations to daemonset and cleanup job\nUpdate kata-rbac.yaml",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
           "jobId": "57225467071",
           "runId": "19955344132",
           "runAttempt": 1,
           "isFlaky": true,
+          "prMerged": false
+        },
+        {
+          "date": "2025-12-05",
+          "prNumber": "12108",
+          "prTitle": "policy: gpu: validation of vfio passthrough GPUs",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "57244273802",
+          "runId": "19960632771",
+          "runAttempt": 1,
+          "isFlaky": false,
           "prMerged": false
         },
         {
@@ -126,20 +150,20 @@
           "prTitle": "gpu: VFIO handling container vs sandbox",
           "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
           "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobId": "57198045709",
-          "runId": "19946356504",
-          "runAttempt": 1,
+          "jobId": "57175477934",
+          "runId": "19939221364",
+          "runAttempt": 2,
           "isFlaky": true,
           "prMerged": false
         },
         {
           "date": "2025-12-04",
-          "prNumber": "12181",
-          "prTitle": "tests: use Authorization when GH_TOKEN is set",
+          "prNumber": "12188",
+          "prTitle": "gpu: VFIO handling container vs sandbox",
           "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
           "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobId": "57198504922",
-          "runId": "19946714191",
+          "jobId": "57198045709",
+          "runId": "19946356504",
           "runAttempt": 1,
           "isFlaky": true,
           "prMerged": false
@@ -185,12 +209,12 @@
     {
       "name": "setup_file failed",
       "file": "k8s-nvidia-nim.bats",
-      "totalFailures": 9,
+      "totalFailures": 10,
       "flakyCount": 3,
       "mergedCount": 0,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": false,
-      "uniquePRs": 8,
+      "uniquePRs": 7,
       "uniqueDates": [
         "2025-12-05",
         "2025-12-04"
@@ -199,7 +223,7 @@
         {
           "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
           "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "count": 9,
+          "count": 10,
           "flakyCount": 3,
           "mergedCount": 0
         }
@@ -223,10 +247,34 @@
           "prTitle": "runtime-rs: handle container missing during kill_process gracefully\nKata-deploy: Add tolerations to daemonset and cleanup job\nUpdate kata-rbac.yaml",
           "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
           "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "57230727112",
+          "runId": "19956830891",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": false
+        },
+        {
+          "date": "2025-12-05",
+          "prNumber": "12167\n12115\n12084",
+          "prTitle": "runtime-rs: handle container missing during kill_process gracefully\nKata-deploy: Add tolerations to daemonset and cleanup job\nUpdate kata-rbac.yaml",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
           "jobId": "57225467071",
           "runId": "19955344132",
           "runAttempt": 1,
           "isFlaky": true,
+          "prMerged": false
+        },
+        {
+          "date": "2025-12-05",
+          "prNumber": "12108",
+          "prTitle": "policy: gpu: validation of vfio passthrough GPUs",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "57244273802",
+          "runId": "19960632771",
+          "runAttempt": 1,
+          "isFlaky": false,
           "prMerged": false
         },
         {
@@ -263,18 +311,6 @@
           "runId": "19945046217",
           "runAttempt": 1,
           "isFlaky": false,
-          "prMerged": false
-        },
-        {
-          "date": "2025-12-04",
-          "prNumber": "12181",
-          "prTitle": "tests: use Authorization when GH_TOKEN is set",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobId": "57198504922",
-          "runId": "19946714191",
-          "runAttempt": 1,
-          "isFlaky": true,
           "prMerged": false
         },
         {
@@ -391,15 +427,14 @@
     {
       "name": "Test we cannot pull an image that exceeds the memory limit inside the guest",
       "file": "k8s-guest-pull-image.bats",
-      "totalFailures": 4,
-      "flakyCount": 2,
+      "totalFailures": 2,
+      "flakyCount": 0,
       "mergedCount": 0,
-      "isConfirmedFlaky": true,
+      "isConfirmedFlaky": false,
       "mergedDespiteFailure": false,
-      "uniquePRs": 2,
+      "uniquePRs": 1,
       "uniqueDates": [
-        "2025-12-05",
-        "2025-12-04"
+        "2025-12-05"
       ],
       "affectedJobs": [
         {
@@ -407,13 +442,6 @@
           "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (nydus, qemu-coco-dev, kubeadm)",
           "count": 2,
           "flakyCount": 0,
-          "mergedCount": 0
-        },
-        {
-          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
-          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
-          "count": 2,
-          "flakyCount": 2,
           "mergedCount": 0
         }
       ],
@@ -440,30 +468,6 @@
           "runId": "19950751977",
           "runAttempt": 2,
           "isFlaky": false,
-          "prMerged": false
-        },
-        {
-          "date": "2025-12-04",
-          "prNumber": "12181",
-          "prTitle": "tests: use Authorization when GH_TOKEN is set",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
-          "jobId": "57198504970",
-          "runId": "19946714191",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2025-12-04",
-          "prNumber": "12181",
-          "prTitle": "tests: use Authorization when GH_TOKEN is set",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
-          "jobId": "57198504970",
-          "runId": "19946714191",
-          "runAttempt": 1,
-          "isFlaky": true,
           "prMerged": false
         }
       ]
@@ -750,54 +754,6 @@
           "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, qemu-runtime-rs, normal)",
           "jobId": "57201304689",
           "runId": "19947080042",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        }
-      ]
-    },
-    {
-      "name": "Policy failure: unexpected config map",
-      "file": "k8s-policy-pod.bats",
-      "totalFailures": 2,
-      "flakyCount": 2,
-      "mergedCount": 0,
-      "isConfirmedFlaky": true,
-      "mergedDespiteFailure": false,
-      "uniquePRs": 1,
-      "uniqueDates": [
-        "2025-12-04"
-      ],
-      "affectedJobs": [
-        {
-          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
-          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
-          "count": 2,
-          "flakyCount": 2,
-          "mergedCount": 0
-        }
-      ],
-      "recentOccurrences": [
-        {
-          "date": "2025-12-04",
-          "prNumber": "12181",
-          "prTitle": "tests: use Authorization when GH_TOKEN is set",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
-          "jobId": "57198504970",
-          "runId": "19946714191",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2025-12-04",
-          "prNumber": "12181",
-          "prTitle": "tests: use Authorization when GH_TOKEN is set",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
-          "jobId": "57198504970",
-          "runId": "19946714191",
           "runAttempt": 1,
           "isFlaky": true,
           "prMerged": false
@@ -1166,14 +1122,14 @@
     }
   ],
   "summary": {
-    "totalFailedTests": 19,
-    "confirmedFlaky": 13,
+    "totalFailedTests": 18,
+    "confirmedFlaky": 11,
     "mergedDespiteFailure": 0,
     "mostAffectedJob": {
       "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
       "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-      "count": 22,
-      "flakyCount": 10,
+      "count": 25,
+      "flakyCount": 11,
       "mergedCount": 0
     },
     "trend": [
@@ -1227,26 +1183,26 @@
       },
       {
         "date": "2025-12-04",
-        "failures": 37
+        "failures": 32
       },
       {
         "date": "2025-12-05",
-        "failures": 20
+        "failures": 24
       }
     ],
     "jobBreakdown": [
       {
         "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
         "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-        "count": 22,
-        "flakyCount": 10,
+        "count": 25,
+        "flakyCount": 11,
         "mergedCount": 0
       },
       {
         "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
         "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
-        "count": 20,
-        "flakyCount": 12,
+        "count": 16,
+        "flakyCount": 8,
         "mergedCount": 0
       },
       {
