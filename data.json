@@ -1,5 +1,5 @@
 {
-  "lastRefresh": "2025-12-06T01:23:12.865Z",
+  "lastRefresh": "2025-12-06T03:48:18.894Z",
   "sections": [
     {
       "id": "nvidia-gpu",
@@ -19,7 +19,7 @@
           "isRequired": true,
           "duration": "8m 24s",
           "lastFailure": "Yesterday",
-          "lastSuccess": "Just now",
+          "lastSuccess": "3h ago",
           "weatherHistory": [
             {
               "date": "2025-11-27T00:00:00.000Z",
@@ -136,8 +136,8 @@
           ],
           "isRequired": true,
           "duration": "17m 46s",
-          "lastFailure": "19h ago",
-          "lastSuccess": "Just now",
+          "lastFailure": "22h ago",
+          "lastSuccess": "3h ago",
           "weatherHistory": [
             {
               "date": "2025-11-27T00:00:00.000Z",
@@ -299,15 +299,15 @@
           "name": "non-TEE with nydus snapshotter",
           "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev, nydus, guest-pull)",
           "fullName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev, nydus, guest-pull)",
-          "status": "not_run",
+          "status": "passed",
           "categories": [
             "tee",
             "required"
           ],
           "isRequired": true,
-          "duration": "N/A",
+          "duration": "48m 59s",
           "lastFailure": "2 days ago",
-          "lastSuccess": "Yesterday",
+          "lastSuccess": "3h ago",
           "weatherHistory": [
             {
               "date": "2025-11-27T00:00:00.000Z",
@@ -440,10 +440,10 @@
             },
             {
               "date": "2025-12-06T00:00:00.000Z",
-              "status": "none",
+              "status": "passed",
               "runId": "19979653999",
               "jobId": "57304154219",
-              "duration": "N/A",
+              "duration": "48m 59s",
               "failureStep": null,
               "failureDetails": null
             }
@@ -492,8 +492,8 @@
           ],
           "isRequired": false,
           "duration": "N/A",
-          "lastFailure": "22h ago",
-          "lastSuccess": "18h ago",
+          "lastFailure": "Yesterday",
+          "lastSuccess": "20h ago",
           "weatherHistory": [
             {
               "date": "2025-11-27T00:00:00.000Z",
@@ -2610,14 +2610,14 @@
           "name": "Intel TDX with nydus snapshotter",
           "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
           "fullName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
-          "status": "not_run",
+          "status": "passed",
           "categories": [
             "tee"
           ],
           "isRequired": false,
-          "duration": "N/A",
-          "lastFailure": "18h ago",
-          "lastSuccess": "2 days ago",
+          "duration": "37m 39s",
+          "lastFailure": "20h ago",
+          "lastSuccess": "2h ago",
           "weatherHistory": [
             {
               "date": "2025-11-27T00:00:00.000Z",
@@ -2726,10 +2726,10 @@
             },
             {
               "date": "2025-12-06T00:00:00.000Z",
-              "status": "none",
+              "status": "passed",
               "runId": "19979653999",
               "jobId": "57304154217",
-              "duration": "N/A",
+              "duration": "37m 39s",
               "failureStep": null,
               "failureDetails": null
             }
@@ -2768,8 +2768,8 @@
           ],
           "isRequired": false,
           "duration": "22m 4s",
-          "lastFailure": "22h ago",
-          "lastSuccess": "Just now",
+          "lastFailure": "Yesterday",
+          "lastSuccess": "3h ago",
           "weatherHistory": [
             {
               "date": "2025-11-27T00:00:00.000Z",
@@ -2921,8 +2921,8 @@
           ],
           "isRequired": true,
           "duration": "17m 46s",
-          "lastFailure": "19h ago",
-          "lastSuccess": "Just now",
+          "lastFailure": "22h ago",
+          "lastSuccess": "3h ago",
           "weatherHistory": [
             {
               "date": "2025-11-27T00:00:00.000Z",
@@ -3084,7 +3084,7 @@
           "isRequired": false,
           "duration": "38m 54s",
           "lastFailure": "Never",
-          "lastSuccess": "Just now",
+          "lastSuccess": "3h ago",
           "weatherHistory": [
             {
               "date": "2025-11-27T00:00:00.000Z",
@@ -3193,14 +3193,14 @@
           "name": "non-TEE with runtime-rs and nydus snapshotter",
           "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
           "fullName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
-          "status": "not_run",
+          "status": "passed",
           "categories": [
             "tee"
           ],
           "isRequired": false,
-          "duration": "N/A",
-          "lastFailure": "3 days ago",
-          "lastSuccess": "Yesterday",
+          "duration": "61m 47s",
+          "lastFailure": "4 days ago",
+          "lastSuccess": "3h ago",
           "weatherHistory": [
             {
               "date": "2025-11-27T00:00:00.000Z",
@@ -3213,12 +3213,36 @@
             },
             {
               "date": "2025-11-28T00:00:00.000Z",
-              "status": "passed",
+              "status": "failed",
               "runId": "19750471173",
-              "jobId": "56597102037",
-              "duration": "59m 24s",
-              "failureStep": null,
-              "failureDetails": null
+              "jobId": "56592877175",
+              "duration": "80m 48s",
+              "failureStep": "k8s-guest-pull-image-signature.bats",
+              "failureDetails": {
+                "failures": [
+                  {
+                    "number": 1,
+                    "name": "Create a pod from an unsigned image, on an insecureAcceptAnything registry works",
+                    "comment": "",
+                    "file": "k8s-guest-pull-image-signature.bats"
+                  },
+                  {
+                    "number": 1,
+                    "name": "Create a pod from an unsigned image, on an insecureAcceptAnything registry works",
+                    "comment": "",
+                    "file": "##[group]k8s-guest-pull-image-signature.bats"
+                  }
+                ],
+                "stats": {
+                  "total": 250,
+                  "passed": 248,
+                  "failed": 2,
+                  "skipped": 0
+                },
+                "batsFiles": [
+                  "k8s-guest-pull-image-signature.bats"
+                ]
+              }
             },
             {
               "date": "2025-11-29T00:00:00.000Z",
@@ -3285,16 +3309,27 @@
             },
             {
               "date": "2025-12-06T00:00:00.000Z",
-              "status": "none",
+              "status": "passed",
               "runId": "19979653999",
               "jobId": "57304154215",
-              "duration": "N/A",
+              "duration": "61m 47s",
               "failureStep": null,
               "failureDetails": null
             }
           ],
-          "failureCount": 0,
-          "failedTestsInWeather": [],
+          "failureCount": 1,
+          "failedTestsInWeather": [
+            {
+              "name": "Create a pod from an unsigned image, on an insecureAcceptAnything registry works",
+              "count": 1,
+              "dates": [
+                "2025-11-28"
+              ],
+              "files": [
+                "k8s-guest-pull-image-signature.bats"
+              ]
+            }
+          ],
           "retried": 0,
           "setupRetry": false,
           "runId": "19979653999",
@@ -3317,7 +3352,7 @@
           "isRequired": false,
           "duration": "18m 16s",
           "lastFailure": "Never",
-          "lastSuccess": "Just now",
+          "lastSuccess": "3h ago",
           "weatherHistory": [
             {
               "date": "2025-11-27T00:00:00.000Z",
@@ -3435,7 +3470,7 @@
           "isRequired": false,
           "duration": "0m 8s",
           "lastFailure": "Never",
-          "lastSuccess": "20h ago",
+          "lastSuccess": "22h ago",
           "weatherHistory": [
             {
               "date": "2025-11-27T00:00:00.000Z",
@@ -3551,8 +3586,8 @@
           ],
           "isRequired": false,
           "duration": "0m 9s",
-          "lastFailure": "20h ago",
-          "lastSuccess": "14h ago",
+          "lastFailure": "22h ago",
+          "lastSuccess": "16h ago",
           "weatherHistory": [
             {
               "date": "2025-11-27T00:00:00.000Z",
@@ -3668,8 +3703,8 @@
           ],
           "isRequired": false,
           "duration": "0m 9s",
-          "lastFailure": "20h ago",
-          "lastSuccess": "14h ago",
+          "lastFailure": "22h ago",
+          "lastSuccess": "16h ago",
           "weatherHistory": [
             {
               "date": "2025-11-27T00:00:00.000Z",
@@ -3791,8 +3826,8 @@
           ],
           "isRequired": false,
           "duration": "0m 7s",
-          "lastFailure": "20h ago",
-          "lastSuccess": "14h ago",
+          "lastFailure": "22h ago",
+          "lastSuccess": "16h ago",
           "weatherHistory": [
             {
               "date": "2025-11-27T00:00:00.000Z",
@@ -3909,7 +3944,7 @@
           "isRequired": false,
           "duration": "0m 8s",
           "lastFailure": "Never",
-          "lastSuccess": "20h ago",
+          "lastSuccess": "22h ago",
           "weatherHistory": [
             {
               "date": "2025-11-27T00:00:00.000Z",
@@ -4025,8 +4060,8 @@
           ],
           "isRequired": false,
           "duration": "0m 9s",
-          "lastFailure": "20h ago",
-          "lastSuccess": "14h ago",
+          "lastFailure": "22h ago",
+          "lastSuccess": "16h ago",
           "weatherHistory": [
             {
               "date": "2025-11-27T00:00:00.000Z",
@@ -4142,8 +4177,8 @@
           ],
           "isRequired": false,
           "duration": "0m 9s",
-          "lastFailure": "20h ago",
-          "lastSuccess": "14h ago",
+          "lastFailure": "22h ago",
+          "lastSuccess": "16h ago",
           "weatherHistory": [
             {
               "date": "2025-11-27T00:00:00.000Z",
@@ -4267,8 +4302,8 @@
         ],
         "isRequired": false,
         "duration": "0m 9s",
-        "lastFailure": "20h ago",
-        "lastSuccess": "14h ago",
+        "lastFailure": "22h ago",
+        "lastSuccess": "16h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -4384,8 +4419,8 @@
         ],
         "isRequired": false,
         "duration": "0m 9s",
-        "lastFailure": "20h ago",
-        "lastSuccess": "14h ago",
+        "lastFailure": "22h ago",
+        "lastSuccess": "16h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -4502,7 +4537,7 @@
         "isRequired": false,
         "duration": "0m 8s",
         "lastFailure": "Never",
-        "lastSuccess": "20h ago",
+        "lastSuccess": "22h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -4617,8 +4652,8 @@
         ],
         "isRequired": false,
         "duration": "0m 7s",
-        "lastFailure": "20h ago",
-        "lastSuccess": "14h ago",
+        "lastFailure": "22h ago",
+        "lastSuccess": "16h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -4734,7 +4769,7 @@
         "isRequired": true,
         "duration": "0m 50s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -4749,7 +4784,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592463673",
             "duration": "0m 39s",
@@ -4855,7 +4890,7 @@
         "isRequired": false,
         "duration": "0m 46s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -4978,7 +5013,7 @@
         "isRequired": true,
         "duration": "0m 40s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -5099,7 +5134,7 @@
         "isRequired": false,
         "duration": "0m 46s",
         "lastFailure": "4 days ago",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -5222,7 +5257,7 @@
         "isRequired": true,
         "duration": "0m 55s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -5345,7 +5380,7 @@
         "isRequired": true,
         "duration": "0m 53s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -5468,7 +5503,7 @@
         "isRequired": false,
         "duration": "0m 45s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -5589,7 +5624,7 @@
         "isRequired": false,
         "duration": "0m 45s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -5712,7 +5747,7 @@
         "isRequired": true,
         "duration": "0m 46s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -5833,7 +5868,7 @@
         "isRequired": false,
         "duration": "0m 44s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -5956,7 +5991,7 @@
         "isRequired": true,
         "duration": "0m 53s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -6077,7 +6112,7 @@
         "isRequired": false,
         "duration": "1m 8s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -6092,7 +6127,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592463845",
             "duration": "0m 51s",
@@ -6200,7 +6235,7 @@
         "isRequired": true,
         "duration": "0m 52s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -6215,7 +6250,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592463857",
             "duration": "0m 57s",
@@ -6321,7 +6356,7 @@
         "isRequired": false,
         "duration": "1m 14s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -6336,7 +6371,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592463858",
             "duration": "0m 54s",
@@ -6444,7 +6479,7 @@
         "isRequired": true,
         "duration": "1m 18s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -6459,7 +6494,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592463859",
             "duration": "0m 54s",
@@ -6568,7 +6603,7 @@
         "isRequired": true,
         "duration": "0m 57s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -6583,7 +6618,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592463875",
             "duration": "1m 6s",
@@ -6691,7 +6726,7 @@
         "isRequired": false,
         "duration": "0m 50s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -6706,7 +6741,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592463862",
             "duration": "0m 50s",
@@ -6814,7 +6849,7 @@
         "isRequired": true,
         "duration": "0m 37s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -6829,7 +6864,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592463861",
             "duration": "0m 51s",
@@ -6937,7 +6972,7 @@
         "isRequired": true,
         "duration": "0m 46s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -6952,7 +6987,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592463867",
             "duration": "0m 51s",
@@ -7061,7 +7096,7 @@
         "isRequired": true,
         "duration": "0m 42s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -7076,7 +7111,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592463870",
             "duration": "0m 47s",
@@ -7182,7 +7217,7 @@
         "isRequired": false,
         "duration": "0m 48s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -7197,7 +7232,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592463879",
             "duration": "0m 45s",
@@ -7305,7 +7340,7 @@
         "isRequired": true,
         "duration": "0m 43s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -7320,7 +7355,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592463897",
             "duration": "0m 44s",
@@ -7429,7 +7464,7 @@
         "isRequired": true,
         "duration": "0m 57s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -7444,7 +7479,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592463864",
             "duration": "0m 55s",
@@ -7552,7 +7587,7 @@
         "isRequired": false,
         "duration": "0m 49s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -7567,7 +7602,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592463887",
             "duration": "0m 51s",
@@ -7675,7 +7710,7 @@
         "isRequired": true,
         "duration": "0m 55s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -7690,7 +7725,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592463882",
             "duration": "0m 48s",
@@ -7798,7 +7833,7 @@
         "isRequired": true,
         "duration": "0m 41s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -7813,7 +7848,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592463884",
             "duration": "0m 46s",
@@ -8040,7 +8075,7 @@
         "isRequired": false,
         "duration": "0m 58s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -8055,7 +8090,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592511088",
             "duration": "0m 54s",
@@ -8161,7 +8196,7 @@
         "isRequired": false,
         "duration": "0m 54s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -8176,7 +8211,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592511083",
             "duration": "1m 11s",
@@ -8282,7 +8317,7 @@
         "isRequired": false,
         "duration": "0m 58s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -8297,7 +8332,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592511087",
             "duration": "1m 2s",
@@ -8405,7 +8440,7 @@
         "isRequired": false,
         "duration": "1m 31s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -8420,7 +8455,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592511086",
             "duration": "1m 11s",
@@ -8528,7 +8563,7 @@
         "isRequired": false,
         "duration": "1m 0s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -8543,7 +8578,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592511091",
             "duration": "1m 16s",
@@ -8649,7 +8684,7 @@
         "isRequired": false,
         "duration": "1m 2s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -8664,7 +8699,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592511092",
             "duration": "1m 1s",
@@ -8770,7 +8805,7 @@
         "isRequired": false,
         "duration": "1m 15s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -8785,7 +8820,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592511098",
             "duration": "0m 51s",
@@ -8893,7 +8928,7 @@
         "isRequired": false,
         "duration": "0m 56s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -8908,7 +8943,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592511097",
             "duration": "0m 59s",
@@ -9016,7 +9051,7 @@
         "isRequired": false,
         "duration": "0m 56s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -9031,7 +9066,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592511118",
             "duration": "1m 6s",
@@ -9137,7 +9172,7 @@
         "isRequired": false,
         "duration": "1m 12s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -9152,7 +9187,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592565714",
             "duration": "1m 8s",
@@ -9260,7 +9295,7 @@
         "isRequired": true,
         "duration": "1m 34s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -9275,7 +9310,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592611782",
             "duration": "1m 34s",
@@ -9502,7 +9537,7 @@
         "isRequired": false,
         "duration": "0m 3s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -9517,7 +9552,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592561034",
             "duration": "0m 3s",
@@ -9625,7 +9660,7 @@
         "isRequired": false,
         "duration": "0m 4s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -9640,7 +9675,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592561036",
             "duration": "0m 6s",
@@ -9748,7 +9783,7 @@
         "isRequired": false,
         "duration": "0m 4s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -9763,7 +9798,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592561028",
             "duration": "0m 4s",
@@ -9871,7 +9906,7 @@
         "isRequired": false,
         "duration": "0m 4s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -9886,7 +9921,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592561031",
             "duration": "0m 5s",
@@ -9992,7 +10027,7 @@
         "isRequired": false,
         "duration": "0m 4s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -10007,7 +10042,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592561048",
             "duration": "0m 4s",
@@ -10234,7 +10269,7 @@
         "isRequired": false,
         "duration": "0m 3s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -10249,7 +10284,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592561039",
             "duration": "0m 4s",
@@ -10355,7 +10390,7 @@
         "isRequired": false,
         "duration": "0m 55s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -10476,7 +10511,7 @@
         "isRequired": false,
         "duration": "0m 55s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -10597,7 +10632,7 @@
         "isRequired": false,
         "duration": "0m 58s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -10718,7 +10753,7 @@
         "isRequired": false,
         "duration": "1m 0s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -10839,7 +10874,7 @@
         "isRequired": false,
         "duration": "1m 6s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -10960,7 +10995,7 @@
         "isRequired": false,
         "duration": "10m 24s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -11081,7 +11116,7 @@
         "isRequired": false,
         "duration": "0m 52s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -11096,7 +11131,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592463800",
             "duration": "0m 51s",
@@ -11204,7 +11239,7 @@
         "isRequired": false,
         "duration": "1m 10s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -11325,7 +11360,7 @@
         "isRequired": false,
         "duration": "1m 21s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -11446,7 +11481,7 @@
         "isRequired": false,
         "duration": "0m 53s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -11567,7 +11602,7 @@
         "isRequired": false,
         "duration": "0m 52s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -11582,7 +11617,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592463842",
             "duration": "0m 54s",
@@ -11688,7 +11723,7 @@
         "isRequired": false,
         "duration": "1m 2s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -11703,7 +11738,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592463847",
             "duration": "0m 50s",
@@ -11809,7 +11844,7 @@
         "isRequired": false,
         "duration": "1m 8s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -11824,7 +11859,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592851086",
             "duration": "0m 56s",
@@ -11932,7 +11967,7 @@
         "isRequired": false,
         "duration": "1m 16s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -11947,7 +11982,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592851113",
             "duration": "1m 16s",
@@ -12053,7 +12088,7 @@
         "isRequired": false,
         "duration": "1m 14s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -12068,7 +12103,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592851090",
             "duration": "1m 10s",
@@ -12176,7 +12211,7 @@
         "isRequired": false,
         "duration": "1m 21s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -12191,7 +12226,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592851092",
             "duration": "1m 13s",
@@ -12297,7 +12332,7 @@
         "isRequired": false,
         "duration": "1m 6s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -12312,7 +12347,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592911774",
             "duration": "1m 5s",
@@ -12418,7 +12453,7 @@
         "isRequired": false,
         "duration": "0m 32s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -12433,7 +12468,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592960443",
             "duration": "0m 35s",
@@ -12539,7 +12574,7 @@
         "isRequired": false,
         "duration": "0m 5s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -12554,7 +12589,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592904336",
             "duration": "0m 3s",
@@ -12662,7 +12697,7 @@
         "isRequired": false,
         "duration": "0m 3s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -12677,7 +12712,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592904331",
             "duration": "0m 5s",
@@ -12783,7 +12818,7 @@
         "isRequired": false,
         "duration": "0m 2s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -12798,7 +12833,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592904342",
             "duration": "0m 2s",
@@ -12904,7 +12939,7 @@
         "isRequired": false,
         "duration": "0m 53s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -13025,7 +13060,7 @@
         "isRequired": false,
         "duration": "2m 40s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -13146,7 +13181,7 @@
         "isRequired": false,
         "duration": "1m 43s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -13267,7 +13302,7 @@
         "isRequired": false,
         "duration": "1m 13s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -13388,7 +13423,7 @@
         "isRequired": false,
         "duration": "2m 52s",
         "lastFailure": "2 days ago",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -13509,7 +13544,7 @@
         "isRequired": false,
         "duration": "1m 32s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -13524,7 +13559,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "none",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592924326",
             "duration": "N/A",
@@ -13630,7 +13665,7 @@
         "isRequired": false,
         "duration": "0m 40s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -13645,7 +13680,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "none",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592924461",
             "duration": "N/A",
@@ -13766,7 +13801,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "none",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592924219",
             "duration": "0m 0s",
@@ -13872,7 +13907,7 @@
         "isRequired": false,
         "duration": "0m 3s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -13995,7 +14030,7 @@
         "isRequired": false,
         "duration": "1m 3s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -14119,7 +14154,7 @@
         "isRequired": false,
         "duration": "1m 10s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -14242,7 +14277,7 @@
         "isRequired": false,
         "duration": "1m 16s",
         "lastFailure": "3 days ago",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -14365,7 +14400,7 @@
         "isRequired": false,
         "duration": "1m 5s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -14488,7 +14523,7 @@
         "isRequired": false,
         "duration": "1m 13s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -14611,7 +14646,7 @@
         "isRequired": false,
         "duration": "1m 5s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -14626,7 +14661,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592463754",
             "duration": "1m 17s",
@@ -14734,7 +14769,7 @@
         "isRequired": false,
         "duration": "1m 4s",
         "lastFailure": "2 days ago",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -14857,7 +14892,7 @@
         "isRequired": false,
         "duration": "1m 41s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -14872,7 +14907,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592643991",
             "duration": "1m 21s",
@@ -15103,7 +15138,7 @@
         "isRequired": false,
         "duration": "1m 48s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -15118,7 +15153,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592525520",
             "duration": "1m 39s",
@@ -15226,7 +15261,7 @@
         "isRequired": false,
         "duration": "1m 45s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -15241,7 +15276,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592525527",
             "duration": "1m 37s",
@@ -15349,7 +15384,7 @@
         "isRequired": false,
         "duration": "1m 29s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -15364,7 +15399,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592525535",
             "duration": "1m 24s",
@@ -15472,7 +15507,7 @@
         "isRequired": false,
         "duration": "1m 30s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -15487,7 +15522,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592525522",
             "duration": "1m 45s",
@@ -15595,7 +15630,7 @@
         "isRequired": false,
         "duration": "1m 28s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -15610,7 +15645,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592704852",
             "duration": "1m 25s",
@@ -15718,7 +15753,7 @@
         "isRequired": false,
         "duration": "0m 40s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -15733,7 +15768,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592769123",
             "duration": "0m 42s",
@@ -15964,7 +15999,7 @@
         "isRequired": false,
         "duration": "0m 9s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -15979,7 +16014,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592698943",
             "duration": "0m 3s",
@@ -16088,7 +16123,7 @@
         "isRequired": false,
         "duration": "0m 4s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -16103,7 +16138,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592698949",
             "duration": "0m 2s",
@@ -16211,7 +16246,7 @@
         "isRequired": false,
         "duration": "0m 2s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -16226,7 +16261,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592698954",
             "duration": "0m 5s",
@@ -16332,7 +16367,7 @@
         "isRequired": false,
         "duration": "0m 59s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -16347,7 +16382,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592675776",
             "duration": "0m 59s",
@@ -16576,7 +16611,7 @@
         "isRequired": true,
         "duration": "6m 35s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -16591,7 +16626,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592675813",
             "duration": "5m 1s",
@@ -16697,7 +16732,7 @@
         "isRequired": false,
         "duration": "2m 54s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -16712,7 +16747,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592988490",
             "duration": "1m 37s",
@@ -16833,7 +16868,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "none",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592924567",
             "duration": "0m 0s",
@@ -16939,7 +16974,7 @@
         "isRequired": false,
         "duration": "4m 53s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -17185,7 +17220,7 @@
         "isRequired": false,
         "duration": "2m 49s",
         "lastFailure": "4 days ago",
-        "lastSuccess": "Just now",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -17200,7 +17235,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592801967",
             "duration": "2m 56s",
@@ -17442,7 +17477,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "none",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592675982",
             "duration": "0m 0s",
@@ -17550,7 +17585,7 @@
         "isRequired": true,
         "duration": "3m 44s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -17565,7 +17600,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592676014",
             "duration": "4m 21s",
@@ -17673,7 +17708,7 @@
         "isRequired": true,
         "duration": "3m 28s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -17688,7 +17723,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592676007",
             "duration": "4m 30s",
@@ -17796,7 +17831,7 @@
         "isRequired": true,
         "duration": "3m 26s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -17811,7 +17846,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592676013",
             "duration": "3m 56s",
@@ -17919,7 +17954,7 @@
         "isRequired": true,
         "duration": "3m 37s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -17934,7 +17969,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592676010",
             "duration": "3m 19s",
@@ -18040,7 +18075,7 @@
         "isRequired": false,
         "duration": "3m 28s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -18055,7 +18090,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592676015",
             "duration": "3m 40s",
@@ -18163,7 +18198,7 @@
         "isRequired": true,
         "duration": "3m 41s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -18178,7 +18213,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592675988",
             "duration": "4m 26s",
@@ -18286,7 +18321,7 @@
         "isRequired": true,
         "duration": "4m 27s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -18301,7 +18336,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592675997",
             "duration": "3m 44s",
@@ -18409,7 +18444,7 @@
         "isRequired": true,
         "duration": "3m 38s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -18424,7 +18459,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592675994",
             "duration": "3m 40s",
@@ -18532,7 +18567,7 @@
         "isRequired": true,
         "duration": "4m 58s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -18547,7 +18582,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592675985",
             "duration": "3m 50s",
@@ -18653,7 +18688,7 @@
         "isRequired": false,
         "duration": "3m 40s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -18668,7 +18703,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592675990",
             "duration": "4m 23s",
@@ -18776,7 +18811,7 @@
         "isRequired": true,
         "duration": "3m 36s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -18791,7 +18826,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592676070",
             "duration": "3m 38s",
@@ -18897,7 +18932,7 @@
         "isRequired": false,
         "duration": "1m 21s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -18912,7 +18947,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592676095",
             "duration": "1m 17s",
@@ -19020,7 +19055,7 @@
         "isRequired": true,
         "duration": "1m 11s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -19035,7 +19070,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592676110",
             "duration": "1m 54s",
@@ -19143,7 +19178,7 @@
         "isRequired": true,
         "duration": "1m 20s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -19158,7 +19193,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592676091",
             "duration": "2m 1s",
@@ -19266,7 +19301,7 @@
         "isRequired": true,
         "duration": "1m 15s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -19281,7 +19316,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592676105",
             "duration": "1m 22s",
@@ -19387,7 +19422,7 @@
         "isRequired": false,
         "duration": "1m 39s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -19402,7 +19437,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592676102",
             "duration": "1m 18s",
@@ -19508,7 +19543,7 @@
         "isRequired": false,
         "duration": "2m 1s",
         "lastFailure": "11/27/2025",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -19523,7 +19558,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592675962",
             "duration": "1m 2s",
@@ -19629,7 +19664,7 @@
         "isRequired": false,
         "duration": "1m 9s",
         "lastFailure": "11/27/2025",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -19644,7 +19679,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592675967",
             "duration": "1m 41s",
@@ -19750,7 +19785,7 @@
         "isRequired": false,
         "duration": "1m 24s",
         "lastFailure": "11/27/2025",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -19765,7 +19800,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592675966",
             "duration": "1m 8s",
@@ -19871,7 +19906,7 @@
         "isRequired": false,
         "duration": "0m 54s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -19886,7 +19921,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592675964",
             "duration": "1m 55s",
@@ -19992,7 +20027,7 @@
         "isRequired": false,
         "duration": "1m 48s",
         "lastFailure": "11/27/2025",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -20007,7 +20042,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592675960",
             "duration": "1m 7s",
@@ -20113,7 +20148,7 @@
         "isRequired": false,
         "duration": "1m 19s",
         "lastFailure": "11/27/2025",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -20128,7 +20163,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592675968",
             "duration": "1m 22s",
@@ -20234,7 +20269,7 @@
         "isRequired": false,
         "duration": "2m 11s",
         "lastFailure": "11/27/2025",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -20249,7 +20284,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592675961",
             "duration": "1m 3s",
@@ -20355,7 +20390,7 @@
         "isRequired": false,
         "duration": "1m 48s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -20370,7 +20405,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592675977",
             "duration": "1m 0s",
@@ -20491,7 +20526,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "none",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592675904",
             "duration": "0m 0s",
@@ -20612,7 +20647,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "none",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592675975",
             "duration": "0m 0s",
@@ -20733,7 +20768,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "none",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592676041",
             "duration": "0m 0s",
@@ -20979,7 +21014,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "none",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592801942",
             "duration": "N/A",
@@ -21087,7 +21122,7 @@
         "isRequired": false,
         "duration": "3m 35s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -21102,7 +21137,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592801966",
             "duration": "3m 41s",
@@ -21210,7 +21245,7 @@
         "isRequired": false,
         "duration": "3m 50s",
         "lastFailure": "6 days ago",
-        "lastSuccess": "Just now",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -21225,7 +21260,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592801948",
             "duration": "3m 53s",
@@ -21454,7 +21489,7 @@
         "isRequired": true,
         "duration": "4m 32s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -21469,7 +21504,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592676262",
             "duration": "5m 33s",
@@ -21577,7 +21612,7 @@
         "isRequired": true,
         "duration": "4m 46s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -21592,7 +21627,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592676306",
             "duration": "4m 1s",
@@ -21700,7 +21735,7 @@
         "isRequired": true,
         "duration": "4m 44s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -21715,7 +21750,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592676274",
             "duration": "4m 45s",
@@ -21823,7 +21858,7 @@
         "isRequired": true,
         "duration": "4m 27s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -21838,7 +21873,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592676281",
             "duration": "4m 25s",
@@ -21946,7 +21981,7 @@
         "isRequired": true,
         "duration": "5m 17s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -21961,7 +21996,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592676299",
             "duration": "6m 30s",
@@ -22069,7 +22104,7 @@
         "isRequired": true,
         "duration": "4m 32s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -22084,7 +22119,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592676200",
             "duration": "4m 32s",
@@ -22192,7 +22227,7 @@
         "isRequired": true,
         "duration": "4m 49s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -22207,7 +22242,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592676229",
             "duration": "4m 53s",
@@ -22315,7 +22350,7 @@
         "isRequired": true,
         "duration": "4m 31s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -22330,7 +22365,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592676219",
             "duration": "4m 6s",
@@ -22438,7 +22473,7 @@
         "isRequired": true,
         "duration": "5m 30s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -22453,7 +22488,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592676288",
             "duration": "4m 19s",
@@ -22561,7 +22596,7 @@
         "isRequired": true,
         "duration": "5m 39s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -22576,7 +22611,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592676284",
             "duration": "4m 40s",
@@ -22807,7 +22842,7 @@
         "isRequired": false,
         "duration": "5m 34s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -22822,7 +22857,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592802081",
             "duration": "5m 51s",
@@ -22930,7 +22965,7 @@
         "isRequired": false,
         "duration": "5m 54s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -22945,7 +22980,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592802045",
             "duration": "5m 23s",
@@ -23051,7 +23086,7 @@
         "isRequired": false,
         "duration": "4m 50s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -23066,7 +23101,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592988522",
             "duration": "5m 4s",
@@ -23187,7 +23222,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "none",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592924543",
             "duration": "0m 0s",
@@ -23293,7 +23328,7 @@
         "isRequired": false,
         "duration": "5m 38s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -23537,7 +23572,7 @@
         "isRequired": true,
         "duration": "18m 32s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -23552,7 +23587,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592877170",
             "duration": "18m 35s",
@@ -23660,7 +23695,7 @@
         "isRequired": true,
         "duration": "39m 7s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -23675,7 +23710,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592877168",
             "duration": "43m 40s",
@@ -23783,7 +23818,7 @@
         "isRequired": true,
         "duration": "47m 5s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -23798,7 +23833,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592877154",
             "duration": "42m 47s",
@@ -23906,7 +23941,7 @@
         "isRequired": true,
         "duration": "16m 58s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -23921,7 +23956,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592877142",
             "duration": "15m 38s",
@@ -24029,7 +24064,7 @@
         "isRequired": true,
         "duration": "25m 13s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -24044,7 +24079,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592877140",
             "duration": "24m 27s",
@@ -24152,7 +24187,7 @@
         "isRequired": true,
         "duration": "15m 2s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -24167,7 +24202,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592877161",
             "duration": "15m 2s",
@@ -24275,7 +24310,7 @@
         "isRequired": true,
         "duration": "24m 23s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -24290,7 +24325,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592877158",
             "duration": "21m 53s",
@@ -24398,7 +24433,7 @@
         "isRequired": true,
         "duration": "17m 5s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -24413,7 +24448,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592877143",
             "duration": "15m 37s",
@@ -24521,7 +24556,7 @@
         "isRequired": true,
         "duration": "30m 41s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -24536,7 +24571,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592877146",
             "duration": "22m 6s",
@@ -24644,7 +24679,7 @@
         "isRequired": true,
         "duration": "18m 22s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -24659,7 +24694,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592877147",
             "duration": "17m 13s",
@@ -24767,7 +24802,7 @@
         "isRequired": true,
         "duration": "22m 21s",
         "lastFailure": "11/27/2025",
-        "lastSuccess": "Just now",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -24782,7 +24817,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592877151",
             "duration": "20m 49s",
@@ -24890,7 +24925,7 @@
         "isRequired": true,
         "duration": "20m 15s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -24905,7 +24940,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592877157",
             "duration": "14m 33s",
@@ -25013,7 +25048,7 @@
         "isRequired": true,
         "duration": "22m 27s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -25028,7 +25063,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592877149",
             "duration": "23m 34s",
@@ -25136,7 +25171,7 @@
         "isRequired": true,
         "duration": "19m 36s",
         "lastFailure": "Yesterday",
-        "lastSuccess": "Just now",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -25151,7 +25186,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56593052365",
             "duration": "19m 7s",
@@ -25383,8 +25418,8 @@
         ],
         "isRequired": true,
         "duration": "17m 46s",
-        "lastFailure": "19h ago",
-        "lastSuccess": "Just now",
+        "lastFailure": "22h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -25547,7 +25582,7 @@
         "isRequired": true,
         "duration": "8m 24s",
         "lastFailure": "Yesterday",
-        "lastSuccess": "Just now",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -25676,7 +25711,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "none",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592924580",
             "duration": "0m 0s",
@@ -25782,7 +25817,7 @@
         "isRequired": false,
         "duration": "16m 20s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -26030,7 +26065,7 @@
         "isRequired": false,
         "duration": "15m 38s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -26045,7 +26080,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592927489",
             "duration": "15m 34s",
@@ -26153,8 +26188,8 @@
         ],
         "isRequired": false,
         "duration": "22m 4s",
-        "lastFailure": "22h ago",
-        "lastSuccess": "Just now",
+        "lastFailure": "Yesterday",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -26305,8 +26340,8 @@
         ],
         "isRequired": false,
         "duration": "11m 53s",
-        "lastFailure": "22h ago",
-        "lastSuccess": "Just now",
+        "lastFailure": "Yesterday",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -26321,7 +26356,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592927317",
             "duration": "13m 0s",
@@ -26552,7 +26587,7 @@
         "isRequired": false,
         "duration": "38m 54s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -26661,15 +26696,15 @@
         "name": "run-k8s-tests-coco-nontee (qemu-coco-dev, nydus, guest-pull)",
         "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev, nydus, guest-pull)",
         "fullName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev, nydus, guest-pull)",
-        "status": "not_run",
+        "status": "passed",
         "categories": [
           "tee",
           "required"
         ],
         "isRequired": true,
-        "duration": "N/A",
+        "duration": "48m 59s",
         "lastFailure": "2 days ago",
-        "lastSuccess": "Yesterday",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -26802,10 +26837,10 @@
           },
           {
             "date": "2025-12-06T00:00:00.000Z",
-            "status": "none",
+            "status": "passed",
             "runId": "19979653999",
             "jobId": "57304154219",
-            "duration": "N/A",
+            "duration": "48m 59s",
             "failureStep": null,
             "failureDetails": null
           }
@@ -26848,14 +26883,14 @@
         "name": "run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
         "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
         "fullName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
-        "status": "not_run",
+        "status": "passed",
         "categories": [
           "tee"
         ],
         "isRequired": false,
-        "duration": "N/A",
-        "lastFailure": "3 days ago",
-        "lastSuccess": "Yesterday",
+        "duration": "61m 47s",
+        "lastFailure": "4 days ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -26868,12 +26903,36 @@
           },
           {
             "date": "2025-11-28T00:00:00.000Z",
-            "status": "passed",
+            "status": "failed",
             "runId": "19750471173",
-            "jobId": "56597102037",
-            "duration": "59m 24s",
-            "failureStep": null,
-            "failureDetails": null
+            "jobId": "56592877175",
+            "duration": "80m 48s",
+            "failureStep": "k8s-guest-pull-image-signature.bats",
+            "failureDetails": {
+              "failures": [
+                {
+                  "number": 1,
+                  "name": "Create a pod from an unsigned image, on an insecureAcceptAnything registry works",
+                  "comment": "",
+                  "file": "k8s-guest-pull-image-signature.bats"
+                },
+                {
+                  "number": 1,
+                  "name": "Create a pod from an unsigned image, on an insecureAcceptAnything registry works",
+                  "comment": "",
+                  "file": "##[group]k8s-guest-pull-image-signature.bats"
+                }
+              ],
+              "stats": {
+                "total": 250,
+                "passed": 248,
+                "failed": 2,
+                "skipped": 0
+              },
+              "batsFiles": [
+                "k8s-guest-pull-image-signature.bats"
+              ]
+            }
           },
           {
             "date": "2025-11-29T00:00:00.000Z",
@@ -26940,16 +26999,27 @@
           },
           {
             "date": "2025-12-06T00:00:00.000Z",
-            "status": "none",
+            "status": "passed",
             "runId": "19979653999",
             "jobId": "57304154215",
-            "duration": "N/A",
+            "duration": "61m 47s",
             "failureStep": null,
             "failureDetails": null
           }
         ],
-        "failureCount": 0,
-        "failedTestsInWeather": [],
+        "failureCount": 1,
+        "failedTestsInWeather": [
+          {
+            "name": "Create a pod from an unsigned image, on an insecureAcceptAnything registry works",
+            "count": 1,
+            "dates": [
+              "2025-11-28"
+            ],
+            "files": [
+              "k8s-guest-pull-image-signature.bats"
+            ]
+          }
+        ],
         "retried": 0,
         "setupRetry": false,
         "runId": "19979653999",
@@ -26972,7 +27042,7 @@
         "isRequired": false,
         "duration": "18m 16s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -27088,8 +27158,8 @@
         ],
         "isRequired": false,
         "duration": "N/A",
-        "lastFailure": "22h ago",
-        "lastSuccess": "18h ago",
+        "lastFailure": "Yesterday",
+        "lastSuccess": "20h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -29206,14 +29276,14 @@
         "name": "run-k8s-tests-on-tee (tdx, qemu-tdx)",
         "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
         "fullName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
-        "status": "not_run",
+        "status": "passed",
         "categories": [
           "tee"
         ],
         "isRequired": false,
-        "duration": "N/A",
-        "lastFailure": "18h ago",
-        "lastSuccess": "2 days ago",
+        "duration": "37m 39s",
+        "lastFailure": "20h ago",
+        "lastSuccess": "2h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -29322,10 +29392,10 @@
           },
           {
             "date": "2025-12-06T00:00:00.000Z",
-            "status": "none",
+            "status": "passed",
             "runId": "19979653999",
             "jobId": "57304154217",
-            "duration": "N/A",
+            "duration": "37m 39s",
             "failureStep": null,
             "failureDetails": null
           }
@@ -29485,7 +29555,7 @@
         "isRequired": true,
         "duration": "7m 15s",
         "lastFailure": "Yesterday",
-        "lastSuccess": "Just now",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -29500,7 +29570,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592877183",
             "duration": "6m 33s",
@@ -29608,7 +29678,7 @@
         "isRequired": true,
         "duration": "7m 19s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -29623,7 +29693,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592877182",
             "duration": "6m 41s",
@@ -29731,7 +29801,7 @@
         "isRequired": true,
         "duration": "5m 53s",
         "lastFailure": "Yesterday",
-        "lastSuccess": "Just now",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -29746,7 +29816,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592877184",
             "duration": "5m 0s",
@@ -29854,7 +29924,7 @@
         "isRequired": true,
         "duration": "7m 35s",
         "lastFailure": "Yesterday",
-        "lastSuccess": "Just now",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -29869,7 +29939,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592877187",
             "duration": "8m 41s",
@@ -30098,7 +30168,7 @@
         "isRequired": true,
         "duration": "1m 55s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -30113,7 +30183,7 @@
           {
             "date": "2025-11-28T00:00:00.000Z",
             "status": "passed",
-            "retried": true,
+            "retried": false,
             "runId": "19750471173",
             "jobId": "56592675867",
             "duration": "2m 23s",
@@ -30226,7 +30296,7 @@
         "status": "passed",
         "duration": "5m 54s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -30335,7 +30405,7 @@
         "status": "passed",
         "duration": "6m 11s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -30444,7 +30514,7 @@
         "status": "passed",
         "duration": "6m 5s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -30553,7 +30623,7 @@
         "status": "passed",
         "duration": "6m 13s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -30662,7 +30732,7 @@
         "status": "passed",
         "duration": "6m 11s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -30771,7 +30841,7 @@
         "status": "passed",
         "duration": "6m 20s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -30880,7 +30950,7 @@
         "status": "passed",
         "duration": "4m 42s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -30989,7 +31059,7 @@
         "status": "passed",
         "duration": "5m 1s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -31098,7 +31168,7 @@
         "status": "passed",
         "duration": "5m 0s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -31207,7 +31277,7 @@
         "status": "passed",
         "duration": "4m 46s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -31316,7 +31386,7 @@
         "status": "passed",
         "duration": "5m 0s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -31425,7 +31495,7 @@
         "status": "passed",
         "duration": "5m 27s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -31534,7 +31604,7 @@
         "status": "passed",
         "duration": "5m 42s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -31643,7 +31713,7 @@
         "status": "passed",
         "duration": "5m 7s",
         "lastFailure": "4 days ago",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -31752,7 +31822,7 @@
         "status": "passed",
         "duration": "4m 40s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -31861,7 +31931,7 @@
         "status": "passed",
         "duration": "5m 2s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -31970,7 +32040,7 @@
         "status": "passed",
         "duration": "4m 22s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -32079,7 +32149,7 @@
         "status": "passed",
         "duration": "5m 4s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -32188,7 +32258,7 @@
         "status": "passed",
         "duration": "7m 11s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -32297,7 +32367,7 @@
         "status": "passed",
         "duration": "6m 24s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -32406,7 +32476,7 @@
         "status": "passed",
         "duration": "7m 25s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -32515,7 +32585,7 @@
         "status": "passed",
         "duration": "5m 50s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -32624,7 +32694,7 @@
         "status": "passed",
         "duration": "6m 45s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -32733,7 +32803,7 @@
         "status": "passed",
         "duration": "6m 4s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -32842,7 +32912,7 @@
         "status": "passed",
         "duration": "5m 47s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -32951,7 +33021,7 @@
         "status": "passed",
         "duration": "6m 27s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -33060,7 +33130,7 @@
         "status": "passed",
         "duration": "5m 17s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -33169,7 +33239,7 @@
         "status": "passed",
         "duration": "4m 57s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -33278,7 +33348,7 @@
         "status": "passed",
         "duration": "4m 58s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -33387,7 +33457,7 @@
         "status": "passed",
         "duration": "4m 55s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -33496,7 +33566,7 @@
         "status": "passed",
         "duration": "3m 55s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -33605,7 +33675,7 @@
         "status": "passed",
         "duration": "3m 56s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -33714,7 +33784,7 @@
         "status": "passed",
         "duration": "5m 0s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -33823,7 +33893,7 @@
         "status": "passed",
         "duration": "5m 20s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -33932,7 +34002,7 @@
         "status": "passed",
         "duration": "4m 20s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -34041,7 +34111,7 @@
         "status": "passed",
         "duration": "4m 10s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -34150,7 +34220,7 @@
         "status": "passed",
         "duration": "5m 2s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -34259,7 +34329,7 @@
         "status": "passed",
         "duration": "3m 47s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -34368,7 +34438,7 @@
         "status": "passed",
         "duration": "4m 7s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -34477,7 +34547,7 @@
         "status": "passed",
         "duration": "6m 27s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -34586,7 +34656,7 @@
         "status": "passed",
         "duration": "6m 10s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -34695,7 +34765,7 @@
         "status": "passed",
         "duration": "7m 14s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -34813,7 +34883,7 @@
         "status": "passed",
         "duration": "50m 10s",
         "lastFailure": "Never",
-        "lastSuccess": "20h ago",
+        "lastSuccess": "23h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -35031,7 +35101,7 @@
         "status": "passed",
         "duration": "29m 19s",
         "lastFailure": "Yesterday",
-        "lastSuccess": "20h ago",
+        "lastSuccess": "23h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -35467,7 +35537,7 @@
         "status": "passed",
         "duration": "5m 12s",
         "lastFailure": "Never",
-        "lastSuccess": "20h ago",
+        "lastSuccess": "23h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -35576,7 +35646,7 @@
         "status": "passed",
         "duration": "4m 15s",
         "lastFailure": "Never",
-        "lastSuccess": "20h ago",
+        "lastSuccess": "23h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -35685,7 +35755,7 @@
         "status": "passed",
         "duration": "6m 58s",
         "lastFailure": "11/28/2025",
-        "lastSuccess": "20h ago",
+        "lastSuccess": "23h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -35794,7 +35864,7 @@
         "status": "passed",
         "duration": "5m 0s",
         "lastFailure": "Never",
-        "lastSuccess": "20h ago",
+        "lastSuccess": "23h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -35903,7 +35973,7 @@
         "status": "passed",
         "duration": "21m 52s",
         "lastFailure": "2 days ago",
-        "lastSuccess": "20h ago",
+        "lastSuccess": "23h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -36057,7 +36127,7 @@
         "status": "passed",
         "duration": "5m 2s",
         "lastFailure": "Never",
-        "lastSuccess": "20h ago",
+        "lastSuccess": "23h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -36165,7 +36235,7 @@
         "fullName": "e2e / image / build and push (release, linux/amd64,linux/s390x,linux/ppc64le)",
         "status": "failed",
         "duration": "32m 17s",
-        "lastFailure": "20h ago",
+        "lastFailure": "23h ago",
         "lastSuccess": "Yesterday",
         "weatherHistory": [
           {
@@ -36877,7 +36947,7 @@
         "status": "passed",
         "duration": "0m 6s",
         "lastFailure": "Never",
-        "lastSuccess": "20h ago",
+        "lastSuccess": "23h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -36986,7 +37056,7 @@
         "status": "passed",
         "duration": "10m 28s",
         "lastFailure": "Never",
-        "lastSuccess": "20h ago",
+        "lastSuccess": "23h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -37095,7 +37165,7 @@
         "status": "passed",
         "duration": "27m 30s",
         "lastFailure": "Never",
-        "lastSuccess": "20h ago",
+        "lastSuccess": "23h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -37204,7 +37274,7 @@
         "status": "passed",
         "duration": "7m 44s",
         "lastFailure": "Never",
-        "lastSuccess": "20h ago",
+        "lastSuccess": "23h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -37313,7 +37383,7 @@
         "status": "passed",
         "duration": "2m 34s",
         "lastFailure": "Never",
-        "lastSuccess": "20h ago",
+        "lastSuccess": "23h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -37422,7 +37492,7 @@
         "status": "passed",
         "duration": "2m 16s",
         "lastFailure": "Never",
-        "lastSuccess": "20h ago",
+        "lastSuccess": "23h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -37531,7 +37601,7 @@
         "status": "passed",
         "duration": "2m 35s",
         "lastFailure": "Never",
-        "lastSuccess": "20h ago",
+        "lastSuccess": "23h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -37640,7 +37710,7 @@
         "status": "passed",
         "duration": "12m 0s",
         "lastFailure": "Never",
-        "lastSuccess": "20h ago",
+        "lastSuccess": "23h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -37749,7 +37819,7 @@
         "status": "passed",
         "duration": "14m 9s",
         "lastFailure": "11/28/2025",
-        "lastSuccess": "20h ago",
+        "lastSuccess": "23h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
@@ -37858,7 +37928,7 @@
         "status": "passed",
         "duration": "0m 7s",
         "lastFailure": "Never",
-        "lastSuccess": "20h ago",
+        "lastSuccess": "23h ago",
         "weatherHistory": [
           {
             "date": "2025-11-27T00:00:00.000Z",
