@@ -1,7 +1,7 @@
 {
-  "lastRefresh": "2025-12-19T16:23:47.698Z",
+  "lastRefresh": "2025-12-19T20:22:19.066Z",
   "periodDays": 14,
-  "totalFailures": 769,
+  "totalFailures": 796,
   "totalPRs": 16,
   "confirmedFlakyCount": 4,
   "mergedDespiteFailureCount": 55,
@@ -1095,9 +1095,9 @@
     {
       "name": "Cannot get CDH resource when deny-all policy is set",
       "file": "k8s-confidential-attestation.bats",
-      "totalFailures": 20,
+      "totalFailures": 21,
       "flakyCount": 0,
-      "mergedCount": 2,
+      "mergedCount": 3,
       "isConfirmedFlaky": false,
       "mergedDespiteFailure": true,
       "uniquePRs": 5,
@@ -1107,18 +1107,18 @@
       ],
       "affectedJobs": [
         {
+          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "count": 9,
+          "flakyCount": 0,
+          "mergedCount": 3
+        },
+        {
           "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
           "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
           "count": 8,
           "flakyCount": 0,
           "mergedCount": 0
-        },
-        {
-          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 8,
-          "flakyCount": 0,
-          "mergedCount": 2
         },
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
@@ -1327,6 +1327,18 @@
           "prTitle": "dragonball: Skip tests require kvm while kvm is absent",
           "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "58545114977",
+          "runId": "20339966077",
+          "runAttempt": 3,
+          "isFlaky": false,
+          "prMerged": true
+        },
+        {
+          "date": "2025-12-18",
+          "prNumber": "12259",
+          "prTitle": "dragonball: Skip tests require kvm while kvm is absent",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "jobId": "58395823369",
           "runId": "20327033455",
           "runAttempt": 1,
@@ -1363,9 +1375,9 @@
           "prTitle": "nvidia: rootfs: Bump driver to 590",
           "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
           "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobId": "58379842259",
-          "runId": "20321236889",
-          "runAttempt": 1,
+          "jobId": "58417952266",
+          "runId": "20333215436",
+          "runAttempt": 2,
           "isFlaky": false,
           "prMerged": false
         }
@@ -1374,9 +1386,9 @@
     {
       "name": "Get CDH resource",
       "file": "k8s-confidential-attestation.bats",
-      "totalFailures": 19,
+      "totalFailures": 20,
       "flakyCount": 0,
-      "mergedCount": 2,
+      "mergedCount": 3,
       "isConfirmedFlaky": false,
       "mergedDespiteFailure": true,
       "uniquePRs": 5,
@@ -1388,9 +1400,9 @@
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 8,
+          "count": 9,
           "flakyCount": 0,
-          "mergedCount": 2
+          "mergedCount": 3
         },
         {
           "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
@@ -1594,6 +1606,18 @@
           "prTitle": "dragonball: Skip tests require kvm while kvm is absent",
           "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "58545114977",
+          "runId": "20339966077",
+          "runAttempt": 3,
+          "isFlaky": false,
+          "prMerged": true
+        },
+        {
+          "date": "2025-12-18",
+          "prNumber": "12259",
+          "prTitle": "dragonball: Skip tests require kvm while kvm is absent",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "jobId": "58395823369",
           "runId": "20327033455",
           "runAttempt": 1,
@@ -1630,9 +1654,9 @@
           "prTitle": "nvidia: rootfs: Bump driver to 590",
           "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
           "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobId": "58379842259",
-          "runId": "20321236889",
-          "runAttempt": 1,
+          "jobId": "58417952266",
+          "runId": "20333215436",
+          "runAttempt": 2,
           "isFlaky": false,
           "prMerged": false
         }
@@ -1641,9 +1665,9 @@
     {
       "name": "Cannot get CDH resource when affirming policy is set without reference values",
       "file": "k8s-confidential-attestation.bats",
-      "totalFailures": 19,
+      "totalFailures": 20,
       "flakyCount": 0,
-      "mergedCount": 2,
+      "mergedCount": 3,
       "isConfirmedFlaky": false,
       "mergedDespiteFailure": true,
       "uniquePRs": 5,
@@ -1655,9 +1679,9 @@
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 8,
+          "count": 9,
           "flakyCount": 0,
-          "mergedCount": 2
+          "mergedCount": 3
         },
         {
           "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
@@ -1861,6 +1885,18 @@
           "prTitle": "dragonball: Skip tests require kvm while kvm is absent",
           "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "58545114977",
+          "runId": "20339966077",
+          "runAttempt": 3,
+          "isFlaky": false,
+          "prMerged": true
+        },
+        {
+          "date": "2025-12-18",
+          "prNumber": "12259",
+          "prTitle": "dragonball: Skip tests require kvm while kvm is absent",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "jobId": "58395823369",
           "runId": "20327033455",
           "runAttempt": 1,
@@ -1897,9 +1933,9 @@
           "prTitle": "nvidia: rootfs: Bump driver to 590",
           "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
           "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobId": "58379842259",
-          "runId": "20321236889",
-          "runAttempt": 1,
+          "jobId": "58417952266",
+          "runId": "20333215436",
+          "runAttempt": 2,
           "isFlaky": false,
           "prMerged": false
         }
@@ -1908,9 +1944,9 @@
     {
       "name": "Can get CDH resource when affirming policy is set with reference values",
       "file": "k8s-confidential-attestation.bats",
-      "totalFailures": 15,
+      "totalFailures": 16,
       "flakyCount": 0,
-      "mergedCount": 2,
+      "mergedCount": 3,
       "isConfirmedFlaky": false,
       "mergedDespiteFailure": true,
       "uniquePRs": 5,
@@ -1922,9 +1958,9 @@
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 8,
+          "count": 9,
           "flakyCount": 0,
-          "mergedCount": 2
+          "mergedCount": 3
         },
         {
           "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
@@ -2073,6 +2109,18 @@
           "prTitle": "dragonball: Skip tests require kvm while kvm is absent",
           "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "58545114977",
+          "runId": "20339966077",
+          "runAttempt": 3,
+          "isFlaky": false,
+          "prMerged": true
+        },
+        {
+          "date": "2025-12-18",
+          "prNumber": "12259",
+          "prTitle": "dragonball: Skip tests require kvm while kvm is absent",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "jobId": "58395823369",
           "runId": "20327033455",
           "runAttempt": 1,
@@ -2109,9 +2157,9 @@
           "prTitle": "nvidia: rootfs: Bump driver to 590",
           "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
           "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobId": "58379842259",
-          "runId": "20321236889",
-          "runAttempt": 1,
+          "jobId": "58417952266",
+          "runId": "20333215436",
+          "runAttempt": 2,
           "isFlaky": false,
           "prMerged": false
         }
@@ -2534,9 +2582,9 @@
     {
       "name": "Test that creating a container from an encrypted image, with no decryption key fails",
       "file": "k8s-guest-pull-image-encrypted.bats",
-      "totalFailures": 12,
+      "totalFailures": 13,
       "flakyCount": 0,
-      "mergedCount": 2,
+      "mergedCount": 3,
       "isConfirmedFlaky": false,
       "mergedDespiteFailure": true,
       "uniquePRs": 4,
@@ -2548,9 +2596,9 @@
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 8,
+          "count": 9,
           "flakyCount": 0,
-          "mergedCount": 2
+          "mergedCount": 3
         },
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
@@ -2680,6 +2728,18 @@
           "runAttempt": 1,
           "isFlaky": false,
           "prMerged": false
+        },
+        {
+          "date": "2025-12-18",
+          "prNumber": "12259",
+          "prTitle": "dragonball: Skip tests require kvm while kvm is absent",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "58545114977",
+          "runId": "20339966077",
+          "runAttempt": 3,
+          "isFlaky": false,
+          "prMerged": true
         },
         {
           "date": "2025-12-18",
@@ -2710,9 +2770,9 @@
     {
       "name": "Test that creating a container from an encrypted image, with correct decryption key works",
       "file": "k8s-guest-pull-image-encrypted.bats",
-      "totalFailures": 12,
+      "totalFailures": 13,
       "flakyCount": 0,
-      "mergedCount": 2,
+      "mergedCount": 3,
       "isConfirmedFlaky": false,
       "mergedDespiteFailure": true,
       "uniquePRs": 4,
@@ -2724,9 +2784,9 @@
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 8,
+          "count": 9,
           "flakyCount": 0,
-          "mergedCount": 2
+          "mergedCount": 3
         },
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
@@ -2856,6 +2916,18 @@
           "runAttempt": 1,
           "isFlaky": false,
           "prMerged": false
+        },
+        {
+          "date": "2025-12-18",
+          "prNumber": "12259",
+          "prTitle": "dragonball: Skip tests require kvm while kvm is absent",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "58545114977",
+          "runId": "20339966077",
+          "runAttempt": 3,
+          "isFlaky": false,
+          "prMerged": true
         },
         {
           "date": "2025-12-18",
@@ -2886,9 +2958,9 @@
     {
       "name": "Test that creating a container from an encrypted image, with incorrect decryption key fails",
       "file": "k8s-guest-pull-image-encrypted.bats",
-      "totalFailures": 12,
+      "totalFailures": 13,
       "flakyCount": 0,
-      "mergedCount": 2,
+      "mergedCount": 3,
       "isConfirmedFlaky": false,
       "mergedDespiteFailure": true,
       "uniquePRs": 4,
@@ -2900,9 +2972,9 @@
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 8,
+          "count": 9,
           "flakyCount": 0,
-          "mergedCount": 2
+          "mergedCount": 3
         },
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
@@ -3032,6 +3104,18 @@
           "runAttempt": 1,
           "isFlaky": false,
           "prMerged": false
+        },
+        {
+          "date": "2025-12-18",
+          "prNumber": "12259",
+          "prTitle": "dragonball: Skip tests require kvm while kvm is absent",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "58545114977",
+          "runId": "20339966077",
+          "runAttempt": 3,
+          "isFlaky": false,
+          "prMerged": true
         },
         {
           "date": "2025-12-18",
@@ -3062,9 +3146,9 @@
     {
       "name": "Test that creating a container from an authenticated image, with correct credentials works",
       "file": "k8s-guest-pull-image-authenticated.bats",
-      "totalFailures": 12,
+      "totalFailures": 13,
       "flakyCount": 0,
-      "mergedCount": 2,
+      "mergedCount": 3,
       "isConfirmedFlaky": false,
       "mergedDespiteFailure": true,
       "uniquePRs": 4,
@@ -3076,9 +3160,9 @@
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 8,
+          "count": 9,
           "flakyCount": 0,
-          "mergedCount": 2
+          "mergedCount": 3
         },
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
@@ -3208,6 +3292,18 @@
           "runAttempt": 1,
           "isFlaky": false,
           "prMerged": false
+        },
+        {
+          "date": "2025-12-18",
+          "prNumber": "12259",
+          "prTitle": "dragonball: Skip tests require kvm while kvm is absent",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "58545114977",
+          "runId": "20339966077",
+          "runAttempt": 3,
+          "isFlaky": false,
+          "prMerged": true
         },
         {
           "date": "2025-12-18",
@@ -3238,9 +3334,9 @@
     {
       "name": "Test that creating a container from an authenticated image, with incorrect credentials fails",
       "file": "k8s-guest-pull-image-authenticated.bats",
-      "totalFailures": 12,
+      "totalFailures": 13,
       "flakyCount": 0,
-      "mergedCount": 2,
+      "mergedCount": 3,
       "isConfirmedFlaky": false,
       "mergedDespiteFailure": true,
       "uniquePRs": 4,
@@ -3252,9 +3348,9 @@
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 8,
+          "count": 9,
           "flakyCount": 0,
-          "mergedCount": 2
+          "mergedCount": 3
         },
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
@@ -3384,6 +3480,18 @@
           "runAttempt": 1,
           "isFlaky": false,
           "prMerged": false
+        },
+        {
+          "date": "2025-12-18",
+          "prNumber": "12259",
+          "prTitle": "dragonball: Skip tests require kvm while kvm is absent",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "58545114977",
+          "runId": "20339966077",
+          "runAttempt": 3,
+          "isFlaky": false,
+          "prMerged": true
         },
         {
           "date": "2025-12-18",
@@ -3414,9 +3522,9 @@
     {
       "name": "Test that creating a container from an authenticated image, with no credentials fails",
       "file": "k8s-guest-pull-image-authenticated.bats",
-      "totalFailures": 12,
+      "totalFailures": 13,
       "flakyCount": 0,
-      "mergedCount": 2,
+      "mergedCount": 3,
       "isConfirmedFlaky": false,
       "mergedDespiteFailure": true,
       "uniquePRs": 4,
@@ -3428,9 +3536,9 @@
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 8,
+          "count": 9,
           "flakyCount": 0,
-          "mergedCount": 2
+          "mergedCount": 3
         },
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
@@ -3560,6 +3668,18 @@
           "runAttempt": 1,
           "isFlaky": false,
           "prMerged": false
+        },
+        {
+          "date": "2025-12-18",
+          "prNumber": "12259",
+          "prTitle": "dragonball: Skip tests require kvm while kvm is absent",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "58545114977",
+          "runId": "20339966077",
+          "runAttempt": 3,
+          "isFlaky": false,
+          "prMerged": true
         },
         {
           "date": "2025-12-18",
@@ -3590,9 +3710,9 @@
     {
       "name": "Create a pod from an unsigned image, on an insecureAcceptAnything registry works",
       "file": "k8s-guest-pull-image-signature.bats",
-      "totalFailures": 12,
+      "totalFailures": 13,
       "flakyCount": 0,
-      "mergedCount": 2,
+      "mergedCount": 3,
       "isConfirmedFlaky": false,
       "mergedDespiteFailure": true,
       "uniquePRs": 4,
@@ -3604,9 +3724,9 @@
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 8,
+          "count": 9,
           "flakyCount": 0,
-          "mergedCount": 2
+          "mergedCount": 3
         },
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
@@ -3736,6 +3856,18 @@
           "runAttempt": 1,
           "isFlaky": false,
           "prMerged": false
+        },
+        {
+          "date": "2025-12-18",
+          "prNumber": "12259",
+          "prTitle": "dragonball: Skip tests require kvm while kvm is absent",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "58545114977",
+          "runId": "20339966077",
+          "runAttempt": 3,
+          "isFlaky": false,
+          "prMerged": true
         },
         {
           "date": "2025-12-18",
@@ -3766,9 +3898,9 @@
     {
       "name": "Create a pod from an unsigned image, on a 'restricted registry' is rejected",
       "file": "k8s-guest-pull-image-signature.bats",
-      "totalFailures": 12,
+      "totalFailures": 13,
       "flakyCount": 0,
-      "mergedCount": 2,
+      "mergedCount": 3,
       "isConfirmedFlaky": false,
       "mergedDespiteFailure": true,
       "uniquePRs": 4,
@@ -3780,9 +3912,9 @@
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 8,
+          "count": 9,
           "flakyCount": 0,
-          "mergedCount": 2
+          "mergedCount": 3
         },
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
@@ -3912,6 +4044,18 @@
           "runAttempt": 1,
           "isFlaky": false,
           "prMerged": false
+        },
+        {
+          "date": "2025-12-18",
+          "prNumber": "12259",
+          "prTitle": "dragonball: Skip tests require kvm while kvm is absent",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "58545114977",
+          "runId": "20339966077",
+          "runAttempt": 3,
+          "isFlaky": false,
+          "prMerged": true
         },
         {
           "date": "2025-12-18",
@@ -3942,9 +4086,9 @@
     {
       "name": "Create a pod from a signed image, on a 'restricted registry' is successful",
       "file": "k8s-guest-pull-image-signature.bats",
-      "totalFailures": 12,
+      "totalFailures": 13,
       "flakyCount": 0,
-      "mergedCount": 2,
+      "mergedCount": 3,
       "isConfirmedFlaky": false,
       "mergedDespiteFailure": true,
       "uniquePRs": 4,
@@ -3956,9 +4100,9 @@
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 8,
+          "count": 9,
           "flakyCount": 0,
-          "mergedCount": 2
+          "mergedCount": 3
         },
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
@@ -4088,6 +4232,18 @@
           "runAttempt": 1,
           "isFlaky": false,
           "prMerged": false
+        },
+        {
+          "date": "2025-12-18",
+          "prNumber": "12259",
+          "prTitle": "dragonball: Skip tests require kvm while kvm is absent",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "58545114977",
+          "runId": "20339966077",
+          "runAttempt": 3,
+          "isFlaky": false,
+          "prMerged": true
         },
         {
           "date": "2025-12-18",
@@ -4118,9 +4274,9 @@
     {
       "name": "Create a pod from a signed image, on a 'restricted registry', but with the wrong key is rejected",
       "file": "k8s-guest-pull-image-signature.bats",
-      "totalFailures": 12,
+      "totalFailures": 13,
       "flakyCount": 0,
-      "mergedCount": 2,
+      "mergedCount": 3,
       "isConfirmedFlaky": false,
       "mergedDespiteFailure": true,
       "uniquePRs": 4,
@@ -4132,9 +4288,9 @@
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 8,
+          "count": 9,
           "flakyCount": 0,
-          "mergedCount": 2
+          "mergedCount": 3
         },
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
@@ -4264,6 +4420,18 @@
           "runAttempt": 1,
           "isFlaky": false,
           "prMerged": false
+        },
+        {
+          "date": "2025-12-18",
+          "prNumber": "12259",
+          "prTitle": "dragonball: Skip tests require kvm while kvm is absent",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "58545114977",
+          "runId": "20339966077",
+          "runAttempt": 3,
+          "isFlaky": false,
+          "prMerged": true
         },
         {
           "date": "2025-12-18",
@@ -4294,9 +4462,9 @@
     {
       "name": "Create a pod from an unsigned image, on a 'restricted registry' works if policy files isn't set",
       "file": "k8s-guest-pull-image-signature.bats",
-      "totalFailures": 12,
+      "totalFailures": 13,
       "flakyCount": 0,
-      "mergedCount": 2,
+      "mergedCount": 3,
       "isConfirmedFlaky": false,
       "mergedDespiteFailure": true,
       "uniquePRs": 4,
@@ -4308,9 +4476,9 @@
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 8,
+          "count": 9,
           "flakyCount": 0,
-          "mergedCount": 2
+          "mergedCount": 3
         },
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
@@ -4440,6 +4608,18 @@
           "runAttempt": 1,
           "isFlaky": false,
           "prMerged": false
+        },
+        {
+          "date": "2025-12-18",
+          "prNumber": "12259",
+          "prTitle": "dragonball: Skip tests require kvm while kvm is absent",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "58545114977",
+          "runId": "20339966077",
+          "runAttempt": 3,
+          "isFlaky": false,
+          "prMerged": true
         },
         {
           "date": "2025-12-18",
@@ -4470,9 +4650,9 @@
     {
       "name": "Test we can pull an unencrypted image outside the guest with runc and then inside the guest successfully",
       "file": "k8s-guest-pull-image.bats",
-      "totalFailures": 12,
+      "totalFailures": 13,
       "flakyCount": 0,
-      "mergedCount": 2,
+      "mergedCount": 3,
       "isConfirmedFlaky": false,
       "mergedDespiteFailure": true,
       "uniquePRs": 4,
@@ -4484,9 +4664,9 @@
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 8,
+          "count": 9,
           "flakyCount": 0,
-          "mergedCount": 2
+          "mergedCount": 3
         },
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
@@ -4616,6 +4796,18 @@
           "runAttempt": 1,
           "isFlaky": false,
           "prMerged": false
+        },
+        {
+          "date": "2025-12-18",
+          "prNumber": "12259",
+          "prTitle": "dragonball: Skip tests require kvm while kvm is absent",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "58545114977",
+          "runId": "20339966077",
+          "runAttempt": 3,
+          "isFlaky": false,
+          "prMerged": true
         },
         {
           "date": "2025-12-18",
@@ -4646,9 +4838,9 @@
     {
       "name": "Test we cannot pull an image that exceeds the memory limit inside the guest",
       "file": "k8s-guest-pull-image.bats",
-      "totalFailures": 12,
+      "totalFailures": 13,
       "flakyCount": 0,
-      "mergedCount": 2,
+      "mergedCount": 3,
       "isConfirmedFlaky": false,
       "mergedDespiteFailure": true,
       "uniquePRs": 4,
@@ -4660,9 +4852,9 @@
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 8,
+          "count": 9,
           "flakyCount": 0,
-          "mergedCount": 2
+          "mergedCount": 3
         },
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
@@ -4792,6 +4984,18 @@
           "runAttempt": 1,
           "isFlaky": false,
           "prMerged": false
+        },
+        {
+          "date": "2025-12-18",
+          "prNumber": "12259",
+          "prTitle": "dragonball: Skip tests require kvm while kvm is absent",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "58545114977",
+          "runId": "20339966077",
+          "runAttempt": 3,
+          "isFlaky": false,
+          "prMerged": true
         },
         {
           "date": "2025-12-18",
@@ -4822,9 +5026,9 @@
     {
       "name": "Test unencrypted confidential container launch success and verify that we are running in a secure enclave.",
       "file": "k8s-confidential.bats",
-      "totalFailures": 12,
+      "totalFailures": 13,
       "flakyCount": 0,
-      "mergedCount": 2,
+      "mergedCount": 3,
       "isConfirmedFlaky": false,
       "mergedDespiteFailure": true,
       "uniquePRs": 4,
@@ -4836,9 +5040,9 @@
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 8,
+          "count": 9,
           "flakyCount": 0,
-          "mergedCount": 2
+          "mergedCount": 3
         },
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
@@ -4968,6 +5172,18 @@
           "runAttempt": 1,
           "isFlaky": false,
           "prMerged": false
+        },
+        {
+          "date": "2025-12-18",
+          "prNumber": "12259",
+          "prTitle": "dragonball: Skip tests require kvm while kvm is absent",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "58545114977",
+          "runId": "20339966077",
+          "runAttempt": 3,
+          "isFlaky": false,
+          "prMerged": true
         },
         {
           "date": "2025-12-18",
@@ -9220,6 +9436,170 @@
       ]
     },
     {
+      "name": "Create a pod from a signed image, on a 'restricted registry' is successful (with initdata)",
+      "file": "k8s-guest-pull-image-signature.bats",
+      "totalFailures": 11,
+      "flakyCount": 2,
+      "mergedCount": 3,
+      "isConfirmedFlaky": true,
+      "mergedDespiteFailure": true,
+      "uniquePRs": 4,
+      "uniqueDates": [
+        "2025-12-19",
+        "2025-12-18"
+      ],
+      "affectedJobs": [
+        {
+          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "count": 9,
+          "flakyCount": 0,
+          "mergedCount": 3
+        },
+        {
+          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
+          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
+          "count": 2,
+          "flakyCount": 2,
+          "mergedCount": 0
+        }
+      ],
+      "recentOccurrences": [
+        {
+          "date": "2025-12-19",
+          "prNumber": "12271",
+          "prTitle": "Bump rust to 1.88",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "58530693229",
+          "runId": "20368119408",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2025-12-19",
+          "prNumber": "12271",
+          "prTitle": "Bump rust to 1.88",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "58530693229",
+          "runId": "20368119408",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2025-12-18",
+          "prNumber": "12265",
+          "prTitle": "nvidia: Bump nvidia-container-toolkit to 1.18.1",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "58439748751",
+          "runId": "20339386467",
+          "runAttempt": 2,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2025-12-18",
+          "prNumber": "12265",
+          "prTitle": "nvidia: Bump nvidia-container-toolkit to 1.18.1",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "58439748751",
+          "runId": "20339386467",
+          "runAttempt": 2,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2025-12-18",
+          "prNumber": "12264",
+          "prTitle": "nvidia: cc: Use nydus-snapshotter",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "58486701019",
+          "runId": "20354066712",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2025-12-18",
+          "prNumber": "12264",
+          "prTitle": "nvidia: cc: Use nydus-snapshotter",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "58486701019",
+          "runId": "20354066712",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2025-12-18",
+          "prNumber": "12264",
+          "prTitle": "nvidia: cc: Use nydus-snapshotter",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
+          "jobId": "58432333355",
+          "runId": "20338222457",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": false
+        },
+        {
+          "date": "2025-12-18",
+          "prNumber": "12264",
+          "prTitle": "nvidia: cc: Use nydus-snapshotter",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
+          "jobId": "58432333355",
+          "runId": "20338222457",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": false
+        },
+        {
+          "date": "2025-12-18",
+          "prNumber": "12259",
+          "prTitle": "dragonball: Skip tests require kvm while kvm is absent",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "58545114977",
+          "runId": "20339966077",
+          "runAttempt": 3,
+          "isFlaky": false,
+          "prMerged": true
+        },
+        {
+          "date": "2025-12-18",
+          "prNumber": "12259",
+          "prTitle": "dragonball: Skip tests require kvm while kvm is absent",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "58395823369",
+          "runId": "20327033455",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        },
+        {
+          "date": "2025-12-18",
+          "prNumber": "12259",
+          "prTitle": "dragonball: Skip tests require kvm while kvm is absent",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "58395823369",
+          "runId": "20327033455",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        }
+      ]
+    },
+    {
       "name": "Test OOM events for pods",
       "file": "k8s-oom.bats",
       "totalFailures": 11,
@@ -9384,163 +9764,11 @@
       ]
     },
     {
-      "name": "Create a pod from a signed image, on a 'restricted registry' is successful (with initdata)",
-      "file": "k8s-guest-pull-image-signature.bats",
-      "totalFailures": 10,
-      "flakyCount": 2,
-      "mergedCount": 2,
-      "isConfirmedFlaky": true,
-      "mergedDespiteFailure": true,
-      "uniquePRs": 4,
-      "uniqueDates": [
-        "2025-12-19",
-        "2025-12-18"
-      ],
-      "affectedJobs": [
-        {
-          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 8,
-          "flakyCount": 0,
-          "mergedCount": 2
-        },
-        {
-          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
-          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
-          "count": 2,
-          "flakyCount": 2,
-          "mergedCount": 0
-        }
-      ],
-      "recentOccurrences": [
-        {
-          "date": "2025-12-19",
-          "prNumber": "12271",
-          "prTitle": "Bump rust to 1.88",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "58530693229",
-          "runId": "20368119408",
-          "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": false
-        },
-        {
-          "date": "2025-12-19",
-          "prNumber": "12271",
-          "prTitle": "Bump rust to 1.88",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "58530693229",
-          "runId": "20368119408",
-          "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": false
-        },
-        {
-          "date": "2025-12-18",
-          "prNumber": "12265",
-          "prTitle": "nvidia: Bump nvidia-container-toolkit to 1.18.1",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "58439748751",
-          "runId": "20339386467",
-          "runAttempt": 2,
-          "isFlaky": false,
-          "prMerged": false
-        },
-        {
-          "date": "2025-12-18",
-          "prNumber": "12265",
-          "prTitle": "nvidia: Bump nvidia-container-toolkit to 1.18.1",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "58439748751",
-          "runId": "20339386467",
-          "runAttempt": 2,
-          "isFlaky": false,
-          "prMerged": false
-        },
-        {
-          "date": "2025-12-18",
-          "prNumber": "12264",
-          "prTitle": "nvidia: cc: Use nydus-snapshotter",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "58486701019",
-          "runId": "20354066712",
-          "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": false
-        },
-        {
-          "date": "2025-12-18",
-          "prNumber": "12264",
-          "prTitle": "nvidia: cc: Use nydus-snapshotter",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "58486701019",
-          "runId": "20354066712",
-          "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": false
-        },
-        {
-          "date": "2025-12-18",
-          "prNumber": "12264",
-          "prTitle": "nvidia: cc: Use nydus-snapshotter",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
-          "jobId": "58432333355",
-          "runId": "20338222457",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2025-12-18",
-          "prNumber": "12264",
-          "prTitle": "nvidia: cc: Use nydus-snapshotter",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
-          "jobId": "58432333355",
-          "runId": "20338222457",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2025-12-18",
-          "prNumber": "12259",
-          "prTitle": "dragonball: Skip tests require kvm while kvm is absent",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "58395823369",
-          "runId": "20327033455",
-          "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": true
-        },
-        {
-          "date": "2025-12-18",
-          "prNumber": "12259",
-          "prTitle": "dragonball: Skip tests require kvm while kvm is absent",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "58395823369",
-          "runId": "20327033455",
-          "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": true
-        }
-      ]
-    },
-    {
       "name": "Test that creating a container from an authenticated image, with correct credentials works (with initdata)",
       "file": "k8s-guest-pull-image-authenticated.bats",
-      "totalFailures": 8,
+      "totalFailures": 9,
       "flakyCount": 0,
-      "mergedCount": 2,
+      "mergedCount": 3,
       "isConfirmedFlaky": false,
       "mergedDespiteFailure": true,
       "uniquePRs": 4,
@@ -9552,9 +9780,9 @@
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 8,
+          "count": 9,
           "flakyCount": 0,
-          "mergedCount": 2
+          "mergedCount": 3
         }
       ],
       "recentOccurrences": [
@@ -9629,6 +9857,18 @@
           "runAttempt": 1,
           "isFlaky": false,
           "prMerged": false
+        },
+        {
+          "date": "2025-12-18",
+          "prNumber": "12259",
+          "prTitle": "dragonball: Skip tests require kvm while kvm is absent",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "58545114977",
+          "runId": "20339966077",
+          "runAttempt": 3,
+          "isFlaky": false,
+          "prMerged": true
         },
         {
           "date": "2025-12-18",
@@ -9659,9 +9899,9 @@
     {
       "name": "Test that creating a container from an authenticated image, with incorrect credentials fails (with initdata)",
       "file": "k8s-guest-pull-image-authenticated.bats",
-      "totalFailures": 8,
+      "totalFailures": 9,
       "flakyCount": 0,
-      "mergedCount": 2,
+      "mergedCount": 3,
       "isConfirmedFlaky": false,
       "mergedDespiteFailure": true,
       "uniquePRs": 4,
@@ -9673,9 +9913,9 @@
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 8,
+          "count": 9,
           "flakyCount": 0,
-          "mergedCount": 2
+          "mergedCount": 3
         }
       ],
       "recentOccurrences": [
@@ -9750,6 +9990,18 @@
           "runAttempt": 1,
           "isFlaky": false,
           "prMerged": false
+        },
+        {
+          "date": "2025-12-18",
+          "prNumber": "12259",
+          "prTitle": "dragonball: Skip tests require kvm while kvm is absent",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "58545114977",
+          "runId": "20339966077",
+          "runAttempt": 3,
+          "isFlaky": false,
+          "prMerged": true
         },
         {
           "date": "2025-12-18",
@@ -9780,9 +10032,9 @@
     {
       "name": "Test that creating a container from an authenticated image, with no credentials fails (with initdata)",
       "file": "k8s-guest-pull-image-authenticated.bats",
-      "totalFailures": 8,
+      "totalFailures": 9,
       "flakyCount": 0,
-      "mergedCount": 2,
+      "mergedCount": 3,
       "isConfirmedFlaky": false,
       "mergedDespiteFailure": true,
       "uniquePRs": 4,
@@ -9794,9 +10046,9 @@
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 8,
+          "count": 9,
           "flakyCount": 0,
-          "mergedCount": 2
+          "mergedCount": 3
         }
       ],
       "recentOccurrences": [
@@ -9871,6 +10123,18 @@
           "runAttempt": 1,
           "isFlaky": false,
           "prMerged": false
+        },
+        {
+          "date": "2025-12-18",
+          "prNumber": "12259",
+          "prTitle": "dragonball: Skip tests require kvm while kvm is absent",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "58545114977",
+          "runId": "20339966077",
+          "runAttempt": 3,
+          "isFlaky": false,
+          "prMerged": true
         },
         {
           "date": "2025-12-18",
@@ -9901,9 +10165,9 @@
     {
       "name": "Create a pod from an unsigned image, on an insecureAcceptAnything registry works (with initdata)",
       "file": "k8s-guest-pull-image-signature.bats",
-      "totalFailures": 8,
+      "totalFailures": 9,
       "flakyCount": 0,
-      "mergedCount": 2,
+      "mergedCount": 3,
       "isConfirmedFlaky": false,
       "mergedDespiteFailure": true,
       "uniquePRs": 4,
@@ -9915,9 +10179,9 @@
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 8,
+          "count": 9,
           "flakyCount": 0,
-          "mergedCount": 2
+          "mergedCount": 3
         }
       ],
       "recentOccurrences": [
@@ -9992,6 +10256,18 @@
           "runAttempt": 1,
           "isFlaky": false,
           "prMerged": false
+        },
+        {
+          "date": "2025-12-18",
+          "prNumber": "12259",
+          "prTitle": "dragonball: Skip tests require kvm while kvm is absent",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "58545114977",
+          "runId": "20339966077",
+          "runAttempt": 3,
+          "isFlaky": false,
+          "prMerged": true
         },
         {
           "date": "2025-12-18",
@@ -10022,9 +10298,9 @@
     {
       "name": "Create a pod from an unsigned image, on a 'restricted registry' is rejected (with initdata)",
       "file": "k8s-guest-pull-image-signature.bats",
-      "totalFailures": 8,
+      "totalFailures": 9,
       "flakyCount": 0,
-      "mergedCount": 2,
+      "mergedCount": 3,
       "isConfirmedFlaky": false,
       "mergedDespiteFailure": true,
       "uniquePRs": 4,
@@ -10036,9 +10312,9 @@
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 8,
+          "count": 9,
           "flakyCount": 0,
-          "mergedCount": 2
+          "mergedCount": 3
         }
       ],
       "recentOccurrences": [
@@ -10113,6 +10389,18 @@
           "runAttempt": 1,
           "isFlaky": false,
           "prMerged": false
+        },
+        {
+          "date": "2025-12-18",
+          "prNumber": "12259",
+          "prTitle": "dragonball: Skip tests require kvm while kvm is absent",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "58545114977",
+          "runId": "20339966077",
+          "runAttempt": 3,
+          "isFlaky": false,
+          "prMerged": true
         },
         {
           "date": "2025-12-18",
@@ -10143,9 +10431,9 @@
     {
       "name": "Create a pod from a signed image, on a 'restricted registry', but with the wrong key is rejected (with initdata)",
       "file": "k8s-guest-pull-image-signature.bats",
-      "totalFailures": 8,
+      "totalFailures": 9,
       "flakyCount": 0,
-      "mergedCount": 2,
+      "mergedCount": 3,
       "isConfirmedFlaky": false,
       "mergedDespiteFailure": true,
       "uniquePRs": 4,
@@ -10157,9 +10445,9 @@
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 8,
+          "count": 9,
           "flakyCount": 0,
-          "mergedCount": 2
+          "mergedCount": 3
         }
       ],
       "recentOccurrences": [
@@ -10234,6 +10522,18 @@
           "runAttempt": 1,
           "isFlaky": false,
           "prMerged": false
+        },
+        {
+          "date": "2025-12-18",
+          "prNumber": "12259",
+          "prTitle": "dragonball: Skip tests require kvm while kvm is absent",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "58545114977",
+          "runId": "20339966077",
+          "runAttempt": 3,
+          "isFlaky": false,
+          "prMerged": true
         },
         {
           "date": "2025-12-18",
@@ -10264,9 +10564,9 @@
     {
       "name": "Create a pod from an unsigned image, on a 'restricted registry' works if policy files isn't set (with initdata)",
       "file": "k8s-guest-pull-image-signature.bats",
-      "totalFailures": 8,
+      "totalFailures": 9,
       "flakyCount": 0,
-      "mergedCount": 2,
+      "mergedCount": 3,
       "isConfirmedFlaky": false,
       "mergedDespiteFailure": true,
       "uniquePRs": 4,
@@ -10278,9 +10578,9 @@
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 8,
+          "count": 9,
           "flakyCount": 0,
-          "mergedCount": 2
+          "mergedCount": 3
         }
       ],
       "recentOccurrences": [
@@ -10362,6 +10662,18 @@
           "prTitle": "dragonball: Skip tests require kvm while kvm is absent",
           "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "58545114977",
+          "runId": "20339966077",
+          "runAttempt": 3,
+          "isFlaky": false,
+          "prMerged": true
+        },
+        {
+          "date": "2025-12-18",
+          "prNumber": "12259",
+          "prTitle": "dragonball: Skip tests require kvm while kvm is absent",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "jobId": "58395823369",
           "runId": "20327033455",
           "runAttempt": 1,
@@ -10385,7 +10697,7 @@
     {
       "name": "setup_file failed",
       "file": "k8s-nvidia-nim.bats",
-      "totalFailures": 8,
+      "totalFailures": 9,
       "flakyCount": 1,
       "mergedCount": 0,
       "isConfirmedFlaky": true,
@@ -10398,7 +10710,7 @@
         {
           "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
           "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "count": 6,
+          "count": 7,
           "flakyCount": 0,
           "mergedCount": 0
         },
@@ -10501,10 +10813,22 @@
           "prTitle": "nvidia: rootfs: Bump driver to 590",
           "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
           "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
-          "jobId": "58379842245",
-          "runId": "20321236889",
-          "runAttempt": 1,
+          "jobId": "58417952217",
+          "runId": "20333215436",
+          "runAttempt": 2,
           "isFlaky": true,
+          "prMerged": false
+        },
+        {
+          "date": "2025-12-18",
+          "prNumber": "12256",
+          "prTitle": "nvidia: rootfs: Bump driver to 590",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "58417952266",
+          "runId": "20333215436",
+          "runAttempt": 2,
+          "isFlaky": false,
           "prMerged": false
         }
       ]
@@ -10609,9 +10933,9 @@
           "prTitle": "nvidia: rootfs: Bump driver to 590",
           "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
           "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobId": "58379842259",
-          "runId": "20321236889",
-          "runAttempt": 1,
+          "jobId": "58417952266",
+          "runId": "20333215436",
+          "runAttempt": 2,
           "isFlaky": false,
           "prMerged": false
         }
@@ -11281,9 +11605,9 @@
     "mostAffectedJob": {
       "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
       "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-      "count": 439,
+      "count": 465,
       "flakyCount": 0,
-      "mergedCount": 110
+      "mergedCount": 136
     },
     "trend": [
       {
@@ -11336,7 +11660,7 @@
       },
       {
         "date": "2025-12-18",
-        "failures": 646
+        "failures": 673
       },
       {
         "date": "2025-12-19",
@@ -11347,9 +11671,9 @@
       {
         "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
         "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-        "count": 439,
+        "count": 465,
         "flakyCount": 0,
-        "mergedCount": 110
+        "mergedCount": 136
       },
       {
         "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
@@ -11368,7 +11692,7 @@
       {
         "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
         "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-        "count": 42,
+        "count": 43,
         "flakyCount": 0,
         "mergedCount": 0
       },
