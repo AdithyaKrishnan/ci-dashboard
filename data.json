@@ -1,5 +1,5 @@
 {
-  "lastRefresh": "2025-12-22T01:28:59.318Z",
+  "lastRefresh": "2025-12-22T04:08:56.630Z",
   "sections": [
     {
       "id": "nvidia-gpu",
@@ -19,7 +19,7 @@
           "isRequired": true,
           "duration": "16m 4s",
           "lastFailure": "12/14/2025",
-          "lastSuccess": "Just now",
+          "lastSuccess": "3h ago",
           "weatherHistory": [
             {
               "date": "2025-12-13T00:00:00.000Z",
@@ -183,7 +183,7 @@
           "isRequired": true,
           "duration": "25m 1s",
           "lastFailure": "12/14/2025",
-          "lastSuccess": "Just now",
+          "lastSuccess": "3h ago",
           "weatherHistory": [
             {
               "date": "2025-12-13T00:00:00.000Z",
@@ -328,15 +328,15 @@
           "name": "non-TEE with nydus snapshotter",
           "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev, nydus, guest-pull)",
           "fullName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev, nydus, guest-pull)",
-          "status": "not_run",
+          "status": "passed",
           "categories": [
             "tee",
             "required"
           ],
           "isRequired": true,
-          "duration": "N/A",
+          "duration": "60m 55s",
           "lastFailure": "Never",
-          "lastSuccess": "Yesterday",
+          "lastSuccess": "3h ago",
           "weatherHistory": [
             {
               "date": "2025-12-13T00:00:00.000Z",
@@ -421,10 +421,10 @@
             },
             {
               "date": "2025-12-22T00:00:00.000Z",
-              "status": "none",
+              "status": "passed",
               "runId": "20418020103",
               "jobId": "58665139253",
-              "duration": "N/A",
+              "duration": "60m 55s",
               "failureStep": null,
               "failureDetails": null
             }
@@ -453,7 +453,7 @@
           "isRequired": false,
           "duration": "42m 46s",
           "lastFailure": "2 days ago",
-          "lastSuccess": "Just now",
+          "lastSuccess": "3h ago",
           "weatherHistory": [
             {
               "date": "2025-12-13T00:00:00.000Z",
@@ -3486,7 +3486,7 @@
           ],
           "isRequired": false,
           "duration": "42m 35s",
-          "lastFailure": "Just now",
+          "lastFailure": "3h ago",
           "lastSuccess": "6 days ago",
           "weatherHistory": [
             {
@@ -6536,9 +6536,9 @@
             "required"
           ],
           "isRequired": true,
-          "duration": "23m 59s",
+          "duration": "23m 27s",
           "lastFailure": "12/13/2025",
-          "lastSuccess": "23h ago",
+          "lastSuccess": "2h ago",
           "weatherHistory": [
             {
               "date": "2025-12-13T00:00:00.000Z",
@@ -6831,10 +6831,10 @@
             },
             {
               "date": "2025-12-22T00:00:00.000Z",
-              "status": "none",
-              "runId": null,
-              "jobId": null,
-              "duration": null,
+              "status": "passed",
+              "runId": "20418020103",
+              "jobId": "58667971294",
+              "duration": "23m 27s",
               "failureStep": null,
               "failureDetails": null
             }
@@ -7004,8 +7004,8 @@
           ],
           "retried": 0,
           "setupRetry": false,
-          "runId": "20402029451",
-          "jobId": "58628040778",
+          "runId": "20418020103",
+          "jobId": "58667971294",
           "error": null,
           "maintainers": [
             "@BbolroC"
@@ -7025,7 +7025,7 @@
           "isRequired": true,
           "duration": "25m 1s",
           "lastFailure": "12/14/2025",
-          "lastSuccess": "Just now",
+          "lastSuccess": "3h ago",
           "weatherHistory": [
             {
               "date": "2025-12-13T00:00:00.000Z",
@@ -7163,13 +7163,13 @@
           "name": "non-TEE with force guest pull",
           "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (experimental-force-guest-pull, qemu-coco-dev)",
           "fullName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (experimental-force-guest-pull, qemu-coco-dev)",
-          "status": "not_run",
+          "status": "failed",
           "categories": [
             "tee"
           ],
           "isRequired": false,
-          "duration": "N/A",
-          "lastFailure": "Never",
+          "duration": "56m 24s",
+          "lastFailure": "3h ago",
           "lastSuccess": "Yesterday",
           "weatherHistory": [
             {
@@ -7255,21 +7255,533 @@
             },
             {
               "date": "2025-12-22T00:00:00.000Z",
-              "status": "none",
+              "status": "failed",
               "runId": "20418020103",
               "jobId": "58665139246",
-              "duration": "N/A",
-              "failureStep": null,
-              "failureDetails": null
+              "duration": "56m 24s",
+              "failureStep": "k8s-guest-pull-image-authenticated.bats, k8s-guest-pull-image-signature.bats, k8s-confidential-attestation.bats, k8s-sealed-secret.bats, k8s-hostname.bats",
+              "failureDetails": {
+                "failures": [
+                  {
+                    "number": 1,
+                    "name": "Test that creating a container from an authenticated image, with correct credentials works",
+                    "comment": "",
+                    "file": "k8s-guest-pull-image-authenticated.bats"
+                  },
+                  {
+                    "number": 2,
+                    "name": "Test that creating a container from an authenticated image, with incorrect credentials fails",
+                    "comment": "",
+                    "file": "k8s-guest-pull-image-authenticated.bats"
+                  },
+                  {
+                    "number": 4,
+                    "name": "Test that creating a container from an authenticated image, with correct credentials works (with initdata)",
+                    "comment": "",
+                    "file": "k8s-guest-pull-image-authenticated.bats"
+                  },
+                  {
+                    "number": 5,
+                    "name": "Test that creating a container from an authenticated image, with incorrect credentials fails (with initdata)",
+                    "comment": "",
+                    "file": "k8s-guest-pull-image-authenticated.bats"
+                  },
+                  {
+                    "number": 1,
+                    "name": "Create a pod from an unsigned image, on an insecureAcceptAnything registry works",
+                    "comment": "",
+                    "file": "k8s-guest-pull-image-signature.bats"
+                  },
+                  {
+                    "number": 2,
+                    "name": "Create a pod from an unsigned image, on a 'restricted registry' is rejected",
+                    "comment": "",
+                    "file": "k8s-guest-pull-image-signature.bats"
+                  },
+                  {
+                    "number": 3,
+                    "name": "Create a pod from a signed image, on a 'restricted registry' is successful",
+                    "comment": "",
+                    "file": "k8s-guest-pull-image-signature.bats"
+                  },
+                  {
+                    "number": 4,
+                    "name": "Create a pod from a signed image, on a 'restricted registry', but with the wrong key is rejected",
+                    "comment": "",
+                    "file": "k8s-guest-pull-image-signature.bats"
+                  },
+                  {
+                    "number": 6,
+                    "name": "Create a pod from an unsigned image, on an insecureAcceptAnything registry works (with initdata)",
+                    "comment": "",
+                    "file": "k8s-guest-pull-image-signature.bats"
+                  },
+                  {
+                    "number": 7,
+                    "name": "Create a pod from an unsigned image, on a 'restricted registry' is rejected (with initdata)",
+                    "comment": "",
+                    "file": "k8s-guest-pull-image-signature.bats"
+                  },
+                  {
+                    "number": 8,
+                    "name": "Create a pod from a signed image, on a 'restricted registry' is successful (with initdata)",
+                    "comment": "",
+                    "file": "k8s-guest-pull-image-signature.bats"
+                  },
+                  {
+                    "number": 9,
+                    "name": "Create a pod from a signed image, on a 'restricted registry', but with the wrong key is rejected (with initdata)",
+                    "comment": "",
+                    "file": "k8s-guest-pull-image-signature.bats"
+                  },
+                  {
+                    "number": 1,
+                    "name": "Get CDH resource",
+                    "comment": "",
+                    "file": "k8s-confidential-attestation.bats"
+                  },
+                  {
+                    "number": 2,
+                    "name": "Unseal Env Secrets with CDH",
+                    "comment": "",
+                    "file": "k8s-sealed-secret.bats"
+                  },
+                  {
+                    "number": 3,
+                    "name": "Unseal File Secrets with CDH",
+                    "comment": "",
+                    "file": "k8s-sealed-secret.bats"
+                  },
+                  {
+                    "number": 1,
+                    "name": "Validate Pod hostname",
+                    "comment": "",
+                    "file": "k8s-hostname.bats"
+                  },
+                  {
+                    "number": 1,
+                    "name": "Get CDH resource",
+                    "comment": "",
+                    "file": "##[group]k8s-confidential-attestation.bats"
+                  },
+                  {
+                    "number": 1,
+                    "name": "Create a pod from an unsigned image, on an insecureAcceptAnything registry works",
+                    "comment": "",
+                    "file": "##[group]k8s-guest-pull-image-signature.bats"
+                  },
+                  {
+                    "number": 2,
+                    "name": "Create a pod from an unsigned image, on a 'restricted registry' is rejected",
+                    "comment": "",
+                    "file": "k8s-guest-pull-image-signature.bats"
+                  },
+                  {
+                    "number": 3,
+                    "name": "Create a pod from a signed image, on a 'restricted registry' is successful",
+                    "comment": "",
+                    "file": "k8s-guest-pull-image-signature.bats"
+                  },
+                  {
+                    "number": 4,
+                    "name": "Create a pod from a signed image, on a 'restricted registry', but with the wrong key is rejected",
+                    "comment": "",
+                    "file": "k8s-guest-pull-image-signature.bats"
+                  },
+                  {
+                    "number": 6,
+                    "name": "Create a pod from an unsigned image, on an insecureAcceptAnything registry works (with initdata)",
+                    "comment": "",
+                    "file": "k8s-guest-pull-image-signature.bats"
+                  },
+                  {
+                    "number": 7,
+                    "name": "Create a pod from an unsigned image, on a 'restricted registry' is rejected (with initdata)",
+                    "comment": "",
+                    "file": "k8s-guest-pull-image-signature.bats"
+                  },
+                  {
+                    "number": 8,
+                    "name": "Create a pod from a signed image, on a 'restricted registry' is successful (with initdata)",
+                    "comment": "",
+                    "file": "k8s-guest-pull-image-signature.bats"
+                  },
+                  {
+                    "number": 9,
+                    "name": "Create a pod from a signed image, on a 'restricted registry', but with the wrong key is rejected (with initdata)",
+                    "comment": "",
+                    "file": "k8s-guest-pull-image-signature.bats"
+                  },
+                  {
+                    "number": 1,
+                    "name": "Test that creating a container from an authenticated image, with correct credentials works",
+                    "comment": "",
+                    "file": "##[group]k8s-guest-pull-image-authenticated.bats"
+                  },
+                  {
+                    "number": 2,
+                    "name": "Test that creating a container from an authenticated image, with incorrect credentials fails",
+                    "comment": "",
+                    "file": "k8s-guest-pull-image-authenticated.bats"
+                  },
+                  {
+                    "number": 4,
+                    "name": "Test that creating a container from an authenticated image, with correct credentials works (with initdata)",
+                    "comment": "",
+                    "file": "k8s-guest-pull-image-authenticated.bats"
+                  },
+                  {
+                    "number": 5,
+                    "name": "Test that creating a container from an authenticated image, with incorrect credentials fails (with initdata)",
+                    "comment": "",
+                    "file": "k8s-guest-pull-image-authenticated.bats"
+                  },
+                  {
+                    "number": 1,
+                    "name": "Validate Pod hostname",
+                    "comment": "",
+                    "file": "##[group]k8s-hostname.bats"
+                  },
+                  {
+                    "number": 2,
+                    "name": "Unseal Env Secrets with CDH",
+                    "comment": "",
+                    "file": "##[group]k8s-sealed-secret.bats"
+                  },
+                  {
+                    "number": 3,
+                    "name": "Unseal File Secrets with CDH",
+                    "comment": "",
+                    "file": "k8s-sealed-secret.bats"
+                  }
+                ],
+                "stats": {
+                  "total": 254,
+                  "passed": 222,
+                  "failed": 32,
+                  "skipped": 0
+                },
+                "batsFiles": [
+                  "k8s-guest-pull-image-authenticated.bats",
+                  "k8s-guest-pull-image-signature.bats",
+                  "k8s-confidential-attestation.bats",
+                  "k8s-sealed-secret.bats",
+                  "k8s-hostname.bats"
+                ]
+              }
             }
           ],
-          "failureCount": 0,
-          "failedTestsInWeather": [],
+          "failureCount": 1,
+          "failedTestsInWeather": [
+            {
+              "name": "Test that creating a container from an authenticated image, with correct credentials works",
+              "count": 1,
+              "dates": [
+                "2025-12-22"
+              ],
+              "files": [
+                "k8s-guest-pull-image-authenticated.bats"
+              ]
+            },
+            {
+              "name": "Test that creating a container from an authenticated image, with incorrect credentials fails",
+              "count": 1,
+              "dates": [
+                "2025-12-22"
+              ],
+              "files": [
+                "k8s-guest-pull-image-authenticated.bats"
+              ]
+            },
+            {
+              "name": "Test that creating a container from an authenticated image, with correct credentials works (with initdata)",
+              "count": 1,
+              "dates": [
+                "2025-12-22"
+              ],
+              "files": [
+                "k8s-guest-pull-image-authenticated.bats"
+              ]
+            },
+            {
+              "name": "Test that creating a container from an authenticated image, with incorrect credentials fails (with initdata)",
+              "count": 1,
+              "dates": [
+                "2025-12-22"
+              ],
+              "files": [
+                "k8s-guest-pull-image-authenticated.bats"
+              ]
+            },
+            {
+              "name": "Create a pod from an unsigned image, on an insecureAcceptAnything registry works",
+              "count": 1,
+              "dates": [
+                "2025-12-22"
+              ],
+              "files": [
+                "k8s-guest-pull-image-signature.bats"
+              ]
+            },
+            {
+              "name": "Create a pod from an unsigned image, on a 'restricted registry' is rejected",
+              "count": 1,
+              "dates": [
+                "2025-12-22"
+              ],
+              "files": [
+                "k8s-guest-pull-image-signature.bats"
+              ]
+            },
+            {
+              "name": "Create a pod from a signed image, on a 'restricted registry' is successful",
+              "count": 1,
+              "dates": [
+                "2025-12-22"
+              ],
+              "files": [
+                "k8s-guest-pull-image-signature.bats"
+              ]
+            },
+            {
+              "name": "Create a pod from a signed image, on a 'restricted registry', but with the wrong key is rejected",
+              "count": 1,
+              "dates": [
+                "2025-12-22"
+              ],
+              "files": [
+                "k8s-guest-pull-image-signature.bats"
+              ]
+            },
+            {
+              "name": "Create a pod from an unsigned image, on an insecureAcceptAnything registry works (with initdata)",
+              "count": 1,
+              "dates": [
+                "2025-12-22"
+              ],
+              "files": [
+                "k8s-guest-pull-image-signature.bats"
+              ]
+            },
+            {
+              "name": "Create a pod from an unsigned image, on a 'restricted registry' is rejected (with initdata)",
+              "count": 1,
+              "dates": [
+                "2025-12-22"
+              ],
+              "files": [
+                "k8s-guest-pull-image-signature.bats"
+              ]
+            },
+            {
+              "name": "Create a pod from a signed image, on a 'restricted registry' is successful (with initdata)",
+              "count": 1,
+              "dates": [
+                "2025-12-22"
+              ],
+              "files": [
+                "k8s-guest-pull-image-signature.bats"
+              ]
+            },
+            {
+              "name": "Create a pod from a signed image, on a 'restricted registry', but with the wrong key is rejected (with initdata)",
+              "count": 1,
+              "dates": [
+                "2025-12-22"
+              ],
+              "files": [
+                "k8s-guest-pull-image-signature.bats"
+              ]
+            },
+            {
+              "name": "Get CDH resource",
+              "count": 1,
+              "dates": [
+                "2025-12-22"
+              ],
+              "files": [
+                "k8s-confidential-attestation.bats"
+              ]
+            },
+            {
+              "name": "Unseal Env Secrets with CDH",
+              "count": 1,
+              "dates": [
+                "2025-12-22"
+              ],
+              "files": [
+                "k8s-sealed-secret.bats"
+              ]
+            },
+            {
+              "name": "Unseal File Secrets with CDH",
+              "count": 1,
+              "dates": [
+                "2025-12-22"
+              ],
+              "files": [
+                "k8s-sealed-secret.bats"
+              ]
+            },
+            {
+              "name": "Validate Pod hostname",
+              "count": 1,
+              "dates": [
+                "2025-12-22"
+              ],
+              "files": [
+                "k8s-hostname.bats"
+              ]
+            }
+          ],
           "retried": 0,
           "setupRetry": false,
           "runId": "20418020103",
           "jobId": "58665139246",
-          "error": null,
+          "error": {
+            "step": "k8s-guest-pull-image-authenticated.bats, k8s-guest-pull-image-signature.bats, k8s-confidential-attestation.bats, k8s-sealed-secret.bats, k8s-hostname.bats, ##[group]k8s-confidential-attestation.bats, ##[group]k8s-guest-pull-image-signature.bats, ##[group]k8s-guest-pull-image-authenticated.bats, ##[group]k8s-hostname.bats, ##[group]k8s-sealed-secret.bats",
+            "batsFiles": [
+              "k8s-guest-pull-image-authenticated.bats",
+              "k8s-guest-pull-image-signature.bats",
+              "k8s-confidential-attestation.bats",
+              "k8s-sealed-secret.bats",
+              "k8s-hostname.bats",
+              "##[group]k8s-confidential-attestation.bats",
+              "##[group]k8s-guest-pull-image-signature.bats",
+              "##[group]k8s-guest-pull-image-authenticated.bats",
+              "##[group]k8s-hostname.bats",
+              "##[group]k8s-sealed-secret.bats"
+            ],
+            "testResults": {
+              "total": 254,
+              "passed": 222,
+              "failed": 32,
+              "skipped": 0
+            },
+            "failures": [
+              {
+                "number": 1,
+                "name": "Test that creating a container from an authenticated image, with correct credentials works",
+                "comment": "",
+                "file": "k8s-guest-pull-image-authenticated.bats"
+              },
+              {
+                "number": 2,
+                "name": "Test that creating a container from an authenticated image, with incorrect credentials fails",
+                "comment": "",
+                "file": "k8s-guest-pull-image-authenticated.bats"
+              },
+              {
+                "number": 4,
+                "name": "Test that creating a container from an authenticated image, with correct credentials works (with initdata)",
+                "comment": "",
+                "file": "k8s-guest-pull-image-authenticated.bats"
+              },
+              {
+                "number": 5,
+                "name": "Test that creating a container from an authenticated image, with incorrect credentials fails (with initdata)",
+                "comment": "",
+                "file": "k8s-guest-pull-image-authenticated.bats"
+              },
+              {
+                "number": 1,
+                "name": "Create a pod from an unsigned image, on an insecureAcceptAnything registry works",
+                "comment": "",
+                "file": "k8s-guest-pull-image-signature.bats"
+              },
+              {
+                "number": 2,
+                "name": "Create a pod from an unsigned image, on a 'restricted registry' is rejected",
+                "comment": "",
+                "file": "k8s-guest-pull-image-signature.bats"
+              },
+              {
+                "number": 3,
+                "name": "Create a pod from a signed image, on a 'restricted registry' is successful",
+                "comment": "",
+                "file": "k8s-guest-pull-image-signature.bats"
+              },
+              {
+                "number": 4,
+                "name": "Create a pod from a signed image, on a 'restricted registry', but with the wrong key is rejected",
+                "comment": "",
+                "file": "k8s-guest-pull-image-signature.bats"
+              },
+              {
+                "number": 6,
+                "name": "Create a pod from an unsigned image, on an insecureAcceptAnything registry works (with initdata)",
+                "comment": "",
+                "file": "k8s-guest-pull-image-signature.bats"
+              },
+              {
+                "number": 7,
+                "name": "Create a pod from an unsigned image, on a 'restricted registry' is rejected (with initdata)",
+                "comment": "",
+                "file": "k8s-guest-pull-image-signature.bats"
+              },
+              {
+                "number": 8,
+                "name": "Create a pod from a signed image, on a 'restricted registry' is successful (with initdata)",
+                "comment": "",
+                "file": "k8s-guest-pull-image-signature.bats"
+              },
+              {
+                "number": 9,
+                "name": "Create a pod from a signed image, on a 'restricted registry', but with the wrong key is rejected (with initdata)",
+                "comment": "",
+                "file": "k8s-guest-pull-image-signature.bats"
+              },
+              {
+                "number": 1,
+                "name": "Get CDH resource",
+                "comment": "",
+                "file": "k8s-confidential-attestation.bats"
+              },
+              {
+                "number": 2,
+                "name": "Unseal Env Secrets with CDH",
+                "comment": "",
+                "file": "k8s-sealed-secret.bats"
+              },
+              {
+                "number": 3,
+                "name": "Unseal File Secrets with CDH",
+                "comment": "",
+                "file": "k8s-sealed-secret.bats"
+              },
+              {
+                "number": 1,
+                "name": "Validate Pod hostname",
+                "comment": "",
+                "file": "k8s-hostname.bats"
+              },
+              {
+                "number": 1,
+                "name": "Get CDH resource",
+                "comment": "",
+                "file": "##[group]k8s-confidential-attestation.bats"
+              },
+              {
+                "number": 1,
+                "name": "Create a pod from an unsigned image, on an insecureAcceptAnything registry works",
+                "comment": "",
+                "file": "##[group]k8s-guest-pull-image-signature.bats"
+              },
+              {
+                "number": 2,
+                "name": "Create a pod from an unsigned image, on a 'restricted registry' is rejected",
+                "comment": "",
+                "file": "k8s-guest-pull-image-signature.bats"
+              },
+              {
+                "number": 3,
+                "name": "Create a pod from a signed image, on a 'restricted registry' is successful",
+                "comment": "",
+                "file": "k8s-guest-pull-image-signature.bats"
+              }
+            ],
+            "output": "not ok 1 - Test that creating a container from an authenticated image, with correct credentials works\nnot ok 2 - Test that creating a container from an authenticated image, with incorrect credentials fails\nnot ok 4 - Test that creating a container from an authenticated image, with correct credentials works (with initdata)\nnot ok 5 - Test that creating a container from an authenticated image, with incorrect credentials fails (with initdata)\nnot ok 1 - Create a pod from an unsigned image, on an insecureAcceptAnything registry works\nnot ok 2 - Create a pod from an unsigned image, on a 'restricted registry' is rejected\nnot ok 3 - Create a pod from a signed image, on a 'restricted registry' is successful\nnot ok 4 - Create a pod from a signed image, on a 'restricted registry', but with the wrong key is rejected\nnot ok 6 - Create a pod from an unsigned image, on an insecureAcceptAnything registry works (with initdata)\nnot ok 7 - Create a pod from an unsigned image, on a 'restricted registry' is rejected (with initdata)\nnot ok 8 - Create a pod from a signed image, on a 'restricted registry' is successful (with initdata)\nnot ok 9 - Create a pod from a signed image, on a 'restricted registry', but with the wrong key is rejected (with initdata)\nnot ok 1 - Get CDH resource\nnot ok 2 - Unseal Env Secrets with CDH\nnot ok 3 - Unseal File Secrets with CDH\nnot ok 1 - Validate Pod hostname\nnot ok 1 - Get CDH resource\nnot ok 1 - Create a pod from an unsigned image, on an insecureAcceptAnything registry works\nnot ok 2 - Create a pod from an unsigned image, on a 'restricted registry' is rejected\nnot ok 3 - Create a pod from a signed image, on a 'restricted registry' is successful\nnot ok 4 - Create a pod from a signed image, on a 'restricted registry', but with the wrong key is rejected\nnot ok 6 - Create a pod from an unsigned image, on an insecureAcceptAnything registry works (with initdata)\nnot ok 7 - Create a pod from an unsigned image, on a 'restricted registry' is rejected (with initdata)\nnot ok 8 - Create a pod from a signed image, on a 'restricted registry' is successful (with initdata)\nnot ok 9 - Create a pod from a signed image, on a 'restricted registry', but with the wrong key is rejected (with initdata)\nnot ok 1 - Test that creating a container from an authenticated image, with correct credentials works\nnot ok 2 - Test that creating a container from an authenticated image, with incorrect credentials fails\nnot ok 4 - Test that creating a container from an authenticated image, with correct credentials works (with initdata)\nnot ok 5 - Test that creating a container from an authenticated image, with incorrect credentials fails (with initdata)\nnot ok 1 - Validate Pod hostname\nnot ok 2 - Unseal Env Secrets with CDH\nnot ok 3 - Unseal File Secrets with CDH"
+          },
           "maintainers": [
             "@fidencio"
           ]
@@ -7279,14 +7791,14 @@
           "name": "non-TEE with runtime-rs and nydus snapshotter",
           "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
           "fullName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
-          "status": "not_run",
+          "status": "passed",
           "categories": [
             "tee"
           ],
           "isRequired": false,
-          "duration": "N/A",
+          "duration": "53m 42s",
           "lastFailure": "12/15/2025",
-          "lastSuccess": "Yesterday",
+          "lastSuccess": "3h ago",
           "weatherHistory": [
             {
               "date": "2025-12-13T00:00:00.000Z",
@@ -7371,10 +7883,10 @@
             },
             {
               "date": "2025-12-22T00:00:00.000Z",
-              "status": "none",
+              "status": "passed",
               "runId": "20418020103",
               "jobId": "58665139247",
-              "duration": "N/A",
+              "duration": "53m 42s",
               "failureStep": null,
               "failureDetails": null
             }
@@ -7402,7 +7914,7 @@
           ],
           "isRequired": false,
           "duration": "15m 56s",
-          "lastFailure": "Just now",
+          "lastFailure": "3h ago",
           "lastSuccess": "5 days ago",
           "weatherHistory": [
             {
@@ -7731,7 +8243,7 @@
           "isRequired": false,
           "duration": "0m 5s",
           "lastFailure": "Never",
-          "lastSuccess": "20h ago",
+          "lastSuccess": "23h ago",
           "weatherHistory": [
             {
               "date": "2025-12-13T00:00:00.000Z",
@@ -7848,7 +8360,7 @@
           "isRequired": false,
           "duration": "0m 9s",
           "lastFailure": "3 days ago",
-          "lastSuccess": "20h ago",
+          "lastSuccess": "23h ago",
           "weatherHistory": [
             {
               "date": "2025-12-13T00:00:00.000Z",
@@ -7965,7 +8477,7 @@
           "isRequired": false,
           "duration": "0m 8s",
           "lastFailure": "3 days ago",
-          "lastSuccess": "20h ago",
+          "lastSuccess": "23h ago",
           "weatherHistory": [
             {
               "date": "2025-12-13T00:00:00.000Z",
@@ -8088,7 +8600,7 @@
           "isRequired": false,
           "duration": "0m 4s",
           "lastFailure": "Never",
-          "lastSuccess": "20h ago",
+          "lastSuccess": "23h ago",
           "weatherHistory": [
             {
               "date": "2025-12-13T00:00:00.000Z",
@@ -8205,7 +8717,7 @@
           "isRequired": false,
           "duration": "0m 5s",
           "lastFailure": "Never",
-          "lastSuccess": "20h ago",
+          "lastSuccess": "23h ago",
           "weatherHistory": [
             {
               "date": "2025-12-13T00:00:00.000Z",
@@ -8322,7 +8834,7 @@
           "isRequired": false,
           "duration": "0m 9s",
           "lastFailure": "3 days ago",
-          "lastSuccess": "20h ago",
+          "lastSuccess": "23h ago",
           "weatherHistory": [
             {
               "date": "2025-12-13T00:00:00.000Z",
@@ -8439,7 +8951,7 @@
           "isRequired": false,
           "duration": "0m 8s",
           "lastFailure": "3 days ago",
-          "lastSuccess": "20h ago",
+          "lastSuccess": "23h ago",
           "weatherHistory": [
             {
               "date": "2025-12-13T00:00:00.000Z",
@@ -8564,7 +9076,7 @@
         "isRequired": false,
         "duration": "0m 9s",
         "lastFailure": "3 days ago",
-        "lastSuccess": "20h ago",
+        "lastSuccess": "23h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -8681,7 +9193,7 @@
         "isRequired": false,
         "duration": "0m 8s",
         "lastFailure": "3 days ago",
-        "lastSuccess": "20h ago",
+        "lastSuccess": "23h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -8798,7 +9310,7 @@
         "isRequired": false,
         "duration": "0m 5s",
         "lastFailure": "Never",
-        "lastSuccess": "20h ago",
+        "lastSuccess": "23h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -8914,7 +9426,7 @@
         "isRequired": false,
         "duration": "0m 4s",
         "lastFailure": "Never",
-        "lastSuccess": "20h ago",
+        "lastSuccess": "23h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -9030,7 +9542,7 @@
         "isRequired": true,
         "duration": "0m 33s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -9151,7 +9663,7 @@
         "isRequired": false,
         "duration": "0m 56s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -9393,7 +9905,7 @@
         "isRequired": false,
         "duration": "0m 49s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -9516,7 +10028,7 @@
         "isRequired": true,
         "duration": "0m 40s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -9639,7 +10151,7 @@
         "isRequired": true,
         "duration": "0m 55s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -9762,7 +10274,7 @@
         "isRequired": false,
         "duration": "0m 48s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -10006,7 +10518,7 @@
         "isRequired": true,
         "duration": "0m 41s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -10492,7 +11004,7 @@
         "isRequired": true,
         "duration": "0m 49s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -10613,7 +11125,7 @@
         "isRequired": false,
         "duration": "0m 58s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -10736,7 +11248,7 @@
         "isRequired": true,
         "duration": "1m 7s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -10860,7 +11372,7 @@
         "isRequired": true,
         "duration": "1m 0s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -10983,7 +11495,7 @@
         "isRequired": false,
         "duration": "0m 57s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -11106,7 +11618,7 @@
         "isRequired": true,
         "duration": "0m 52s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -11229,7 +11741,7 @@
         "isRequired": true,
         "duration": "0m 58s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -11353,7 +11865,7 @@
         "isRequired": true,
         "duration": "0m 51s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -11474,7 +11986,7 @@
         "isRequired": false,
         "duration": "0m 47s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -11597,7 +12109,7 @@
         "isRequired": true,
         "duration": "0m 50s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -11721,7 +12233,7 @@
         "isRequired": true,
         "duration": "1m 7s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -11844,7 +12356,7 @@
         "isRequired": false,
         "duration": "1m 1s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -12088,7 +12600,7 @@
         "isRequired": true,
         "duration": "0m 58s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -12209,7 +12721,7 @@
         "isRequired": false,
         "duration": "1m 1s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -12330,7 +12842,7 @@
         "isRequired": false,
         "duration": "1m 0s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -12451,7 +12963,7 @@
         "isRequired": false,
         "duration": "0m 57s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -12574,7 +13086,7 @@
         "isRequired": false,
         "duration": "1m 1s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -12697,7 +13209,7 @@
         "isRequired": false,
         "duration": "1m 21s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -12818,7 +13330,7 @@
         "isRequired": false,
         "duration": "0m 59s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -12939,7 +13451,7 @@
         "isRequired": false,
         "duration": "1m 2s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -13062,7 +13574,7 @@
         "isRequired": false,
         "duration": "1m 15s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -13185,7 +13697,7 @@
         "isRequired": false,
         "duration": "1m 0s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -13306,7 +13818,7 @@
         "isRequired": false,
         "duration": "1m 3s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -13429,7 +13941,7 @@
         "isRequired": true,
         "duration": "0m 48s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -13552,7 +14064,7 @@
         "isRequired": true,
         "duration": "0m 52s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -13675,7 +14187,7 @@
         "isRequired": true,
         "duration": "0m 51s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -13798,7 +14310,7 @@
         "isRequired": true,
         "duration": "0m 46s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -13921,7 +14433,7 @@
         "isRequired": true,
         "duration": "0m 45s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -14044,7 +14556,7 @@
         "isRequired": true,
         "duration": "0m 43s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -14167,7 +14679,7 @@
         "isRequired": true,
         "duration": "1m 31s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -14290,7 +14802,7 @@
         "isRequired": true,
         "duration": "0m 17s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -14411,7 +14923,7 @@
         "isRequired": false,
         "duration": "0m 6s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -14534,7 +15046,7 @@
         "isRequired": false,
         "duration": "0m 6s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -14657,7 +15169,7 @@
         "isRequired": false,
         "duration": "0m 6s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -14780,7 +15292,7 @@
         "isRequired": false,
         "duration": "0m 5s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -14901,7 +15413,7 @@
         "isRequired": false,
         "duration": "0m 3s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -15022,7 +15534,7 @@
         "isRequired": false,
         "duration": "0m 8s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -15143,7 +15655,7 @@
         "isRequired": false,
         "duration": "0m 59s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -15264,7 +15776,7 @@
         "isRequired": false,
         "duration": "1m 2s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -15385,7 +15897,7 @@
         "isRequired": false,
         "duration": "0m 59s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -15506,7 +16018,7 @@
         "isRequired": false,
         "duration": "0m 54s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -15627,7 +16139,7 @@
         "isRequired": false,
         "duration": "1m 3s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -15748,7 +16260,7 @@
         "isRequired": false,
         "duration": "10m 7s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -15869,7 +16381,7 @@
         "isRequired": false,
         "duration": "0m 54s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -15992,7 +16504,7 @@
         "isRequired": false,
         "duration": "1m 8s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -16113,7 +16625,7 @@
         "isRequired": false,
         "duration": "0m 56s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -16234,7 +16746,7 @@
         "isRequired": false,
         "duration": "1m 3s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -16355,7 +16867,7 @@
         "isRequired": false,
         "duration": "1m 2s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -16476,7 +16988,7 @@
         "isRequired": false,
         "duration": "0m 49s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -16597,7 +17109,7 @@
         "isRequired": false,
         "duration": "1m 22s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -16720,7 +17232,7 @@
         "isRequired": false,
         "duration": "1m 16s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -16841,7 +17353,7 @@
         "isRequired": false,
         "duration": "0m 59s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -16964,7 +17476,7 @@
         "isRequired": false,
         "duration": "1m 10s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -17085,7 +17597,7 @@
         "isRequired": false,
         "duration": "1m 5s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -17206,7 +17718,7 @@
         "isRequired": false,
         "duration": "0m 32s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -17327,7 +17839,7 @@
         "isRequired": false,
         "duration": "0m 3s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -17450,7 +17962,7 @@
         "isRequired": false,
         "duration": "0m 4s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -17571,7 +18083,7 @@
         "isRequired": false,
         "duration": "0m 3s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -17687,12 +18199,12 @@
         "name": "build-asset (agent, test) [ppc64le]",
         "jobName": "kata-containers-ci-on-push / build-kata-static-tarball-ppc64le / build-asset (agent, test)",
         "fullName": "kata-containers-ci-on-push / build-kata-static-tarball-ppc64le / build-asset (agent, test)",
-        "status": "running",
+        "status": "passed",
         "categories": [],
         "isRequired": false,
-        "duration": "N/A",
+        "duration": "2m 56s",
         "lastFailure": "Never",
-        "lastSuccess": "Yesterday",
+        "lastSuccess": "2h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -17786,11 +18298,11 @@
           },
           {
             "date": "2025-12-22T00:00:00.000Z",
-            "status": "none",
+            "status": "passed",
             "retried": false,
             "runId": "20418020103",
             "jobId": "58664550551",
-            "duration": "N/A",
+            "duration": "2m 56s",
             "failureStep": null,
             "failureDetails": null
           }
@@ -17813,7 +18325,7 @@
         "isRequired": false,
         "duration": "3m 13s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -17934,7 +18446,7 @@
         "isRequired": false,
         "duration": "2m 27s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -18055,7 +18567,7 @@
         "isRequired": false,
         "duration": "3m 11s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -18174,9 +18686,9 @@
         "status": "passed",
         "categories": [],
         "isRequired": false,
-        "duration": "10m 15s",
+        "duration": "6m 14s",
         "lastFailure": "Never",
-        "lastSuccess": "23h ago",
+        "lastSuccess": "2h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -18270,11 +18782,11 @@
           },
           {
             "date": "2025-12-22T00:00:00.000Z",
-            "status": "none",
+            "status": "passed",
             "retried": false,
-            "runId": null,
-            "jobId": null,
-            "duration": null,
+            "runId": "20418020103",
+            "jobId": "58667363887",
+            "duration": "6m 14s",
             "failureStep": null,
             "failureDetails": null
           }
@@ -18282,8 +18794,8 @@
         "failureCount": 0,
         "retried": false,
         "retriedAndPassed": false,
-        "runId": "20402029451",
-        "jobId": "58627737247",
+        "runId": "20418020103",
+        "jobId": "58667363887",
         "error": null,
         "maintainers": []
       },
@@ -18295,9 +18807,9 @@
         "status": "passed",
         "categories": [],
         "isRequired": false,
-        "duration": "1m 43s",
+        "duration": "2m 30s",
         "lastFailure": "Never",
-        "lastSuccess": "23h ago",
+        "lastSuccess": "2h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -18391,11 +18903,11 @@
           },
           {
             "date": "2025-12-22T00:00:00.000Z",
-            "status": "none",
+            "status": "passed",
             "retried": false,
-            "runId": null,
-            "jobId": null,
-            "duration": null,
+            "runId": "20418020103",
+            "jobId": "58667724909",
+            "duration": "2m 30s",
             "failureStep": null,
             "failureDetails": null
           }
@@ -18403,8 +18915,8 @@
         "failureCount": 0,
         "retried": false,
         "retriedAndPassed": false,
-        "runId": "20402029451",
-        "jobId": "58628084818",
+        "runId": "20418020103",
+        "jobId": "58667724909",
         "error": null,
         "maintainers": []
       },
@@ -18416,9 +18928,9 @@
         "status": "passed",
         "categories": [],
         "isRequired": false,
-        "duration": "2m 6s",
+        "duration": "0m 44s",
         "lastFailure": "Never",
-        "lastSuccess": "23h ago",
+        "lastSuccess": "2h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -18512,11 +19024,11 @@
           },
           {
             "date": "2025-12-22T00:00:00.000Z",
-            "status": "none",
+            "status": "passed",
             "retried": false,
-            "runId": null,
-            "jobId": null,
-            "duration": null,
+            "runId": "20418020103",
+            "jobId": "58668144391",
+            "duration": "0m 44s",
             "failureStep": null,
             "failureDetails": null
           }
@@ -18524,8 +19036,8 @@
         "failureCount": 0,
         "retried": false,
         "retriedAndPassed": false,
-        "runId": "20402029451",
-        "jobId": "58628309263",
+        "runId": "20418020103",
+        "jobId": "58668144391",
         "error": null,
         "maintainers": []
       },
@@ -18539,7 +19051,7 @@
         "isRequired": false,
         "duration": "0m 3s",
         "lastFailure": "Never",
-        "lastSuccess": "23h ago",
+        "lastSuccess": "2h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -18633,11 +19145,11 @@
           },
           {
             "date": "2025-12-22T00:00:00.000Z",
-            "status": "none",
+            "status": "passed",
             "retried": false,
-            "runId": null,
-            "jobId": null,
-            "duration": null,
+            "runId": "20418020103",
+            "jobId": "58667721463",
+            "duration": "0m 3s",
             "failureStep": null,
             "failureDetails": null
           }
@@ -18645,8 +19157,8 @@
         "failureCount": 0,
         "retried": false,
         "retriedAndPassed": false,
-        "runId": "20402029451",
-        "jobId": "58628082588",
+        "runId": "20418020103",
+        "jobId": "58667721463",
         "error": null,
         "maintainers": []
       },
@@ -18662,7 +19174,7 @@
         "isRequired": false,
         "duration": "1m 12s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -18786,7 +19298,7 @@
         "isRequired": false,
         "duration": "1m 12s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -18909,7 +19421,7 @@
         "isRequired": false,
         "duration": "1m 8s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -19032,7 +19544,7 @@
         "isRequired": false,
         "duration": "1m 8s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -19155,7 +19667,7 @@
         "isRequired": false,
         "duration": "1m 14s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -19278,7 +19790,7 @@
         "isRequired": false,
         "duration": "1m 7s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -19394,14 +19906,14 @@
         "name": "build-asset (virtiofsd) [s390x]",
         "jobName": "kata-containers-ci-on-push / build-kata-static-tarball-s390x / build-asset (virtiofsd)",
         "fullName": "kata-containers-ci-on-push / build-kata-static-tarball-s390x / build-asset (virtiofsd)",
-        "status": "running",
+        "status": "passed",
         "categories": [
           "ibm"
         ],
         "isRequired": false,
-        "duration": "N/A",
+        "duration": "1m 15s",
         "lastFailure": "Never",
-        "lastSuccess": "Yesterday",
+        "lastSuccess": "2h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -19495,11 +20007,11 @@
           },
           {
             "date": "2025-12-22T00:00:00.000Z",
-            "status": "none",
+            "status": "passed",
             "retried": false,
             "runId": "20418020103",
             "jobId": "58664550521",
-            "duration": "N/A",
+            "duration": "1m 15s",
             "failureStep": null,
             "failureDetails": null
           }
@@ -19522,9 +20034,9 @@
           "ibm"
         ],
         "isRequired": false,
-        "duration": "1m 31s",
+        "duration": "1m 37s",
         "lastFailure": "Never",
-        "lastSuccess": "Yesterday",
+        "lastSuccess": "2h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -19618,11 +20130,11 @@
           },
           {
             "date": "2025-12-22T00:00:00.000Z",
-            "status": "none",
+            "status": "passed",
             "retried": false,
-            "runId": null,
-            "jobId": null,
-            "duration": null,
+            "runId": "20418020103",
+            "jobId": "58667402767",
+            "duration": "1m 37s",
             "failureStep": null,
             "failureDetails": null
           }
@@ -19630,8 +20142,8 @@
         "failureCount": 0,
         "retried": false,
         "retriedAndPassed": false,
-        "runId": "20402029451",
-        "jobId": "58626011402",
+        "runId": "20418020103",
+        "jobId": "58667402767",
         "error": null,
         "maintainers": []
       },
@@ -19645,9 +20157,9 @@
           "ibm"
         ],
         "isRequired": false,
-        "duration": "1m 35s",
+        "duration": "1m 15s",
         "lastFailure": "Never",
-        "lastSuccess": "Yesterday",
+        "lastSuccess": "2h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -19741,11 +20253,11 @@
           },
           {
             "date": "2025-12-22T00:00:00.000Z",
-            "status": "none",
+            "status": "passed",
             "retried": false,
-            "runId": null,
-            "jobId": null,
-            "duration": null,
+            "runId": "20418020103",
+            "jobId": "58667291166",
+            "duration": "1m 15s",
             "failureStep": null,
             "failureDetails": null
           }
@@ -19753,8 +20265,8 @@
         "failureCount": 0,
         "retried": false,
         "retriedAndPassed": false,
-        "runId": "20402029451",
-        "jobId": "58625796786",
+        "runId": "20418020103",
+        "jobId": "58667291166",
         "error": null,
         "maintainers": []
       },
@@ -19768,9 +20280,9 @@
           "ibm"
         ],
         "isRequired": false,
-        "duration": "1m 36s",
+        "duration": "1m 50s",
         "lastFailure": "Never",
-        "lastSuccess": "Yesterday",
+        "lastSuccess": "2h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -19864,11 +20376,11 @@
           },
           {
             "date": "2025-12-22T00:00:00.000Z",
-            "status": "none",
+            "status": "passed",
             "retried": false,
-            "runId": null,
-            "jobId": null,
-            "duration": null,
+            "runId": "20418020103",
+            "jobId": "58667291152",
+            "duration": "1m 50s",
             "failureStep": null,
             "failureDetails": null
           }
@@ -19876,8 +20388,8 @@
         "failureCount": 0,
         "retried": false,
         "retriedAndPassed": false,
-        "runId": "20402029451",
-        "jobId": "58625796782",
+        "runId": "20418020103",
+        "jobId": "58667291152",
         "error": null,
         "maintainers": []
       },
@@ -19891,9 +20403,9 @@
           "ibm"
         ],
         "isRequired": false,
-        "duration": "1m 28s",
+        "duration": "1m 32s",
         "lastFailure": "Never",
-        "lastSuccess": "Yesterday",
+        "lastSuccess": "2h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -19987,11 +20499,11 @@
           },
           {
             "date": "2025-12-22T00:00:00.000Z",
-            "status": "none",
+            "status": "passed",
             "retried": false,
-            "runId": null,
-            "jobId": null,
-            "duration": null,
+            "runId": "20418020103",
+            "jobId": "58667291156",
+            "duration": "1m 32s",
             "failureStep": null,
             "failureDetails": null
           }
@@ -19999,8 +20511,8 @@
         "failureCount": 0,
         "retried": false,
         "retriedAndPassed": false,
-        "runId": "20402029451",
-        "jobId": "58625796778",
+        "runId": "20418020103",
+        "jobId": "58667291156",
         "error": null,
         "maintainers": []
       },
@@ -20014,9 +20526,9 @@
           "ibm"
         ],
         "isRequired": false,
-        "duration": "1m 28s",
+        "duration": "1m 41s",
         "lastFailure": "Never",
-        "lastSuccess": "Yesterday",
+        "lastSuccess": "2h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -20110,11 +20622,11 @@
           },
           {
             "date": "2025-12-22T00:00:00.000Z",
-            "status": "none",
+            "status": "passed",
             "retried": false,
-            "runId": null,
-            "jobId": null,
-            "duration": null,
+            "runId": "20418020103",
+            "jobId": "58667291160",
+            "duration": "1m 41s",
             "failureStep": null,
             "failureDetails": null
           }
@@ -20122,8 +20634,8 @@
         "failureCount": 0,
         "retried": false,
         "retriedAndPassed": false,
-        "runId": "20402029451",
-        "jobId": "58625796780",
+        "runId": "20418020103",
+        "jobId": "58667291160",
         "error": null,
         "maintainers": []
       },
@@ -20137,9 +20649,9 @@
           "ibm"
         ],
         "isRequired": false,
-        "duration": "1m 17s",
+        "duration": "1m 22s",
         "lastFailure": "Never",
-        "lastSuccess": "23h ago",
+        "lastSuccess": "2h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -20233,11 +20745,11 @@
           },
           {
             "date": "2025-12-22T00:00:00.000Z",
-            "status": "none",
+            "status": "passed",
             "retried": false,
-            "runId": null,
-            "jobId": null,
-            "duration": null,
+            "runId": "20418020103",
+            "jobId": "58667473179",
+            "duration": "1m 22s",
             "failureStep": null,
             "failureDetails": null
           }
@@ -20245,8 +20757,8 @@
         "failureCount": 0,
         "retried": false,
         "retriedAndPassed": false,
-        "runId": "20402029451",
-        "jobId": "58626061753",
+        "runId": "20418020103",
+        "jobId": "58667473179",
         "error": null,
         "maintainers": []
       },
@@ -20262,7 +20774,7 @@
         "isRequired": false,
         "duration": "0m 41s",
         "lastFailure": "Never",
-        "lastSuccess": "23h ago",
+        "lastSuccess": "2h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -20356,11 +20868,11 @@
           },
           {
             "date": "2025-12-22T00:00:00.000Z",
-            "status": "none",
+            "status": "passed",
             "retried": false,
-            "runId": null,
-            "jobId": null,
-            "duration": null,
+            "runId": "20418020103",
+            "jobId": "58667739960",
+            "duration": "0m 41s",
             "failureStep": null,
             "failureDetails": null
           }
@@ -20368,8 +20880,8 @@
         "failureCount": 0,
         "retried": false,
         "retriedAndPassed": false,
-        "runId": "20402029451",
-        "jobId": "58627739139",
+        "runId": "20418020103",
+        "jobId": "58667739960",
         "error": null,
         "maintainers": []
       },
@@ -20383,9 +20895,9 @@
           "ibm"
         ],
         "isRequired": false,
-        "duration": "0m 3s",
+        "duration": "0m 8s",
         "lastFailure": "Never",
-        "lastSuccess": "Yesterday",
+        "lastSuccess": "2h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -20479,11 +20991,11 @@
           },
           {
             "date": "2025-12-22T00:00:00.000Z",
-            "status": "none",
+            "status": "passed",
             "retried": false,
-            "runId": null,
-            "jobId": null,
-            "duration": null,
+            "runId": "20418020103",
+            "jobId": "58667466209",
+            "duration": "0m 8s",
             "failureStep": null,
             "failureDetails": null
           }
@@ -20491,8 +21003,8 @@
         "failureCount": 0,
         "retried": false,
         "retriedAndPassed": false,
-        "runId": "20402029451",
-        "jobId": "58626056804",
+        "runId": "20418020103",
+        "jobId": "58667466209",
         "error": null,
         "maintainers": []
       },
@@ -20507,9 +21019,9 @@
           "ibm"
         ],
         "isRequired": false,
-        "duration": "0m 4s",
+        "duration": "0m 1s",
         "lastFailure": "Never",
-        "lastSuccess": "Yesterday",
+        "lastSuccess": "2h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -20603,11 +21115,11 @@
           },
           {
             "date": "2025-12-22T00:00:00.000Z",
-            "status": "none",
+            "status": "passed",
             "retried": false,
-            "runId": null,
-            "jobId": null,
-            "duration": null,
+            "runId": "20418020103",
+            "jobId": "58667466210",
+            "duration": "0m 1s",
             "failureStep": null,
             "failureDetails": null
           }
@@ -20615,8 +21127,8 @@
         "failureCount": 0,
         "retried": false,
         "retriedAndPassed": false,
-        "runId": "20402029451",
-        "jobId": "58626056802",
+        "runId": "20418020103",
+        "jobId": "58667466210",
         "error": null,
         "maintainers": []
       },
@@ -20630,9 +21142,9 @@
           "ibm"
         ],
         "isRequired": false,
-        "duration": "0m 8s",
+        "duration": "0m 9s",
         "lastFailure": "Never",
-        "lastSuccess": "Yesterday",
+        "lastSuccess": "2h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -20726,11 +21238,11 @@
           },
           {
             "date": "2025-12-22T00:00:00.000Z",
-            "status": "none",
+            "status": "passed",
             "retried": false,
-            "runId": null,
-            "jobId": null,
-            "duration": null,
+            "runId": "20418020103",
+            "jobId": "58667466208",
+            "duration": "0m 9s",
             "failureStep": null,
             "failureDetails": null
           }
@@ -20738,8 +21250,8 @@
         "failureCount": 0,
         "retried": false,
         "retriedAndPassed": false,
-        "runId": "20402029451",
-        "jobId": "58626056808",
+        "runId": "20418020103",
+        "jobId": "58667466208",
         "error": null,
         "maintainers": []
       },
@@ -20753,7 +21265,7 @@
         "isRequired": false,
         "duration": "0m 37s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -20876,7 +21388,7 @@
         "isRequired": true,
         "duration": "9m 1s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -20997,7 +21509,7 @@
         "isRequired": false,
         "duration": "2m 31s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -21116,9 +21628,9 @@
         "status": "passed",
         "categories": [],
         "isRequired": false,
-        "duration": "2m 39s",
+        "duration": "2m 33s",
         "lastFailure": "Never",
-        "lastSuccess": "23h ago",
+        "lastSuccess": "2h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -21212,11 +21724,11 @@
           },
           {
             "date": "2025-12-22T00:00:00.000Z",
-            "status": "none",
+            "status": "passed",
             "retried": false,
-            "runId": null,
-            "jobId": null,
-            "duration": null,
+            "runId": "20418020103",
+            "jobId": "58668237697",
+            "duration": "2m 33s",
             "failureStep": null,
             "failureDetails": null
           }
@@ -21224,8 +21736,8 @@
         "failureCount": 0,
         "retried": false,
         "retriedAndPassed": false,
-        "runId": "20402029451",
-        "jobId": "58628409621",
+        "runId": "20418020103",
+        "jobId": "58668237697",
         "error": null,
         "maintainers": []
       },
@@ -21239,9 +21751,9 @@
           "ibm"
         ],
         "isRequired": false,
-        "duration": "2m 39s",
+        "duration": "3m 13s",
         "lastFailure": "Never",
-        "lastSuccess": "23h ago",
+        "lastSuccess": "2h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -21335,11 +21847,11 @@
           },
           {
             "date": "2025-12-22T00:00:00.000Z",
-            "status": "none",
+            "status": "passed",
             "retried": false,
-            "runId": null,
-            "jobId": null,
-            "duration": null,
+            "runId": "20418020103",
+            "jobId": "58667824316",
+            "duration": "3m 13s",
             "failureStep": null,
             "failureDetails": null
           }
@@ -21347,8 +21859,8 @@
         "failureCount": 0,
         "retried": false,
         "retriedAndPassed": false,
-        "runId": "20402029451",
-        "jobId": "58627925948",
+        "runId": "20418020103",
+        "jobId": "58667824316",
         "error": null,
         "maintainers": []
       },
@@ -21485,7 +21997,7 @@
         "isRequired": true,
         "duration": "3m 39s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -21608,7 +22120,7 @@
         "isRequired": true,
         "duration": "3m 35s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -21731,7 +22243,7 @@
         "isRequired": true,
         "duration": "3m 28s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -21854,7 +22366,7 @@
         "isRequired": true,
         "duration": "3m 37s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -21975,7 +22487,7 @@
         "isRequired": false,
         "duration": "4m 47s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -22098,7 +22610,7 @@
         "isRequired": true,
         "duration": "4m 36s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -22221,7 +22733,7 @@
         "isRequired": true,
         "duration": "4m 45s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -22344,7 +22856,7 @@
         "isRequired": true,
         "duration": "3m 33s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -22467,7 +22979,7 @@
         "isRequired": true,
         "duration": "5m 5s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -22588,7 +23100,7 @@
         "isRequired": false,
         "duration": "3m 54s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -22711,7 +23223,7 @@
         "isRequired": true,
         "duration": "3m 48s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -22832,7 +23344,7 @@
         "isRequired": false,
         "duration": "1m 53s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -22955,7 +23467,7 @@
         "isRequired": true,
         "duration": "2m 3s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -23078,7 +23590,7 @@
         "isRequired": true,
         "duration": "1m 12s",
         "lastFailure": "12/13/2025",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -23201,7 +23713,7 @@
         "isRequired": true,
         "duration": "1m 57s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -23322,7 +23834,7 @@
         "isRequired": false,
         "duration": "1m 46s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -23443,7 +23955,7 @@
         "isRequired": false,
         "duration": "1m 53s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -23564,7 +24076,7 @@
         "isRequired": false,
         "duration": "0m 58s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -23685,7 +24197,7 @@
         "isRequired": false,
         "duration": "1m 16s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -23806,7 +24318,7 @@
         "isRequired": false,
         "duration": "0m 51s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -23927,7 +24439,7 @@
         "isRequired": false,
         "duration": "1m 24s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -24048,7 +24560,7 @@
         "isRequired": false,
         "duration": "1m 3s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -24169,7 +24681,7 @@
         "isRequired": false,
         "duration": "1m 4s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -24290,7 +24802,7 @@
         "isRequired": false,
         "duration": "1m 2s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -24872,9 +25384,9 @@
             "date": "2025-12-22T00:00:00.000Z",
             "status": "none",
             "retried": false,
-            "runId": null,
-            "jobId": null,
-            "duration": null,
+            "runId": "20418020103",
+            "jobId": "58667824415",
+            "duration": "0m 0s",
             "failureStep": null,
             "failureDetails": null
           }
@@ -24882,8 +25394,8 @@
         "failureCount": 0,
         "retried": false,
         "retriedAndPassed": false,
-        "runId": "20402029451",
-        "jobId": "58627926018",
+        "runId": "20418020103",
+        "jobId": "58667824415",
         "error": null,
         "maintainers": []
       },
@@ -24897,9 +25409,9 @@
           "ibm"
         ],
         "isRequired": false,
-        "duration": "3m 22s",
+        "duration": "3m 43s",
         "lastFailure": "Never",
-        "lastSuccess": "23h ago",
+        "lastSuccess": "2h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -24993,11 +25505,11 @@
           },
           {
             "date": "2025-12-22T00:00:00.000Z",
-            "status": "none",
+            "status": "passed",
             "retried": false,
-            "runId": null,
-            "jobId": null,
-            "duration": null,
+            "runId": "20418020103",
+            "jobId": "58667824324",
+            "duration": "3m 43s",
             "failureStep": null,
             "failureDetails": null
           }
@@ -25005,8 +25517,8 @@
         "failureCount": 0,
         "retried": false,
         "retriedAndPassed": false,
-        "runId": "20402029451",
-        "jobId": "58627925945",
+        "runId": "20418020103",
+        "jobId": "58667824324",
         "error": null,
         "maintainers": []
       },
@@ -25020,9 +25532,9 @@
           "ibm"
         ],
         "isRequired": false,
-        "duration": "3m 36s",
+        "duration": "3m 49s",
         "lastFailure": "Never",
-        "lastSuccess": "23h ago",
+        "lastSuccess": "2h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -25116,11 +25628,11 @@
           },
           {
             "date": "2025-12-22T00:00:00.000Z",
-            "status": "none",
+            "status": "passed",
             "retried": false,
-            "runId": null,
-            "jobId": null,
-            "duration": null,
+            "runId": "20418020103",
+            "jobId": "58667824320",
+            "duration": "3m 49s",
             "failureStep": null,
             "failureDetails": null
           }
@@ -25128,8 +25640,8 @@
         "failureCount": 0,
         "retried": false,
         "retriedAndPassed": false,
-        "runId": "20402029451",
-        "jobId": "58627925947",
+        "runId": "20418020103",
+        "jobId": "58667824320",
         "error": null,
         "maintainers": []
       },
@@ -25145,7 +25657,7 @@
         "isRequired": true,
         "duration": "5m 15s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -25268,7 +25780,7 @@
         "isRequired": true,
         "duration": "4m 15s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -25391,7 +25903,7 @@
         "isRequired": true,
         "duration": "4m 15s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -25514,7 +26026,7 @@
         "isRequired": true,
         "duration": "4m 43s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -25637,7 +26149,7 @@
         "isRequired": true,
         "duration": "5m 4s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -25760,7 +26272,7 @@
         "isRequired": true,
         "duration": "4m 28s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -25883,7 +26395,7 @@
         "isRequired": true,
         "duration": "4m 46s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -26006,7 +26518,7 @@
         "isRequired": true,
         "duration": "5m 9s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -26129,7 +26641,7 @@
         "isRequired": true,
         "duration": "4m 58s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -26252,7 +26764,7 @@
         "isRequired": true,
         "duration": "4m 54s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -26376,7 +26888,7 @@
         "isRequired": true,
         "duration": "5m 27s",
         "lastFailure": "Never",
-        "lastSuccess": "23h ago",
+        "lastSuccess": "2h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -26470,11 +26982,11 @@
           },
           {
             "date": "2025-12-22T00:00:00.000Z",
-            "status": "none",
+            "status": "passed",
             "retried": false,
-            "runId": null,
-            "jobId": null,
-            "duration": null,
+            "runId": "20418020103",
+            "jobId": "58667824342",
+            "duration": "5m 27s",
             "failureStep": null,
             "failureDetails": null
           }
@@ -26482,8 +26994,8 @@
         "failureCount": 0,
         "retried": false,
         "retriedAndPassed": false,
-        "runId": "20402029451",
-        "jobId": "58627925958",
+        "runId": "20418020103",
+        "jobId": "58667824342",
         "error": null,
         "maintainers": []
       },
@@ -26497,9 +27009,9 @@
           "ibm"
         ],
         "isRequired": false,
-        "duration": "5m 49s",
+        "duration": "5m 55s",
         "lastFailure": "Never",
-        "lastSuccess": "23h ago",
+        "lastSuccess": "2h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -26593,11 +27105,11 @@
           },
           {
             "date": "2025-12-22T00:00:00.000Z",
-            "status": "none",
+            "status": "passed",
             "retried": false,
-            "runId": null,
-            "jobId": null,
-            "duration": null,
+            "runId": "20418020103",
+            "jobId": "58667824331",
+            "duration": "5m 55s",
             "failureStep": null,
             "failureDetails": null
           }
@@ -26605,8 +27117,8 @@
         "failureCount": 0,
         "retried": false,
         "retriedAndPassed": false,
-        "runId": "20402029451",
-        "jobId": "58627925957",
+        "runId": "20418020103",
+        "jobId": "58667824331",
         "error": null,
         "maintainers": []
       },
@@ -26739,9 +27251,9 @@
         "status": "passed",
         "categories": [],
         "isRequired": false,
-        "duration": "5m 49s",
+        "duration": "6m 2s",
         "lastFailure": "3 days ago",
-        "lastSuccess": "23h ago",
+        "lastSuccess": "2h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -26835,11 +27347,11 @@
           },
           {
             "date": "2025-12-22T00:00:00.000Z",
-            "status": "none",
+            "status": "passed",
             "retried": false,
-            "runId": null,
-            "jobId": null,
-            "duration": null,
+            "runId": "20418020103",
+            "jobId": "58668237709",
+            "duration": "6m 2s",
             "failureStep": null,
             "failureDetails": null
           }
@@ -26847,8 +27359,8 @@
         "failureCount": 2,
         "retried": false,
         "retriedAndPassed": false,
-        "runId": "20402029451",
-        "jobId": "58628409626",
+        "runId": "20418020103",
+        "jobId": "58668237709",
         "error": null,
         "maintainers": []
       },
@@ -26864,7 +27376,7 @@
         "isRequired": true,
         "duration": "17m 2s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -26987,7 +27499,7 @@
         "isRequired": true,
         "duration": "39m 16s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -27110,7 +27622,7 @@
         "isRequired": true,
         "duration": "41m 38s",
         "lastFailure": "5 days ago",
-        "lastSuccess": "Just now",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -27233,7 +27745,7 @@
         "isRequired": true,
         "duration": "15m 47s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -27356,7 +27868,7 @@
         "isRequired": true,
         "duration": "22m 54s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -27479,7 +27991,7 @@
         "isRequired": true,
         "duration": "14m 20s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -27601,7 +28113,7 @@
         ],
         "isRequired": true,
         "duration": "23m 23s",
-        "lastFailure": "Just now",
+        "lastFailure": "3h ago",
         "lastSuccess": "Yesterday",
         "weatherHistory": [
           {
@@ -27725,7 +28237,7 @@
         "isRequired": true,
         "duration": "15m 24s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -27848,7 +28360,7 @@
         "isRequired": true,
         "duration": "29m 48s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -27971,7 +28483,7 @@
         "isRequired": true,
         "duration": "15m 5s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -28094,7 +28606,7 @@
         "isRequired": true,
         "duration": "26m 22s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -28217,7 +28729,7 @@
         "isRequired": true,
         "duration": "15m 18s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -28340,7 +28852,7 @@
         "isRequired": true,
         "duration": "25m 58s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -28463,7 +28975,7 @@
         "isRequired": true,
         "duration": "13m 23s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -28588,7 +29100,7 @@
         "isRequired": true,
         "duration": "25m 1s",
         "lastFailure": "12/14/2025",
-        "lastSuccess": "Just now",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -28734,7 +29246,7 @@
         "isRequired": true,
         "duration": "16m 4s",
         "lastFailure": "12/14/2025",
-        "lastSuccess": "Just now",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -29013,9 +29525,9 @@
         "status": "passed",
         "categories": [],
         "isRequired": false,
-        "duration": "17m 11s",
+        "duration": "17m 5s",
         "lastFailure": "Never",
-        "lastSuccess": "23h ago",
+        "lastSuccess": "2h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -29109,11 +29621,11 @@
           },
           {
             "date": "2025-12-22T00:00:00.000Z",
-            "status": "none",
+            "status": "passed",
             "retried": false,
-            "runId": null,
-            "jobId": null,
-            "duration": null,
+            "runId": "20418020103",
+            "jobId": "58668362060",
+            "duration": "17m 5s",
             "failureStep": null,
             "failureDetails": null
           }
@@ -29121,8 +29633,8 @@
         "failureCount": 0,
         "retried": false,
         "retriedAndPassed": false,
-        "runId": "20402029451",
-        "jobId": "58628528531",
+        "runId": "20418020103",
+        "jobId": "58668362060",
         "error": null,
         "maintainers": []
       },
@@ -29138,9 +29650,9 @@
           "required"
         ],
         "isRequired": true,
-        "duration": "15m 29s",
+        "duration": "15m 11s",
         "lastFailure": "Never",
-        "lastSuccess": "23h ago",
+        "lastSuccess": "2h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -29234,11 +29746,11 @@
           },
           {
             "date": "2025-12-22T00:00:00.000Z",
-            "status": "none",
+            "status": "passed",
             "retried": false,
-            "runId": null,
-            "jobId": null,
-            "duration": null,
+            "runId": "20418020103",
+            "jobId": "58667971315",
+            "duration": "15m 11s",
             "failureStep": null,
             "failureDetails": null
           }
@@ -29246,8 +29758,8 @@
         "failureCount": 0,
         "retried": false,
         "retriedAndPassed": false,
-        "runId": "20402029451",
-        "jobId": "58628040786",
+        "runId": "20418020103",
+        "jobId": "58667971315",
         "error": null,
         "maintainers": []
       },
@@ -29263,9 +29775,9 @@
           "required"
         ],
         "isRequired": true,
-        "duration": "23m 59s",
+        "duration": "23m 27s",
         "lastFailure": "12/13/2025",
-        "lastSuccess": "23h ago",
+        "lastSuccess": "2h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -29558,10 +30070,10 @@
           },
           {
             "date": "2025-12-22T00:00:00.000Z",
-            "status": "none",
-            "runId": null,
-            "jobId": null,
-            "duration": null,
+            "status": "passed",
+            "runId": "20418020103",
+            "jobId": "58667971294",
+            "duration": "23m 27s",
             "failureStep": null,
             "failureDetails": null
           }
@@ -29731,8 +30243,8 @@
         ],
         "retried": 0,
         "setupRetry": false,
-        "runId": "20402029451",
-        "jobId": "58628040778",
+        "runId": "20418020103",
+        "jobId": "58667971294",
         "error": null,
         "maintainers": [
           "@BbolroC"
@@ -29749,9 +30261,9 @@
           "ibm"
         ],
         "isRequired": false,
-        "duration": "13m 6s",
+        "duration": "10m 53s",
         "lastFailure": "12/13/2025",
-        "lastSuccess": "23h ago",
+        "lastSuccess": "2h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -29845,11 +30357,11 @@
           },
           {
             "date": "2025-12-22T00:00:00.000Z",
-            "status": "none",
+            "status": "passed",
             "retried": false,
-            "runId": null,
-            "jobId": null,
-            "duration": null,
+            "runId": "20418020103",
+            "jobId": "58667971291",
+            "duration": "10m 53s",
             "failureStep": null,
             "failureDetails": null
           }
@@ -29857,8 +30369,8 @@
         "failureCount": 1,
         "retried": false,
         "retriedAndPassed": false,
-        "runId": "20402029451",
-        "jobId": "58628040777",
+        "runId": "20418020103",
+        "jobId": "58667971291",
         "error": null,
         "maintainers": []
       },
@@ -29867,13 +30379,13 @@
         "name": "run-k8s-tests-coco-nontee (experimental-force-guest-pull, qemu-coco-dev)",
         "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (experimental-force-guest-pull, qemu-coco-dev)",
         "fullName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (experimental-force-guest-pull, qemu-coco-dev)",
-        "status": "not_run",
+        "status": "failed",
         "categories": [
           "tee"
         ],
         "isRequired": false,
-        "duration": "N/A",
-        "lastFailure": "Never",
+        "duration": "56m 24s",
+        "lastFailure": "3h ago",
         "lastSuccess": "Yesterday",
         "weatherHistory": [
           {
@@ -29959,21 +30471,533 @@
           },
           {
             "date": "2025-12-22T00:00:00.000Z",
-            "status": "none",
+            "status": "failed",
             "runId": "20418020103",
             "jobId": "58665139246",
-            "duration": "N/A",
-            "failureStep": null,
-            "failureDetails": null
+            "duration": "56m 24s",
+            "failureStep": "k8s-guest-pull-image-authenticated.bats, k8s-guest-pull-image-signature.bats, k8s-confidential-attestation.bats, k8s-sealed-secret.bats, k8s-hostname.bats",
+            "failureDetails": {
+              "failures": [
+                {
+                  "number": 1,
+                  "name": "Test that creating a container from an authenticated image, with correct credentials works",
+                  "comment": "",
+                  "file": "k8s-guest-pull-image-authenticated.bats"
+                },
+                {
+                  "number": 2,
+                  "name": "Test that creating a container from an authenticated image, with incorrect credentials fails",
+                  "comment": "",
+                  "file": "k8s-guest-pull-image-authenticated.bats"
+                },
+                {
+                  "number": 4,
+                  "name": "Test that creating a container from an authenticated image, with correct credentials works (with initdata)",
+                  "comment": "",
+                  "file": "k8s-guest-pull-image-authenticated.bats"
+                },
+                {
+                  "number": 5,
+                  "name": "Test that creating a container from an authenticated image, with incorrect credentials fails (with initdata)",
+                  "comment": "",
+                  "file": "k8s-guest-pull-image-authenticated.bats"
+                },
+                {
+                  "number": 1,
+                  "name": "Create a pod from an unsigned image, on an insecureAcceptAnything registry works",
+                  "comment": "",
+                  "file": "k8s-guest-pull-image-signature.bats"
+                },
+                {
+                  "number": 2,
+                  "name": "Create a pod from an unsigned image, on a 'restricted registry' is rejected",
+                  "comment": "",
+                  "file": "k8s-guest-pull-image-signature.bats"
+                },
+                {
+                  "number": 3,
+                  "name": "Create a pod from a signed image, on a 'restricted registry' is successful",
+                  "comment": "",
+                  "file": "k8s-guest-pull-image-signature.bats"
+                },
+                {
+                  "number": 4,
+                  "name": "Create a pod from a signed image, on a 'restricted registry', but with the wrong key is rejected",
+                  "comment": "",
+                  "file": "k8s-guest-pull-image-signature.bats"
+                },
+                {
+                  "number": 6,
+                  "name": "Create a pod from an unsigned image, on an insecureAcceptAnything registry works (with initdata)",
+                  "comment": "",
+                  "file": "k8s-guest-pull-image-signature.bats"
+                },
+                {
+                  "number": 7,
+                  "name": "Create a pod from an unsigned image, on a 'restricted registry' is rejected (with initdata)",
+                  "comment": "",
+                  "file": "k8s-guest-pull-image-signature.bats"
+                },
+                {
+                  "number": 8,
+                  "name": "Create a pod from a signed image, on a 'restricted registry' is successful (with initdata)",
+                  "comment": "",
+                  "file": "k8s-guest-pull-image-signature.bats"
+                },
+                {
+                  "number": 9,
+                  "name": "Create a pod from a signed image, on a 'restricted registry', but with the wrong key is rejected (with initdata)",
+                  "comment": "",
+                  "file": "k8s-guest-pull-image-signature.bats"
+                },
+                {
+                  "number": 1,
+                  "name": "Get CDH resource",
+                  "comment": "",
+                  "file": "k8s-confidential-attestation.bats"
+                },
+                {
+                  "number": 2,
+                  "name": "Unseal Env Secrets with CDH",
+                  "comment": "",
+                  "file": "k8s-sealed-secret.bats"
+                },
+                {
+                  "number": 3,
+                  "name": "Unseal File Secrets with CDH",
+                  "comment": "",
+                  "file": "k8s-sealed-secret.bats"
+                },
+                {
+                  "number": 1,
+                  "name": "Validate Pod hostname",
+                  "comment": "",
+                  "file": "k8s-hostname.bats"
+                },
+                {
+                  "number": 1,
+                  "name": "Get CDH resource",
+                  "comment": "",
+                  "file": "##[group]k8s-confidential-attestation.bats"
+                },
+                {
+                  "number": 1,
+                  "name": "Create a pod from an unsigned image, on an insecureAcceptAnything registry works",
+                  "comment": "",
+                  "file": "##[group]k8s-guest-pull-image-signature.bats"
+                },
+                {
+                  "number": 2,
+                  "name": "Create a pod from an unsigned image, on a 'restricted registry' is rejected",
+                  "comment": "",
+                  "file": "k8s-guest-pull-image-signature.bats"
+                },
+                {
+                  "number": 3,
+                  "name": "Create a pod from a signed image, on a 'restricted registry' is successful",
+                  "comment": "",
+                  "file": "k8s-guest-pull-image-signature.bats"
+                },
+                {
+                  "number": 4,
+                  "name": "Create a pod from a signed image, on a 'restricted registry', but with the wrong key is rejected",
+                  "comment": "",
+                  "file": "k8s-guest-pull-image-signature.bats"
+                },
+                {
+                  "number": 6,
+                  "name": "Create a pod from an unsigned image, on an insecureAcceptAnything registry works (with initdata)",
+                  "comment": "",
+                  "file": "k8s-guest-pull-image-signature.bats"
+                },
+                {
+                  "number": 7,
+                  "name": "Create a pod from an unsigned image, on a 'restricted registry' is rejected (with initdata)",
+                  "comment": "",
+                  "file": "k8s-guest-pull-image-signature.bats"
+                },
+                {
+                  "number": 8,
+                  "name": "Create a pod from a signed image, on a 'restricted registry' is successful (with initdata)",
+                  "comment": "",
+                  "file": "k8s-guest-pull-image-signature.bats"
+                },
+                {
+                  "number": 9,
+                  "name": "Create a pod from a signed image, on a 'restricted registry', but with the wrong key is rejected (with initdata)",
+                  "comment": "",
+                  "file": "k8s-guest-pull-image-signature.bats"
+                },
+                {
+                  "number": 1,
+                  "name": "Test that creating a container from an authenticated image, with correct credentials works",
+                  "comment": "",
+                  "file": "##[group]k8s-guest-pull-image-authenticated.bats"
+                },
+                {
+                  "number": 2,
+                  "name": "Test that creating a container from an authenticated image, with incorrect credentials fails",
+                  "comment": "",
+                  "file": "k8s-guest-pull-image-authenticated.bats"
+                },
+                {
+                  "number": 4,
+                  "name": "Test that creating a container from an authenticated image, with correct credentials works (with initdata)",
+                  "comment": "",
+                  "file": "k8s-guest-pull-image-authenticated.bats"
+                },
+                {
+                  "number": 5,
+                  "name": "Test that creating a container from an authenticated image, with incorrect credentials fails (with initdata)",
+                  "comment": "",
+                  "file": "k8s-guest-pull-image-authenticated.bats"
+                },
+                {
+                  "number": 1,
+                  "name": "Validate Pod hostname",
+                  "comment": "",
+                  "file": "##[group]k8s-hostname.bats"
+                },
+                {
+                  "number": 2,
+                  "name": "Unseal Env Secrets with CDH",
+                  "comment": "",
+                  "file": "##[group]k8s-sealed-secret.bats"
+                },
+                {
+                  "number": 3,
+                  "name": "Unseal File Secrets with CDH",
+                  "comment": "",
+                  "file": "k8s-sealed-secret.bats"
+                }
+              ],
+              "stats": {
+                "total": 254,
+                "passed": 222,
+                "failed": 32,
+                "skipped": 0
+              },
+              "batsFiles": [
+                "k8s-guest-pull-image-authenticated.bats",
+                "k8s-guest-pull-image-signature.bats",
+                "k8s-confidential-attestation.bats",
+                "k8s-sealed-secret.bats",
+                "k8s-hostname.bats"
+              ]
+            }
           }
         ],
-        "failureCount": 0,
-        "failedTestsInWeather": [],
+        "failureCount": 1,
+        "failedTestsInWeather": [
+          {
+            "name": "Test that creating a container from an authenticated image, with correct credentials works",
+            "count": 1,
+            "dates": [
+              "2025-12-22"
+            ],
+            "files": [
+              "k8s-guest-pull-image-authenticated.bats"
+            ]
+          },
+          {
+            "name": "Test that creating a container from an authenticated image, with incorrect credentials fails",
+            "count": 1,
+            "dates": [
+              "2025-12-22"
+            ],
+            "files": [
+              "k8s-guest-pull-image-authenticated.bats"
+            ]
+          },
+          {
+            "name": "Test that creating a container from an authenticated image, with correct credentials works (with initdata)",
+            "count": 1,
+            "dates": [
+              "2025-12-22"
+            ],
+            "files": [
+              "k8s-guest-pull-image-authenticated.bats"
+            ]
+          },
+          {
+            "name": "Test that creating a container from an authenticated image, with incorrect credentials fails (with initdata)",
+            "count": 1,
+            "dates": [
+              "2025-12-22"
+            ],
+            "files": [
+              "k8s-guest-pull-image-authenticated.bats"
+            ]
+          },
+          {
+            "name": "Create a pod from an unsigned image, on an insecureAcceptAnything registry works",
+            "count": 1,
+            "dates": [
+              "2025-12-22"
+            ],
+            "files": [
+              "k8s-guest-pull-image-signature.bats"
+            ]
+          },
+          {
+            "name": "Create a pod from an unsigned image, on a 'restricted registry' is rejected",
+            "count": 1,
+            "dates": [
+              "2025-12-22"
+            ],
+            "files": [
+              "k8s-guest-pull-image-signature.bats"
+            ]
+          },
+          {
+            "name": "Create a pod from a signed image, on a 'restricted registry' is successful",
+            "count": 1,
+            "dates": [
+              "2025-12-22"
+            ],
+            "files": [
+              "k8s-guest-pull-image-signature.bats"
+            ]
+          },
+          {
+            "name": "Create a pod from a signed image, on a 'restricted registry', but with the wrong key is rejected",
+            "count": 1,
+            "dates": [
+              "2025-12-22"
+            ],
+            "files": [
+              "k8s-guest-pull-image-signature.bats"
+            ]
+          },
+          {
+            "name": "Create a pod from an unsigned image, on an insecureAcceptAnything registry works (with initdata)",
+            "count": 1,
+            "dates": [
+              "2025-12-22"
+            ],
+            "files": [
+              "k8s-guest-pull-image-signature.bats"
+            ]
+          },
+          {
+            "name": "Create a pod from an unsigned image, on a 'restricted registry' is rejected (with initdata)",
+            "count": 1,
+            "dates": [
+              "2025-12-22"
+            ],
+            "files": [
+              "k8s-guest-pull-image-signature.bats"
+            ]
+          },
+          {
+            "name": "Create a pod from a signed image, on a 'restricted registry' is successful (with initdata)",
+            "count": 1,
+            "dates": [
+              "2025-12-22"
+            ],
+            "files": [
+              "k8s-guest-pull-image-signature.bats"
+            ]
+          },
+          {
+            "name": "Create a pod from a signed image, on a 'restricted registry', but with the wrong key is rejected (with initdata)",
+            "count": 1,
+            "dates": [
+              "2025-12-22"
+            ],
+            "files": [
+              "k8s-guest-pull-image-signature.bats"
+            ]
+          },
+          {
+            "name": "Get CDH resource",
+            "count": 1,
+            "dates": [
+              "2025-12-22"
+            ],
+            "files": [
+              "k8s-confidential-attestation.bats"
+            ]
+          },
+          {
+            "name": "Unseal Env Secrets with CDH",
+            "count": 1,
+            "dates": [
+              "2025-12-22"
+            ],
+            "files": [
+              "k8s-sealed-secret.bats"
+            ]
+          },
+          {
+            "name": "Unseal File Secrets with CDH",
+            "count": 1,
+            "dates": [
+              "2025-12-22"
+            ],
+            "files": [
+              "k8s-sealed-secret.bats"
+            ]
+          },
+          {
+            "name": "Validate Pod hostname",
+            "count": 1,
+            "dates": [
+              "2025-12-22"
+            ],
+            "files": [
+              "k8s-hostname.bats"
+            ]
+          }
+        ],
         "retried": 0,
         "setupRetry": false,
         "runId": "20418020103",
         "jobId": "58665139246",
-        "error": null,
+        "error": {
+          "step": "k8s-guest-pull-image-authenticated.bats, k8s-guest-pull-image-signature.bats, k8s-confidential-attestation.bats, k8s-sealed-secret.bats, k8s-hostname.bats, ##[group]k8s-confidential-attestation.bats, ##[group]k8s-guest-pull-image-signature.bats, ##[group]k8s-guest-pull-image-authenticated.bats, ##[group]k8s-hostname.bats, ##[group]k8s-sealed-secret.bats",
+          "batsFiles": [
+            "k8s-guest-pull-image-authenticated.bats",
+            "k8s-guest-pull-image-signature.bats",
+            "k8s-confidential-attestation.bats",
+            "k8s-sealed-secret.bats",
+            "k8s-hostname.bats",
+            "##[group]k8s-confidential-attestation.bats",
+            "##[group]k8s-guest-pull-image-signature.bats",
+            "##[group]k8s-guest-pull-image-authenticated.bats",
+            "##[group]k8s-hostname.bats",
+            "##[group]k8s-sealed-secret.bats"
+          ],
+          "testResults": {
+            "total": 254,
+            "passed": 222,
+            "failed": 32,
+            "skipped": 0
+          },
+          "failures": [
+            {
+              "number": 1,
+              "name": "Test that creating a container from an authenticated image, with correct credentials works",
+              "comment": "",
+              "file": "k8s-guest-pull-image-authenticated.bats"
+            },
+            {
+              "number": 2,
+              "name": "Test that creating a container from an authenticated image, with incorrect credentials fails",
+              "comment": "",
+              "file": "k8s-guest-pull-image-authenticated.bats"
+            },
+            {
+              "number": 4,
+              "name": "Test that creating a container from an authenticated image, with correct credentials works (with initdata)",
+              "comment": "",
+              "file": "k8s-guest-pull-image-authenticated.bats"
+            },
+            {
+              "number": 5,
+              "name": "Test that creating a container from an authenticated image, with incorrect credentials fails (with initdata)",
+              "comment": "",
+              "file": "k8s-guest-pull-image-authenticated.bats"
+            },
+            {
+              "number": 1,
+              "name": "Create a pod from an unsigned image, on an insecureAcceptAnything registry works",
+              "comment": "",
+              "file": "k8s-guest-pull-image-signature.bats"
+            },
+            {
+              "number": 2,
+              "name": "Create a pod from an unsigned image, on a 'restricted registry' is rejected",
+              "comment": "",
+              "file": "k8s-guest-pull-image-signature.bats"
+            },
+            {
+              "number": 3,
+              "name": "Create a pod from a signed image, on a 'restricted registry' is successful",
+              "comment": "",
+              "file": "k8s-guest-pull-image-signature.bats"
+            },
+            {
+              "number": 4,
+              "name": "Create a pod from a signed image, on a 'restricted registry', but with the wrong key is rejected",
+              "comment": "",
+              "file": "k8s-guest-pull-image-signature.bats"
+            },
+            {
+              "number": 6,
+              "name": "Create a pod from an unsigned image, on an insecureAcceptAnything registry works (with initdata)",
+              "comment": "",
+              "file": "k8s-guest-pull-image-signature.bats"
+            },
+            {
+              "number": 7,
+              "name": "Create a pod from an unsigned image, on a 'restricted registry' is rejected (with initdata)",
+              "comment": "",
+              "file": "k8s-guest-pull-image-signature.bats"
+            },
+            {
+              "number": 8,
+              "name": "Create a pod from a signed image, on a 'restricted registry' is successful (with initdata)",
+              "comment": "",
+              "file": "k8s-guest-pull-image-signature.bats"
+            },
+            {
+              "number": 9,
+              "name": "Create a pod from a signed image, on a 'restricted registry', but with the wrong key is rejected (with initdata)",
+              "comment": "",
+              "file": "k8s-guest-pull-image-signature.bats"
+            },
+            {
+              "number": 1,
+              "name": "Get CDH resource",
+              "comment": "",
+              "file": "k8s-confidential-attestation.bats"
+            },
+            {
+              "number": 2,
+              "name": "Unseal Env Secrets with CDH",
+              "comment": "",
+              "file": "k8s-sealed-secret.bats"
+            },
+            {
+              "number": 3,
+              "name": "Unseal File Secrets with CDH",
+              "comment": "",
+              "file": "k8s-sealed-secret.bats"
+            },
+            {
+              "number": 1,
+              "name": "Validate Pod hostname",
+              "comment": "",
+              "file": "k8s-hostname.bats"
+            },
+            {
+              "number": 1,
+              "name": "Get CDH resource",
+              "comment": "",
+              "file": "##[group]k8s-confidential-attestation.bats"
+            },
+            {
+              "number": 1,
+              "name": "Create a pod from an unsigned image, on an insecureAcceptAnything registry works",
+              "comment": "",
+              "file": "##[group]k8s-guest-pull-image-signature.bats"
+            },
+            {
+              "number": 2,
+              "name": "Create a pod from an unsigned image, on a 'restricted registry' is rejected",
+              "comment": "",
+              "file": "k8s-guest-pull-image-signature.bats"
+            },
+            {
+              "number": 3,
+              "name": "Create a pod from a signed image, on a 'restricted registry' is successful",
+              "comment": "",
+              "file": "k8s-guest-pull-image-signature.bats"
+            }
+          ],
+          "output": "not ok 1 - Test that creating a container from an authenticated image, with correct credentials works\nnot ok 2 - Test that creating a container from an authenticated image, with incorrect credentials fails\nnot ok 4 - Test that creating a container from an authenticated image, with correct credentials works (with initdata)\nnot ok 5 - Test that creating a container from an authenticated image, with incorrect credentials fails (with initdata)\nnot ok 1 - Create a pod from an unsigned image, on an insecureAcceptAnything registry works\nnot ok 2 - Create a pod from an unsigned image, on a 'restricted registry' is rejected\nnot ok 3 - Create a pod from a signed image, on a 'restricted registry' is successful\nnot ok 4 - Create a pod from a signed image, on a 'restricted registry', but with the wrong key is rejected\nnot ok 6 - Create a pod from an unsigned image, on an insecureAcceptAnything registry works (with initdata)\nnot ok 7 - Create a pod from an unsigned image, on a 'restricted registry' is rejected (with initdata)\nnot ok 8 - Create a pod from a signed image, on a 'restricted registry' is successful (with initdata)\nnot ok 9 - Create a pod from a signed image, on a 'restricted registry', but with the wrong key is rejected (with initdata)\nnot ok 1 - Get CDH resource\nnot ok 2 - Unseal Env Secrets with CDH\nnot ok 3 - Unseal File Secrets with CDH\nnot ok 1 - Validate Pod hostname\nnot ok 1 - Get CDH resource\nnot ok 1 - Create a pod from an unsigned image, on an insecureAcceptAnything registry works\nnot ok 2 - Create a pod from an unsigned image, on a 'restricted registry' is rejected\nnot ok 3 - Create a pod from a signed image, on a 'restricted registry' is successful\nnot ok 4 - Create a pod from a signed image, on a 'restricted registry', but with the wrong key is rejected\nnot ok 6 - Create a pod from an unsigned image, on an insecureAcceptAnything registry works (with initdata)\nnot ok 7 - Create a pod from an unsigned image, on a 'restricted registry' is rejected (with initdata)\nnot ok 8 - Create a pod from a signed image, on a 'restricted registry' is successful (with initdata)\nnot ok 9 - Create a pod from a signed image, on a 'restricted registry', but with the wrong key is rejected (with initdata)\nnot ok 1 - Test that creating a container from an authenticated image, with correct credentials works\nnot ok 2 - Test that creating a container from an authenticated image, with incorrect credentials fails\nnot ok 4 - Test that creating a container from an authenticated image, with correct credentials works (with initdata)\nnot ok 5 - Test that creating a container from an authenticated image, with incorrect credentials fails (with initdata)\nnot ok 1 - Validate Pod hostname\nnot ok 2 - Unseal Env Secrets with CDH\nnot ok 3 - Unseal File Secrets with CDH"
+        },
         "maintainers": [
           "@fidencio"
         ]
@@ -29983,15 +31007,15 @@
         "name": "run-k8s-tests-coco-nontee (qemu-coco-dev, nydus, guest-pull)",
         "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev, nydus, guest-pull)",
         "fullName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev, nydus, guest-pull)",
-        "status": "not_run",
+        "status": "passed",
         "categories": [
           "tee",
           "required"
         ],
         "isRequired": true,
-        "duration": "N/A",
+        "duration": "60m 55s",
         "lastFailure": "Never",
-        "lastSuccess": "Yesterday",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -30076,10 +31100,10 @@
           },
           {
             "date": "2025-12-22T00:00:00.000Z",
-            "status": "none",
+            "status": "passed",
             "runId": "20418020103",
             "jobId": "58665139253",
-            "duration": "N/A",
+            "duration": "60m 55s",
             "failureStep": null,
             "failureDetails": null
           }
@@ -30101,14 +31125,14 @@
         "name": "run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
         "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
         "fullName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
-        "status": "not_run",
+        "status": "passed",
         "categories": [
           "tee"
         ],
         "isRequired": false,
-        "duration": "N/A",
+        "duration": "53m 42s",
         "lastFailure": "12/15/2025",
-        "lastSuccess": "Yesterday",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -30193,10 +31217,10 @@
           },
           {
             "date": "2025-12-22T00:00:00.000Z",
-            "status": "none",
+            "status": "passed",
             "runId": "20418020103",
             "jobId": "58665139247",
-            "duration": "N/A",
+            "duration": "53m 42s",
             "failureStep": null,
             "failureDetails": null
           }
@@ -30224,7 +31248,7 @@
         ],
         "isRequired": false,
         "duration": "15m 56s",
-        "lastFailure": "Just now",
+        "lastFailure": "3h ago",
         "lastSuccess": "5 days ago",
         "weatherHistory": [
           {
@@ -30552,7 +31576,7 @@
         "isRequired": false,
         "duration": "42m 46s",
         "lastFailure": "2 days ago",
-        "lastSuccess": "Just now",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -33585,7 +34609,7 @@
         ],
         "isRequired": false,
         "duration": "42m 35s",
-        "lastFailure": "Just now",
+        "lastFailure": "3h ago",
         "lastSuccess": "6 days ago",
         "weatherHistory": [
           {
@@ -36635,7 +37659,7 @@
         "isRequired": true,
         "duration": "6m 12s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -36758,7 +37782,7 @@
         "isRequired": true,
         "duration": "6m 57s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -36881,7 +37905,7 @@
         "isRequired": true,
         "duration": "5m 10s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -37004,7 +38028,7 @@
         "isRequired": true,
         "duration": "7m 19s",
         "lastFailure": "Never",
-        "lastSuccess": "Just now",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -37127,7 +38151,7 @@
         "isRequired": true,
         "duration": "1m 24s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -37255,7 +38279,7 @@
         "status": "passed",
         "duration": "6m 2s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -37364,7 +38388,7 @@
         "status": "passed",
         "duration": "6m 21s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -37473,7 +38497,7 @@
         "status": "passed",
         "duration": "5m 58s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -37582,7 +38606,7 @@
         "status": "passed",
         "duration": "5m 28s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -37691,7 +38715,7 @@
         "status": "passed",
         "duration": "6m 7s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -37800,7 +38824,7 @@
         "status": "passed",
         "duration": "6m 20s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -37909,7 +38933,7 @@
         "status": "passed",
         "duration": "4m 53s",
         "lastFailure": "4 days ago",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -38018,7 +39042,7 @@
         "status": "passed",
         "duration": "4m 37s",
         "lastFailure": "4 days ago",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -38127,7 +39151,7 @@
         "status": "passed",
         "duration": "5m 10s",
         "lastFailure": "4 days ago",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -38236,7 +39260,7 @@
         "status": "passed",
         "duration": "4m 25s",
         "lastFailure": "4 days ago",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -38345,7 +39369,7 @@
         "status": "passed",
         "duration": "5m 7s",
         "lastFailure": "4 days ago",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -38454,7 +39478,7 @@
         "status": "passed",
         "duration": "5m 10s",
         "lastFailure": "Yesterday",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -38563,7 +39587,7 @@
         "status": "passed",
         "duration": "5m 31s",
         "lastFailure": "4 days ago",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -38672,7 +39696,7 @@
         "status": "passed",
         "duration": "5m 52s",
         "lastFailure": "4 days ago",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -38781,7 +39805,7 @@
         "status": "passed",
         "duration": "5m 33s",
         "lastFailure": "4 days ago",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -38890,7 +39914,7 @@
         "status": "passed",
         "duration": "5m 6s",
         "lastFailure": "3 days ago",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -38999,7 +40023,7 @@
         "status": "passed",
         "duration": "5m 22s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -39108,7 +40132,7 @@
         "status": "passed",
         "duration": "5m 16s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -39217,7 +40241,7 @@
         "status": "passed",
         "duration": "6m 51s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -39326,7 +40350,7 @@
         "status": "passed",
         "duration": "6m 49s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -39435,7 +40459,7 @@
         "status": "passed",
         "duration": "7m 42s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -39544,7 +40568,7 @@
         "status": "passed",
         "duration": "7m 35s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -39653,7 +40677,7 @@
         "status": "passed",
         "duration": "5m 54s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -39762,7 +40786,7 @@
         "status": "passed",
         "duration": "5m 46s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -39871,7 +40895,7 @@
         "status": "passed",
         "duration": "7m 6s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -39980,7 +41004,7 @@
         "status": "passed",
         "duration": "6m 16s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -40089,7 +41113,7 @@
         "status": "passed",
         "duration": "5m 26s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -40198,7 +41222,7 @@
         "status": "passed",
         "duration": "5m 11s",
         "lastFailure": "4 days ago",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -40307,7 +41331,7 @@
         "status": "passed",
         "duration": "5m 13s",
         "lastFailure": "4 days ago",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -40416,7 +41440,7 @@
         "status": "passed",
         "duration": "5m 9s",
         "lastFailure": "4 days ago",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -40525,7 +41549,7 @@
         "status": "passed",
         "duration": "5m 22s",
         "lastFailure": "4 days ago",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -40634,7 +41658,7 @@
         "status": "passed",
         "duration": "5m 17s",
         "lastFailure": "4 days ago",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -40743,7 +41767,7 @@
         "status": "passed",
         "duration": "5m 2s",
         "lastFailure": "4 days ago",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -40852,7 +41876,7 @@
         "status": "passed",
         "duration": "4m 55s",
         "lastFailure": "4 days ago",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -40961,7 +41985,7 @@
         "status": "passed",
         "duration": "4m 49s",
         "lastFailure": "4 days ago",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -41070,7 +42094,7 @@
         "status": "passed",
         "duration": "5m 23s",
         "lastFailure": "4 days ago",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -41179,7 +42203,7 @@
         "status": "passed",
         "duration": "5m 32s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -41288,7 +42312,7 @@
         "status": "passed",
         "duration": "4m 56s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -41397,7 +42421,7 @@
         "status": "passed",
         "duration": "5m 7s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -41506,7 +42530,7 @@
         "status": "passed",
         "duration": "6m 37s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -41615,7 +42639,7 @@
         "status": "passed",
         "duration": "6m 44s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -41724,7 +42748,7 @@
         "status": "passed",
         "duration": "8m 57s",
         "lastFailure": "Never",
-        "lastSuccess": "1h ago",
+        "lastSuccess": "3h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -41951,7 +42975,7 @@
         "status": "passed",
         "duration": "31m 2s",
         "lastFailure": "5 days ago",
-        "lastSuccess": "20h ago",
+        "lastSuccess": "23h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -42060,7 +43084,7 @@
         "status": "passed",
         "duration": "30m 22s",
         "lastFailure": "5 days ago",
-        "lastSuccess": "20h ago",
+        "lastSuccess": "23h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -42278,7 +43302,7 @@
         "status": "passed",
         "duration": "34m 41s",
         "lastFailure": "5 days ago",
-        "lastSuccess": "20h ago",
+        "lastSuccess": "23h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -42387,7 +43411,7 @@
         "status": "passed",
         "duration": "0m 3s",
         "lastFailure": "Never",
-        "lastSuccess": "20h ago",
+        "lastSuccess": "23h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -42496,7 +43520,7 @@
         "status": "passed",
         "duration": "4m 47s",
         "lastFailure": "Never",
-        "lastSuccess": "21h ago",
+        "lastSuccess": "23h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -42605,7 +43629,7 @@
         "status": "passed",
         "duration": "3m 51s",
         "lastFailure": "Never",
-        "lastSuccess": "21h ago",
+        "lastSuccess": "23h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -42714,7 +43738,7 @@
         "status": "passed",
         "duration": "5m 46s",
         "lastFailure": "Never",
-        "lastSuccess": "21h ago",
+        "lastSuccess": "23h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -42823,7 +43847,7 @@
         "status": "passed",
         "duration": "4m 41s",
         "lastFailure": "Never",
-        "lastSuccess": "21h ago",
+        "lastSuccess": "23h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -43041,7 +44065,7 @@
         "status": "passed",
         "duration": "15m 40s",
         "lastFailure": "3 days ago",
-        "lastSuccess": "20h ago",
+        "lastSuccess": "23h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -43150,7 +44174,7 @@
         "status": "passed",
         "duration": "4m 39s",
         "lastFailure": "Never",
-        "lastSuccess": "21h ago",
+        "lastSuccess": "23h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -43259,7 +44283,7 @@
         "status": "passed",
         "duration": "10m 57s",
         "lastFailure": "Never",
-        "lastSuccess": "21h ago",
+        "lastSuccess": "23h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -43477,7 +44501,7 @@
         "status": "passed",
         "duration": "31m 16s",
         "lastFailure": "5 days ago",
-        "lastSuccess": "20h ago",
+        "lastSuccess": "23h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -43585,7 +44609,7 @@
         "fullName": "e2e / libvirt (containerd, withoutKbs, ubuntu, generic, amd64) / Libvirt e2e tests: (ubuntu-24.04, containerd, secure_comms: withoutKbs, mkosi: false",
         "status": "failed",
         "duration": "42m 27s",
-        "lastFailure": "20h ago",
+        "lastFailure": "23h ago",
         "lastSuccess": "2 days ago",
         "weatherHistory": [
           {
@@ -43859,7 +44883,7 @@
         "status": "passed",
         "duration": "34m 29s",
         "lastFailure": "5 days ago",
-        "lastSuccess": "20h ago",
+        "lastSuccess": "23h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -43967,7 +44991,7 @@
         "fullName": "e2e / libvirt (crio, withoutKbs, ubuntu, generic, amd64) / Libvirt e2e tests: (ubuntu-24.04, crio, secure_comms: withoutKbs, mkosi: false",
         "status": "failed",
         "duration": "59m 8s",
-        "lastFailure": "20h ago",
+        "lastFailure": "23h ago",
         "lastSuccess": "6 days ago",
         "weatherHistory": [
           {
@@ -44238,7 +45262,7 @@
         "status": "passed",
         "duration": "0m 5s",
         "lastFailure": "Never",
-        "lastSuccess": "21h ago",
+        "lastSuccess": "23h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -44456,7 +45480,7 @@
         "status": "passed",
         "duration": "10m 38s",
         "lastFailure": "Never",
-        "lastSuccess": "20h ago",
+        "lastSuccess": "23h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -44565,7 +45589,7 @@
         "status": "passed",
         "duration": "7m 0s",
         "lastFailure": "Never",
-        "lastSuccess": "20h ago",
+        "lastSuccess": "23h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -44674,7 +45698,7 @@
         "status": "passed",
         "duration": "7m 55s",
         "lastFailure": "Yesterday",
-        "lastSuccess": "20h ago",
+        "lastSuccess": "23h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -44783,7 +45807,7 @@
         "status": "passed",
         "duration": "2m 6s",
         "lastFailure": "Never",
-        "lastSuccess": "20h ago",
+        "lastSuccess": "23h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -44892,7 +45916,7 @@
         "status": "passed",
         "duration": "2m 34s",
         "lastFailure": "12/13/2025",
-        "lastSuccess": "20h ago",
+        "lastSuccess": "23h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -45001,7 +46025,7 @@
         "status": "passed",
         "duration": "2m 37s",
         "lastFailure": "Never",
-        "lastSuccess": "21h ago",
+        "lastSuccess": "23h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -45110,7 +46134,7 @@
         "status": "passed",
         "duration": "10m 31s",
         "lastFailure": "6 days ago",
-        "lastSuccess": "21h ago",
+        "lastSuccess": "23h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -45219,7 +46243,7 @@
         "status": "passed",
         "duration": "12m 31s",
         "lastFailure": "Never",
-        "lastSuccess": "21h ago",
+        "lastSuccess": "23h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -45328,7 +46352,7 @@
         "status": "passed",
         "duration": "0m 8s",
         "lastFailure": "Never",
-        "lastSuccess": "21h ago",
+        "lastSuccess": "23h ago",
         "weatherHistory": [
           {
             "date": "2025-12-13T00:00:00.000Z",
@@ -46392,6 +47416,12 @@
     "Test that creating a container from an authenticated image, with correct credentials works": {
       "occurrences": [
         {
+          "date": "2025-12-22T00:00:00.000Z",
+          "jobName": "non-TEE with force guest pull",
+          "jobId": "58665139246",
+          "runId": "20418020103"
+        },
+        {
           "date": "2025-12-19T00:00:00.000Z",
           "jobName": "AMD SEV-SNP with nydus snapshotter",
           "jobId": "58490564776",
@@ -46512,7 +47542,7 @@
           "runId": "19776214950"
         }
       ],
-      "totalCount": 20,
+      "totalCount": 21,
       "affectedJobs": [
         {
           "jobName": "AMD SEV-SNP with nydus snapshotter",
@@ -46548,6 +47578,14 @@
           ]
         },
         {
+          "jobName": "non-TEE with force guest pull",
+          "count": 1,
+          "latestDate": "2025-12-22T00:00:00.000Z",
+          "jobIds": [
+            "58665139246"
+          ]
+        },
+        {
           "jobName": "IBM zVSI with nydus snapshotter",
           "count": 1,
           "latestDate": "2025-12-13T00:00:00.000Z",
@@ -46556,11 +47594,17 @@
           ]
         }
       ],
-      "uniqueJobsAffected": 3
+      "uniqueJobsAffected": 4
     },
     "Test that creating a container from an authenticated image, with incorrect credentials fails": {
       "occurrences": [
         {
+          "date": "2025-12-22T00:00:00.000Z",
+          "jobName": "non-TEE with force guest pull",
+          "jobId": "58665139246",
+          "runId": "20418020103"
+        },
+        {
           "date": "2025-12-19T00:00:00.000Z",
           "jobName": "AMD SEV-SNP with nydus snapshotter",
           "jobId": "58490564776",
@@ -46681,7 +47725,7 @@
           "runId": "19776214950"
         }
       ],
-      "totalCount": 20,
+      "totalCount": 21,
       "affectedJobs": [
         {
           "jobName": "AMD SEV-SNP with nydus snapshotter",
@@ -46717,6 +47761,14 @@
           ]
         },
         {
+          "jobName": "non-TEE with force guest pull",
+          "count": 1,
+          "latestDate": "2025-12-22T00:00:00.000Z",
+          "jobIds": [
+            "58665139246"
+          ]
+        },
+        {
           "jobName": "IBM zVSI with nydus snapshotter",
           "count": 1,
           "latestDate": "2025-12-13T00:00:00.000Z",
@@ -46725,7 +47777,7 @@
           ]
         }
       ],
-      "uniqueJobsAffected": 3
+      "uniqueJobsAffected": 4
     },
     "Test that creating a container from an authenticated image, with no credentials fails": {
       "occurrences": [
@@ -46885,6 +47937,12 @@
     "Test that creating a container from an authenticated image, with correct credentials works (with initdata)": {
       "occurrences": [
         {
+          "date": "2025-12-22T00:00:00.000Z",
+          "jobName": "non-TEE with force guest pull",
+          "jobId": "58665139246",
+          "runId": "20418020103"
+        },
+        {
           "date": "2025-12-19T00:00:00.000Z",
           "jobName": "AMD SEV-SNP with nydus snapshotter",
           "jobId": "58490564776",
@@ -46987,7 +48045,7 @@
           "runId": "19776214950"
         }
       ],
-      "totalCount": 17,
+      "totalCount": 18,
       "affectedJobs": [
         {
           "jobName": "AMD SEV-SNP with nydus snapshotter",
@@ -47013,6 +48071,14 @@
           ]
         },
         {
+          "jobName": "non-TEE with force guest pull",
+          "count": 1,
+          "latestDate": "2025-12-22T00:00:00.000Z",
+          "jobIds": [
+            "58665139246"
+          ]
+        },
+        {
           "jobName": "IBM zVSI with nydus snapshotter",
           "count": 1,
           "latestDate": "2025-12-13T00:00:00.000Z",
@@ -47021,11 +48087,17 @@
           ]
         }
       ],
-      "uniqueJobsAffected": 2
+      "uniqueJobsAffected": 3
     },
     "Test that creating a container from an authenticated image, with incorrect credentials fails (with initdata)": {
       "occurrences": [
         {
+          "date": "2025-12-22T00:00:00.000Z",
+          "jobName": "non-TEE with force guest pull",
+          "jobId": "58665139246",
+          "runId": "20418020103"
+        },
+        {
           "date": "2025-12-19T00:00:00.000Z",
           "jobName": "AMD SEV-SNP with nydus snapshotter",
           "jobId": "58490564776",
@@ -47128,7 +48200,7 @@
           "runId": "19776214950"
         }
       ],
-      "totalCount": 17,
+      "totalCount": 18,
       "affectedJobs": [
         {
           "jobName": "AMD SEV-SNP with nydus snapshotter",
@@ -47154,6 +48226,14 @@
           ]
         },
         {
+          "jobName": "non-TEE with force guest pull",
+          "count": 1,
+          "latestDate": "2025-12-22T00:00:00.000Z",
+          "jobIds": [
+            "58665139246"
+          ]
+        },
+        {
           "jobName": "IBM zVSI with nydus snapshotter",
           "count": 1,
           "latestDate": "2025-12-13T00:00:00.000Z",
@@ -47162,7 +48242,7 @@
           ]
         }
       ],
-      "uniqueJobsAffected": 2
+      "uniqueJobsAffected": 3
     },
     "Test that creating a container from an authenticated image, with no credentials fails (with initdata)": {
       "occurrences": [
@@ -47293,6 +48373,12 @@
     },
     "Create a pod from an unsigned image, on an insecureAcceptAnything registry works": {
       "occurrences": [
+        {
+          "date": "2025-12-22T00:00:00.000Z",
+          "jobName": "non-TEE with force guest pull",
+          "jobId": "58665139246",
+          "runId": "20418020103"
+        },
         {
           "date": "2025-12-19T00:00:00.000Z",
           "jobName": "AMD SEV-SNP with nydus snapshotter",
@@ -47432,7 +48518,7 @@
           "runId": "19750471173"
         }
       ],
-      "totalCount": 23,
+      "totalCount": 24,
       "affectedJobs": [
         {
           "jobName": "AMD SEV-SNP with nydus snapshotter",
@@ -47478,6 +48564,14 @@
           ]
         },
         {
+          "jobName": "non-TEE with force guest pull",
+          "count": 1,
+          "latestDate": "2025-12-22T00:00:00.000Z",
+          "jobIds": [
+            "58665139246"
+          ]
+        },
+        {
           "jobName": "IBM zVSI with nydus snapshotter",
           "count": 1,
           "latestDate": "2025-12-13T00:00:00.000Z",
@@ -47486,10 +48580,16 @@
           ]
         }
       ],
-      "uniqueJobsAffected": 4
+      "uniqueJobsAffected": 5
     },
     "Create a pod from an unsigned image, on a 'restricted registry' is rejected": {
       "occurrences": [
+        {
+          "date": "2025-12-22T00:00:00.000Z",
+          "jobName": "non-TEE with force guest pull",
+          "jobId": "58665139246",
+          "runId": "20418020103"
+        },
         {
           "date": "2025-12-19T00:00:00.000Z",
           "jobName": "AMD SEV-SNP with nydus snapshotter",
@@ -47611,7 +48711,7 @@
           "runId": "19776214950"
         }
       ],
-      "totalCount": 20,
+      "totalCount": 21,
       "affectedJobs": [
         {
           "jobName": "AMD SEV-SNP with nydus snapshotter",
@@ -47647,6 +48747,14 @@
           ]
         },
         {
+          "jobName": "non-TEE with force guest pull",
+          "count": 1,
+          "latestDate": "2025-12-22T00:00:00.000Z",
+          "jobIds": [
+            "58665139246"
+          ]
+        },
+        {
           "jobName": "IBM zVSI with nydus snapshotter",
           "count": 1,
           "latestDate": "2025-12-13T00:00:00.000Z",
@@ -47655,10 +48763,16 @@
           ]
         }
       ],
-      "uniqueJobsAffected": 3
+      "uniqueJobsAffected": 4
     },
     "Create a pod from a signed image, on a 'restricted registry' is successful": {
       "occurrences": [
+        {
+          "date": "2025-12-22T00:00:00.000Z",
+          "jobName": "non-TEE with force guest pull",
+          "jobId": "58665139246",
+          "runId": "20418020103"
+        },
         {
           "date": "2025-12-19T00:00:00.000Z",
           "jobName": "AMD SEV-SNP with nydus snapshotter",
@@ -47786,7 +48900,7 @@
           "runId": "19776214950"
         }
       ],
-      "totalCount": 21,
+      "totalCount": 22,
       "affectedJobs": [
         {
           "jobName": "AMD SEV-SNP with nydus snapshotter",
@@ -47829,12 +48943,26 @@
             "57949636726",
             "57207742966"
           ]
+        },
+        {
+          "jobName": "non-TEE with force guest pull",
+          "count": 1,
+          "latestDate": "2025-12-22T00:00:00.000Z",
+          "jobIds": [
+            "58665139246"
+          ]
         }
       ],
-      "uniqueJobsAffected": 3
+      "uniqueJobsAffected": 4
     },
     "Create a pod from a signed image, on a 'restricted registry', but with the wrong key is rejected": {
       "occurrences": [
+        {
+          "date": "2025-12-22T00:00:00.000Z",
+          "jobName": "non-TEE with force guest pull",
+          "jobId": "58665139246",
+          "runId": "20418020103"
+        },
         {
           "date": "2025-12-19T00:00:00.000Z",
           "jobName": "AMD SEV-SNP with nydus snapshotter",
@@ -47956,7 +49084,7 @@
           "runId": "19776214950"
         }
       ],
-      "totalCount": 20,
+      "totalCount": 21,
       "affectedJobs": [
         {
           "jobName": "AMD SEV-SNP with nydus snapshotter",
@@ -47992,6 +49120,14 @@
           ]
         },
         {
+          "jobName": "non-TEE with force guest pull",
+          "count": 1,
+          "latestDate": "2025-12-22T00:00:00.000Z",
+          "jobIds": [
+            "58665139246"
+          ]
+        },
+        {
           "jobName": "IBM zVSI with nydus snapshotter",
           "count": 1,
           "latestDate": "2025-12-13T00:00:00.000Z",
@@ -48000,7 +49136,7 @@
           ]
         }
       ],
-      "uniqueJobsAffected": 3
+      "uniqueJobsAffected": 4
     },
     "Create a pod from an unsigned image, on a 'restricted registry' works if policy files isn't set": {
       "occurrences": [
@@ -48160,6 +49296,12 @@
     "Create a pod from an unsigned image, on an insecureAcceptAnything registry works (with initdata)": {
       "occurrences": [
         {
+          "date": "2025-12-22T00:00:00.000Z",
+          "jobName": "non-TEE with force guest pull",
+          "jobId": "58665139246",
+          "runId": "20418020103"
+        },
+        {
           "date": "2025-12-19T00:00:00.000Z",
           "jobName": "AMD SEV-SNP with nydus snapshotter",
           "jobId": "58490564776",
@@ -48262,7 +49404,7 @@
           "runId": "19776214950"
         }
       ],
-      "totalCount": 17,
+      "totalCount": 18,
       "affectedJobs": [
         {
           "jobName": "AMD SEV-SNP with nydus snapshotter",
@@ -48288,6 +49430,14 @@
           ]
         },
         {
+          "jobName": "non-TEE with force guest pull",
+          "count": 1,
+          "latestDate": "2025-12-22T00:00:00.000Z",
+          "jobIds": [
+            "58665139246"
+          ]
+        },
+        {
           "jobName": "IBM zVSI with nydus snapshotter",
           "count": 1,
           "latestDate": "2025-12-13T00:00:00.000Z",
@@ -48296,11 +49446,17 @@
           ]
         }
       ],
-      "uniqueJobsAffected": 2
+      "uniqueJobsAffected": 3
     },
     "Create a pod from an unsigned image, on a 'restricted registry' is rejected (with initdata)": {
       "occurrences": [
         {
+          "date": "2025-12-22T00:00:00.000Z",
+          "jobName": "non-TEE with force guest pull",
+          "jobId": "58665139246",
+          "runId": "20418020103"
+        },
+        {
           "date": "2025-12-19T00:00:00.000Z",
           "jobName": "AMD SEV-SNP with nydus snapshotter",
           "jobId": "58490564776",
@@ -48403,7 +49559,7 @@
           "runId": "19776214950"
         }
       ],
-      "totalCount": 17,
+      "totalCount": 18,
       "affectedJobs": [
         {
           "jobName": "AMD SEV-SNP with nydus snapshotter",
@@ -48429,6 +49585,14 @@
           ]
         },
         {
+          "jobName": "non-TEE with force guest pull",
+          "count": 1,
+          "latestDate": "2025-12-22T00:00:00.000Z",
+          "jobIds": [
+            "58665139246"
+          ]
+        },
+        {
           "jobName": "IBM zVSI with nydus snapshotter",
           "count": 1,
           "latestDate": "2025-12-13T00:00:00.000Z",
@@ -48437,11 +49601,17 @@
           ]
         }
       ],
-      "uniqueJobsAffected": 2
+      "uniqueJobsAffected": 3
     },
     "Create a pod from a signed image, on a 'restricted registry' is successful (with initdata)": {
       "occurrences": [
         {
+          "date": "2025-12-22T00:00:00.000Z",
+          "jobName": "non-TEE with force guest pull",
+          "jobId": "58665139246",
+          "runId": "20418020103"
+        },
+        {
           "date": "2025-12-19T00:00:00.000Z",
           "jobName": "AMD SEV-SNP with nydus snapshotter",
           "jobId": "58490564776",
@@ -48544,7 +49714,7 @@
           "runId": "19776214950"
         }
       ],
-      "totalCount": 17,
+      "totalCount": 18,
       "affectedJobs": [
         {
           "jobName": "AMD SEV-SNP with nydus snapshotter",
@@ -48570,6 +49740,14 @@
           ]
         },
         {
+          "jobName": "non-TEE with force guest pull",
+          "count": 1,
+          "latestDate": "2025-12-22T00:00:00.000Z",
+          "jobIds": [
+            "58665139246"
+          ]
+        },
+        {
           "jobName": "IBM zVSI with nydus snapshotter",
           "count": 1,
           "latestDate": "2025-12-13T00:00:00.000Z",
@@ -48578,11 +49756,17 @@
           ]
         }
       ],
-      "uniqueJobsAffected": 2
+      "uniqueJobsAffected": 3
     },
     "Create a pod from a signed image, on a 'restricted registry', but with the wrong key is rejected (with initdata)": {
       "occurrences": [
         {
+          "date": "2025-12-22T00:00:00.000Z",
+          "jobName": "non-TEE with force guest pull",
+          "jobId": "58665139246",
+          "runId": "20418020103"
+        },
+        {
           "date": "2025-12-19T00:00:00.000Z",
           "jobName": "AMD SEV-SNP with nydus snapshotter",
           "jobId": "58490564776",
@@ -48685,7 +49869,7 @@
           "runId": "19776214950"
         }
       ],
-      "totalCount": 17,
+      "totalCount": 18,
       "affectedJobs": [
         {
           "jobName": "AMD SEV-SNP with nydus snapshotter",
@@ -48711,6 +49895,14 @@
           ]
         },
         {
+          "jobName": "non-TEE with force guest pull",
+          "count": 1,
+          "latestDate": "2025-12-22T00:00:00.000Z",
+          "jobIds": [
+            "58665139246"
+          ]
+        },
+        {
           "jobName": "IBM zVSI with nydus snapshotter",
           "count": 1,
           "latestDate": "2025-12-13T00:00:00.000Z",
@@ -48719,7 +49911,7 @@
           ]
         }
       ],
-      "uniqueJobsAffected": 2
+      "uniqueJobsAffected": 3
     },
     "Create a pod from an unsigned image, on a 'restricted registry' works if policy files isn't set (with initdata)": {
       "occurrences": [
@@ -48850,6 +50042,12 @@
     },
     "Get CDH resource": {
       "occurrences": [
+        {
+          "date": "2025-12-22T00:00:00.000Z",
+          "jobName": "non-TEE with force guest pull",
+          "jobId": "58665139246",
+          "runId": "20418020103"
+        },
         {
           "date": "2025-12-19T00:00:00.000Z",
           "jobName": "AMD SEV-SNP with nydus snapshotter",
@@ -48989,7 +50187,7 @@
           "runId": "19776214950"
         }
       ],
-      "totalCount": 23,
+      "totalCount": 24,
       "affectedJobs": [
         {
           "jobName": "AMD SEV-SNP with nydus snapshotter",
@@ -49035,6 +50233,14 @@
           ]
         },
         {
+          "jobName": "non-TEE with force guest pull",
+          "count": 1,
+          "latestDate": "2025-12-22T00:00:00.000Z",
+          "jobIds": [
+            "58665139246"
+          ]
+        },
+        {
           "jobName": "IBM zVSI with nydus snapshotter",
           "count": 1,
           "latestDate": "2025-12-13T00:00:00.000Z",
@@ -49043,7 +50249,7 @@
           ]
         }
       ],
-      "uniqueJobsAffected": 4
+      "uniqueJobsAffected": 5
     },
     "Cannot get CDH resource when deny-all policy is set": {
       "occurrences": [
@@ -49844,6 +51050,12 @@
     "Unseal Env Secrets with CDH": {
       "occurrences": [
         {
+          "date": "2025-12-22T00:00:00.000Z",
+          "jobName": "non-TEE with force guest pull",
+          "jobId": "58665139246",
+          "runId": "20418020103"
+        },
+        {
           "date": "2025-12-19T00:00:00.000Z",
           "jobName": "AMD SEV-SNP with nydus snapshotter",
           "jobId": "58490564776",
@@ -49964,7 +51176,7 @@
           "runId": "19776214950"
         }
       ],
-      "totalCount": 20,
+      "totalCount": 21,
       "affectedJobs": [
         {
           "jobName": "AMD SEV-SNP with nydus snapshotter",
@@ -50000,6 +51212,14 @@
           ]
         },
         {
+          "jobName": "non-TEE with force guest pull",
+          "count": 1,
+          "latestDate": "2025-12-22T00:00:00.000Z",
+          "jobIds": [
+            "58665139246"
+          ]
+        },
+        {
           "jobName": "IBM zVSI with nydus snapshotter",
           "count": 1,
           "latestDate": "2025-12-13T00:00:00.000Z",
@@ -50008,11 +51228,17 @@
           ]
         }
       ],
-      "uniqueJobsAffected": 3
+      "uniqueJobsAffected": 4
     },
     "Unseal File Secrets with CDH": {
       "occurrences": [
         {
+          "date": "2025-12-22T00:00:00.000Z",
+          "jobName": "non-TEE with force guest pull",
+          "jobId": "58665139246",
+          "runId": "20418020103"
+        },
+        {
           "date": "2025-12-19T00:00:00.000Z",
           "jobName": "AMD SEV-SNP with nydus snapshotter",
           "jobId": "58490564776",
@@ -50133,7 +51359,7 @@
           "runId": "19776214950"
         }
       ],
-      "totalCount": 20,
+      "totalCount": 21,
       "affectedJobs": [
         {
           "jobName": "AMD SEV-SNP with nydus snapshotter",
@@ -50169,6 +51395,14 @@
           ]
         },
         {
+          "jobName": "non-TEE with force guest pull",
+          "count": 1,
+          "latestDate": "2025-12-22T00:00:00.000Z",
+          "jobIds": [
+            "58665139246"
+          ]
+        },
+        {
           "jobName": "IBM zVSI with nydus snapshotter",
           "count": 1,
           "latestDate": "2025-12-13T00:00:00.000Z",
@@ -50177,7 +51411,7 @@
           ]
         }
       ],
-      "uniqueJobsAffected": 3
+      "uniqueJobsAffected": 4
     },
     "Running with postStart and preStop handlers": {
       "occurrences": [
@@ -52232,6 +53466,12 @@
     "Validate Pod hostname": {
       "occurrences": [
         {
+          "date": "2025-12-22T00:00:00.000Z",
+          "jobName": "non-TEE with force guest pull",
+          "jobId": "58665139246",
+          "runId": "20418020103"
+        },
+        {
           "date": "2025-12-19T00:00:00.000Z",
           "jobName": "AMD SEV-SNP with nydus snapshotter",
           "jobId": "58490564776",
@@ -52346,7 +53586,7 @@
           "runId": "19776214950"
         }
       ],
-      "totalCount": 19,
+      "totalCount": 20,
       "affectedJobs": [
         {
           "jobName": "AMD SEV-SNP with nydus snapshotter",
@@ -52380,9 +53620,17 @@
             "58030688507",
             "57989873131"
           ]
+        },
+        {
+          "jobName": "non-TEE with force guest pull",
+          "count": 1,
+          "latestDate": "2025-12-22T00:00:00.000Z",
+          "jobIds": [
+            "58665139246"
+          ]
         }
       ],
-      "uniqueJobsAffected": 2
+      "uniqueJobsAffected": 3
     },
     "/dev hostPath volume bind mounts the guest device and skips virtio-fs": {
       "occurrences": [
