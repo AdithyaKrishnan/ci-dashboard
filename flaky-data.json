@@ -1,7 +1,7 @@
 {
-  "lastRefresh": "2026-01-03T00:58:08.359Z",
+  "lastRefresh": "2026-01-03T04:28:30.096Z",
   "periodDays": 14,
-  "totalFailures": 710,
+  "totalFailures": 702,
   "totalPRs": 6,
   "confirmedFlakyCount": 3,
   "mergedDespiteFailureCount": 2,
@@ -9,9 +9,9 @@
     {
       "name": "Liveness http probe",
       "file": "k8s-liveness-probes.bats",
-      "totalFailures": 46,
+      "totalFailures": 42,
       "flakyCount": 4,
-      "mergedCount": 12,
+      "mergedCount": 8,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": true,
       "uniquePRs": 6,
@@ -26,16 +26,16 @@
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter (qemu-coco-dev, erofs, default)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter (qemu-coco-dev, erofs, default)",
-          "count": 24,
+          "count": 22,
           "flakyCount": 0,
-          "mergedCount": 6
+          "mergedCount": 4
         },
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
-          "count": 22,
+          "count": 20,
           "flakyCount": 4,
-          "mergedCount": 6
+          "mergedCount": 4
         }
       ],
       "recentOccurrences": [
@@ -446,54 +446,6 @@
           "runAttempt": 1,
           "isFlaky": false,
           "prMerged": false
-        },
-        {
-          "date": "2025-12-22",
-          "prNumber": "12271",
-          "prTitle": "Bump rust to 1.88",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter (qemu-coco-dev, erofs, default)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter (qemu-coco-dev, erofs, default)",
-          "jobId": "58744701547",
-          "runId": "20442370449",
-          "runAttempt": 2,
-          "isFlaky": false,
-          "prMerged": true
-        },
-        {
-          "date": "2025-12-22",
-          "prNumber": "12271",
-          "prTitle": "Bump rust to 1.88",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter (qemu-coco-dev, erofs, default)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter (qemu-coco-dev, erofs, default)",
-          "jobId": "58744701547",
-          "runId": "20442370449",
-          "runAttempt": 2,
-          "isFlaky": false,
-          "prMerged": true
-        },
-        {
-          "date": "2025-12-22",
-          "prNumber": "12271",
-          "prTitle": "Bump rust to 1.88",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
-          "jobId": "58744701631",
-          "runId": "20442370449",
-          "runAttempt": 2,
-          "isFlaky": false,
-          "prMerged": true
-        },
-        {
-          "date": "2025-12-22",
-          "prNumber": "12271",
-          "prTitle": "Bump rust to 1.88",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
-          "jobId": "58744701631",
-          "runId": "20442370449",
-          "runAttempt": 2,
-          "isFlaky": false,
-          "prMerged": true
         },
         {
           "date": "2025-12-22",
@@ -596,9 +548,9 @@
     {
       "name": "Liveness tcp probe",
       "file": "k8s-liveness-probes.bats",
-      "totalFailures": 46,
+      "totalFailures": 42,
       "flakyCount": 4,
-      "mergedCount": 12,
+      "mergedCount": 8,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": true,
       "uniquePRs": 6,
@@ -613,16 +565,16 @@
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter (qemu-coco-dev, erofs, default)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter (qemu-coco-dev, erofs, default)",
-          "count": 24,
+          "count": 22,
           "flakyCount": 0,
-          "mergedCount": 6
+          "mergedCount": 4
         },
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
-          "count": 22,
+          "count": 20,
           "flakyCount": 4,
-          "mergedCount": 6
+          "mergedCount": 4
         }
       ],
       "recentOccurrences": [
@@ -1033,54 +985,6 @@
           "runAttempt": 1,
           "isFlaky": false,
           "prMerged": false
-        },
-        {
-          "date": "2025-12-22",
-          "prNumber": "12271",
-          "prTitle": "Bump rust to 1.88",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter (qemu-coco-dev, erofs, default)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter (qemu-coco-dev, erofs, default)",
-          "jobId": "58744701547",
-          "runId": "20442370449",
-          "runAttempt": 2,
-          "isFlaky": false,
-          "prMerged": true
-        },
-        {
-          "date": "2025-12-22",
-          "prNumber": "12271",
-          "prTitle": "Bump rust to 1.88",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter (qemu-coco-dev, erofs, default)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter (qemu-coco-dev, erofs, default)",
-          "jobId": "58744701547",
-          "runId": "20442370449",
-          "runAttempt": 2,
-          "isFlaky": false,
-          "prMerged": true
-        },
-        {
-          "date": "2025-12-22",
-          "prNumber": "12271",
-          "prTitle": "Bump rust to 1.88",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
-          "jobId": "58744701631",
-          "runId": "20442370449",
-          "runAttempt": 2,
-          "isFlaky": false,
-          "prMerged": true
-        },
-        {
-          "date": "2025-12-22",
-          "prNumber": "12271",
-          "prTitle": "Bump rust to 1.88",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
-          "jobId": "58744701631",
-          "runId": "20442370449",
-          "runAttempt": 2,
-          "isFlaky": false,
-          "prMerged": true
         },
         {
           "date": "2025-12-22",
@@ -10005,7 +9909,7 @@
       },
       {
         "date": "2025-12-22",
-        "failures": 228
+        "failures": 220
       },
       {
         "date": "2025-12-23",
@@ -10088,16 +9992,16 @@
       {
         "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter (qemu-coco-dev, erofs, default)",
         "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter (qemu-coco-dev, erofs, default)",
-        "count": 48,
+        "count": 44,
         "flakyCount": 0,
-        "mergedCount": 12
+        "mergedCount": 8
       },
       {
         "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
         "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
-        "count": 44,
+        "count": 40,
         "flakyCount": 8,
-        "mergedCount": 12
+        "mergedCount": 8
       },
       {
         "name": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, cloud-hypervisor, normal)",
