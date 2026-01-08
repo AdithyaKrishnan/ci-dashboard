@@ -1,7 +1,7 @@
 {
-  "lastRefresh": "2026-01-08T04:37:16.297Z",
+  "lastRefresh": "2026-01-08T08:24:23.367Z",
   "periodDays": 14,
-  "totalFailures": 1081,
+  "totalFailures": 1077,
   "totalPRs": 19,
   "confirmedFlakyCount": 62,
   "mergedDespiteFailureCount": 61,
@@ -9,12 +9,12 @@
     {
       "name": "Liveness http probe",
       "file": "k8s-liveness-probes.bats",
-      "totalFailures": 46,
+      "totalFailures": 44,
       "flakyCount": 8,
       "mergedCount": 10,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": true,
-      "uniquePRs": 11,
+      "uniquePRs": 10,
       "uniqueDates": [
         "2026-01-07"
       ],
@@ -22,7 +22,7 @@
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter (qemu-coco-dev, erofs, default)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter (qemu-coco-dev, erofs, default)",
-          "count": 26,
+          "count": 24,
           "flakyCount": 6,
           "mergedCount": 6
         },
@@ -364,30 +364,6 @@
           "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, dragonball, small)",
           "jobId": "59659717906",
           "runId": "20774697769",
-          "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-07",
-          "prNumber": "12293",
-          "prTitle": "runtime-rs: make OOM watcher and signal handling lifecycle-aware",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter (qemu-coco-dev, erofs, default)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter (qemu-coco-dev, erofs, default)",
-          "jobId": "59653767030",
-          "runId": "20772977772",
-          "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-07",
-          "prNumber": "12293",
-          "prTitle": "runtime-rs: make OOM watcher and signal handling lifecycle-aware",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter (qemu-coco-dev, erofs, default)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter (qemu-coco-dev, erofs, default)",
-          "jobId": "59653767030",
-          "runId": "20772977772",
           "runAttempt": 1,
           "isFlaky": false,
           "prMerged": false
@@ -613,12 +589,12 @@
     {
       "name": "Liveness tcp probe",
       "file": "k8s-liveness-probes.bats",
-      "totalFailures": 46,
+      "totalFailures": 44,
       "flakyCount": 8,
       "mergedCount": 10,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": true,
-      "uniquePRs": 11,
+      "uniquePRs": 10,
       "uniqueDates": [
         "2026-01-07"
       ],
@@ -626,7 +602,7 @@
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter (qemu-coco-dev, erofs, default)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter (qemu-coco-dev, erofs, default)",
-          "count": 26,
+          "count": 24,
           "flakyCount": 6,
           "mergedCount": 6
         },
@@ -968,30 +944,6 @@
           "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, dragonball, small)",
           "jobId": "59659717906",
           "runId": "20774697769",
-          "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-07",
-          "prNumber": "12293",
-          "prTitle": "runtime-rs: make OOM watcher and signal handling lifecycle-aware",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter (qemu-coco-dev, erofs, default)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter (qemu-coco-dev, erofs, default)",
-          "jobId": "59653767030",
-          "runId": "20772977772",
-          "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-07",
-          "prNumber": "12293",
-          "prTitle": "runtime-rs: make OOM watcher and signal handling lifecycle-aware",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter (qemu-coco-dev, erofs, default)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter (qemu-coco-dev, erofs, default)",
-          "jobId": "59653767030",
-          "runId": "20772977772",
           "runAttempt": 1,
           "isFlaky": false,
           "prMerged": false
@@ -15642,7 +15594,7 @@
       },
       {
         "date": "2026-01-07",
-        "failures": 1079
+        "failures": 1075
       },
       {
         "date": "2026-01-08",
@@ -15681,7 +15633,7 @@
       {
         "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter (qemu-coco-dev, erofs, default)",
         "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter (qemu-coco-dev, erofs, default)",
-        "count": 56,
+        "count": 52,
         "flakyCount": 14,
         "mergedCount": 14
       },
