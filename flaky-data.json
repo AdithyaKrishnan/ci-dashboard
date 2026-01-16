@@ -1,10 +1,10 @@
 {
-  "lastRefresh": "2026-01-16T08:24:20.419Z",
+  "lastRefresh": "2026-01-16T12:31:40.049Z",
   "periodDays": 14,
-  "totalFailures": 148,
-  "totalPRs": 11,
+  "totalFailures": 145,
+  "totalPRs": 9,
   "confirmedFlakyCount": 41,
-  "mergedDespiteFailureCount": 2,
+  "mergedDespiteFailureCount": 1,
   "failedTests": [
     {
       "name": "Empty dir volume with subPath shares data from initContainer",
@@ -696,12 +696,12 @@
     {
       "name": "setup_file failed",
       "file": "k8s-nvidia-nim.bats",
-      "totalFailures": 8,
+      "totalFailures": 7,
       "flakyCount": 1,
       "mergedCount": 0,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": false,
-      "uniquePRs": 3,
+      "uniquePRs": 2,
       "uniqueDates": [
         "2026-01-15",
         "2026-01-14"
@@ -710,7 +710,7 @@
         {
           "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
           "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "count": 5,
+          "count": 4,
           "flakyCount": 1,
           "mergedCount": 0
         },
@@ -723,18 +723,6 @@
         }
       ],
       "recentOccurrences": [
-        {
-          "date": "2026-01-15",
-          "prNumber": "12339",
-          "prTitle": "docs: Update NVIDIA GPU passthrough QEMU scenario",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobId": "60500201025",
-          "runId": "21039989057",
-          "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": false
-        },
         {
           "date": "2026-01-15",
           "prNumber": "12331",
@@ -822,14 +810,118 @@
       ]
     },
     {
+      "name": "Empty dir volume when FSGroup is specified with non-root container",
+      "file": "k8s-empty-dirs.bats",
+      "totalFailures": 6,
+      "flakyCount": 4,
+      "mergedCount": 0,
+      "isConfirmedFlaky": true,
+      "mergedDespiteFailure": false,
+      "uniquePRs": 2,
+      "uniqueDates": [
+        "2026-01-16",
+        "2026-01-14"
+      ],
+      "affectedJobs": [
+        {
+          "name": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (devmapper, qemu, kubeadm)",
+          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (devmapper, qemu, kubeadm)",
+          "count": 4,
+          "flakyCount": 2,
+          "mergedCount": 0
+        },
+        {
+          "name": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu, kubeadm)",
+          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu, kubeadm)",
+          "count": 2,
+          "flakyCount": 2,
+          "mergedCount": 0
+        }
+      ],
+      "recentOccurrences": [
+        {
+          "date": "2026-01-16",
+          "prNumber": "12312\n12310",
+          "prTitle": "kata-deploy: Fix extraction of the containerd major version\nFix extraction of the containerd major version",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (devmapper, qemu, kubeadm)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (devmapper, qemu, kubeadm)",
+          "jobId": "60583094958",
+          "runId": "21065407452",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-16",
+          "prNumber": "12312\n12310",
+          "prTitle": "kata-deploy: Fix extraction of the containerd major version\nFix extraction of the containerd major version",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (devmapper, qemu, kubeadm)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (devmapper, qemu, kubeadm)",
+          "jobId": "60583094958",
+          "runId": "21065407452",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-14",
+          "prNumber": "12331",
+          "prTitle": "runtime: Fix golang information lost when compiling",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (devmapper, qemu, kubeadm)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (devmapper, qemu, kubeadm)",
+          "jobId": "60352312766",
+          "runId": "20995167313",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-14",
+          "prNumber": "12331",
+          "prTitle": "runtime: Fix golang information lost when compiling",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (devmapper, qemu, kubeadm)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (devmapper, qemu, kubeadm)",
+          "jobId": "60352312766",
+          "runId": "20995167313",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-14",
+          "prNumber": "12331",
+          "prTitle": "runtime: Fix golang information lost when compiling",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu, kubeadm)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu, kubeadm)",
+          "jobId": "60355256166",
+          "runId": "20995167313",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-14",
+          "prNumber": "12331",
+          "prTitle": "runtime: Fix golang information lost when compiling",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu, kubeadm)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu, kubeadm)",
+          "jobId": "60355256166",
+          "runId": "20995167313",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": false
+        }
+      ]
+    },
+    {
       "name": "Test OOM events for pods",
       "file": "k8s-oom.bats",
-      "totalFailures": 8,
+      "totalFailures": 6,
       "flakyCount": 2,
       "mergedCount": 4,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": true,
-      "uniquePRs": 4,
+      "uniquePRs": 3,
       "uniqueDates": [
         "2026-01-15",
         "2026-01-14"
@@ -838,36 +930,12 @@
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
-          "count": 8,
+          "count": 6,
           "flakyCount": 2,
           "mergedCount": 4
         }
       ],
       "recentOccurrences": [
-        {
-          "date": "2026-01-15",
-          "prNumber": "12339",
-          "prTitle": "docs: Update NVIDIA GPU passthrough QEMU scenario",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
-          "jobId": "60500201147",
-          "runId": "21039989057",
-          "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-15",
-          "prNumber": "12339",
-          "prTitle": "docs: Update NVIDIA GPU passthrough QEMU scenario",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
-          "jobId": "60500201147",
-          "runId": "21039989057",
-          "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": false
-        },
         {
           "date": "2026-01-15",
           "prNumber": "12338",
@@ -945,174 +1013,70 @@
     {
       "name": "Verify nginx connectivity between pods",
       "file": "k8s-nginx-connectivity.bats",
-      "totalFailures": 6,
-      "flakyCount": 4,
-      "mergedCount": 2,
-      "isConfirmedFlaky": true,
-      "mergedDespiteFailure": true,
-      "uniquePRs": 3,
-      "uniqueDates": [
-        "2026-01-15",
-        "2026-01-14",
-        "2026-01-13"
-      ],
-      "affectedJobs": [
-        {
-          "name": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu, kubeadm)",
-          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu, kubeadm)",
-          "count": 6,
-          "flakyCount": 4,
-          "mergedCount": 2
-        }
-      ],
-      "recentOccurrences": [
-        {
-          "date": "2026-01-15",
-          "prNumber": "12334",
-          "prTitle": "Rust linting improvements",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu, kubeadm)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu, kubeadm)",
-          "jobId": "60524692891",
-          "runId": "21029937628",
-          "runAttempt": 3,
-          "isFlaky": false,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-15",
-          "prNumber": "12334",
-          "prTitle": "Rust linting improvements",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu, kubeadm)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu, kubeadm)",
-          "jobId": "60524692891",
-          "runId": "21029937628",
-          "runAttempt": 3,
-          "isFlaky": false,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-14",
-          "prNumber": "12280",
-          "prTitle": "runtime: Support subPath mounts for emptyDir volumes in Kata runtime",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu, kubeadm)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu, kubeadm)",
-          "jobId": "60322092792",
-          "runId": "20986108896",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-14",
-          "prNumber": "12280",
-          "prTitle": "runtime: Support subPath mounts for emptyDir volumes in Kata runtime",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu, kubeadm)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu, kubeadm)",
-          "jobId": "60322092792",
-          "runId": "20986108896",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-13",
-          "prNumber": "12252",
-          "prTitle": "kernel: Bump to the new LTS",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu, kubeadm)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu, kubeadm)",
-          "jobId": "60252109915",
-          "runId": "20963766971",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": true
-        },
-        {
-          "date": "2026-01-13",
-          "prNumber": "12252",
-          "prTitle": "kernel: Bump to the new LTS",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu, kubeadm)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu, kubeadm)",
-          "jobId": "60252109915",
-          "runId": "20963766971",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": true
-        }
-      ]
-    },
-    {
-      "name": "Empty dir volume when FSGroup is specified with non-root container",
-      "file": "k8s-empty-dirs.bats",
       "totalFailures": 4,
-      "flakyCount": 4,
+      "flakyCount": 2,
       "mergedCount": 0,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": false,
-      "uniquePRs": 1,
+      "uniquePRs": 2,
       "uniqueDates": [
+        "2026-01-15",
         "2026-01-14"
       ],
       "affectedJobs": [
         {
-          "name": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (devmapper, qemu, kubeadm)",
-          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (devmapper, qemu, kubeadm)",
-          "count": 2,
-          "flakyCount": 2,
-          "mergedCount": 0
-        },
-        {
           "name": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu, kubeadm)",
           "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu, kubeadm)",
-          "count": 2,
+          "count": 4,
           "flakyCount": 2,
           "mergedCount": 0
         }
       ],
       "recentOccurrences": [
         {
-          "date": "2026-01-14",
-          "prNumber": "12331",
-          "prTitle": "runtime: Fix golang information lost when compiling",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (devmapper, qemu, kubeadm)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (devmapper, qemu, kubeadm)",
-          "jobId": "60352312766",
-          "runId": "20995167313",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-14",
-          "prNumber": "12331",
-          "prTitle": "runtime: Fix golang information lost when compiling",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (devmapper, qemu, kubeadm)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (devmapper, qemu, kubeadm)",
-          "jobId": "60352312766",
-          "runId": "20995167313",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-14",
-          "prNumber": "12331",
-          "prTitle": "runtime: Fix golang information lost when compiling",
+          "date": "2026-01-15",
+          "prNumber": "12334",
+          "prTitle": "Rust linting improvements",
           "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu, kubeadm)",
           "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu, kubeadm)",
-          "jobId": "60355256166",
-          "runId": "20995167313",
+          "jobId": "60524692891",
+          "runId": "21029937628",
+          "runAttempt": 3,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-15",
+          "prNumber": "12334",
+          "prTitle": "Rust linting improvements",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu, kubeadm)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu, kubeadm)",
+          "jobId": "60524692891",
+          "runId": "21029937628",
+          "runAttempt": 3,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-14",
+          "prNumber": "12280",
+          "prTitle": "runtime: Support subPath mounts for emptyDir volumes in Kata runtime",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu, kubeadm)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu, kubeadm)",
+          "jobId": "60322092792",
+          "runId": "20986108896",
           "runAttempt": 1,
           "isFlaky": true,
           "prMerged": false
         },
         {
           "date": "2026-01-14",
-          "prNumber": "12331",
-          "prTitle": "runtime: Fix golang information lost when compiling",
+          "prNumber": "12280",
+          "prTitle": "runtime: Support subPath mounts for emptyDir volumes in Kata runtime",
           "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu, kubeadm)",
           "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu, kubeadm)",
-          "jobId": "60355256166",
-          "runId": "20995167313",
+          "jobId": "60322092792",
+          "runId": "20986108896",
           "runAttempt": 1,
           "isFlaky": true,
           "prMerged": false
@@ -2859,13 +2823,13 @@
   "summary": {
     "totalFailedTests": 41,
     "confirmedFlaky": 41,
-    "mergedDespiteFailure": 2,
+    "mergedDespiteFailure": 1,
     "mostAffectedJob": {
       "name": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu, kubeadm)",
       "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu, kubeadm)",
-      "count": 41,
-      "flakyCount": 39,
-      "mergedCount": 2
+      "count": 39,
+      "flakyCount": 37,
+      "mergedCount": 0
     },
     "trend": [
       {
@@ -2910,7 +2874,7 @@
       },
       {
         "date": "2026-01-13",
-        "failures": 4
+        "failures": 2
       },
       {
         "date": "2026-01-14",
@@ -2918,20 +2882,20 @@
       },
       {
         "date": "2026-01-15",
-        "failures": 49
+        "failures": 46
       },
       {
         "date": "2026-01-16",
-        "failures": 0
+        "failures": 2
       }
     ],
     "jobBreakdown": [
       {
         "name": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu, kubeadm)",
         "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu, kubeadm)",
-        "count": 41,
-        "flakyCount": 39,
-        "mergedCount": 2
+        "count": 39,
+        "flakyCount": 37,
+        "mergedCount": 0
       },
       {
         "name": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (nydus, qemu-coco-dev, kubeadm)",
@@ -2943,7 +2907,7 @@
       {
         "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
         "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
-        "count": 12,
+        "count": 10,
         "flakyCount": 6,
         "mergedCount": 4
       },
