@@ -1,7 +1,7 @@
 {
-  "lastRefresh": "2026-01-19T08:28:34.779Z",
+  "lastRefresh": "2026-01-19T12:34:39.541Z",
   "periodDays": 14,
-  "totalFailures": 58,
+  "totalFailures": 56,
   "totalPRs": 9,
   "confirmedFlakyCount": 23,
   "mergedDespiteFailureCount": 1,
@@ -9,7 +9,7 @@
     {
       "name": "setup_file failed",
       "file": "k8s-nvidia-nim.bats",
-      "totalFailures": 8,
+      "totalFailures": 6,
       "flakyCount": 1,
       "mergedCount": 0,
       "isConfirmedFlaky": true,
@@ -24,14 +24,14 @@
         {
           "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
           "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "count": 5,
+          "count": 4,
           "flakyCount": 1,
           "mergedCount": 0
         },
         {
           "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
           "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
-          "count": 3,
+          "count": 2,
           "flakyCount": 0,
           "mergedCount": 0
         }
@@ -58,30 +58,6 @@
           "jobId": "60426398871",
           "runId": "21017398746",
           "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-15",
-          "prNumber": "12265",
-          "prTitle": "nvidia: Bump nvidia-container-toolkit to 1.18.1",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobId": "60468867837",
-          "runId": "21029956393",
-          "runAttempt": 3,
-          "isFlaky": false,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-15",
-          "prNumber": "12265",
-          "prTitle": "nvidia: Bump nvidia-container-toolkit to 1.18.1",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
-          "jobId": "60468867994",
-          "runId": "21029956393",
-          "runAttempt": 3,
           "isFlaky": false,
           "prMerged": false
         },
@@ -1372,7 +1348,7 @@
       },
       {
         "date": "2026-01-15",
-        "failures": 46
+        "failures": 44
       },
       {
         "date": "2026-01-16",
@@ -1402,7 +1378,7 @@
       {
         "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
         "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-        "count": 11,
+        "count": 10,
         "flakyCount": 7,
         "mergedCount": 0
       },
@@ -1423,7 +1399,7 @@
       {
         "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
         "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
-        "count": 3,
+        "count": 2,
         "flakyCount": 0,
         "mergedCount": 0
       },
