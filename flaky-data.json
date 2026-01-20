@@ -1,21 +1,22 @@
 {
-  "lastRefresh": "2026-01-20T01:04:08.771Z",
+  "lastRefresh": "2026-01-20T04:45:01.695Z",
   "periodDays": 14,
-  "totalFailures": 108,
+  "totalFailures": 124,
   "totalPRs": 10,
-  "confirmedFlakyCount": 24,
+  "confirmedFlakyCount": 23,
   "mergedDespiteFailureCount": 0,
   "failedTests": [
     {
       "name": "CUDA Vector Addition Test",
       "file": "k8s-nvidia-cuda.bats",
-      "totalFailures": 15,
-      "flakyCount": 13,
+      "totalFailures": 19,
+      "flakyCount": 17,
       "mergedCount": 0,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": false,
       "uniquePRs": 4,
       "uniqueDates": [
+        "2026-01-20",
         "2026-01-19",
         "2026-01-16"
       ],
@@ -23,19 +24,67 @@
         {
           "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
           "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
-          "count": 8,
-          "flakyCount": 6,
+          "count": 10,
+          "flakyCount": 8,
           "mergedCount": 0
         },
         {
           "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
           "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "count": 7,
-          "flakyCount": 7,
+          "count": 9,
+          "flakyCount": 9,
           "mergedCount": 0
         }
       ],
       "recentOccurrences": [
+        {
+          "date": "2026-01-20",
+          "prNumber": "12316",
+          "prTitle": "runtime: nvidia: Use image and sanitize whitespaces",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
+          "jobId": "60844819890",
+          "runId": "21156657333",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-20",
+          "prNumber": "12316",
+          "prTitle": "runtime: nvidia: Use image and sanitize whitespaces",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
+          "jobId": "60844819890",
+          "runId": "21156657333",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-20",
+          "prNumber": "12316",
+          "prTitle": "runtime: nvidia: Use image and sanitize whitespaces",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "60844819892",
+          "runId": "21156657333",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-20",
+          "prNumber": "12316",
+          "prTitle": "runtime: nvidia: Use image and sanitize whitespaces",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "60844819892",
+          "runId": "21156657333",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": false
+        },
         {
           "date": "2026-01-19",
           "prNumber": "12363",
@@ -220,14 +269,15 @@
     },
     {
       "name": "setup_file failed",
-      "file": "k8s-nvidia-nim.bats",
-      "totalFailures": 15,
-      "flakyCount": 13,
+      "file": "k8s-nvidia-cuda.bats",
+      "totalFailures": 19,
+      "flakyCount": 17,
       "mergedCount": 0,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": false,
       "uniquePRs": 4,
       "uniqueDates": [
+        "2026-01-20",
         "2026-01-19",
         "2026-01-16"
       ],
@@ -235,19 +285,67 @@
         {
           "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
           "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
-          "count": 8,
-          "flakyCount": 6,
+          "count": 10,
+          "flakyCount": 8,
           "mergedCount": 0
         },
         {
           "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
           "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "count": 7,
-          "flakyCount": 7,
+          "count": 9,
+          "flakyCount": 9,
           "mergedCount": 0
         }
       ],
       "recentOccurrences": [
+        {
+          "date": "2026-01-20",
+          "prNumber": "12316",
+          "prTitle": "runtime: nvidia: Use image and sanitize whitespaces",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
+          "jobId": "60844819890",
+          "runId": "21156657333",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-20",
+          "prNumber": "12316",
+          "prTitle": "runtime: nvidia: Use image and sanitize whitespaces",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
+          "jobId": "60844819890",
+          "runId": "21156657333",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-20",
+          "prNumber": "12316",
+          "prTitle": "runtime: nvidia: Use image and sanitize whitespaces",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "60844819892",
+          "runId": "21156657333",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-20",
+          "prNumber": "12316",
+          "prTitle": "runtime: nvidia: Use image and sanitize whitespaces",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "60844819892",
+          "runId": "21156657333",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": false
+        },
         {
           "date": "2026-01-19",
           "prNumber": "12363",
@@ -438,8 +536,9 @@
       "mergedCount": 0,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": false,
-      "uniquePRs": 4,
+      "uniquePRs": 5,
       "uniqueDates": [
+        "2026-01-20",
         "2026-01-19",
         "2026-01-17",
         "2026-01-16"
@@ -448,8 +547,8 @@
         {
           "name": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (devmapper, qemu, kubeadm)",
           "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (devmapper, qemu, kubeadm)",
-          "count": 10,
-          "flakyCount": 10,
+          "count": 12,
+          "flakyCount": 12,
           "mergedCount": 0
         },
         {
@@ -458,17 +557,34 @@
           "count": 2,
           "flakyCount": 0,
           "mergedCount": 0
-        },
-        {
-          "name": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (cbl-mariner, clh, small, oci-distribution)",
-          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (cbl-mariner, clh, small, oci-distribution)",
-          "count": 2,
-          "flakyCount": 2,
-          "mergedCount": 0
         }
       ],
       "recentOccurrences": [
         {
+          "date": "2026-01-20",
+          "prNumber": "12316",
+          "prTitle": "runtime: nvidia: Use image and sanitize whitespaces",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (devmapper, qemu, kubeadm)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (devmapper, qemu, kubeadm)",
+          "jobId": "60845190830",
+          "runId": "21156657333",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-20",
+          "prNumber": "12316",
+          "prTitle": "runtime: nvidia: Use image and sanitize whitespaces",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (devmapper, qemu, kubeadm)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (devmapper, qemu, kubeadm)",
+          "jobId": "60845190830",
+          "runId": "21156657333",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": false
+        },
+        {
           "date": "2026-01-19",
           "prNumber": "12365",
           "prTitle": "tests: Add common bats test runner function",
@@ -513,30 +629,6 @@
           "jobId": "60800633589",
           "runId": "21138742774",
           "runAttempt": 3,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-19",
-          "prNumber": "12355",
-          "prTitle": "runtime-rs: Add arm64 QEMU support",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (cbl-mariner, clh, small, oci-distribution)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (cbl-mariner, clh, small, oci-distribution)",
-          "jobId": "60832081419",
-          "runId": "21152279747",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-19",
-          "prNumber": "12355",
-          "prTitle": "runtime-rs: Add arm64 QEMU support",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (cbl-mariner, clh, small, oci-distribution)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (cbl-mariner, clh, small, oci-distribution)",
-          "jobId": "60832081419",
-          "runId": "21152279747",
-          "runAttempt": 1,
           "isFlaky": true,
           "prMerged": false
         },
@@ -641,13 +733,14 @@
     {
       "name": "Get CDH resource",
       "file": "k8s-confidential-attestation.bats",
-      "totalFailures": 9,
-      "flakyCount": 9,
+      "totalFailures": 11,
+      "flakyCount": 11,
       "mergedCount": 0,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": false,
       "uniquePRs": 3,
       "uniqueDates": [
+        "2026-01-20",
         "2026-01-19",
         "2026-01-16"
       ],
@@ -655,8 +748,8 @@
         {
           "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
           "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "count": 7,
-          "flakyCount": 7,
+          "count": 9,
+          "flakyCount": 9,
           "mergedCount": 0
         },
         {
@@ -668,6 +761,30 @@
         }
       ],
       "recentOccurrences": [
+        {
+          "date": "2026-01-20",
+          "prNumber": "12316",
+          "prTitle": "runtime: nvidia: Use image and sanitize whitespaces",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "60844819892",
+          "runId": "21156657333",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-20",
+          "prNumber": "12316",
+          "prTitle": "runtime: nvidia: Use image and sanitize whitespaces",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "60844819892",
+          "runId": "21156657333",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": false
+        },
         {
           "date": "2026-01-19",
           "prNumber": "12350",
@@ -781,13 +898,14 @@
     {
       "name": "Cannot get CDH resource when deny-all policy is set",
       "file": "k8s-confidential-attestation.bats",
-      "totalFailures": 7,
-      "flakyCount": 7,
+      "totalFailures": 9,
+      "flakyCount": 9,
       "mergedCount": 0,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": false,
       "uniquePRs": 3,
       "uniqueDates": [
+        "2026-01-20",
         "2026-01-19",
         "2026-01-16"
       ],
@@ -795,12 +913,36 @@
         {
           "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
           "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "count": 7,
-          "flakyCount": 7,
+          "count": 9,
+          "flakyCount": 9,
           "mergedCount": 0
         }
       ],
       "recentOccurrences": [
+        {
+          "date": "2026-01-20",
+          "prNumber": "12316",
+          "prTitle": "runtime: nvidia: Use image and sanitize whitespaces",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "60844819892",
+          "runId": "21156657333",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-20",
+          "prNumber": "12316",
+          "prTitle": "runtime: nvidia: Use image and sanitize whitespaces",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "60844819892",
+          "runId": "21156657333",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": false
+        },
         {
           "date": "2026-01-19",
           "prNumber": "12350",
@@ -890,13 +1032,14 @@
     {
       "name": "Cannot get CDH resource when affirming policy is set without reference values",
       "file": "k8s-confidential-attestation.bats",
-      "totalFailures": 7,
-      "flakyCount": 7,
+      "totalFailures": 9,
+      "flakyCount": 9,
       "mergedCount": 0,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": false,
       "uniquePRs": 3,
       "uniqueDates": [
+        "2026-01-20",
         "2026-01-19",
         "2026-01-16"
       ],
@@ -904,12 +1047,36 @@
         {
           "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
           "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "count": 7,
-          "flakyCount": 7,
+          "count": 9,
+          "flakyCount": 9,
           "mergedCount": 0
         }
       ],
       "recentOccurrences": [
+        {
+          "date": "2026-01-20",
+          "prNumber": "12316",
+          "prTitle": "runtime: nvidia: Use image and sanitize whitespaces",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "60844819892",
+          "runId": "21156657333",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-20",
+          "prNumber": "12316",
+          "prTitle": "runtime: nvidia: Use image and sanitize whitespaces",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "60844819892",
+          "runId": "21156657333",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": false
+        },
         {
           "date": "2026-01-19",
           "prNumber": "12350",
@@ -999,13 +1166,14 @@
     {
       "name": "Can get CDH resource when affirming policy is set with reference values",
       "file": "k8s-confidential-attestation.bats",
-      "totalFailures": 7,
-      "flakyCount": 7,
+      "totalFailures": 9,
+      "flakyCount": 9,
       "mergedCount": 0,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": false,
       "uniquePRs": 3,
       "uniqueDates": [
+        "2026-01-20",
         "2026-01-19",
         "2026-01-16"
       ],
@@ -1013,12 +1181,36 @@
         {
           "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
           "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "count": 7,
-          "flakyCount": 7,
+          "count": 9,
+          "flakyCount": 9,
           "mergedCount": 0
         }
       ],
       "recentOccurrences": [
+        {
+          "date": "2026-01-20",
+          "prNumber": "12316",
+          "prTitle": "runtime: nvidia: Use image and sanitize whitespaces",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "60844819892",
+          "runId": "21156657333",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-20",
+          "prNumber": "12316",
+          "prTitle": "runtime: nvidia: Use image and sanitize whitespaces",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "60844819892",
+          "runId": "21156657333",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": false
+        },
         {
           "date": "2026-01-19",
           "prNumber": "12350",
@@ -1108,16 +1300,24 @@
     {
       "name": "Parallel jobs",
       "file": "k8s-parallel.bats",
-      "totalFailures": 2,
-      "flakyCount": 2,
+      "totalFailures": 4,
+      "flakyCount": 4,
       "mergedCount": 0,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": false,
-      "uniquePRs": 1,
+      "uniquePRs": 2,
       "uniqueDates": [
+        "2026-01-20",
         "2026-01-19"
       ],
       "affectedJobs": [
+        {
+          "name": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, dragonball, normal)",
+          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, dragonball, normal)",
+          "count": 2,
+          "flakyCount": 2,
+          "mergedCount": 0
+        },
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev, nydus, guest-pull)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev, nydus, guest-pull)",
@@ -1128,6 +1328,30 @@
       ],
       "recentOccurrences": [
         {
+          "date": "2026-01-20",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, dragonball, normal)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, dragonball, normal)",
+          "jobId": "60841501989",
+          "runId": "21155918716",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-20",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, dragonball, normal)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, dragonball, normal)",
+          "jobId": "60841501989",
+          "runId": "21155918716",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": false
+        },
+        {
           "date": "2026-01-19",
           "prNumber": "12316",
           "prTitle": "runtime: nvidia: Use image and sanitize whitespaces",
@@ -1147,54 +1371,6 @@
           "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev, nydus, guest-pull)",
           "jobId": "60836203254",
           "runId": "21153558758",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        }
-      ]
-    },
-    {
-      "name": "Test readonly volume for pods",
-      "file": "k8s-file-volume.bats",
-      "totalFailures": 2,
-      "flakyCount": 2,
-      "mergedCount": 0,
-      "isConfirmedFlaky": true,
-      "mergedDespiteFailure": false,
-      "uniquePRs": 1,
-      "uniqueDates": [
-        "2026-01-19"
-      ],
-      "affectedJobs": [
-        {
-          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter (qemu-coco-dev, erofs, default)",
-          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter (qemu-coco-dev, erofs, default)",
-          "count": 2,
-          "flakyCount": 2,
-          "mergedCount": 0
-        }
-      ],
-      "recentOccurrences": [
-        {
-          "date": "2026-01-19",
-          "prNumber": "12355",
-          "prTitle": "runtime-rs: Add arm64 QEMU support",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter (qemu-coco-dev, erofs, default)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter (qemu-coco-dev, erofs, default)",
-          "jobId": "60832081315",
-          "runId": "21152279747",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-19",
-          "prNumber": "12355",
-          "prTitle": "runtime-rs: Add arm64 QEMU support",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter (qemu-coco-dev, erofs, default)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter (qemu-coco-dev, erofs, default)",
-          "jobId": "60832081315",
-          "runId": "21152279747",
           "runAttempt": 1,
           "isFlaky": true,
           "prMerged": false
@@ -1923,14 +2099,14 @@
     }
   ],
   "summary": {
-    "totalFailedTests": 24,
-    "confirmedFlaky": 24,
+    "totalFailedTests": 23,
+    "confirmedFlaky": 23,
     "mergedDespiteFailure": 0,
     "mostAffectedJob": {
       "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
       "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-      "count": 42,
-      "flakyCount": 42,
+      "count": 54,
+      "flakyCount": 54,
       "mergedCount": 0
     },
     "trend": [
@@ -1984,19 +2160,19 @@
       },
       {
         "date": "2026-01-19",
-        "failures": 98
+        "failures": 94
       },
       {
         "date": "2026-01-20",
-        "failures": 0
+        "failures": 20
       }
     ],
     "jobBreakdown": [
       {
         "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
         "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-        "count": 42,
-        "flakyCount": 42,
+        "count": 54,
+        "flakyCount": 54,
         "mergedCount": 0
       },
       {
@@ -2009,15 +2185,15 @@
       {
         "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
         "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
-        "count": 16,
-        "flakyCount": 12,
+        "count": 20,
+        "flakyCount": 16,
         "mergedCount": 0
       },
       {
         "name": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (devmapper, qemu, kubeadm)",
         "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (devmapper, qemu, kubeadm)",
-        "count": 10,
-        "flakyCount": 10,
+        "count": 12,
+        "flakyCount": 12,
         "mergedCount": 0
       },
       {
@@ -2035,15 +2211,8 @@
         "mergedCount": 0
       },
       {
-        "name": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (cbl-mariner, clh, small, oci-distribution)",
-        "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (cbl-mariner, clh, small, oci-distribution)",
-        "count": 2,
-        "flakyCount": 2,
-        "mergedCount": 0
-      },
-      {
-        "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter (qemu-coco-dev, erofs, default)",
-        "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter (qemu-coco-dev, erofs, default)",
+        "name": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, dragonball, normal)",
+        "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, dragonball, normal)",
         "count": 2,
         "flakyCount": 2,
         "mergedCount": 0
