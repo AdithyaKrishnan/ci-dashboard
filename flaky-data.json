@@ -1,8 +1,8 @@
 {
-  "lastRefresh": "2026-01-20T04:45:01.695Z",
+  "lastRefresh": "2026-01-20T08:27:08.858Z",
   "periodDays": 14,
-  "totalFailures": 124,
-  "totalPRs": 10,
+  "totalFailures": 128,
+  "totalPRs": 11,
   "confirmedFlakyCount": 23,
   "mergedDespiteFailureCount": 0,
   "failedTests": [
@@ -531,12 +531,12 @@
     {
       "name": "Empty dir volume when FSGroup is specified with non-root container",
       "file": "k8s-empty-dirs.bats",
-      "totalFailures": 14,
+      "totalFailures": 18,
       "flakyCount": 12,
       "mergedCount": 0,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": false,
-      "uniquePRs": 5,
+      "uniquePRs": 7,
       "uniqueDates": [
         "2026-01-20",
         "2026-01-19",
@@ -547,13 +547,13 @@
         {
           "name": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (devmapper, qemu, kubeadm)",
           "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (devmapper, qemu, kubeadm)",
-          "count": 12,
+          "count": 16,
           "flakyCount": 12,
           "mergedCount": 0
         },
         {
-          "name": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (cbl-mariner, clh, small, containerd)",
-          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (cbl-mariner, clh, small, containerd)",
+          "name": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, clh, small)",
+          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, clh, small)",
           "count": 2,
           "flakyCount": 0,
           "mergedCount": 0
@@ -562,6 +562,78 @@
       "recentOccurrences": [
         {
           "date": "2026-01-20",
+          "prNumber": "12366",
+          "prTitle": "runtime: Add -info flag support for containerd v2.0+",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, clh, small)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, clh, small)",
+          "jobId": "60855438598",
+          "runId": "21160532358",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-20",
+          "prNumber": "12366",
+          "prTitle": "runtime: Add -info flag support for containerd v2.0+",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, clh, small)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, clh, small)",
+          "jobId": "60855438598",
+          "runId": "21160532358",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-20",
+          "prNumber": "12364",
+          "prTitle": "kata-deploy: Use version check for microk8s drop-in support",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (devmapper, qemu, kubeadm)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (devmapper, qemu, kubeadm)",
+          "jobId": "60855900913",
+          "runId": "21160522932",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-20",
+          "prNumber": "12364",
+          "prTitle": "kata-deploy: Use version check for microk8s drop-in support",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (devmapper, qemu, kubeadm)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (devmapper, qemu, kubeadm)",
+          "jobId": "60855900913",
+          "runId": "21160522932",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-20",
+          "prNumber": "12362",
+          "prTitle": "agent: Refresh `Cargo.lock`",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (devmapper, qemu, kubeadm)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (devmapper, qemu, kubeadm)",
+          "jobId": "60862021431",
+          "runId": "21162347844",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-20",
+          "prNumber": "12362",
+          "prTitle": "agent: Refresh `Cargo.lock`",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (devmapper, qemu, kubeadm)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (devmapper, qemu, kubeadm)",
+          "jobId": "60862021431",
+          "runId": "21162347844",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-20",
           "prNumber": "12316",
           "prTitle": "runtime: nvidia: Use image and sanitize whitespaces",
           "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (devmapper, qemu, kubeadm)",
@@ -586,30 +658,6 @@
         },
         {
           "date": "2026-01-19",
-          "prNumber": "12365",
-          "prTitle": "tests: Add common bats test runner function",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (cbl-mariner, clh, small, containerd)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (cbl-mariner, clh, small, containerd)",
-          "jobId": "60833412943",
-          "runId": "21152929661",
-          "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-19",
-          "prNumber": "12365",
-          "prTitle": "tests: Add common bats test runner function",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (cbl-mariner, clh, small, containerd)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (cbl-mariner, clh, small, containerd)",
-          "jobId": "60833412943",
-          "runId": "21152929661",
-          "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-19",
           "prNumber": "12355",
           "prTitle": "runtime-rs: Add arm64 QEMU support",
           "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (devmapper, qemu, kubeadm)",
@@ -713,7 +761,7 @@
           "jobId": "60583094958",
           "runId": "21065407452",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": false
         },
         {
@@ -725,7 +773,7 @@
           "jobId": "60583094958",
           "runId": "21065407452",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": false
         }
       ]
@@ -2160,11 +2208,11 @@
       },
       {
         "date": "2026-01-19",
-        "failures": 94
+        "failures": 92
       },
       {
         "date": "2026-01-20",
-        "failures": 20
+        "failures": 26
       }
     ],
     "jobBreakdown": [
@@ -2192,7 +2240,7 @@
       {
         "name": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (devmapper, qemu, kubeadm)",
         "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (devmapper, qemu, kubeadm)",
-        "count": 12,
+        "count": 16,
         "flakyCount": 12,
         "mergedCount": 0
       },
@@ -2204,8 +2252,8 @@
         "mergedCount": 0
       },
       {
-        "name": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (cbl-mariner, clh, small, containerd)",
-        "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (cbl-mariner, clh, small, containerd)",
+        "name": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, clh, small)",
+        "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, clh, small)",
         "count": 2,
         "flakyCount": 0,
         "mergedCount": 0
