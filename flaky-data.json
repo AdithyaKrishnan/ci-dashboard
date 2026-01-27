@@ -1,16 +1,16 @@
 {
-  "lastRefresh": "2026-01-27T12:36:27.581Z",
+  "lastRefresh": "2026-01-27T16:28:39.760Z",
   "periodDays": 14,
   "totalFailures": 304,
   "totalPRs": 11,
-  "confirmedFlakyCount": 57,
+  "confirmedFlakyCount": 56,
   "mergedDespiteFailureCount": 55,
   "failedTests": [
     {
       "name": "Kill all processes in container",
       "file": "k8s-kill-all-process-in-container.bats",
       "totalFailures": 16,
-      "flakyCount": 4,
+      "flakyCount": 2,
       "mergedCount": 2,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": true,
@@ -24,7 +24,7 @@
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "count": 4,
-          "flakyCount": 4,
+          "flakyCount": 2,
           "mergedCount": 2
         },
         {
@@ -248,7 +248,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         },
         {
@@ -260,7 +260,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         }
       ]
@@ -469,7 +469,7 @@
       "name": "Get CDH resource",
       "file": "k8s-confidential-attestation.bats",
       "totalFailures": 12,
-      "flakyCount": 8,
+      "flakyCount": 6,
       "mergedCount": 2,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": true,
@@ -491,7 +491,7 @@
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "count": 4,
-          "flakyCount": 4,
+          "flakyCount": 2,
           "mergedCount": 2
         }
       ],
@@ -625,7 +625,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         },
         {
@@ -637,7 +637,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         }
       ]
@@ -646,7 +646,7 @@
       "name": "Can get CDH resource when affirming policy is set with reference values",
       "file": "k8s-confidential-attestation.bats",
       "totalFailures": 12,
-      "flakyCount": 8,
+      "flakyCount": 6,
       "mergedCount": 2,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": true,
@@ -668,7 +668,7 @@
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "count": 4,
-          "flakyCount": 4,
+          "flakyCount": 2,
           "mergedCount": 2
         }
       ],
@@ -802,7 +802,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         },
         {
@@ -814,7 +814,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         }
       ]
@@ -999,7 +999,7 @@
       "name": "Cannot get CDH resource when affirming policy is set without reference values",
       "file": "k8s-confidential-attestation.bats",
       "totalFailures": 12,
-      "flakyCount": 10,
+      "flakyCount": 8,
       "mergedCount": 2,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": true,
@@ -1021,7 +1021,7 @@
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "count": 4,
-          "flakyCount": 4,
+          "flakyCount": 2,
           "mergedCount": 2
         }
       ],
@@ -1131,7 +1131,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         },
         {
@@ -1143,7 +1143,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         },
         {
@@ -1176,7 +1176,7 @@
       "name": "Running with postStart and preStop handlers",
       "file": "k8s-attach-handlers.bats",
       "totalFailures": 12,
-      "flakyCount": 12,
+      "flakyCount": 10,
       "mergedCount": 2,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": true,
@@ -1189,7 +1189,7 @@
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "count": 4,
-          "flakyCount": 4,
+          "flakyCount": 2,
           "mergedCount": 2
         },
         {
@@ -1351,7 +1351,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         },
         {
@@ -1363,7 +1363,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         }
       ]
@@ -1372,7 +1372,7 @@
       "name": "Cannot get CDH resource when deny-all policy is set",
       "file": "k8s-confidential-attestation.bats",
       "totalFailures": 10,
-      "flakyCount": 8,
+      "flakyCount": 6,
       "mergedCount": 2,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": true,
@@ -1394,7 +1394,7 @@
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "count": 4,
-          "flakyCount": 4,
+          "flakyCount": 2,
           "mergedCount": 2
         }
       ],
@@ -1504,7 +1504,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         },
         {
@@ -1516,7 +1516,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         }
       ]
@@ -1525,7 +1525,7 @@
       "name": "Pod that performs ip6tables setup",
       "file": "k8s-ip6tables.bats",
       "totalFailures": 8,
-      "flakyCount": 6,
+      "flakyCount": 4,
       "mergedCount": 2,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": true,
@@ -1539,7 +1539,7 @@
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "count": 6,
-          "flakyCount": 4,
+          "flakyCount": 2,
           "mergedCount": 2
         },
         {
@@ -1632,7 +1632,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         },
         {
@@ -1644,7 +1644,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         }
       ]
@@ -1653,7 +1653,7 @@
       "name": "Empty dir volume when FSGroup is specified with non-root container",
       "file": "k8s-empty-dirs.bats",
       "totalFailures": 6,
-      "flakyCount": 4,
+      "flakyCount": 2,
       "mergedCount": 2,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": true,
@@ -1667,7 +1667,7 @@
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "count": 4,
-          "flakyCount": 4,
+          "flakyCount": 2,
           "mergedCount": 2
         },
         {
@@ -1736,7 +1736,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         },
         {
@@ -1748,7 +1748,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         }
       ]
@@ -1757,7 +1757,7 @@
       "name": "Check capabilities of pod",
       "file": "k8s-caps.bats",
       "totalFailures": 6,
-      "flakyCount": 6,
+      "flakyCount": 4,
       "mergedCount": 2,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": true,
@@ -1770,7 +1770,7 @@
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "count": 4,
-          "flakyCount": 4,
+          "flakyCount": 2,
           "mergedCount": 2
         },
         {
@@ -1815,7 +1815,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         },
         {
@@ -1827,7 +1827,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         },
         {
@@ -1860,7 +1860,7 @@
       "name": "Run a job to completion",
       "file": "k8s-job.bats",
       "totalFailures": 6,
-      "flakyCount": 6,
+      "flakyCount": 4,
       "mergedCount": 2,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": true,
@@ -1873,7 +1873,7 @@
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "count": 4,
-          "flakyCount": 4,
+          "flakyCount": 2,
           "mergedCount": 2
         },
         {
@@ -1942,7 +1942,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         },
         {
@@ -1954,7 +1954,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         }
       ]
@@ -1963,7 +1963,7 @@
       "name": "Test that creating a container from an encrypted image, with no decryption key fails",
       "file": "k8s-guest-pull-image-encrypted.bats",
       "totalFailures": 4,
-      "flakyCount": 4,
+      "flakyCount": 2,
       "mergedCount": 2,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": true,
@@ -1976,7 +1976,7 @@
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "count": 4,
-          "flakyCount": 4,
+          "flakyCount": 2,
           "mergedCount": 2
         }
       ],
@@ -2014,7 +2014,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         },
         {
@@ -2026,7 +2026,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         }
       ]
@@ -2035,7 +2035,7 @@
       "name": "Test that creating a container from an encrypted image, with correct decryption key works",
       "file": "k8s-guest-pull-image-encrypted.bats",
       "totalFailures": 4,
-      "flakyCount": 4,
+      "flakyCount": 2,
       "mergedCount": 2,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": true,
@@ -2048,7 +2048,7 @@
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "count": 4,
-          "flakyCount": 4,
+          "flakyCount": 2,
           "mergedCount": 2
         }
       ],
@@ -2086,7 +2086,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         },
         {
@@ -2098,7 +2098,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         }
       ]
@@ -2107,7 +2107,7 @@
       "name": "Test that creating a container from an encrypted image, with incorrect decryption key fails",
       "file": "k8s-guest-pull-image-encrypted.bats",
       "totalFailures": 4,
-      "flakyCount": 4,
+      "flakyCount": 2,
       "mergedCount": 2,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": true,
@@ -2120,7 +2120,7 @@
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "count": 4,
-          "flakyCount": 4,
+          "flakyCount": 2,
           "mergedCount": 2
         }
       ],
@@ -2158,7 +2158,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         },
         {
@@ -2170,7 +2170,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         }
       ]
@@ -2179,7 +2179,7 @@
       "name": "Test that creating a container from an authenticated image, with correct credentials works",
       "file": "k8s-guest-pull-image-authenticated.bats",
       "totalFailures": 4,
-      "flakyCount": 4,
+      "flakyCount": 2,
       "mergedCount": 2,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": true,
@@ -2192,7 +2192,7 @@
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "count": 4,
-          "flakyCount": 4,
+          "flakyCount": 2,
           "mergedCount": 2
         }
       ],
@@ -2230,7 +2230,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         },
         {
@@ -2242,7 +2242,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         }
       ]
@@ -2251,7 +2251,7 @@
       "name": "Test that creating a container from an authenticated image, with incorrect credentials fails",
       "file": "k8s-guest-pull-image-authenticated.bats",
       "totalFailures": 4,
-      "flakyCount": 4,
+      "flakyCount": 2,
       "mergedCount": 2,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": true,
@@ -2264,7 +2264,7 @@
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "count": 4,
-          "flakyCount": 4,
+          "flakyCount": 2,
           "mergedCount": 2
         }
       ],
@@ -2302,7 +2302,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         },
         {
@@ -2314,7 +2314,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         }
       ]
@@ -2323,7 +2323,7 @@
       "name": "Test that creating a container from an authenticated image, with no credentials fails",
       "file": "k8s-guest-pull-image-authenticated.bats",
       "totalFailures": 4,
-      "flakyCount": 4,
+      "flakyCount": 2,
       "mergedCount": 2,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": true,
@@ -2336,7 +2336,7 @@
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "count": 4,
-          "flakyCount": 4,
+          "flakyCount": 2,
           "mergedCount": 2
         }
       ],
@@ -2374,7 +2374,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         },
         {
@@ -2386,7 +2386,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         }
       ]
@@ -2395,7 +2395,7 @@
       "name": "Test that creating a container from an authenticated image, with correct credentials works (with initdata)",
       "file": "k8s-guest-pull-image-authenticated.bats",
       "totalFailures": 4,
-      "flakyCount": 4,
+      "flakyCount": 2,
       "mergedCount": 2,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": true,
@@ -2408,7 +2408,7 @@
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "count": 4,
-          "flakyCount": 4,
+          "flakyCount": 2,
           "mergedCount": 2
         }
       ],
@@ -2446,7 +2446,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         },
         {
@@ -2458,7 +2458,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         }
       ]
@@ -2467,7 +2467,7 @@
       "name": "Test that creating a container from an authenticated image, with incorrect credentials fails (with initdata)",
       "file": "k8s-guest-pull-image-authenticated.bats",
       "totalFailures": 4,
-      "flakyCount": 4,
+      "flakyCount": 2,
       "mergedCount": 2,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": true,
@@ -2480,7 +2480,7 @@
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "count": 4,
-          "flakyCount": 4,
+          "flakyCount": 2,
           "mergedCount": 2
         }
       ],
@@ -2518,7 +2518,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         },
         {
@@ -2530,7 +2530,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         }
       ]
@@ -2539,7 +2539,7 @@
       "name": "Test that creating a container from an authenticated image, with no credentials fails (with initdata)",
       "file": "k8s-guest-pull-image-authenticated.bats",
       "totalFailures": 4,
-      "flakyCount": 4,
+      "flakyCount": 2,
       "mergedCount": 2,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": true,
@@ -2552,7 +2552,7 @@
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "count": 4,
-          "flakyCount": 4,
+          "flakyCount": 2,
           "mergedCount": 2
         }
       ],
@@ -2590,7 +2590,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         },
         {
@@ -2602,7 +2602,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         }
       ]
@@ -2611,7 +2611,7 @@
       "name": "Create a pod from an unsigned image, on an insecureAcceptAnything registry works",
       "file": "k8s-guest-pull-image-signature.bats",
       "totalFailures": 4,
-      "flakyCount": 4,
+      "flakyCount": 2,
       "mergedCount": 2,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": true,
@@ -2624,7 +2624,7 @@
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "count": 4,
-          "flakyCount": 4,
+          "flakyCount": 2,
           "mergedCount": 2
         }
       ],
@@ -2662,7 +2662,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         },
         {
@@ -2674,7 +2674,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         }
       ]
@@ -2683,7 +2683,7 @@
       "name": "Create a pod from an unsigned image, on a 'restricted registry' is rejected",
       "file": "k8s-guest-pull-image-signature.bats",
       "totalFailures": 4,
-      "flakyCount": 4,
+      "flakyCount": 2,
       "mergedCount": 2,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": true,
@@ -2696,7 +2696,7 @@
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "count": 4,
-          "flakyCount": 4,
+          "flakyCount": 2,
           "mergedCount": 2
         }
       ],
@@ -2734,7 +2734,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         },
         {
@@ -2746,7 +2746,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         }
       ]
@@ -2755,7 +2755,7 @@
       "name": "Create a pod from a signed image, on a 'restricted registry' is successful",
       "file": "k8s-guest-pull-image-signature.bats",
       "totalFailures": 4,
-      "flakyCount": 4,
+      "flakyCount": 2,
       "mergedCount": 2,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": true,
@@ -2768,7 +2768,7 @@
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "count": 4,
-          "flakyCount": 4,
+          "flakyCount": 2,
           "mergedCount": 2
         }
       ],
@@ -2806,7 +2806,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         },
         {
@@ -2818,7 +2818,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         }
       ]
@@ -2827,7 +2827,7 @@
       "name": "Create a pod from a signed image, on a 'restricted registry', but with the wrong key is rejected",
       "file": "k8s-guest-pull-image-signature.bats",
       "totalFailures": 4,
-      "flakyCount": 4,
+      "flakyCount": 2,
       "mergedCount": 2,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": true,
@@ -2840,7 +2840,7 @@
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "count": 4,
-          "flakyCount": 4,
+          "flakyCount": 2,
           "mergedCount": 2
         }
       ],
@@ -2878,7 +2878,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         },
         {
@@ -2890,7 +2890,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         }
       ]
@@ -2899,7 +2899,7 @@
       "name": "Create a pod from an unsigned image, on a 'restricted registry' works if policy files isn't set",
       "file": "k8s-guest-pull-image-signature.bats",
       "totalFailures": 4,
-      "flakyCount": 4,
+      "flakyCount": 2,
       "mergedCount": 2,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": true,
@@ -2912,7 +2912,7 @@
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "count": 4,
-          "flakyCount": 4,
+          "flakyCount": 2,
           "mergedCount": 2
         }
       ],
@@ -2950,7 +2950,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         },
         {
@@ -2962,7 +2962,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         }
       ]
@@ -2971,7 +2971,7 @@
       "name": "Create a pod from an unsigned image, on an insecureAcceptAnything registry works (with initdata)",
       "file": "k8s-guest-pull-image-signature.bats",
       "totalFailures": 4,
-      "flakyCount": 4,
+      "flakyCount": 2,
       "mergedCount": 2,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": true,
@@ -2984,7 +2984,7 @@
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "count": 4,
-          "flakyCount": 4,
+          "flakyCount": 2,
           "mergedCount": 2
         }
       ],
@@ -3022,7 +3022,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         },
         {
@@ -3034,7 +3034,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         }
       ]
@@ -3043,7 +3043,7 @@
       "name": "Create a pod from an unsigned image, on a 'restricted registry' is rejected (with initdata)",
       "file": "k8s-guest-pull-image-signature.bats",
       "totalFailures": 4,
-      "flakyCount": 4,
+      "flakyCount": 2,
       "mergedCount": 2,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": true,
@@ -3056,7 +3056,7 @@
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "count": 4,
-          "flakyCount": 4,
+          "flakyCount": 2,
           "mergedCount": 2
         }
       ],
@@ -3094,7 +3094,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         },
         {
@@ -3106,7 +3106,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         }
       ]
@@ -3115,7 +3115,7 @@
       "name": "Create a pod from a signed image, on a 'restricted registry' is successful (with initdata)",
       "file": "k8s-guest-pull-image-signature.bats",
       "totalFailures": 4,
-      "flakyCount": 4,
+      "flakyCount": 2,
       "mergedCount": 2,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": true,
@@ -3128,7 +3128,7 @@
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "count": 4,
-          "flakyCount": 4,
+          "flakyCount": 2,
           "mergedCount": 2
         }
       ],
@@ -3166,7 +3166,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         },
         {
@@ -3178,7 +3178,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         }
       ]
@@ -3187,7 +3187,7 @@
       "name": "Create a pod from a signed image, on a 'restricted registry', but with the wrong key is rejected (with initdata)",
       "file": "k8s-guest-pull-image-signature.bats",
       "totalFailures": 4,
-      "flakyCount": 4,
+      "flakyCount": 2,
       "mergedCount": 2,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": true,
@@ -3200,7 +3200,7 @@
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "count": 4,
-          "flakyCount": 4,
+          "flakyCount": 2,
           "mergedCount": 2
         }
       ],
@@ -3238,7 +3238,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         },
         {
@@ -3250,7 +3250,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         }
       ]
@@ -3259,7 +3259,7 @@
       "name": "Create a pod from an unsigned image, on a 'restricted registry' works if policy files isn't set (with initdata)",
       "file": "k8s-guest-pull-image-signature.bats",
       "totalFailures": 4,
-      "flakyCount": 4,
+      "flakyCount": 2,
       "mergedCount": 2,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": true,
@@ -3272,7 +3272,7 @@
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "count": 4,
-          "flakyCount": 4,
+          "flakyCount": 2,
           "mergedCount": 2
         }
       ],
@@ -3310,7 +3310,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         },
         {
@@ -3322,7 +3322,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         }
       ]
@@ -3331,7 +3331,7 @@
       "name": "Test we can pull an unencrypted image outside the guest with runc and then inside the guest successfully",
       "file": "k8s-guest-pull-image.bats",
       "totalFailures": 4,
-      "flakyCount": 4,
+      "flakyCount": 2,
       "mergedCount": 2,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": true,
@@ -3344,7 +3344,7 @@
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "count": 4,
-          "flakyCount": 4,
+          "flakyCount": 2,
           "mergedCount": 2
         }
       ],
@@ -3382,7 +3382,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         },
         {
@@ -3394,7 +3394,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         }
       ]
@@ -3403,7 +3403,7 @@
       "name": "Test we cannot pull an image that exceeds the memory limit inside the guest",
       "file": "k8s-guest-pull-image.bats",
       "totalFailures": 4,
-      "flakyCount": 4,
+      "flakyCount": 2,
       "mergedCount": 2,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": true,
@@ -3416,7 +3416,7 @@
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "count": 4,
-          "flakyCount": 4,
+          "flakyCount": 2,
           "mergedCount": 2
         }
       ],
@@ -3454,7 +3454,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         },
         {
@@ -3466,7 +3466,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         }
       ]
@@ -3475,7 +3475,7 @@
       "name": "Test unencrypted confidential container launch success and verify that we are running in a secure enclave.",
       "file": "k8s-confidential.bats",
       "totalFailures": 4,
-      "flakyCount": 4,
+      "flakyCount": 2,
       "mergedCount": 2,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": true,
@@ -3488,7 +3488,7 @@
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "count": 4,
-          "flakyCount": 4,
+          "flakyCount": 2,
           "mergedCount": 2
         }
       ],
@@ -3526,7 +3526,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         },
         {
@@ -3538,7 +3538,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         }
       ]
@@ -3547,7 +3547,7 @@
       "name": "Cannot Unseal Env Secrets with CDH without key",
       "file": "k8s-sealed-secret.bats",
       "totalFailures": 4,
-      "flakyCount": 4,
+      "flakyCount": 2,
       "mergedCount": 2,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": true,
@@ -3560,7 +3560,7 @@
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "count": 4,
-          "flakyCount": 4,
+          "flakyCount": 2,
           "mergedCount": 2
         }
       ],
@@ -3598,7 +3598,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         },
         {
@@ -3610,7 +3610,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         }
       ]
@@ -3619,7 +3619,7 @@
       "name": "Unseal Env Secrets with CDH",
       "file": "k8s-sealed-secret.bats",
       "totalFailures": 4,
-      "flakyCount": 4,
+      "flakyCount": 2,
       "mergedCount": 2,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": true,
@@ -3632,7 +3632,7 @@
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "count": 4,
-          "flakyCount": 4,
+          "flakyCount": 2,
           "mergedCount": 2
         }
       ],
@@ -3670,7 +3670,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         },
         {
@@ -3682,7 +3682,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         }
       ]
@@ -3691,7 +3691,7 @@
       "name": "Unseal File Secrets with CDH",
       "file": "k8s-sealed-secret.bats",
       "totalFailures": 4,
-      "flakyCount": 4,
+      "flakyCount": 2,
       "mergedCount": 2,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": true,
@@ -3704,7 +3704,7 @@
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "count": 4,
-          "flakyCount": 4,
+          "flakyCount": 2,
           "mergedCount": 2
         }
       ],
@@ -3742,7 +3742,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         },
         {
@@ -3754,7 +3754,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         }
       ]
@@ -3763,7 +3763,7 @@
       "name": "Block Storage Support",
       "file": "k8s-block-volume.bats",
       "totalFailures": 4,
-      "flakyCount": 4,
+      "flakyCount": 2,
       "mergedCount": 2,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": true,
@@ -3776,7 +3776,7 @@
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "count": 4,
-          "flakyCount": 4,
+          "flakyCount": 2,
           "mergedCount": 2
         }
       ],
@@ -3814,7 +3814,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         },
         {
@@ -3826,7 +3826,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         }
       ]
@@ -3835,7 +3835,7 @@
       "name": "ConfigMap for a pod",
       "file": "k8s-configmap.bats",
       "totalFailures": 4,
-      "flakyCount": 4,
+      "flakyCount": 2,
       "mergedCount": 2,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": true,
@@ -3848,7 +3848,7 @@
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "count": 4,
-          "flakyCount": 4,
+          "flakyCount": 2,
           "mergedCount": 2
         }
       ],
@@ -3886,7 +3886,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         },
         {
@@ -3898,7 +3898,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         }
       ]
@@ -3907,7 +3907,7 @@
       "name": "Copy file in a pod",
       "file": "k8s-copy-file.bats",
       "totalFailures": 4,
-      "flakyCount": 4,
+      "flakyCount": 2,
       "mergedCount": 2,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": true,
@@ -3920,7 +3920,7 @@
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "count": 4,
-          "flakyCount": 4,
+          "flakyCount": 2,
           "mergedCount": 2
         }
       ],
@@ -3958,7 +3958,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         },
         {
@@ -3970,7 +3970,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         }
       ]
@@ -3979,7 +3979,7 @@
       "name": "Copy from pod to host",
       "file": "k8s-copy-file.bats",
       "totalFailures": 4,
-      "flakyCount": 4,
+      "flakyCount": 2,
       "mergedCount": 2,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": true,
@@ -3992,7 +3992,7 @@
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "count": 4,
-          "flakyCount": 4,
+          "flakyCount": 2,
           "mergedCount": 2
         }
       ],
@@ -4030,7 +4030,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         },
         {
@@ -4042,7 +4042,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         }
       ]
@@ -4051,7 +4051,7 @@
       "name": "Credentials using secrets",
       "file": "k8s-credentials-secrets.bats",
       "totalFailures": 4,
-      "flakyCount": 4,
+      "flakyCount": 2,
       "mergedCount": 2,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": true,
@@ -4064,7 +4064,7 @@
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "count": 4,
-          "flakyCount": 4,
+          "flakyCount": 2,
           "mergedCount": 2
         }
       ],
@@ -4102,7 +4102,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         },
         {
@@ -4114,7 +4114,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         }
       ]
@@ -4123,7 +4123,7 @@
       "name": "Empty dir volumes",
       "file": "k8s-empty-dirs.bats",
       "totalFailures": 4,
-      "flakyCount": 4,
+      "flakyCount": 2,
       "mergedCount": 2,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": true,
@@ -4136,7 +4136,7 @@
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "count": 4,
-          "flakyCount": 4,
+          "flakyCount": 2,
           "mergedCount": 2
         }
       ],
@@ -4174,7 +4174,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         },
         {
@@ -4186,7 +4186,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         }
       ]
@@ -4195,7 +4195,7 @@
       "name": "Environment variables",
       "file": "k8s-env.bats",
       "totalFailures": 4,
-      "flakyCount": 4,
+      "flakyCount": 2,
       "mergedCount": 2,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": true,
@@ -4208,7 +4208,7 @@
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "count": 4,
-          "flakyCount": 4,
+          "flakyCount": 2,
           "mergedCount": 2
         }
       ],
@@ -4246,7 +4246,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         },
         {
@@ -4258,7 +4258,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         }
       ]
@@ -4267,7 +4267,7 @@
       "name": "Kubectl exec",
       "file": "k8s-exec.bats",
       "totalFailures": 4,
-      "flakyCount": 4,
+      "flakyCount": 2,
       "mergedCount": 2,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": true,
@@ -4280,7 +4280,7 @@
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "count": 4,
-          "flakyCount": 4,
+          "flakyCount": 2,
           "mergedCount": 2
         }
       ],
@@ -4318,7 +4318,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         },
         {
@@ -4330,7 +4330,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         }
       ]
@@ -4339,7 +4339,7 @@
       "name": "Test readonly volume for pods",
       "file": "k8s-file-volume.bats",
       "totalFailures": 4,
-      "flakyCount": 4,
+      "flakyCount": 2,
       "mergedCount": 2,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": true,
@@ -4352,7 +4352,7 @@
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "count": 4,
-          "flakyCount": 4,
+          "flakyCount": 2,
           "mergedCount": 2
         }
       ],
@@ -4390,7 +4390,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         },
         {
@@ -4402,7 +4402,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         }
       ]
@@ -4411,7 +4411,7 @@
       "name": "Validate Pod hostname",
       "file": "k8s-hostname.bats",
       "totalFailures": 4,
-      "flakyCount": 4,
+      "flakyCount": 2,
       "mergedCount": 2,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": true,
@@ -4424,7 +4424,7 @@
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "count": 4,
-          "flakyCount": 4,
+          "flakyCount": 2,
           "mergedCount": 2
         }
       ],
@@ -4462,7 +4462,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         },
         {
@@ -4474,7 +4474,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         }
       ]
@@ -4483,7 +4483,7 @@
       "name": "/dev hostPath volume bind mounts the guest device and skips virtio-fs",
       "file": "k8s-hostpath-volume.bats",
       "totalFailures": 4,
-      "flakyCount": 4,
+      "flakyCount": 2,
       "mergedCount": 2,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": true,
@@ -4496,7 +4496,7 @@
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "count": 4,
-          "flakyCount": 4,
+          "flakyCount": 2,
           "mergedCount": 2
         }
       ],
@@ -4534,7 +4534,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         },
         {
@@ -4546,7 +4546,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         }
       ]
@@ -4555,7 +4555,7 @@
       "name": "configmap update works, and preserves symlinks",
       "file": "k8s-inotify.bats",
       "totalFailures": 4,
-      "flakyCount": 4,
+      "flakyCount": 2,
       "mergedCount": 2,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": true,
@@ -4568,7 +4568,7 @@
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "count": 4,
-          "flakyCount": 4,
+          "flakyCount": 2,
           "mergedCount": 2
         }
       ],
@@ -4606,7 +4606,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         },
         {
@@ -4618,7 +4618,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         }
       ]
@@ -4627,7 +4627,7 @@
       "name": "Limit range for storage",
       "file": "k8s-limit-range.bats",
       "totalFailures": 4,
-      "flakyCount": 4,
+      "flakyCount": 2,
       "mergedCount": 2,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": true,
@@ -4640,7 +4640,7 @@
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "count": 4,
-          "flakyCount": 4,
+          "flakyCount": 2,
           "mergedCount": 2
         }
       ],
@@ -4678,7 +4678,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         },
         {
@@ -4690,7 +4690,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         }
       ]
@@ -4699,7 +4699,7 @@
       "name": "Liveness probe",
       "file": "k8s-liveness-probes.bats",
       "totalFailures": 4,
-      "flakyCount": 4,
+      "flakyCount": 2,
       "mergedCount": 2,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": true,
@@ -4712,7 +4712,7 @@
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "count": 4,
-          "flakyCount": 4,
+          "flakyCount": 2,
           "mergedCount": 2
         }
       ],
@@ -4750,7 +4750,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         },
         {
@@ -4762,7 +4762,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         }
       ]
@@ -4771,7 +4771,7 @@
       "name": "Liveness http probe",
       "file": "k8s-liveness-probes.bats",
       "totalFailures": 4,
-      "flakyCount": 4,
+      "flakyCount": 2,
       "mergedCount": 2,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": true,
@@ -4784,7 +4784,7 @@
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "count": 4,
-          "flakyCount": 4,
+          "flakyCount": 2,
           "mergedCount": 2
         }
       ],
@@ -4822,7 +4822,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         },
         {
@@ -4834,7 +4834,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         }
       ]
@@ -4843,7 +4843,7 @@
       "name": "Liveness tcp probe",
       "file": "k8s-liveness-probes.bats",
       "totalFailures": 4,
-      "flakyCount": 4,
+      "flakyCount": 2,
       "mergedCount": 2,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": true,
@@ -4856,7 +4856,7 @@
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "count": 4,
-          "flakyCount": 4,
+          "flakyCount": 2,
           "mergedCount": 2
         }
       ],
@@ -4894,7 +4894,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         },
         {
@@ -4906,7 +4906,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         }
       ]
@@ -4915,7 +4915,7 @@
       "name": "Running within memory constraints",
       "file": "k8s-memory.bats",
       "totalFailures": 4,
-      "flakyCount": 4,
+      "flakyCount": 2,
       "mergedCount": 2,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": true,
@@ -4928,7 +4928,7 @@
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "count": 4,
-          "flakyCount": 4,
+          "flakyCount": 2,
           "mergedCount": 2
         }
       ],
@@ -4966,7 +4966,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         },
         {
@@ -4978,7 +4978,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         }
       ]
@@ -4987,7 +4987,7 @@
       "name": "Nested mount of a secret volume in a configmap volume for a pod",
       "file": "k8s-nested-configmap-secret.bats",
       "totalFailures": 4,
-      "flakyCount": 4,
+      "flakyCount": 2,
       "mergedCount": 2,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": true,
@@ -5000,7 +5000,7 @@
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "count": 4,
-          "flakyCount": 4,
+          "flakyCount": 2,
           "mergedCount": 2
         }
       ],
@@ -5038,7 +5038,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         },
         {
@@ -5050,7 +5050,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         }
       ]
@@ -5059,7 +5059,7 @@
       "name": "Test OOM events for pods",
       "file": "k8s-oom.bats",
       "totalFailures": 4,
-      "flakyCount": 4,
+      "flakyCount": 2,
       "mergedCount": 2,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": true,
@@ -5072,7 +5072,7 @@
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "count": 4,
-          "flakyCount": 4,
+          "flakyCount": 2,
           "mergedCount": 2
         }
       ],
@@ -5110,7 +5110,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         },
         {
@@ -5122,7 +5122,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         }
       ]
@@ -5131,9 +5131,9 @@
       "name": "Pods establishing a VPN connection using openvpn",
       "file": "k8s-openvpn.bats",
       "totalFailures": 2,
-      "flakyCount": 2,
+      "flakyCount": 0,
       "mergedCount": 2,
-      "isConfirmedFlaky": true,
+      "isConfirmedFlaky": false,
       "mergedDespiteFailure": true,
       "uniquePRs": 1,
       "uniqueDates": [
@@ -5144,7 +5144,7 @@
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "count": 2,
-          "flakyCount": 2,
+          "flakyCount": 0,
           "mergedCount": 2
         }
       ],
@@ -5158,7 +5158,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         },
         {
@@ -5170,7 +5170,7 @@
           "jobId": "61298558856",
           "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         }
       ]
@@ -5178,13 +5178,13 @@
   ],
   "summary": {
     "totalFailedTests": 57,
-    "confirmedFlaky": 57,
+    "confirmedFlaky": 56,
     "mergedDespiteFailure": 55,
     "mostAffectedJob": {
       "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
       "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
       "count": 220,
-      "flakyCount": 218,
+      "flakyCount": 108,
       "mergedCount": 110
     },
     "trend": [
@@ -5250,7 +5250,7 @@
         "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
         "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
         "count": 220,
-        "flakyCount": 218,
+        "flakyCount": 108,
         "mergedCount": 110
       },
       {
