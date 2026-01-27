@@ -1,32 +1,250 @@
 {
-  "lastRefresh": "2026-01-27T16:28:39.760Z",
+  "lastRefresh": "2026-01-27T20:24:02.762Z",
   "periodDays": 14,
-  "totalFailures": 304,
-  "totalPRs": 11,
-  "confirmedFlakyCount": 56,
+  "totalFailures": 192,
+  "totalPRs": 14,
+  "confirmedFlakyCount": 8,
   "mergedDespiteFailureCount": 55,
   "failedTests": [
     {
+      "name": "setup_file failed",
+      "file": "k8s-nvidia-nim.bats",
+      "totalFailures": 16,
+      "flakyCount": 10,
+      "mergedCount": 0,
+      "isConfirmedFlaky": true,
+      "mergedDespiteFailure": false,
+      "uniquePRs": 5,
+      "uniqueDates": [
+        "2026-01-27",
+        "2026-01-26",
+        "2026-01-25"
+      ],
+      "affectedJobs": [
+        {
+          "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "count": 10,
+          "flakyCount": 6,
+          "mergedCount": 0
+        },
+        {
+          "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
+          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
+          "count": 6,
+          "flakyCount": 4,
+          "mergedCount": 0
+        }
+      ],
+      "recentOccurrences": [
+        {
+          "date": "2026-01-27",
+          "prNumber": "12401",
+          "prTitle": "versions: Bump guest-components",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "61652450010",
+          "runId": "21405970027",
+          "runAttempt": 2,
+          "isFlaky": true,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-27",
+          "prNumber": "12401",
+          "prTitle": "versions: Bump guest-components",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "61652450010",
+          "runId": "21405970027",
+          "runAttempt": 2,
+          "isFlaky": true,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-26",
+          "prNumber": "12325",
+          "prTitle": "build(deps): bump github.com/containerd/containerd/api from 1.9.0 to 1.10.0 in /src/runtime",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "61477667552",
+          "runId": "21359476929",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-26",
+          "prNumber": "12325",
+          "prTitle": "build(deps): bump github.com/containerd/containerd/api from 1.9.0 to 1.10.0 in /src/runtime",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "61477667552",
+          "runId": "21359476929",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-26",
+          "prNumber": "12312\n12310",
+          "prTitle": "kata-deploy: Fix extraction of the containerd major version\nFix extraction of the containerd major version",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
+          "jobId": "61431794207",
+          "runId": "21345135958",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-26",
+          "prNumber": "12312\n12310",
+          "prTitle": "kata-deploy: Fix extraction of the containerd major version\nFix extraction of the containerd major version",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
+          "jobId": "61431794207",
+          "runId": "21345135958",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-26",
+          "prNumber": "12312\n12310",
+          "prTitle": "kata-deploy: Fix extraction of the containerd major version\nFix extraction of the containerd major version",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "61431794209",
+          "runId": "21345135958",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-26",
+          "prNumber": "12312\n12310",
+          "prTitle": "kata-deploy: Fix extraction of the containerd major version\nFix extraction of the containerd major version",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "61431794209",
+          "runId": "21345135958",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-26",
+          "prNumber": "12293",
+          "prTitle": "runtime-rs: make OOM watcher and signal handling lifecycle-aware",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
+          "jobId": "61444440254",
+          "runId": "21349464437",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-26",
+          "prNumber": "12293",
+          "prTitle": "runtime-rs: make OOM watcher and signal handling lifecycle-aware",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
+          "jobId": "61444440254",
+          "runId": "21349464437",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-26",
+          "prNumber": "12293",
+          "prTitle": "runtime-rs: make OOM watcher and signal handling lifecycle-aware",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "61444440267",
+          "runId": "21349464437",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-26",
+          "prNumber": "12293",
+          "prTitle": "runtime-rs: make OOM watcher and signal handling lifecycle-aware",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "61444440267",
+          "runId": "21349464437",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-25",
+          "prNumber": "12385",
+          "prTitle": "versions: Tidy up versions file",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "61417059321",
+          "runId": "21339450540",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-25",
+          "prNumber": "12385",
+          "prTitle": "versions: Tidy up versions file",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "61417059321",
+          "runId": "21339450540",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-25",
+          "prNumber": "12385",
+          "prTitle": "versions: Tidy up versions file",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
+          "jobId": "61417059344",
+          "runId": "21339450540",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-25",
+          "prNumber": "12385",
+          "prTitle": "versions: Tidy up versions file",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
+          "jobId": "61417059344",
+          "runId": "21339450540",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": false
+        }
+      ]
+    },
+    {
       "name": "Kill all processes in container",
       "file": "k8s-kill-all-process-in-container.bats",
-      "totalFailures": 16,
-      "flakyCount": 2,
+      "totalFailures": 14,
+      "flakyCount": 0,
       "mergedCount": 2,
-      "isConfirmedFlaky": true,
+      "isConfirmedFlaky": false,
       "mergedDespiteFailure": true,
-      "uniquePRs": 3,
+      "uniquePRs": 2,
       "uniqueDates": [
         "2026-01-26",
         "2026-01-23"
       ],
       "affectedJobs": [
-        {
-          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 4,
-          "flakyCount": 2,
-          "mergedCount": 2
-        },
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
@@ -68,489 +286,23 @@
           "count": 2,
           "flakyCount": 0,
           "mergedCount": 0
-        }
-      ],
-      "recentOccurrences": [
-        {
-          "date": "2026-01-26",
-          "prNumber": "12293",
-          "prTitle": "runtime-rs: make OOM watcher and signal handling lifecycle-aware",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
-          "jobId": "61444440301",
-          "runId": "21349464437",
-          "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-26",
-          "prNumber": "12293",
-          "prTitle": "runtime-rs: make OOM watcher and signal handling lifecycle-aware",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
-          "jobId": "61444440301",
-          "runId": "21349464437",
-          "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-26",
-          "prNumber": "12293",
-          "prTitle": "runtime-rs: make OOM watcher and signal handling lifecycle-aware",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, qemu-runtime-rs, small)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, qemu-runtime-rs, small)",
-          "jobId": "61444440323",
-          "runId": "21349464437",
-          "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-26",
-          "prNumber": "12293",
-          "prTitle": "runtime-rs: make OOM watcher and signal handling lifecycle-aware",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, qemu-runtime-rs, small)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, qemu-runtime-rs, small)",
-          "jobId": "61444440323",
-          "runId": "21349464437",
-          "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-26",
-          "prNumber": "12293",
-          "prTitle": "runtime-rs: make OOM watcher and signal handling lifecycle-aware",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, dragonball, small)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, dragonball, small)",
-          "jobId": "61444440333",
-          "runId": "21349464437",
-          "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-26",
-          "prNumber": "12293",
-          "prTitle": "runtime-rs: make OOM watcher and signal handling lifecycle-aware",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, dragonball, small)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, dragonball, small)",
-          "jobId": "61444440333",
-          "runId": "21349464437",
-          "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-26",
-          "prNumber": "12293",
-          "prTitle": "runtime-rs: make OOM watcher and signal handling lifecycle-aware",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, cloud-hypervisor, small)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, cloud-hypervisor, small)",
-          "jobId": "61444440343",
-          "runId": "21349464437",
-          "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-26",
-          "prNumber": "12293",
-          "prTitle": "runtime-rs: make OOM watcher and signal handling lifecycle-aware",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, cloud-hypervisor, small)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, cloud-hypervisor, small)",
-          "jobId": "61444440343",
-          "runId": "21349464437",
-          "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-26",
-          "prNumber": "12293",
-          "prTitle": "runtime-rs: make OOM watcher and signal handling lifecycle-aware",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (overlayfs, qemu-runtime-rs, kubeadm)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (overlayfs, qemu-runtime-rs, kubeadm)",
-          "jobId": "61444738014",
-          "runId": "21349464437",
-          "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-26",
-          "prNumber": "12293",
-          "prTitle": "runtime-rs: make OOM watcher and signal handling lifecycle-aware",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (overlayfs, qemu-runtime-rs, kubeadm)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (overlayfs, qemu-runtime-rs, kubeadm)",
-          "jobId": "61444738014",
-          "runId": "21349464437",
-          "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-26",
-          "prNumber": "12293",
-          "prTitle": "runtime-rs: make OOM watcher and signal handling lifecycle-aware",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu-runtime-rs, kubeadm)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu-runtime-rs, kubeadm)",
-          "jobId": "61444765935",
-          "runId": "21349464437",
-          "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-26",
-          "prNumber": "12293",
-          "prTitle": "runtime-rs: make OOM watcher and signal handling lifecycle-aware",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu-runtime-rs, kubeadm)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu-runtime-rs, kubeadm)",
-          "jobId": "61444765935",
-          "runId": "21349464437",
-          "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-23",
-          "prNumber": "12349",
-          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61298558856",
-          "runId": "21294580562",
-          "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": true
-        },
-        {
-          "date": "2026-01-23",
-          "prNumber": "12349",
-          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61298558856",
-          "runId": "21294580562",
-          "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": true
-        }
-      ]
-    },
-    {
-      "name": "setup_file failed",
-      "file": "k8s-nvidia-nim.bats",
-      "totalFailures": 14,
-      "flakyCount": 8,
-      "mergedCount": 0,
-      "isConfirmedFlaky": true,
-      "mergedDespiteFailure": false,
-      "uniquePRs": 4,
-      "uniqueDates": [
-        "2026-01-26",
-        "2026-01-25"
-      ],
-      "affectedJobs": [
-        {
-          "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "count": 8,
-          "flakyCount": 4,
-          "mergedCount": 0
-        },
-        {
-          "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
-          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
-          "count": 6,
-          "flakyCount": 4,
-          "mergedCount": 0
-        }
-      ],
-      "recentOccurrences": [
-        {
-          "date": "2026-01-26",
-          "prNumber": "12325",
-          "prTitle": "build(deps): bump github.com/containerd/containerd/api from 1.9.0 to 1.10.0 in /src/runtime",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobId": "61477667552",
-          "runId": "21359476929",
-          "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-26",
-          "prNumber": "12325",
-          "prTitle": "build(deps): bump github.com/containerd/containerd/api from 1.9.0 to 1.10.0 in /src/runtime",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobId": "61477667552",
-          "runId": "21359476929",
-          "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-26",
-          "prNumber": "12312\n12310",
-          "prTitle": "kata-deploy: Fix extraction of the containerd major version\nFix extraction of the containerd major version",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
-          "jobId": "61431794207",
-          "runId": "21345135958",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-26",
-          "prNumber": "12312\n12310",
-          "prTitle": "kata-deploy: Fix extraction of the containerd major version\nFix extraction of the containerd major version",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
-          "jobId": "61431794207",
-          "runId": "21345135958",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-26",
-          "prNumber": "12312\n12310",
-          "prTitle": "kata-deploy: Fix extraction of the containerd major version\nFix extraction of the containerd major version",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobId": "61431794209",
-          "runId": "21345135958",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-26",
-          "prNumber": "12312\n12310",
-          "prTitle": "kata-deploy: Fix extraction of the containerd major version\nFix extraction of the containerd major version",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobId": "61431794209",
-          "runId": "21345135958",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-26",
-          "prNumber": "12293",
-          "prTitle": "runtime-rs: make OOM watcher and signal handling lifecycle-aware",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
-          "jobId": "61444440254",
-          "runId": "21349464437",
-          "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-26",
-          "prNumber": "12293",
-          "prTitle": "runtime-rs: make OOM watcher and signal handling lifecycle-aware",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
-          "jobId": "61444440254",
-          "runId": "21349464437",
-          "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-26",
-          "prNumber": "12293",
-          "prTitle": "runtime-rs: make OOM watcher and signal handling lifecycle-aware",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobId": "61444440267",
-          "runId": "21349464437",
-          "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-26",
-          "prNumber": "12293",
-          "prTitle": "runtime-rs: make OOM watcher and signal handling lifecycle-aware",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobId": "61444440267",
-          "runId": "21349464437",
-          "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-25",
-          "prNumber": "12385",
-          "prTitle": "versions: Tidy up versions file",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobId": "61417059321",
-          "runId": "21339450540",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-25",
-          "prNumber": "12385",
-          "prTitle": "versions: Tidy up versions file",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobId": "61417059321",
-          "runId": "21339450540",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-25",
-          "prNumber": "12385",
-          "prTitle": "versions: Tidy up versions file",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
-          "jobId": "61417059344",
-          "runId": "21339450540",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-25",
-          "prNumber": "12385",
-          "prTitle": "versions: Tidy up versions file",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-tests-on-amd64",
-          "jobId": "61417059344",
-          "runId": "21339450540",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        }
-      ]
-    },
-    {
-      "name": "Get CDH resource",
-      "file": "k8s-confidential-attestation.bats",
-      "totalFailures": 12,
-      "flakyCount": 6,
-      "mergedCount": 2,
-      "isConfirmedFlaky": true,
-      "mergedDespiteFailure": true,
-      "uniquePRs": 6,
-      "uniqueDates": [
-        "2026-01-26",
-        "2026-01-25",
-        "2026-01-23"
-      ],
-      "affectedJobs": [
-        {
-          "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "count": 8,
-          "flakyCount": 4,
-          "mergedCount": 0
         },
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 4,
-          "flakyCount": 2,
+          "count": 2,
+          "flakyCount": 0,
           "mergedCount": 2
         }
       ],
       "recentOccurrences": [
         {
           "date": "2026-01-26",
-          "prNumber": "12325",
-          "prTitle": "build(deps): bump github.com/containerd/containerd/api from 1.9.0 to 1.10.0 in /src/runtime",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobId": "61477667552",
-          "runId": "21359476929",
-          "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-26",
-          "prNumber": "12325",
-          "prTitle": "build(deps): bump github.com/containerd/containerd/api from 1.9.0 to 1.10.0 in /src/runtime",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobId": "61477667552",
-          "runId": "21359476929",
-          "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-26",
-          "prNumber": "12312\n12310",
-          "prTitle": "kata-deploy: Fix extraction of the containerd major version\nFix extraction of the containerd major version",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobId": "61431794209",
-          "runId": "21345135958",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-26",
-          "prNumber": "12312\n12310",
-          "prTitle": "kata-deploy: Fix extraction of the containerd major version\nFix extraction of the containerd major version",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobId": "61431794209",
-          "runId": "21345135958",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-26",
           "prNumber": "12293",
           "prTitle": "runtime-rs: make OOM watcher and signal handling lifecycle-aware",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobId": "61444440267",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
+          "jobId": "61444440301",
           "runId": "21349464437",
           "runAttempt": 1,
           "isFlaky": false,
@@ -560,60 +312,132 @@
           "date": "2026-01-26",
           "prNumber": "12293",
           "prTitle": "runtime-rs: make OOM watcher and signal handling lifecycle-aware",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobId": "61444440267",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
+          "jobId": "61444440301",
           "runId": "21349464437",
           "runAttempt": 1,
           "isFlaky": false,
           "prMerged": false
         },
         {
-          "date": "2026-01-25",
-          "prNumber": "12385",
-          "prTitle": "versions: Tidy up versions file",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobId": "61417059321",
-          "runId": "21339450540",
+          "date": "2026-01-26",
+          "prNumber": "12293",
+          "prTitle": "runtime-rs: make OOM watcher and signal handling lifecycle-aware",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, qemu-runtime-rs, small)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, qemu-runtime-rs, small)",
+          "jobId": "61444440323",
+          "runId": "21349464437",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": false
         },
         {
-          "date": "2026-01-25",
-          "prNumber": "12385",
-          "prTitle": "versions: Tidy up versions file",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobId": "61417059321",
-          "runId": "21339450540",
+          "date": "2026-01-26",
+          "prNumber": "12293",
+          "prTitle": "runtime-rs: make OOM watcher and signal handling lifecycle-aware",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, qemu-runtime-rs, small)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, qemu-runtime-rs, small)",
+          "jobId": "61444440323",
+          "runId": "21349464437",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": false
         },
         {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
+          "date": "2026-01-26",
+          "prNumber": "12293",
+          "prTitle": "runtime-rs: make OOM watcher and signal handling lifecycle-aware",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, dragonball, small)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, dragonball, small)",
+          "jobId": "61444440333",
+          "runId": "21349464437",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": false
         },
         {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
+          "date": "2026-01-26",
+          "prNumber": "12293",
+          "prTitle": "runtime-rs: make OOM watcher and signal handling lifecycle-aware",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, dragonball, small)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, dragonball, small)",
+          "jobId": "61444440333",
+          "runId": "21349464437",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-26",
+          "prNumber": "12293",
+          "prTitle": "runtime-rs: make OOM watcher and signal handling lifecycle-aware",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, cloud-hypervisor, small)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, cloud-hypervisor, small)",
+          "jobId": "61444440343",
+          "runId": "21349464437",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-26",
+          "prNumber": "12293",
+          "prTitle": "runtime-rs: make OOM watcher and signal handling lifecycle-aware",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, cloud-hypervisor, small)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, cloud-hypervisor, small)",
+          "jobId": "61444440343",
+          "runId": "21349464437",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-26",
+          "prNumber": "12293",
+          "prTitle": "runtime-rs: make OOM watcher and signal handling lifecycle-aware",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (overlayfs, qemu-runtime-rs, kubeadm)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (overlayfs, qemu-runtime-rs, kubeadm)",
+          "jobId": "61444738014",
+          "runId": "21349464437",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-26",
+          "prNumber": "12293",
+          "prTitle": "runtime-rs: make OOM watcher and signal handling lifecycle-aware",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (overlayfs, qemu-runtime-rs, kubeadm)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (overlayfs, qemu-runtime-rs, kubeadm)",
+          "jobId": "61444738014",
+          "runId": "21349464437",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-26",
+          "prNumber": "12293",
+          "prTitle": "runtime-rs: make OOM watcher and signal handling lifecycle-aware",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu-runtime-rs, kubeadm)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu-runtime-rs, kubeadm)",
+          "jobId": "61444765935",
+          "runId": "21349464437",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-26",
+          "prNumber": "12293",
+          "prTitle": "runtime-rs: make OOM watcher and signal handling lifecycle-aware",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu-runtime-rs, kubeadm)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu-runtime-rs, kubeadm)",
+          "jobId": "61444765935",
+          "runId": "21349464437",
+          "runAttempt": 1,
+          "isFlaky": false,
           "prMerged": false
         },
         {
@@ -646,12 +470,13 @@
       "name": "Can get CDH resource when affirming policy is set with reference values",
       "file": "k8s-confidential-attestation.bats",
       "totalFailures": 12,
-      "flakyCount": 6,
+      "flakyCount": 4,
       "mergedCount": 2,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": true,
       "uniquePRs": 6,
       "uniqueDates": [
+        "2026-01-27",
         "2026-01-26",
         "2026-01-25",
         "2026-01-23"
@@ -660,20 +485,44 @@
         {
           "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
           "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "count": 8,
+          "count": 10,
           "flakyCount": 4,
           "mergedCount": 0
         },
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 4,
-          "flakyCount": 2,
+          "count": 2,
+          "flakyCount": 0,
           "mergedCount": 2
         }
       ],
       "recentOccurrences": [
         {
+          "date": "2026-01-27",
+          "prNumber": "12396",
+          "prTitle": "WIP: runtime(-rs): Introduce dm-verity kernelinit mode",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "61642671519",
+          "runId": "21407886970",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-27",
+          "prNumber": "12396",
+          "prTitle": "WIP: runtime(-rs): Introduce dm-verity kernelinit mode",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "61642671519",
+          "runId": "21407886970",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
           "date": "2026-01-26",
           "prNumber": "12325",
           "prTitle": "build(deps): bump github.com/containerd/containerd/api from 1.9.0 to 1.10.0 in /src/runtime",
@@ -765,30 +614,6 @@
           "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
           "jobId": "61417059321",
           "runId": "21339450540",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
           "runAttempt": 1,
           "isFlaky": true,
           "prMerged": false
@@ -996,14 +821,14 @@
       ]
     },
     {
-      "name": "Cannot get CDH resource when affirming policy is set without reference values",
+      "name": "Get CDH resource",
       "file": "k8s-confidential-attestation.bats",
-      "totalFailures": 12,
-      "flakyCount": 8,
+      "totalFailures": 10,
+      "flakyCount": 4,
       "mergedCount": 2,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": true,
-      "uniquePRs": 6,
+      "uniquePRs": 5,
       "uniqueDates": [
         "2026-01-26",
         "2026-01-25",
@@ -1014,18 +839,42 @@
           "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
           "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
           "count": 8,
-          "flakyCount": 6,
+          "flakyCount": 4,
           "mergedCount": 0
         },
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 4,
-          "flakyCount": 2,
+          "count": 2,
+          "flakyCount": 0,
           "mergedCount": 2
         }
       ],
       "recentOccurrences": [
+        {
+          "date": "2026-01-26",
+          "prNumber": "12325",
+          "prTitle": "build(deps): bump github.com/containerd/containerd/api from 1.9.0 to 1.10.0 in /src/runtime",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "61477667552",
+          "runId": "21359476929",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-26",
+          "prNumber": "12325",
+          "prTitle": "build(deps): bump github.com/containerd/containerd/api from 1.9.0 to 1.10.0 in /src/runtime",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "61477667552",
+          "runId": "21359476929",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
         {
           "date": "2026-01-26",
           "prNumber": "12312\n12310",
@@ -1100,250 +949,6 @@
         },
         {
           "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-23",
-          "prNumber": "12349",
-          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61298558856",
-          "runId": "21294580562",
-          "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": true
-        },
-        {
-          "date": "2026-01-23",
-          "prNumber": "12349",
-          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61298558856",
-          "runId": "21294580562",
-          "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": true
-        },
-        {
-          "date": "2026-01-23",
-          "prNumber": "12345",
-          "prTitle": "ci: Fix shellcheck errors for kubernetes intergration tests",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobId": "61315939227",
-          "runId": "21299852738",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-23",
-          "prNumber": "12345",
-          "prTitle": "ci: Fix shellcheck errors for kubernetes intergration tests",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobId": "61315939227",
-          "runId": "21299852738",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        }
-      ]
-    },
-    {
-      "name": "Running with postStart and preStop handlers",
-      "file": "k8s-attach-handlers.bats",
-      "totalFailures": 12,
-      "flakyCount": 10,
-      "mergedCount": 2,
-      "isConfirmedFlaky": true,
-      "mergedDespiteFailure": true,
-      "uniquePRs": 2,
-      "uniqueDates": [
-        "2026-01-23"
-      ],
-      "affectedJobs": [
-        {
-          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 4,
-          "flakyCount": 2,
-          "mergedCount": 2
-        },
-        {
-          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
-          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
-          "count": 2,
-          "flakyCount": 2,
-          "mergedCount": 0
-        },
-        {
-          "name": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, cloud-hypervisor, small)",
-          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, cloud-hypervisor, small)",
-          "count": 2,
-          "flakyCount": 2,
-          "mergedCount": 0
-        },
-        {
-          "name": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, dragonball, small)",
-          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, dragonball, small)",
-          "count": 2,
-          "flakyCount": 2,
-          "mergedCount": 0
-        },
-        {
-          "name": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, qemu-runtime-rs, small)",
-          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, qemu-runtime-rs, small)",
-          "count": 2,
-          "flakyCount": 2,
-          "mergedCount": 0
-        }
-      ],
-      "recentOccurrences": [
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
-          "jobId": "61274430387",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
-          "jobId": "61274430387",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, cloud-hypervisor, small)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, cloud-hypervisor, small)",
-          "jobId": "61274430456",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, cloud-hypervisor, small)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, cloud-hypervisor, small)",
-          "jobId": "61274430456",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, dragonball, small)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, dragonball, small)",
-          "jobId": "61274430461",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, dragonball, small)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, dragonball, small)",
-          "jobId": "61274430461",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, qemu-runtime-rs, small)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, qemu-runtime-rs, small)",
-          "jobId": "61274430539",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, qemu-runtime-rs, small)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, qemu-runtime-rs, small)",
-          "jobId": "61274430539",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-23",
           "prNumber": "12349",
           "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
           "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
@@ -1369,7 +974,7 @@
       ]
     },
     {
-      "name": "Cannot get CDH resource when deny-all policy is set",
+      "name": "Cannot get CDH resource when affirming policy is set without reference values",
       "file": "k8s-confidential-attestation.bats",
       "totalFailures": 10,
       "flakyCount": 6,
@@ -1386,15 +991,15 @@
         {
           "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
           "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "count": 6,
-          "flakyCount": 4,
+          "count": 8,
+          "flakyCount": 6,
           "mergedCount": 0
         },
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 4,
-          "flakyCount": 2,
+          "count": 2,
+          "flakyCount": 0,
           "mergedCount": 2
         }
       ],
@@ -1473,30 +1078,6 @@
         },
         {
           "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-23",
           "prNumber": "12349",
           "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
           "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
@@ -1518,12 +1099,36 @@
           "runAttempt": 1,
           "isFlaky": false,
           "prMerged": true
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12345",
+          "prTitle": "ci: Fix shellcheck errors for kubernetes intergration tests",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "61315939227",
+          "runId": "21299852738",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12345",
+          "prTitle": "ci: Fix shellcheck errors for kubernetes intergration tests",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "61315939227",
+          "runId": "21299852738",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": false
         }
       ]
     },
     {
-      "name": "Pod that performs ip6tables setup",
-      "file": "k8s-ip6tables.bats",
+      "name": "Cannot get CDH resource when deny-all policy is set",
+      "file": "k8s-confidential-attestation.bats",
       "totalFailures": 8,
       "flakyCount": 4,
       "mergedCount": 2,
@@ -1532,56 +1137,33 @@
       "uniquePRs": 4,
       "uniqueDates": [
         "2026-01-26",
+        "2026-01-25",
         "2026-01-23"
       ],
       "affectedJobs": [
         {
-          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
           "count": 6,
-          "flakyCount": 2,
-          "mergedCount": 2
+          "flakyCount": 4,
+          "mergedCount": 0
         },
         {
-          "name": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (cbl-mariner, clh, small, oci-distribution)",
-          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (cbl-mariner, clh, small, oci-distribution)",
+          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "count": 2,
-          "flakyCount": 2,
-          "mergedCount": 0
+          "flakyCount": 0,
+          "mergedCount": 2
         }
       ],
       "recentOccurrences": [
         {
           "date": "2026-01-26",
-          "prNumber": "12325",
-          "prTitle": "build(deps): bump github.com/containerd/containerd/api from 1.9.0 to 1.10.0 in /src/runtime",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61477667582",
-          "runId": "21359476929",
-          "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-26",
-          "prNumber": "12325",
-          "prTitle": "build(deps): bump github.com/containerd/containerd/api from 1.9.0 to 1.10.0 in /src/runtime",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61477667582",
-          "runId": "21359476929",
-          "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-26",
           "prNumber": "12312\n12310",
           "prTitle": "kata-deploy: Fix extraction of the containerd major version\nFix extraction of the containerd major version",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (cbl-mariner, clh, small, oci-distribution)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (cbl-mariner, clh, small, oci-distribution)",
-          "jobId": "61431794265",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "61431794209",
           "runId": "21345135958",
           "runAttempt": 1,
           "isFlaky": true,
@@ -1591,34 +1173,58 @@
           "date": "2026-01-26",
           "prNumber": "12312\n12310",
           "prTitle": "kata-deploy: Fix extraction of the containerd major version\nFix extraction of the containerd major version",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (cbl-mariner, clh, small, oci-distribution)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (cbl-mariner, clh, small, oci-distribution)",
-          "jobId": "61431794265",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "61431794209",
           "runId": "21345135958",
           "runAttempt": 1,
           "isFlaky": true,
           "prMerged": false
         },
         {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
+          "date": "2026-01-26",
+          "prNumber": "12293",
+          "prTitle": "runtime-rs: make OOM watcher and signal handling lifecycle-aware",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "61444440267",
+          "runId": "21349464437",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-26",
+          "prNumber": "12293",
+          "prTitle": "runtime-rs: make OOM watcher and signal handling lifecycle-aware",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "61444440267",
+          "runId": "21349464437",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-25",
+          "prNumber": "12385",
+          "prTitle": "versions: Tidy up versions file",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "61417059321",
+          "runId": "21339450540",
           "runAttempt": 1,
           "isFlaky": true,
           "prMerged": false
         },
         {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
+          "date": "2026-01-25",
+          "prNumber": "12385",
+          "prTitle": "versions: Tidy up versions file",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "61417059321",
+          "runId": "21339450540",
           "runAttempt": 1,
           "isFlaky": true,
           "prMerged": false
@@ -1653,6 +1259,111 @@
       "name": "Empty dir volume when FSGroup is specified with non-root container",
       "file": "k8s-empty-dirs.bats",
       "totalFailures": 6,
+      "flakyCount": 0,
+      "mergedCount": 2,
+      "isConfirmedFlaky": false,
+      "mergedDespiteFailure": true,
+      "uniquePRs": 3,
+      "uniqueDates": [
+        "2026-01-27",
+        "2026-01-26",
+        "2026-01-23"
+      ],
+      "affectedJobs": [
+        {
+          "name": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (devmapper, qemu, kubeadm)",
+          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (devmapper, qemu, kubeadm)",
+          "count": 4,
+          "flakyCount": 0,
+          "mergedCount": 0
+        },
+        {
+          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "count": 2,
+          "flakyCount": 0,
+          "mergedCount": 2
+        }
+      ],
+      "recentOccurrences": [
+        {
+          "date": "2026-01-27",
+          "prNumber": "12394",
+          "prTitle": "shim: enforce iommufd for confidential guest vfio",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (devmapper, qemu, kubeadm)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (devmapper, qemu, kubeadm)",
+          "jobId": "61647438203",
+          "runId": "21406423301",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-27",
+          "prNumber": "12394",
+          "prTitle": "shim: enforce iommufd for confidential guest vfio",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (devmapper, qemu, kubeadm)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (devmapper, qemu, kubeadm)",
+          "jobId": "61647438203",
+          "runId": "21406423301",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-26",
+          "prNumber": "12395",
+          "prTitle": "kata-deploy: Update for mariner in all target",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (devmapper, qemu, kubeadm)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (devmapper, qemu, kubeadm)",
+          "jobId": "61525964872",
+          "runId": "21372510967",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-26",
+          "prNumber": "12395",
+          "prTitle": "kata-deploy: Update for mariner in all target",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (devmapper, qemu, kubeadm)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (devmapper, qemu, kubeadm)",
+          "jobId": "61525964872",
+          "runId": "21372510967",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        }
+      ]
+    },
+    {
+      "name": "Pod that performs ip6tables setup",
+      "file": "k8s-ip6tables.bats",
+      "totalFailures": 6,
       "flakyCount": 2,
       "mergedCount": 2,
       "isConfirmedFlaky": true,
@@ -1667,62 +1378,62 @@
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "count": 4,
-          "flakyCount": 2,
+          "flakyCount": 0,
           "mergedCount": 2
         },
         {
-          "name": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (devmapper, qemu, kubeadm)",
-          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (devmapper, qemu, kubeadm)",
+          "name": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (cbl-mariner, clh, small, oci-distribution)",
+          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (cbl-mariner, clh, small, oci-distribution)",
           "count": 2,
-          "flakyCount": 0,
+          "flakyCount": 2,
           "mergedCount": 0
         }
       ],
       "recentOccurrences": [
         {
           "date": "2026-01-26",
-          "prNumber": "12395",
-          "prTitle": "kata-deploy: Update for mariner in all target",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (devmapper, qemu, kubeadm)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (devmapper, qemu, kubeadm)",
-          "jobId": "61525964872",
-          "runId": "21372510967",
+          "prNumber": "12325",
+          "prTitle": "build(deps): bump github.com/containerd/containerd/api from 1.9.0 to 1.10.0 in /src/runtime",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61477667582",
+          "runId": "21359476929",
           "runAttempt": 1,
           "isFlaky": false,
           "prMerged": false
         },
         {
           "date": "2026-01-26",
-          "prNumber": "12395",
-          "prTitle": "kata-deploy: Update for mariner in all target",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (devmapper, qemu, kubeadm)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (devmapper, qemu, kubeadm)",
-          "jobId": "61525964872",
-          "runId": "21372510967",
+          "prNumber": "12325",
+          "prTitle": "build(deps): bump github.com/containerd/containerd/api from 1.9.0 to 1.10.0 in /src/runtime",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61477667582",
+          "runId": "21359476929",
           "runAttempt": 1,
           "isFlaky": false,
           "prMerged": false
         },
         {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
+          "date": "2026-01-26",
+          "prNumber": "12312\n12310",
+          "prTitle": "kata-deploy: Fix extraction of the containerd major version\nFix extraction of the containerd major version",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (cbl-mariner, clh, small, oci-distribution)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (cbl-mariner, clh, small, oci-distribution)",
+          "jobId": "61431794265",
+          "runId": "21345135958",
           "runAttempt": 1,
           "isFlaky": true,
           "prMerged": false
         },
         {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
+          "date": "2026-01-26",
+          "prNumber": "12312\n12310",
+          "prTitle": "kata-deploy: Fix extraction of the containerd major version\nFix extraction of the containerd major version",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (cbl-mariner, clh, small, oci-distribution)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (cbl-mariner, clh, small, oci-distribution)",
+          "jobId": "61431794265",
+          "runId": "21345135958",
           "runAttempt": 1,
           "isFlaky": true,
           "prMerged": false
@@ -1756,212 +1467,6 @@
     {
       "name": "Check capabilities of pod",
       "file": "k8s-caps.bats",
-      "totalFailures": 6,
-      "flakyCount": 4,
-      "mergedCount": 2,
-      "isConfirmedFlaky": true,
-      "mergedDespiteFailure": true,
-      "uniquePRs": 3,
-      "uniqueDates": [
-        "2026-01-23"
-      ],
-      "affectedJobs": [
-        {
-          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 4,
-          "flakyCount": 2,
-          "mergedCount": 2
-        },
-        {
-          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter (qemu-coco-dev, erofs, default)",
-          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter (qemu-coco-dev, erofs, default)",
-          "count": 2,
-          "flakyCount": 2,
-          "mergedCount": 0
-        }
-      ],
-      "recentOccurrences": [
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-23",
-          "prNumber": "12349",
-          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61298558856",
-          "runId": "21294580562",
-          "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": true
-        },
-        {
-          "date": "2026-01-23",
-          "prNumber": "12349",
-          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61298558856",
-          "runId": "21294580562",
-          "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": true
-        },
-        {
-          "date": "2026-01-23",
-          "prNumber": "12345",
-          "prTitle": "ci: Fix shellcheck errors for kubernetes intergration tests",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter (qemu-coco-dev, erofs, default)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter (qemu-coco-dev, erofs, default)",
-          "jobId": "61315939221",
-          "runId": "21299852738",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-23",
-          "prNumber": "12345",
-          "prTitle": "ci: Fix shellcheck errors for kubernetes intergration tests",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter (qemu-coco-dev, erofs, default)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter (qemu-coco-dev, erofs, default)",
-          "jobId": "61315939221",
-          "runId": "21299852738",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        }
-      ]
-    },
-    {
-      "name": "Run a job to completion",
-      "file": "k8s-job.bats",
-      "totalFailures": 6,
-      "flakyCount": 4,
-      "mergedCount": 2,
-      "isConfirmedFlaky": true,
-      "mergedDespiteFailure": true,
-      "uniquePRs": 2,
-      "uniqueDates": [
-        "2026-01-23"
-      ],
-      "affectedJobs": [
-        {
-          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 4,
-          "flakyCount": 2,
-          "mergedCount": 2
-        },
-        {
-          "name": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (cbl-mariner, clh, small, oci-distribution)",
-          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (cbl-mariner, clh, small, oci-distribution)",
-          "count": 2,
-          "flakyCount": 2,
-          "mergedCount": 0
-        }
-      ],
-      "recentOccurrences": [
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (cbl-mariner, clh, small, oci-distribution)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (cbl-mariner, clh, small, oci-distribution)",
-          "jobId": "61274430487",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (cbl-mariner, clh, small, oci-distribution)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (cbl-mariner, clh, small, oci-distribution)",
-          "jobId": "61274430487",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-23",
-          "prNumber": "12349",
-          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61298558856",
-          "runId": "21294580562",
-          "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": true
-        },
-        {
-          "date": "2026-01-23",
-          "prNumber": "12349",
-          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61298558856",
-          "runId": "21294580562",
-          "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": true
-        }
-      ]
-    },
-    {
-      "name": "Test that creating a container from an encrypted image, with no decryption key fails",
-      "file": "k8s-guest-pull-image-encrypted.bats",
       "totalFailures": 4,
       "flakyCount": 2,
       "mergedCount": 2,
@@ -1973,38 +1478,93 @@
       ],
       "affectedJobs": [
         {
+          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter (qemu-coco-dev, erofs, default)",
+          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter (qemu-coco-dev, erofs, default)",
+          "count": 2,
+          "flakyCount": 2,
+          "mergedCount": 0
+        },
+        {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 4,
-          "flakyCount": 2,
+          "count": 2,
+          "flakyCount": 0,
           "mergedCount": 2
         }
       ],
       "recentOccurrences": [
         {
           "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
           "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12345",
+          "prTitle": "ci: Fix shellcheck errors for kubernetes intergration tests",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter (qemu-coco-dev, erofs, default)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter (qemu-coco-dev, erofs, default)",
+          "jobId": "61315939221",
+          "runId": "21299852738",
           "runAttempt": 1,
           "isFlaky": true,
           "prMerged": false
         },
         {
           "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
+          "prNumber": "12345",
+          "prTitle": "ci: Fix shellcheck errors for kubernetes intergration tests",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter (qemu-coco-dev, erofs, default)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter (qemu-coco-dev, erofs, default)",
+          "jobId": "61315939221",
+          "runId": "21299852738",
           "runAttempt": 1,
           "isFlaky": true,
           "prMerged": false
-        },
+        }
+      ]
+    },
+    {
+      "name": "Test that creating a container from an encrypted image, with no decryption key fails",
+      "file": "k8s-guest-pull-image-encrypted.bats",
+      "totalFailures": 2,
+      "flakyCount": 0,
+      "mergedCount": 2,
+      "isConfirmedFlaky": false,
+      "mergedDespiteFailure": true,
+      "uniquePRs": 1,
+      "uniqueDates": [
+        "2026-01-23"
+      ],
+      "affectedJobs": [
+        {
+          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "count": 2,
+          "flakyCount": 0,
+          "mergedCount": 2
+        }
+      ],
+      "recentOccurrences": [
         {
           "date": "2026-01-23",
           "prNumber": "12349",
@@ -2034,12 +1594,12 @@
     {
       "name": "Test that creating a container from an encrypted image, with correct decryption key works",
       "file": "k8s-guest-pull-image-encrypted.bats",
-      "totalFailures": 4,
-      "flakyCount": 2,
+      "totalFailures": 2,
+      "flakyCount": 0,
       "mergedCount": 2,
-      "isConfirmedFlaky": true,
+      "isConfirmedFlaky": false,
       "mergedDespiteFailure": true,
-      "uniquePRs": 2,
+      "uniquePRs": 1,
       "uniqueDates": [
         "2026-01-23"
       ],
@@ -2047,36 +1607,12 @@
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 4,
-          "flakyCount": 2,
+          "count": 2,
+          "flakyCount": 0,
           "mergedCount": 2
         }
       ],
       "recentOccurrences": [
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
         {
           "date": "2026-01-23",
           "prNumber": "12349",
@@ -2106,12 +1642,12 @@
     {
       "name": "Test that creating a container from an encrypted image, with incorrect decryption key fails",
       "file": "k8s-guest-pull-image-encrypted.bats",
-      "totalFailures": 4,
-      "flakyCount": 2,
+      "totalFailures": 2,
+      "flakyCount": 0,
       "mergedCount": 2,
-      "isConfirmedFlaky": true,
+      "isConfirmedFlaky": false,
       "mergedDespiteFailure": true,
-      "uniquePRs": 2,
+      "uniquePRs": 1,
       "uniqueDates": [
         "2026-01-23"
       ],
@@ -2119,36 +1655,12 @@
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 4,
-          "flakyCount": 2,
+          "count": 2,
+          "flakyCount": 0,
           "mergedCount": 2
         }
       ],
       "recentOccurrences": [
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
         {
           "date": "2026-01-23",
           "prNumber": "12349",
@@ -2178,12 +1690,12 @@
     {
       "name": "Test that creating a container from an authenticated image, with correct credentials works",
       "file": "k8s-guest-pull-image-authenticated.bats",
-      "totalFailures": 4,
-      "flakyCount": 2,
+      "totalFailures": 2,
+      "flakyCount": 0,
       "mergedCount": 2,
-      "isConfirmedFlaky": true,
+      "isConfirmedFlaky": false,
       "mergedDespiteFailure": true,
-      "uniquePRs": 2,
+      "uniquePRs": 1,
       "uniqueDates": [
         "2026-01-23"
       ],
@@ -2191,36 +1703,12 @@
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 4,
-          "flakyCount": 2,
+          "count": 2,
+          "flakyCount": 0,
           "mergedCount": 2
         }
       ],
       "recentOccurrences": [
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
         {
           "date": "2026-01-23",
           "prNumber": "12349",
@@ -2250,12 +1738,12 @@
     {
       "name": "Test that creating a container from an authenticated image, with incorrect credentials fails",
       "file": "k8s-guest-pull-image-authenticated.bats",
-      "totalFailures": 4,
-      "flakyCount": 2,
+      "totalFailures": 2,
+      "flakyCount": 0,
       "mergedCount": 2,
-      "isConfirmedFlaky": true,
+      "isConfirmedFlaky": false,
       "mergedDespiteFailure": true,
-      "uniquePRs": 2,
+      "uniquePRs": 1,
       "uniqueDates": [
         "2026-01-23"
       ],
@@ -2263,36 +1751,12 @@
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 4,
-          "flakyCount": 2,
+          "count": 2,
+          "flakyCount": 0,
           "mergedCount": 2
         }
       ],
       "recentOccurrences": [
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
         {
           "date": "2026-01-23",
           "prNumber": "12349",
@@ -2322,12 +1786,12 @@
     {
       "name": "Test that creating a container from an authenticated image, with no credentials fails",
       "file": "k8s-guest-pull-image-authenticated.bats",
-      "totalFailures": 4,
-      "flakyCount": 2,
+      "totalFailures": 2,
+      "flakyCount": 0,
       "mergedCount": 2,
-      "isConfirmedFlaky": true,
+      "isConfirmedFlaky": false,
       "mergedDespiteFailure": true,
-      "uniquePRs": 2,
+      "uniquePRs": 1,
       "uniqueDates": [
         "2026-01-23"
       ],
@@ -2335,36 +1799,12 @@
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 4,
-          "flakyCount": 2,
+          "count": 2,
+          "flakyCount": 0,
           "mergedCount": 2
         }
       ],
       "recentOccurrences": [
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
         {
           "date": "2026-01-23",
           "prNumber": "12349",
@@ -2394,12 +1834,12 @@
     {
       "name": "Test that creating a container from an authenticated image, with correct credentials works (with initdata)",
       "file": "k8s-guest-pull-image-authenticated.bats",
-      "totalFailures": 4,
-      "flakyCount": 2,
+      "totalFailures": 2,
+      "flakyCount": 0,
       "mergedCount": 2,
-      "isConfirmedFlaky": true,
+      "isConfirmedFlaky": false,
       "mergedDespiteFailure": true,
-      "uniquePRs": 2,
+      "uniquePRs": 1,
       "uniqueDates": [
         "2026-01-23"
       ],
@@ -2407,36 +1847,12 @@
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 4,
-          "flakyCount": 2,
+          "count": 2,
+          "flakyCount": 0,
           "mergedCount": 2
         }
       ],
       "recentOccurrences": [
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
         {
           "date": "2026-01-23",
           "prNumber": "12349",
@@ -2466,12 +1882,12 @@
     {
       "name": "Test that creating a container from an authenticated image, with incorrect credentials fails (with initdata)",
       "file": "k8s-guest-pull-image-authenticated.bats",
-      "totalFailures": 4,
-      "flakyCount": 2,
+      "totalFailures": 2,
+      "flakyCount": 0,
       "mergedCount": 2,
-      "isConfirmedFlaky": true,
+      "isConfirmedFlaky": false,
       "mergedDespiteFailure": true,
-      "uniquePRs": 2,
+      "uniquePRs": 1,
       "uniqueDates": [
         "2026-01-23"
       ],
@@ -2479,36 +1895,12 @@
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 4,
-          "flakyCount": 2,
+          "count": 2,
+          "flakyCount": 0,
           "mergedCount": 2
         }
       ],
       "recentOccurrences": [
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
         {
           "date": "2026-01-23",
           "prNumber": "12349",
@@ -2538,12 +1930,12 @@
     {
       "name": "Test that creating a container from an authenticated image, with no credentials fails (with initdata)",
       "file": "k8s-guest-pull-image-authenticated.bats",
-      "totalFailures": 4,
-      "flakyCount": 2,
+      "totalFailures": 2,
+      "flakyCount": 0,
       "mergedCount": 2,
-      "isConfirmedFlaky": true,
+      "isConfirmedFlaky": false,
       "mergedDespiteFailure": true,
-      "uniquePRs": 2,
+      "uniquePRs": 1,
       "uniqueDates": [
         "2026-01-23"
       ],
@@ -2551,36 +1943,12 @@
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 4,
-          "flakyCount": 2,
+          "count": 2,
+          "flakyCount": 0,
           "mergedCount": 2
         }
       ],
       "recentOccurrences": [
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
         {
           "date": "2026-01-23",
           "prNumber": "12349",
@@ -2610,12 +1978,12 @@
     {
       "name": "Create a pod from an unsigned image, on an insecureAcceptAnything registry works",
       "file": "k8s-guest-pull-image-signature.bats",
-      "totalFailures": 4,
-      "flakyCount": 2,
+      "totalFailures": 2,
+      "flakyCount": 0,
       "mergedCount": 2,
-      "isConfirmedFlaky": true,
+      "isConfirmedFlaky": false,
       "mergedDespiteFailure": true,
-      "uniquePRs": 2,
+      "uniquePRs": 1,
       "uniqueDates": [
         "2026-01-23"
       ],
@@ -2623,36 +1991,12 @@
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 4,
-          "flakyCount": 2,
+          "count": 2,
+          "flakyCount": 0,
           "mergedCount": 2
         }
       ],
       "recentOccurrences": [
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
         {
           "date": "2026-01-23",
           "prNumber": "12349",
@@ -2682,12 +2026,12 @@
     {
       "name": "Create a pod from an unsigned image, on a 'restricted registry' is rejected",
       "file": "k8s-guest-pull-image-signature.bats",
-      "totalFailures": 4,
-      "flakyCount": 2,
+      "totalFailures": 2,
+      "flakyCount": 0,
       "mergedCount": 2,
-      "isConfirmedFlaky": true,
+      "isConfirmedFlaky": false,
       "mergedDespiteFailure": true,
-      "uniquePRs": 2,
+      "uniquePRs": 1,
       "uniqueDates": [
         "2026-01-23"
       ],
@@ -2695,36 +2039,12 @@
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 4,
-          "flakyCount": 2,
+          "count": 2,
+          "flakyCount": 0,
           "mergedCount": 2
         }
       ],
       "recentOccurrences": [
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
         {
           "date": "2026-01-23",
           "prNumber": "12349",
@@ -2754,12 +2074,12 @@
     {
       "name": "Create a pod from a signed image, on a 'restricted registry' is successful",
       "file": "k8s-guest-pull-image-signature.bats",
-      "totalFailures": 4,
-      "flakyCount": 2,
+      "totalFailures": 2,
+      "flakyCount": 0,
       "mergedCount": 2,
-      "isConfirmedFlaky": true,
+      "isConfirmedFlaky": false,
       "mergedDespiteFailure": true,
-      "uniquePRs": 2,
+      "uniquePRs": 1,
       "uniqueDates": [
         "2026-01-23"
       ],
@@ -2767,36 +2087,12 @@
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 4,
-          "flakyCount": 2,
+          "count": 2,
+          "flakyCount": 0,
           "mergedCount": 2
         }
       ],
       "recentOccurrences": [
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
         {
           "date": "2026-01-23",
           "prNumber": "12349",
@@ -2826,12 +2122,12 @@
     {
       "name": "Create a pod from a signed image, on a 'restricted registry', but with the wrong key is rejected",
       "file": "k8s-guest-pull-image-signature.bats",
-      "totalFailures": 4,
-      "flakyCount": 2,
+      "totalFailures": 2,
+      "flakyCount": 0,
       "mergedCount": 2,
-      "isConfirmedFlaky": true,
+      "isConfirmedFlaky": false,
       "mergedDespiteFailure": true,
-      "uniquePRs": 2,
+      "uniquePRs": 1,
       "uniqueDates": [
         "2026-01-23"
       ],
@@ -2839,36 +2135,12 @@
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 4,
-          "flakyCount": 2,
+          "count": 2,
+          "flakyCount": 0,
           "mergedCount": 2
         }
       ],
       "recentOccurrences": [
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
         {
           "date": "2026-01-23",
           "prNumber": "12349",
@@ -2898,12 +2170,12 @@
     {
       "name": "Create a pod from an unsigned image, on a 'restricted registry' works if policy files isn't set",
       "file": "k8s-guest-pull-image-signature.bats",
-      "totalFailures": 4,
-      "flakyCount": 2,
+      "totalFailures": 2,
+      "flakyCount": 0,
       "mergedCount": 2,
-      "isConfirmedFlaky": true,
+      "isConfirmedFlaky": false,
       "mergedDespiteFailure": true,
-      "uniquePRs": 2,
+      "uniquePRs": 1,
       "uniqueDates": [
         "2026-01-23"
       ],
@@ -2911,36 +2183,12 @@
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 4,
-          "flakyCount": 2,
+          "count": 2,
+          "flakyCount": 0,
           "mergedCount": 2
         }
       ],
       "recentOccurrences": [
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
         {
           "date": "2026-01-23",
           "prNumber": "12349",
@@ -2970,12 +2218,12 @@
     {
       "name": "Create a pod from an unsigned image, on an insecureAcceptAnything registry works (with initdata)",
       "file": "k8s-guest-pull-image-signature.bats",
-      "totalFailures": 4,
-      "flakyCount": 2,
+      "totalFailures": 2,
+      "flakyCount": 0,
       "mergedCount": 2,
-      "isConfirmedFlaky": true,
+      "isConfirmedFlaky": false,
       "mergedDespiteFailure": true,
-      "uniquePRs": 2,
+      "uniquePRs": 1,
       "uniqueDates": [
         "2026-01-23"
       ],
@@ -2983,36 +2231,12 @@
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 4,
-          "flakyCount": 2,
+          "count": 2,
+          "flakyCount": 0,
           "mergedCount": 2
         }
       ],
       "recentOccurrences": [
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
         {
           "date": "2026-01-23",
           "prNumber": "12349",
@@ -3042,12 +2266,12 @@
     {
       "name": "Create a pod from an unsigned image, on a 'restricted registry' is rejected (with initdata)",
       "file": "k8s-guest-pull-image-signature.bats",
-      "totalFailures": 4,
-      "flakyCount": 2,
+      "totalFailures": 2,
+      "flakyCount": 0,
       "mergedCount": 2,
-      "isConfirmedFlaky": true,
+      "isConfirmedFlaky": false,
       "mergedDespiteFailure": true,
-      "uniquePRs": 2,
+      "uniquePRs": 1,
       "uniqueDates": [
         "2026-01-23"
       ],
@@ -3055,36 +2279,12 @@
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 4,
-          "flakyCount": 2,
+          "count": 2,
+          "flakyCount": 0,
           "mergedCount": 2
         }
       ],
       "recentOccurrences": [
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
         {
           "date": "2026-01-23",
           "prNumber": "12349",
@@ -3114,12 +2314,12 @@
     {
       "name": "Create a pod from a signed image, on a 'restricted registry' is successful (with initdata)",
       "file": "k8s-guest-pull-image-signature.bats",
-      "totalFailures": 4,
-      "flakyCount": 2,
+      "totalFailures": 2,
+      "flakyCount": 0,
       "mergedCount": 2,
-      "isConfirmedFlaky": true,
+      "isConfirmedFlaky": false,
       "mergedDespiteFailure": true,
-      "uniquePRs": 2,
+      "uniquePRs": 1,
       "uniqueDates": [
         "2026-01-23"
       ],
@@ -3127,36 +2327,12 @@
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 4,
-          "flakyCount": 2,
+          "count": 2,
+          "flakyCount": 0,
           "mergedCount": 2
         }
       ],
       "recentOccurrences": [
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
         {
           "date": "2026-01-23",
           "prNumber": "12349",
@@ -3186,12 +2362,12 @@
     {
       "name": "Create a pod from a signed image, on a 'restricted registry', but with the wrong key is rejected (with initdata)",
       "file": "k8s-guest-pull-image-signature.bats",
-      "totalFailures": 4,
-      "flakyCount": 2,
+      "totalFailures": 2,
+      "flakyCount": 0,
       "mergedCount": 2,
-      "isConfirmedFlaky": true,
+      "isConfirmedFlaky": false,
       "mergedDespiteFailure": true,
-      "uniquePRs": 2,
+      "uniquePRs": 1,
       "uniqueDates": [
         "2026-01-23"
       ],
@@ -3199,36 +2375,12 @@
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 4,
-          "flakyCount": 2,
+          "count": 2,
+          "flakyCount": 0,
           "mergedCount": 2
         }
       ],
       "recentOccurrences": [
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
         {
           "date": "2026-01-23",
           "prNumber": "12349",
@@ -3258,12 +2410,12 @@
     {
       "name": "Create a pod from an unsigned image, on a 'restricted registry' works if policy files isn't set (with initdata)",
       "file": "k8s-guest-pull-image-signature.bats",
-      "totalFailures": 4,
-      "flakyCount": 2,
+      "totalFailures": 2,
+      "flakyCount": 0,
       "mergedCount": 2,
-      "isConfirmedFlaky": true,
+      "isConfirmedFlaky": false,
       "mergedDespiteFailure": true,
-      "uniquePRs": 2,
+      "uniquePRs": 1,
       "uniqueDates": [
         "2026-01-23"
       ],
@@ -3271,36 +2423,12 @@
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 4,
-          "flakyCount": 2,
+          "count": 2,
+          "flakyCount": 0,
           "mergedCount": 2
         }
       ],
       "recentOccurrences": [
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
         {
           "date": "2026-01-23",
           "prNumber": "12349",
@@ -3330,12 +2458,12 @@
     {
       "name": "Test we can pull an unencrypted image outside the guest with runc and then inside the guest successfully",
       "file": "k8s-guest-pull-image.bats",
-      "totalFailures": 4,
-      "flakyCount": 2,
+      "totalFailures": 2,
+      "flakyCount": 0,
       "mergedCount": 2,
-      "isConfirmedFlaky": true,
+      "isConfirmedFlaky": false,
       "mergedDespiteFailure": true,
-      "uniquePRs": 2,
+      "uniquePRs": 1,
       "uniqueDates": [
         "2026-01-23"
       ],
@@ -3343,36 +2471,12 @@
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 4,
-          "flakyCount": 2,
+          "count": 2,
+          "flakyCount": 0,
           "mergedCount": 2
         }
       ],
       "recentOccurrences": [
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
         {
           "date": "2026-01-23",
           "prNumber": "12349",
@@ -3402,12 +2506,12 @@
     {
       "name": "Test we cannot pull an image that exceeds the memory limit inside the guest",
       "file": "k8s-guest-pull-image.bats",
-      "totalFailures": 4,
-      "flakyCount": 2,
+      "totalFailures": 2,
+      "flakyCount": 0,
       "mergedCount": 2,
-      "isConfirmedFlaky": true,
+      "isConfirmedFlaky": false,
       "mergedDespiteFailure": true,
-      "uniquePRs": 2,
+      "uniquePRs": 1,
       "uniqueDates": [
         "2026-01-23"
       ],
@@ -3415,36 +2519,12 @@
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 4,
-          "flakyCount": 2,
+          "count": 2,
+          "flakyCount": 0,
           "mergedCount": 2
         }
       ],
       "recentOccurrences": [
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
         {
           "date": "2026-01-23",
           "prNumber": "12349",
@@ -3474,12 +2554,12 @@
     {
       "name": "Test unencrypted confidential container launch success and verify that we are running in a secure enclave.",
       "file": "k8s-confidential.bats",
-      "totalFailures": 4,
-      "flakyCount": 2,
+      "totalFailures": 2,
+      "flakyCount": 0,
       "mergedCount": 2,
-      "isConfirmedFlaky": true,
+      "isConfirmedFlaky": false,
       "mergedDespiteFailure": true,
-      "uniquePRs": 2,
+      "uniquePRs": 1,
       "uniqueDates": [
         "2026-01-23"
       ],
@@ -3487,36 +2567,12 @@
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 4,
-          "flakyCount": 2,
+          "count": 2,
+          "flakyCount": 0,
           "mergedCount": 2
         }
       ],
       "recentOccurrences": [
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
         {
           "date": "2026-01-23",
           "prNumber": "12349",
@@ -3546,12 +2602,12 @@
     {
       "name": "Cannot Unseal Env Secrets with CDH without key",
       "file": "k8s-sealed-secret.bats",
-      "totalFailures": 4,
-      "flakyCount": 2,
+      "totalFailures": 2,
+      "flakyCount": 0,
       "mergedCount": 2,
-      "isConfirmedFlaky": true,
+      "isConfirmedFlaky": false,
       "mergedDespiteFailure": true,
-      "uniquePRs": 2,
+      "uniquePRs": 1,
       "uniqueDates": [
         "2026-01-23"
       ],
@@ -3559,36 +2615,12 @@
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 4,
-          "flakyCount": 2,
+          "count": 2,
+          "flakyCount": 0,
           "mergedCount": 2
         }
       ],
       "recentOccurrences": [
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
         {
           "date": "2026-01-23",
           "prNumber": "12349",
@@ -3618,12 +2650,12 @@
     {
       "name": "Unseal Env Secrets with CDH",
       "file": "k8s-sealed-secret.bats",
-      "totalFailures": 4,
-      "flakyCount": 2,
+      "totalFailures": 2,
+      "flakyCount": 0,
       "mergedCount": 2,
-      "isConfirmedFlaky": true,
+      "isConfirmedFlaky": false,
       "mergedDespiteFailure": true,
-      "uniquePRs": 2,
+      "uniquePRs": 1,
       "uniqueDates": [
         "2026-01-23"
       ],
@@ -3631,36 +2663,12 @@
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 4,
-          "flakyCount": 2,
+          "count": 2,
+          "flakyCount": 0,
           "mergedCount": 2
         }
       ],
       "recentOccurrences": [
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
         {
           "date": "2026-01-23",
           "prNumber": "12349",
@@ -3690,12 +2698,12 @@
     {
       "name": "Unseal File Secrets with CDH",
       "file": "k8s-sealed-secret.bats",
-      "totalFailures": 4,
-      "flakyCount": 2,
+      "totalFailures": 2,
+      "flakyCount": 0,
       "mergedCount": 2,
-      "isConfirmedFlaky": true,
+      "isConfirmedFlaky": false,
       "mergedDespiteFailure": true,
-      "uniquePRs": 2,
+      "uniquePRs": 1,
       "uniqueDates": [
         "2026-01-23"
       ],
@@ -3703,36 +2711,60 @@
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 4,
-          "flakyCount": 2,
+          "count": 2,
+          "flakyCount": 0,
           "mergedCount": 2
         }
       ],
       "recentOccurrences": [
         {
           "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
           "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
+          "jobId": "61298558856",
+          "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
+          "isFlaky": false,
+          "prMerged": true
         },
         {
           "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
           "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
+          "jobId": "61298558856",
+          "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
+          "isFlaky": false,
+          "prMerged": true
+        }
+      ]
+    },
+    {
+      "name": "Running with postStart and preStop handlers",
+      "file": "k8s-attach-handlers.bats",
+      "totalFailures": 2,
+      "flakyCount": 0,
+      "mergedCount": 2,
+      "isConfirmedFlaky": false,
+      "mergedDespiteFailure": true,
+      "uniquePRs": 1,
+      "uniqueDates": [
+        "2026-01-23"
+      ],
+      "affectedJobs": [
+        {
+          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "count": 2,
+          "flakyCount": 0,
+          "mergedCount": 2
+        }
+      ],
+      "recentOccurrences": [
         {
           "date": "2026-01-23",
           "prNumber": "12349",
@@ -3762,12 +2794,12 @@
     {
       "name": "Block Storage Support",
       "file": "k8s-block-volume.bats",
-      "totalFailures": 4,
-      "flakyCount": 2,
+      "totalFailures": 2,
+      "flakyCount": 0,
       "mergedCount": 2,
-      "isConfirmedFlaky": true,
+      "isConfirmedFlaky": false,
       "mergedDespiteFailure": true,
-      "uniquePRs": 2,
+      "uniquePRs": 1,
       "uniqueDates": [
         "2026-01-23"
       ],
@@ -3775,36 +2807,12 @@
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 4,
-          "flakyCount": 2,
+          "count": 2,
+          "flakyCount": 0,
           "mergedCount": 2
         }
       ],
       "recentOccurrences": [
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
         {
           "date": "2026-01-23",
           "prNumber": "12349",
@@ -3834,12 +2842,12 @@
     {
       "name": "ConfigMap for a pod",
       "file": "k8s-configmap.bats",
-      "totalFailures": 4,
-      "flakyCount": 2,
+      "totalFailures": 2,
+      "flakyCount": 0,
       "mergedCount": 2,
-      "isConfirmedFlaky": true,
+      "isConfirmedFlaky": false,
       "mergedDespiteFailure": true,
-      "uniquePRs": 2,
+      "uniquePRs": 1,
       "uniqueDates": [
         "2026-01-23"
       ],
@@ -3847,36 +2855,12 @@
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 4,
-          "flakyCount": 2,
+          "count": 2,
+          "flakyCount": 0,
           "mergedCount": 2
         }
       ],
       "recentOccurrences": [
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
         {
           "date": "2026-01-23",
           "prNumber": "12349",
@@ -3906,12 +2890,12 @@
     {
       "name": "Copy file in a pod",
       "file": "k8s-copy-file.bats",
-      "totalFailures": 4,
-      "flakyCount": 2,
+      "totalFailures": 2,
+      "flakyCount": 0,
       "mergedCount": 2,
-      "isConfirmedFlaky": true,
+      "isConfirmedFlaky": false,
       "mergedDespiteFailure": true,
-      "uniquePRs": 2,
+      "uniquePRs": 1,
       "uniqueDates": [
         "2026-01-23"
       ],
@@ -3919,36 +2903,12 @@
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 4,
-          "flakyCount": 2,
+          "count": 2,
+          "flakyCount": 0,
           "mergedCount": 2
         }
       ],
       "recentOccurrences": [
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
         {
           "date": "2026-01-23",
           "prNumber": "12349",
@@ -3978,12 +2938,12 @@
     {
       "name": "Copy from pod to host",
       "file": "k8s-copy-file.bats",
-      "totalFailures": 4,
-      "flakyCount": 2,
+      "totalFailures": 2,
+      "flakyCount": 0,
       "mergedCount": 2,
-      "isConfirmedFlaky": true,
+      "isConfirmedFlaky": false,
       "mergedDespiteFailure": true,
-      "uniquePRs": 2,
+      "uniquePRs": 1,
       "uniqueDates": [
         "2026-01-23"
       ],
@@ -3991,36 +2951,12 @@
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 4,
-          "flakyCount": 2,
+          "count": 2,
+          "flakyCount": 0,
           "mergedCount": 2
         }
       ],
       "recentOccurrences": [
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
         {
           "date": "2026-01-23",
           "prNumber": "12349",
@@ -4050,12 +2986,12 @@
     {
       "name": "Credentials using secrets",
       "file": "k8s-credentials-secrets.bats",
-      "totalFailures": 4,
-      "flakyCount": 2,
+      "totalFailures": 2,
+      "flakyCount": 0,
       "mergedCount": 2,
-      "isConfirmedFlaky": true,
+      "isConfirmedFlaky": false,
       "mergedDespiteFailure": true,
-      "uniquePRs": 2,
+      "uniquePRs": 1,
       "uniqueDates": [
         "2026-01-23"
       ],
@@ -4063,36 +2999,12 @@
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 4,
-          "flakyCount": 2,
+          "count": 2,
+          "flakyCount": 0,
           "mergedCount": 2
         }
       ],
       "recentOccurrences": [
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
         {
           "date": "2026-01-23",
           "prNumber": "12349",
@@ -4122,12 +3034,12 @@
     {
       "name": "Empty dir volumes",
       "file": "k8s-empty-dirs.bats",
-      "totalFailures": 4,
-      "flakyCount": 2,
+      "totalFailures": 2,
+      "flakyCount": 0,
       "mergedCount": 2,
-      "isConfirmedFlaky": true,
+      "isConfirmedFlaky": false,
       "mergedDespiteFailure": true,
-      "uniquePRs": 2,
+      "uniquePRs": 1,
       "uniqueDates": [
         "2026-01-23"
       ],
@@ -4135,36 +3047,12 @@
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 4,
-          "flakyCount": 2,
+          "count": 2,
+          "flakyCount": 0,
           "mergedCount": 2
         }
       ],
       "recentOccurrences": [
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
         {
           "date": "2026-01-23",
           "prNumber": "12349",
@@ -4194,12 +3082,12 @@
     {
       "name": "Environment variables",
       "file": "k8s-env.bats",
-      "totalFailures": 4,
-      "flakyCount": 2,
+      "totalFailures": 2,
+      "flakyCount": 0,
       "mergedCount": 2,
-      "isConfirmedFlaky": true,
+      "isConfirmedFlaky": false,
       "mergedDespiteFailure": true,
-      "uniquePRs": 2,
+      "uniquePRs": 1,
       "uniqueDates": [
         "2026-01-23"
       ],
@@ -4207,36 +3095,12 @@
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 4,
-          "flakyCount": 2,
+          "count": 2,
+          "flakyCount": 0,
           "mergedCount": 2
         }
       ],
       "recentOccurrences": [
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
         {
           "date": "2026-01-23",
           "prNumber": "12349",
@@ -4266,12 +3130,12 @@
     {
       "name": "Kubectl exec",
       "file": "k8s-exec.bats",
-      "totalFailures": 4,
-      "flakyCount": 2,
+      "totalFailures": 2,
+      "flakyCount": 0,
       "mergedCount": 2,
-      "isConfirmedFlaky": true,
+      "isConfirmedFlaky": false,
       "mergedDespiteFailure": true,
-      "uniquePRs": 2,
+      "uniquePRs": 1,
       "uniqueDates": [
         "2026-01-23"
       ],
@@ -4279,36 +3143,12 @@
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 4,
-          "flakyCount": 2,
+          "count": 2,
+          "flakyCount": 0,
           "mergedCount": 2
         }
       ],
       "recentOccurrences": [
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
         {
           "date": "2026-01-23",
           "prNumber": "12349",
@@ -4338,12 +3178,12 @@
     {
       "name": "Test readonly volume for pods",
       "file": "k8s-file-volume.bats",
-      "totalFailures": 4,
-      "flakyCount": 2,
+      "totalFailures": 2,
+      "flakyCount": 0,
       "mergedCount": 2,
-      "isConfirmedFlaky": true,
+      "isConfirmedFlaky": false,
       "mergedDespiteFailure": true,
-      "uniquePRs": 2,
+      "uniquePRs": 1,
       "uniqueDates": [
         "2026-01-23"
       ],
@@ -4351,36 +3191,12 @@
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 4,
-          "flakyCount": 2,
+          "count": 2,
+          "flakyCount": 0,
           "mergedCount": 2
         }
       ],
       "recentOccurrences": [
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
         {
           "date": "2026-01-23",
           "prNumber": "12349",
@@ -4410,12 +3226,12 @@
     {
       "name": "Validate Pod hostname",
       "file": "k8s-hostname.bats",
-      "totalFailures": 4,
-      "flakyCount": 2,
+      "totalFailures": 2,
+      "flakyCount": 0,
       "mergedCount": 2,
-      "isConfirmedFlaky": true,
+      "isConfirmedFlaky": false,
       "mergedDespiteFailure": true,
-      "uniquePRs": 2,
+      "uniquePRs": 1,
       "uniqueDates": [
         "2026-01-23"
       ],
@@ -4423,36 +3239,12 @@
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 4,
-          "flakyCount": 2,
+          "count": 2,
+          "flakyCount": 0,
           "mergedCount": 2
         }
       ],
       "recentOccurrences": [
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
         {
           "date": "2026-01-23",
           "prNumber": "12349",
@@ -4482,12 +3274,12 @@
     {
       "name": "/dev hostPath volume bind mounts the guest device and skips virtio-fs",
       "file": "k8s-hostpath-volume.bats",
-      "totalFailures": 4,
-      "flakyCount": 2,
+      "totalFailures": 2,
+      "flakyCount": 0,
       "mergedCount": 2,
-      "isConfirmedFlaky": true,
+      "isConfirmedFlaky": false,
       "mergedDespiteFailure": true,
-      "uniquePRs": 2,
+      "uniquePRs": 1,
       "uniqueDates": [
         "2026-01-23"
       ],
@@ -4495,36 +3287,12 @@
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 4,
-          "flakyCount": 2,
+          "count": 2,
+          "flakyCount": 0,
           "mergedCount": 2
         }
       ],
       "recentOccurrences": [
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
         {
           "date": "2026-01-23",
           "prNumber": "12349",
@@ -4554,12 +3322,12 @@
     {
       "name": "configmap update works, and preserves symlinks",
       "file": "k8s-inotify.bats",
-      "totalFailures": 4,
-      "flakyCount": 2,
+      "totalFailures": 2,
+      "flakyCount": 0,
       "mergedCount": 2,
-      "isConfirmedFlaky": true,
+      "isConfirmedFlaky": false,
       "mergedDespiteFailure": true,
-      "uniquePRs": 2,
+      "uniquePRs": 1,
       "uniqueDates": [
         "2026-01-23"
       ],
@@ -4567,36 +3335,60 @@
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 4,
-          "flakyCount": 2,
+          "count": 2,
+          "flakyCount": 0,
           "mergedCount": 2
         }
       ],
       "recentOccurrences": [
         {
           "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
           "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
+          "jobId": "61298558856",
+          "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
+          "isFlaky": false,
+          "prMerged": true
         },
         {
           "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
           "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
+          "jobId": "61298558856",
+          "runId": "21294580562",
           "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
+          "isFlaky": false,
+          "prMerged": true
+        }
+      ]
+    },
+    {
+      "name": "Run a job to completion",
+      "file": "k8s-job.bats",
+      "totalFailures": 2,
+      "flakyCount": 0,
+      "mergedCount": 2,
+      "isConfirmedFlaky": false,
+      "mergedDespiteFailure": true,
+      "uniquePRs": 1,
+      "uniqueDates": [
+        "2026-01-23"
+      ],
+      "affectedJobs": [
+        {
+          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "count": 2,
+          "flakyCount": 0,
+          "mergedCount": 2
+        }
+      ],
+      "recentOccurrences": [
         {
           "date": "2026-01-23",
           "prNumber": "12349",
@@ -4626,12 +3418,12 @@
     {
       "name": "Limit range for storage",
       "file": "k8s-limit-range.bats",
-      "totalFailures": 4,
-      "flakyCount": 2,
+      "totalFailures": 2,
+      "flakyCount": 0,
       "mergedCount": 2,
-      "isConfirmedFlaky": true,
+      "isConfirmedFlaky": false,
       "mergedDespiteFailure": true,
-      "uniquePRs": 2,
+      "uniquePRs": 1,
       "uniqueDates": [
         "2026-01-23"
       ],
@@ -4639,36 +3431,12 @@
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 4,
-          "flakyCount": 2,
+          "count": 2,
+          "flakyCount": 0,
           "mergedCount": 2
         }
       ],
       "recentOccurrences": [
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
         {
           "date": "2026-01-23",
           "prNumber": "12349",
@@ -4698,12 +3466,12 @@
     {
       "name": "Liveness probe",
       "file": "k8s-liveness-probes.bats",
-      "totalFailures": 4,
-      "flakyCount": 2,
+      "totalFailures": 2,
+      "flakyCount": 0,
       "mergedCount": 2,
-      "isConfirmedFlaky": true,
+      "isConfirmedFlaky": false,
       "mergedDespiteFailure": true,
-      "uniquePRs": 2,
+      "uniquePRs": 1,
       "uniqueDates": [
         "2026-01-23"
       ],
@@ -4711,36 +3479,12 @@
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 4,
-          "flakyCount": 2,
+          "count": 2,
+          "flakyCount": 0,
           "mergedCount": 2
         }
       ],
       "recentOccurrences": [
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
         {
           "date": "2026-01-23",
           "prNumber": "12349",
@@ -4770,12 +3514,12 @@
     {
       "name": "Liveness http probe",
       "file": "k8s-liveness-probes.bats",
-      "totalFailures": 4,
-      "flakyCount": 2,
+      "totalFailures": 2,
+      "flakyCount": 0,
       "mergedCount": 2,
-      "isConfirmedFlaky": true,
+      "isConfirmedFlaky": false,
       "mergedDespiteFailure": true,
-      "uniquePRs": 2,
+      "uniquePRs": 1,
       "uniqueDates": [
         "2026-01-23"
       ],
@@ -4783,36 +3527,12 @@
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 4,
-          "flakyCount": 2,
+          "count": 2,
+          "flakyCount": 0,
           "mergedCount": 2
         }
       ],
       "recentOccurrences": [
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
         {
           "date": "2026-01-23",
           "prNumber": "12349",
@@ -4842,12 +3562,12 @@
     {
       "name": "Liveness tcp probe",
       "file": "k8s-liveness-probes.bats",
-      "totalFailures": 4,
-      "flakyCount": 2,
+      "totalFailures": 2,
+      "flakyCount": 0,
       "mergedCount": 2,
-      "isConfirmedFlaky": true,
+      "isConfirmedFlaky": false,
       "mergedDespiteFailure": true,
-      "uniquePRs": 2,
+      "uniquePRs": 1,
       "uniqueDates": [
         "2026-01-23"
       ],
@@ -4855,36 +3575,12 @@
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 4,
-          "flakyCount": 2,
+          "count": 2,
+          "flakyCount": 0,
           "mergedCount": 2
         }
       ],
       "recentOccurrences": [
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
         {
           "date": "2026-01-23",
           "prNumber": "12349",
@@ -4914,12 +3610,12 @@
     {
       "name": "Running within memory constraints",
       "file": "k8s-memory.bats",
-      "totalFailures": 4,
-      "flakyCount": 2,
+      "totalFailures": 2,
+      "flakyCount": 0,
       "mergedCount": 2,
-      "isConfirmedFlaky": true,
+      "isConfirmedFlaky": false,
       "mergedDespiteFailure": true,
-      "uniquePRs": 2,
+      "uniquePRs": 1,
       "uniqueDates": [
         "2026-01-23"
       ],
@@ -4927,36 +3623,12 @@
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 4,
-          "flakyCount": 2,
+          "count": 2,
+          "flakyCount": 0,
           "mergedCount": 2
         }
       ],
       "recentOccurrences": [
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
         {
           "date": "2026-01-23",
           "prNumber": "12349",
@@ -4986,12 +3658,12 @@
     {
       "name": "Nested mount of a secret volume in a configmap volume for a pod",
       "file": "k8s-nested-configmap-secret.bats",
-      "totalFailures": 4,
-      "flakyCount": 2,
+      "totalFailures": 2,
+      "flakyCount": 0,
       "mergedCount": 2,
-      "isConfirmedFlaky": true,
+      "isConfirmedFlaky": false,
       "mergedDespiteFailure": true,
-      "uniquePRs": 2,
+      "uniquePRs": 1,
       "uniqueDates": [
         "2026-01-23"
       ],
@@ -4999,36 +3671,12 @@
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 4,
-          "flakyCount": 2,
+          "count": 2,
+          "flakyCount": 0,
           "mergedCount": 2
         }
       ],
       "recentOccurrences": [
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
         {
           "date": "2026-01-23",
           "prNumber": "12349",
@@ -5058,12 +3706,12 @@
     {
       "name": "Test OOM events for pods",
       "file": "k8s-oom.bats",
-      "totalFailures": 4,
-      "flakyCount": 2,
+      "totalFailures": 2,
+      "flakyCount": 0,
       "mergedCount": 2,
-      "isConfirmedFlaky": true,
+      "isConfirmedFlaky": false,
       "mergedDespiteFailure": true,
-      "uniquePRs": 2,
+      "uniquePRs": 1,
       "uniqueDates": [
         "2026-01-23"
       ],
@@ -5071,36 +3719,12 @@
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 4,
-          "flakyCount": 2,
+          "count": 2,
+          "flakyCount": 0,
           "mergedCount": 2
         }
       ],
       "recentOccurrences": [
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-23",
-          "prNumber": "12376",
-          "prTitle": "runtime-rs: Fix stdout empty when exec process",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61274430406",
-          "runId": "21287223761",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
         {
           "date": "2026-01-23",
           "prNumber": "12349",
@@ -5178,13 +3802,13 @@
   ],
   "summary": {
     "totalFailedTests": 57,
-    "confirmedFlaky": 56,
+    "confirmedFlaky": 8,
     "mergedDespiteFailure": 55,
     "mostAffectedJob": {
       "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
       "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-      "count": 220,
-      "flakyCount": 108,
+      "count": 112,
+      "flakyCount": 0,
       "mergedCount": 110
     },
     "trend": [
@@ -5226,7 +3850,7 @@
       },
       {
         "date": "2026-01-23",
-        "failures": 232
+        "failures": 114
       },
       {
         "date": "2026-01-24",
@@ -5242,22 +3866,22 @@
       },
       {
         "date": "2026-01-27",
-        "failures": 0
+        "failures": 6
       }
     ],
     "jobBreakdown": [
       {
         "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
         "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-        "count": 220,
-        "flakyCount": 108,
+        "count": 112,
+        "flakyCount": 0,
         "mergedCount": 110
       },
       {
         "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
         "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-        "count": 44,
-        "flakyCount": 26,
+        "count": 48,
+        "flakyCount": 28,
         "mergedCount": 0
       },
       {
@@ -5268,38 +3892,38 @@
         "mergedCount": 0
       },
       {
+        "name": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (devmapper, qemu, kubeadm)",
+        "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (devmapper, qemu, kubeadm)",
+        "count": 4,
+        "flakyCount": 0,
+        "mergedCount": 0
+      },
+      {
         "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
         "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
-        "count": 4,
-        "flakyCount": 2,
+        "count": 2,
+        "flakyCount": 0,
         "mergedCount": 0
       },
       {
         "name": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, qemu-runtime-rs, small)",
         "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, qemu-runtime-rs, small)",
-        "count": 4,
-        "flakyCount": 2,
+        "count": 2,
+        "flakyCount": 0,
         "mergedCount": 0
       },
       {
         "name": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, dragonball, small)",
         "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, dragonball, small)",
-        "count": 4,
-        "flakyCount": 2,
+        "count": 2,
+        "flakyCount": 0,
         "mergedCount": 0
       },
       {
         "name": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, cloud-hypervisor, small)",
         "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, cloud-hypervisor, small)",
-        "count": 4,
-        "flakyCount": 2,
-        "mergedCount": 0
-      },
-      {
-        "name": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (cbl-mariner, clh, small, oci-distribution)",
-        "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (cbl-mariner, clh, small, oci-distribution)",
-        "count": 4,
-        "flakyCount": 4,
+        "count": 2,
+        "flakyCount": 0,
         "mergedCount": 0
       },
       {
