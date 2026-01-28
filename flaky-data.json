@@ -1,10 +1,10 @@
 {
-  "lastRefresh": "2026-01-28T04:48:10.882Z",
+  "lastRefresh": "2026-01-28T08:30:45.398Z",
   "periodDays": 14,
-  "totalFailures": 150,
-  "totalPRs": 15,
-  "confirmedFlakyCount": 24,
-  "mergedDespiteFailureCount": 0,
+  "totalFailures": 260,
+  "totalPRs": 14,
+  "confirmedFlakyCount": 23,
+  "mergedDespiteFailureCount": 55,
   "failedTests": [
     {
       "name": "initContainer with shared volume",
@@ -365,6 +365,232 @@
       ]
     },
     {
+      "name": "Can get CDH resource when affirming policy is set with reference values",
+      "file": "k8s-confidential-attestation.bats",
+      "totalFailures": 16,
+      "flakyCount": 6,
+      "mergedCount": 2,
+      "isConfirmedFlaky": true,
+      "mergedDespiteFailure": true,
+      "uniquePRs": 6,
+      "uniqueDates": [
+        "2026-01-27",
+        "2026-01-26",
+        "2026-01-25",
+        "2026-01-23"
+      ],
+      "affectedJobs": [
+        {
+          "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "count": 12,
+          "flakyCount": 4,
+          "mergedCount": 0
+        },
+        {
+          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "count": 4,
+          "flakyCount": 2,
+          "mergedCount": 2
+        }
+      ],
+      "recentOccurrences": [
+        {
+          "date": "2026-01-27",
+          "prNumber": "12396",
+          "prTitle": "WIP: runtime(-rs): Introduce dm-verity kernelinit mode",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "61671794500",
+          "runId": "21417126665",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-27",
+          "prNumber": "12396",
+          "prTitle": "WIP: runtime(-rs): Introduce dm-verity kernelinit mode",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "61671794500",
+          "runId": "21417126665",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-27",
+          "prNumber": "12396",
+          "prTitle": "WIP: runtime(-rs): Introduce dm-verity kernelinit mode",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "61642671519",
+          "runId": "21407886970",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-27",
+          "prNumber": "12396",
+          "prTitle": "WIP: runtime(-rs): Introduce dm-verity kernelinit mode",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "61642671519",
+          "runId": "21407886970",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-27",
+          "prNumber": "12396",
+          "prTitle": "WIP: runtime(-rs): Introduce dm-verity kernelinit mode",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61642671530",
+          "runId": "21407886970",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-27",
+          "prNumber": "12396",
+          "prTitle": "WIP: runtime(-rs): Introduce dm-verity kernelinit mode",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61642671530",
+          "runId": "21407886970",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-26",
+          "prNumber": "12325",
+          "prTitle": "build(deps): bump github.com/containerd/containerd/api from 1.9.0 to 1.10.0 in /src/runtime",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "61477667552",
+          "runId": "21359476929",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-26",
+          "prNumber": "12325",
+          "prTitle": "build(deps): bump github.com/containerd/containerd/api from 1.9.0 to 1.10.0 in /src/runtime",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "61477667552",
+          "runId": "21359476929",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-26",
+          "prNumber": "12312\n12310",
+          "prTitle": "kata-deploy: Fix extraction of the containerd major version\nFix extraction of the containerd major version",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "61431794209",
+          "runId": "21345135958",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-26",
+          "prNumber": "12312\n12310",
+          "prTitle": "kata-deploy: Fix extraction of the containerd major version\nFix extraction of the containerd major version",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "61431794209",
+          "runId": "21345135958",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-26",
+          "prNumber": "12293",
+          "prTitle": "runtime-rs: make OOM watcher and signal handling lifecycle-aware",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "61444440267",
+          "runId": "21349464437",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-26",
+          "prNumber": "12293",
+          "prTitle": "runtime-rs: make OOM watcher and signal handling lifecycle-aware",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "61444440267",
+          "runId": "21349464437",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-25",
+          "prNumber": "12385",
+          "prTitle": "versions: Tidy up versions file",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "61417059321",
+          "runId": "21339450540",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-25",
+          "prNumber": "12385",
+          "prTitle": "versions: Tidy up versions file",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "61417059321",
+          "runId": "21339450540",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        }
+      ]
+    },
+    {
       "name": "Containers with shared volume",
       "file": "k8s-shared-volume.bats",
       "totalFailures": 14,
@@ -599,207 +825,6 @@
       ]
     },
     {
-      "name": "Can get CDH resource when affirming policy is set with reference values",
-      "file": "k8s-confidential-attestation.bats",
-      "totalFailures": 14,
-      "flakyCount": 6,
-      "mergedCount": 0,
-      "isConfirmedFlaky": true,
-      "mergedDespiteFailure": false,
-      "uniquePRs": 5,
-      "uniqueDates": [
-        "2026-01-27",
-        "2026-01-26",
-        "2026-01-25"
-      ],
-      "affectedJobs": [
-        {
-          "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "count": 12,
-          "flakyCount": 4,
-          "mergedCount": 0
-        },
-        {
-          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 2,
-          "flakyCount": 2,
-          "mergedCount": 0
-        }
-      ],
-      "recentOccurrences": [
-        {
-          "date": "2026-01-27",
-          "prNumber": "12396",
-          "prTitle": "WIP: runtime(-rs): Introduce dm-verity kernelinit mode",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobId": "61671794500",
-          "runId": "21417126665",
-          "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-27",
-          "prNumber": "12396",
-          "prTitle": "WIP: runtime(-rs): Introduce dm-verity kernelinit mode",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobId": "61671794500",
-          "runId": "21417126665",
-          "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-27",
-          "prNumber": "12396",
-          "prTitle": "WIP: runtime(-rs): Introduce dm-verity kernelinit mode",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobId": "61642671519",
-          "runId": "21407886970",
-          "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-27",
-          "prNumber": "12396",
-          "prTitle": "WIP: runtime(-rs): Introduce dm-verity kernelinit mode",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobId": "61642671519",
-          "runId": "21407886970",
-          "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-27",
-          "prNumber": "12396",
-          "prTitle": "WIP: runtime(-rs): Introduce dm-verity kernelinit mode",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61642671530",
-          "runId": "21407886970",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-27",
-          "prNumber": "12396",
-          "prTitle": "WIP: runtime(-rs): Introduce dm-verity kernelinit mode",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61642671530",
-          "runId": "21407886970",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-26",
-          "prNumber": "12325",
-          "prTitle": "build(deps): bump github.com/containerd/containerd/api from 1.9.0 to 1.10.0 in /src/runtime",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobId": "61477667552",
-          "runId": "21359476929",
-          "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-26",
-          "prNumber": "12325",
-          "prTitle": "build(deps): bump github.com/containerd/containerd/api from 1.9.0 to 1.10.0 in /src/runtime",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobId": "61477667552",
-          "runId": "21359476929",
-          "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-26",
-          "prNumber": "12312\n12310",
-          "prTitle": "kata-deploy: Fix extraction of the containerd major version\nFix extraction of the containerd major version",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobId": "61431794209",
-          "runId": "21345135958",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-26",
-          "prNumber": "12312\n12310",
-          "prTitle": "kata-deploy: Fix extraction of the containerd major version\nFix extraction of the containerd major version",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobId": "61431794209",
-          "runId": "21345135958",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-26",
-          "prNumber": "12293",
-          "prTitle": "runtime-rs: make OOM watcher and signal handling lifecycle-aware",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobId": "61444440267",
-          "runId": "21349464437",
-          "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-26",
-          "prNumber": "12293",
-          "prTitle": "runtime-rs: make OOM watcher and signal handling lifecycle-aware",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobId": "61444440267",
-          "runId": "21349464437",
-          "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-25",
-          "prNumber": "12385",
-          "prTitle": "versions: Tidy up versions file",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobId": "61417059321",
-          "runId": "21339450540",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-25",
-          "prNumber": "12385",
-          "prTitle": "versions: Tidy up versions file",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobId": "61417059321",
-          "runId": "21339450540",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        }
-      ]
-    },
-    {
       "name": "setup_file failed",
       "file": "k8s-nvidia-nim.bats",
       "totalFailures": 14,
@@ -1000,6 +1025,419 @@
       ]
     },
     {
+      "name": "Kill all processes in container",
+      "file": "k8s-kill-all-process-in-container.bats",
+      "totalFailures": 14,
+      "flakyCount": 0,
+      "mergedCount": 2,
+      "isConfirmedFlaky": false,
+      "mergedDespiteFailure": true,
+      "uniquePRs": 2,
+      "uniqueDates": [
+        "2026-01-26",
+        "2026-01-23"
+      ],
+      "affectedJobs": [
+        {
+          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
+          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
+          "count": 2,
+          "flakyCount": 0,
+          "mergedCount": 0
+        },
+        {
+          "name": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, qemu-runtime-rs, small)",
+          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, qemu-runtime-rs, small)",
+          "count": 2,
+          "flakyCount": 0,
+          "mergedCount": 0
+        },
+        {
+          "name": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, dragonball, small)",
+          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, dragonball, small)",
+          "count": 2,
+          "flakyCount": 0,
+          "mergedCount": 0
+        },
+        {
+          "name": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, cloud-hypervisor, small)",
+          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, cloud-hypervisor, small)",
+          "count": 2,
+          "flakyCount": 0,
+          "mergedCount": 0
+        },
+        {
+          "name": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (overlayfs, qemu-runtime-rs, kubeadm)",
+          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (overlayfs, qemu-runtime-rs, kubeadm)",
+          "count": 2,
+          "flakyCount": 0,
+          "mergedCount": 0
+        },
+        {
+          "name": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu-runtime-rs, kubeadm)",
+          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu-runtime-rs, kubeadm)",
+          "count": 2,
+          "flakyCount": 0,
+          "mergedCount": 0
+        },
+        {
+          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "count": 2,
+          "flakyCount": 0,
+          "mergedCount": 2
+        }
+      ],
+      "recentOccurrences": [
+        {
+          "date": "2026-01-26",
+          "prNumber": "12293",
+          "prTitle": "runtime-rs: make OOM watcher and signal handling lifecycle-aware",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
+          "jobId": "61444440301",
+          "runId": "21349464437",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-26",
+          "prNumber": "12293",
+          "prTitle": "runtime-rs: make OOM watcher and signal handling lifecycle-aware",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
+          "jobId": "61444440301",
+          "runId": "21349464437",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-26",
+          "prNumber": "12293",
+          "prTitle": "runtime-rs: make OOM watcher and signal handling lifecycle-aware",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, qemu-runtime-rs, small)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, qemu-runtime-rs, small)",
+          "jobId": "61444440323",
+          "runId": "21349464437",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-26",
+          "prNumber": "12293",
+          "prTitle": "runtime-rs: make OOM watcher and signal handling lifecycle-aware",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, qemu-runtime-rs, small)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, qemu-runtime-rs, small)",
+          "jobId": "61444440323",
+          "runId": "21349464437",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-26",
+          "prNumber": "12293",
+          "prTitle": "runtime-rs: make OOM watcher and signal handling lifecycle-aware",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, dragonball, small)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, dragonball, small)",
+          "jobId": "61444440333",
+          "runId": "21349464437",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-26",
+          "prNumber": "12293",
+          "prTitle": "runtime-rs: make OOM watcher and signal handling lifecycle-aware",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, dragonball, small)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, dragonball, small)",
+          "jobId": "61444440333",
+          "runId": "21349464437",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-26",
+          "prNumber": "12293",
+          "prTitle": "runtime-rs: make OOM watcher and signal handling lifecycle-aware",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, cloud-hypervisor, small)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, cloud-hypervisor, small)",
+          "jobId": "61444440343",
+          "runId": "21349464437",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-26",
+          "prNumber": "12293",
+          "prTitle": "runtime-rs: make OOM watcher and signal handling lifecycle-aware",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, cloud-hypervisor, small)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, cloud-hypervisor, small)",
+          "jobId": "61444440343",
+          "runId": "21349464437",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-26",
+          "prNumber": "12293",
+          "prTitle": "runtime-rs: make OOM watcher and signal handling lifecycle-aware",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (overlayfs, qemu-runtime-rs, kubeadm)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (overlayfs, qemu-runtime-rs, kubeadm)",
+          "jobId": "61444738014",
+          "runId": "21349464437",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-26",
+          "prNumber": "12293",
+          "prTitle": "runtime-rs: make OOM watcher and signal handling lifecycle-aware",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (overlayfs, qemu-runtime-rs, kubeadm)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (overlayfs, qemu-runtime-rs, kubeadm)",
+          "jobId": "61444738014",
+          "runId": "21349464437",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-26",
+          "prNumber": "12293",
+          "prTitle": "runtime-rs: make OOM watcher and signal handling lifecycle-aware",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu-runtime-rs, kubeadm)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu-runtime-rs, kubeadm)",
+          "jobId": "61444765935",
+          "runId": "21349464437",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-26",
+          "prNumber": "12293",
+          "prTitle": "runtime-rs: make OOM watcher and signal handling lifecycle-aware",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu-runtime-rs, kubeadm)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu-runtime-rs, kubeadm)",
+          "jobId": "61444765935",
+          "runId": "21349464437",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        }
+      ]
+    },
+    {
+      "name": "Get CDH resource",
+      "file": "k8s-confidential-attestation.bats",
+      "totalFailures": 12,
+      "flakyCount": 6,
+      "mergedCount": 2,
+      "isConfirmedFlaky": true,
+      "mergedDespiteFailure": true,
+      "uniquePRs": 6,
+      "uniqueDates": [
+        "2026-01-27",
+        "2026-01-26",
+        "2026-01-25",
+        "2026-01-23"
+      ],
+      "affectedJobs": [
+        {
+          "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "count": 8,
+          "flakyCount": 4,
+          "mergedCount": 0
+        },
+        {
+          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "count": 4,
+          "flakyCount": 2,
+          "mergedCount": 2
+        }
+      ],
+      "recentOccurrences": [
+        {
+          "date": "2026-01-27",
+          "prNumber": "12396",
+          "prTitle": "WIP: runtime(-rs): Introduce dm-verity kernelinit mode",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61642671530",
+          "runId": "21407886970",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-27",
+          "prNumber": "12396",
+          "prTitle": "WIP: runtime(-rs): Introduce dm-verity kernelinit mode",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61642671530",
+          "runId": "21407886970",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-26",
+          "prNumber": "12325",
+          "prTitle": "build(deps): bump github.com/containerd/containerd/api from 1.9.0 to 1.10.0 in /src/runtime",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "61477667552",
+          "runId": "21359476929",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-26",
+          "prNumber": "12325",
+          "prTitle": "build(deps): bump github.com/containerd/containerd/api from 1.9.0 to 1.10.0 in /src/runtime",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "61477667552",
+          "runId": "21359476929",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-26",
+          "prNumber": "12312\n12310",
+          "prTitle": "kata-deploy: Fix extraction of the containerd major version\nFix extraction of the containerd major version",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "61431794209",
+          "runId": "21345135958",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-26",
+          "prNumber": "12312\n12310",
+          "prTitle": "kata-deploy: Fix extraction of the containerd major version\nFix extraction of the containerd major version",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "61431794209",
+          "runId": "21345135958",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-26",
+          "prNumber": "12293",
+          "prTitle": "runtime-rs: make OOM watcher and signal handling lifecycle-aware",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "61444440267",
+          "runId": "21349464437",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-26",
+          "prNumber": "12293",
+          "prTitle": "runtime-rs: make OOM watcher and signal handling lifecycle-aware",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "61444440267",
+          "runId": "21349464437",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-25",
+          "prNumber": "12385",
+          "prTitle": "versions: Tidy up versions file",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "61417059321",
+          "runId": "21339450540",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-25",
+          "prNumber": "12385",
+          "prTitle": "versions: Tidy up versions file",
+          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
+          "jobId": "61417059321",
+          "runId": "21339450540",
+          "runAttempt": 1,
+          "isFlaky": true,
+          "prMerged": false
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        }
+      ]
+    },
+    {
       "name": "CUDA Vector Addition Test",
       "file": "k8s-nvidia-cuda.bats",
       "totalFailures": 12,
@@ -1176,370 +1614,14 @@
       ]
     },
     {
-      "name": "Kill all processes in container",
-      "file": "k8s-kill-all-process-in-container.bats",
-      "totalFailures": 12,
-      "flakyCount": 0,
-      "mergedCount": 0,
-      "isConfirmedFlaky": false,
-      "mergedDespiteFailure": false,
-      "uniquePRs": 1,
-      "uniqueDates": [
-        "2026-01-26"
-      ],
-      "affectedJobs": [
-        {
-          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
-          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
-          "count": 2,
-          "flakyCount": 0,
-          "mergedCount": 0
-        },
-        {
-          "name": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, qemu-runtime-rs, small)",
-          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, qemu-runtime-rs, small)",
-          "count": 2,
-          "flakyCount": 0,
-          "mergedCount": 0
-        },
-        {
-          "name": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, dragonball, small)",
-          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, dragonball, small)",
-          "count": 2,
-          "flakyCount": 0,
-          "mergedCount": 0
-        },
-        {
-          "name": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, cloud-hypervisor, small)",
-          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, cloud-hypervisor, small)",
-          "count": 2,
-          "flakyCount": 0,
-          "mergedCount": 0
-        },
-        {
-          "name": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (overlayfs, qemu-runtime-rs, kubeadm)",
-          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (overlayfs, qemu-runtime-rs, kubeadm)",
-          "count": 2,
-          "flakyCount": 0,
-          "mergedCount": 0
-        },
-        {
-          "name": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu-runtime-rs, kubeadm)",
-          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu-runtime-rs, kubeadm)",
-          "count": 2,
-          "flakyCount": 0,
-          "mergedCount": 0
-        }
-      ],
-      "recentOccurrences": [
-        {
-          "date": "2026-01-26",
-          "prNumber": "12293",
-          "prTitle": "runtime-rs: make OOM watcher and signal handling lifecycle-aware",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
-          "jobId": "61444440301",
-          "runId": "21349464437",
-          "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-26",
-          "prNumber": "12293",
-          "prTitle": "runtime-rs: make OOM watcher and signal handling lifecycle-aware",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
-          "jobId": "61444440301",
-          "runId": "21349464437",
-          "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-26",
-          "prNumber": "12293",
-          "prTitle": "runtime-rs: make OOM watcher and signal handling lifecycle-aware",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, qemu-runtime-rs, small)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, qemu-runtime-rs, small)",
-          "jobId": "61444440323",
-          "runId": "21349464437",
-          "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-26",
-          "prNumber": "12293",
-          "prTitle": "runtime-rs: make OOM watcher and signal handling lifecycle-aware",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, qemu-runtime-rs, small)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, qemu-runtime-rs, small)",
-          "jobId": "61444440323",
-          "runId": "21349464437",
-          "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-26",
-          "prNumber": "12293",
-          "prTitle": "runtime-rs: make OOM watcher and signal handling lifecycle-aware",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, dragonball, small)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, dragonball, small)",
-          "jobId": "61444440333",
-          "runId": "21349464437",
-          "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-26",
-          "prNumber": "12293",
-          "prTitle": "runtime-rs: make OOM watcher and signal handling lifecycle-aware",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, dragonball, small)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, dragonball, small)",
-          "jobId": "61444440333",
-          "runId": "21349464437",
-          "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-26",
-          "prNumber": "12293",
-          "prTitle": "runtime-rs: make OOM watcher and signal handling lifecycle-aware",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, cloud-hypervisor, small)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, cloud-hypervisor, small)",
-          "jobId": "61444440343",
-          "runId": "21349464437",
-          "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-26",
-          "prNumber": "12293",
-          "prTitle": "runtime-rs: make OOM watcher and signal handling lifecycle-aware",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, cloud-hypervisor, small)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, cloud-hypervisor, small)",
-          "jobId": "61444440343",
-          "runId": "21349464437",
-          "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-26",
-          "prNumber": "12293",
-          "prTitle": "runtime-rs: make OOM watcher and signal handling lifecycle-aware",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (overlayfs, qemu-runtime-rs, kubeadm)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (overlayfs, qemu-runtime-rs, kubeadm)",
-          "jobId": "61444738014",
-          "runId": "21349464437",
-          "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-26",
-          "prNumber": "12293",
-          "prTitle": "runtime-rs: make OOM watcher and signal handling lifecycle-aware",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (overlayfs, qemu-runtime-rs, kubeadm)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (overlayfs, qemu-runtime-rs, kubeadm)",
-          "jobId": "61444738014",
-          "runId": "21349464437",
-          "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-26",
-          "prNumber": "12293",
-          "prTitle": "runtime-rs: make OOM watcher and signal handling lifecycle-aware",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu-runtime-rs, kubeadm)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu-runtime-rs, kubeadm)",
-          "jobId": "61444765935",
-          "runId": "21349464437",
-          "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-26",
-          "prNumber": "12293",
-          "prTitle": "runtime-rs: make OOM watcher and signal handling lifecycle-aware",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu-runtime-rs, kubeadm)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu-runtime-rs, kubeadm)",
-          "jobId": "61444765935",
-          "runId": "21349464437",
-          "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": false
-        }
-      ]
-    },
-    {
-      "name": "Get CDH resource",
+      "name": "Cannot get CDH resource when affirming policy is set without reference values",
       "file": "k8s-confidential-attestation.bats",
       "totalFailures": 10,
       "flakyCount": 6,
-      "mergedCount": 0,
+      "mergedCount": 2,
       "isConfirmedFlaky": true,
-      "mergedDespiteFailure": false,
+      "mergedDespiteFailure": true,
       "uniquePRs": 5,
-      "uniqueDates": [
-        "2026-01-27",
-        "2026-01-26",
-        "2026-01-25"
-      ],
-      "affectedJobs": [
-        {
-          "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "count": 8,
-          "flakyCount": 4,
-          "mergedCount": 0
-        },
-        {
-          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 2,
-          "flakyCount": 2,
-          "mergedCount": 0
-        }
-      ],
-      "recentOccurrences": [
-        {
-          "date": "2026-01-27",
-          "prNumber": "12396",
-          "prTitle": "WIP: runtime(-rs): Introduce dm-verity kernelinit mode",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61642671530",
-          "runId": "21407886970",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-27",
-          "prNumber": "12396",
-          "prTitle": "WIP: runtime(-rs): Introduce dm-verity kernelinit mode",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "jobId": "61642671530",
-          "runId": "21407886970",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-26",
-          "prNumber": "12325",
-          "prTitle": "build(deps): bump github.com/containerd/containerd/api from 1.9.0 to 1.10.0 in /src/runtime",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobId": "61477667552",
-          "runId": "21359476929",
-          "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-26",
-          "prNumber": "12325",
-          "prTitle": "build(deps): bump github.com/containerd/containerd/api from 1.9.0 to 1.10.0 in /src/runtime",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobId": "61477667552",
-          "runId": "21359476929",
-          "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-26",
-          "prNumber": "12312\n12310",
-          "prTitle": "kata-deploy: Fix extraction of the containerd major version\nFix extraction of the containerd major version",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobId": "61431794209",
-          "runId": "21345135958",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-26",
-          "prNumber": "12312\n12310",
-          "prTitle": "kata-deploy: Fix extraction of the containerd major version\nFix extraction of the containerd major version",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobId": "61431794209",
-          "runId": "21345135958",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-26",
-          "prNumber": "12293",
-          "prTitle": "runtime-rs: make OOM watcher and signal handling lifecycle-aware",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobId": "61444440267",
-          "runId": "21349464437",
-          "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-26",
-          "prNumber": "12293",
-          "prTitle": "runtime-rs: make OOM watcher and signal handling lifecycle-aware",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobId": "61444440267",
-          "runId": "21349464437",
-          "runAttempt": 1,
-          "isFlaky": false,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-25",
-          "prNumber": "12385",
-          "prTitle": "versions: Tidy up versions file",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobId": "61417059321",
-          "runId": "21339450540",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-25",
-          "prNumber": "12385",
-          "prTitle": "versions: Tidy up versions file",
-          "jobName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobDisplayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-          "jobId": "61417059321",
-          "runId": "21339450540",
-          "runAttempt": 1,
-          "isFlaky": true,
-          "prMerged": false
-        }
-      ]
-    },
-    {
-      "name": "Cannot get CDH resource when affirming policy is set without reference values",
-      "file": "k8s-confidential-attestation.bats",
-      "totalFailures": 8,
-      "flakyCount": 6,
-      "mergedCount": 0,
-      "isConfirmedFlaky": true,
-      "mergedDespiteFailure": false,
-      "uniquePRs": 4,
       "uniqueDates": [
         "2026-01-26",
         "2026-01-25",
@@ -1552,6 +1634,13 @@
           "count": 8,
           "flakyCount": 6,
           "mergedCount": 0
+        },
+        {
+          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "count": 2,
+          "flakyCount": 0,
+          "mergedCount": 2
         }
       ],
       "recentOccurrences": [
@@ -1626,6 +1715,30 @@
           "runAttempt": 1,
           "isFlaky": true,
           "prMerged": false
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
         },
         {
           "date": "2026-01-23",
@@ -1656,15 +1769,16 @@
     {
       "name": "Cannot get CDH resource when deny-all policy is set",
       "file": "k8s-confidential-attestation.bats",
-      "totalFailures": 6,
+      "totalFailures": 8,
       "flakyCount": 4,
-      "mergedCount": 0,
+      "mergedCount": 2,
       "isConfirmedFlaky": true,
-      "mergedDespiteFailure": false,
-      "uniquePRs": 3,
+      "mergedDespiteFailure": true,
+      "uniquePRs": 4,
       "uniqueDates": [
         "2026-01-26",
-        "2026-01-25"
+        "2026-01-25",
+        "2026-01-23"
       ],
       "affectedJobs": [
         {
@@ -1673,6 +1787,13 @@
           "count": 6,
           "flakyCount": 4,
           "mergedCount": 0
+        },
+        {
+          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "count": 2,
+          "flakyCount": 0,
+          "mergedCount": 2
         }
       ],
       "recentOccurrences": [
@@ -1747,28 +1868,53 @@
           "runAttempt": 1,
           "isFlaky": true,
           "prMerged": false
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
         }
       ]
     },
     {
       "name": "Pod that performs ip6tables setup",
       "file": "k8s-ip6tables.bats",
-      "totalFailures": 4,
+      "totalFailures": 6,
       "flakyCount": 2,
-      "mergedCount": 0,
+      "mergedCount": 2,
       "isConfirmedFlaky": true,
-      "mergedDespiteFailure": false,
-      "uniquePRs": 2,
+      "mergedDespiteFailure": true,
+      "uniquePRs": 3,
       "uniqueDates": [
-        "2026-01-26"
+        "2026-01-26",
+        "2026-01-23"
       ],
       "affectedJobs": [
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 2,
+          "count": 4,
           "flakyCount": 0,
-          "mergedCount": 0
+          "mergedCount": 2
         },
         {
           "name": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (cbl-mariner, clh, small, oci-distribution)",
@@ -1826,28 +1972,53 @@
           "runAttempt": 1,
           "isFlaky": true,
           "prMerged": false
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
         }
       ]
     },
     {
       "name": "Test that creating a container from an encrypted image, with correct decryption key works",
       "file": "k8s-guest-pull-image-encrypted.bats",
-      "totalFailures": 2,
+      "totalFailures": 4,
       "flakyCount": 2,
-      "mergedCount": 0,
+      "mergedCount": 2,
       "isConfirmedFlaky": true,
-      "mergedDespiteFailure": false,
-      "uniquePRs": 1,
+      "mergedDespiteFailure": true,
+      "uniquePRs": 2,
       "uniqueDates": [
-        "2026-01-27"
+        "2026-01-27",
+        "2026-01-23"
       ],
       "affectedJobs": [
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 2,
+          "count": 4,
           "flakyCount": 2,
-          "mergedCount": 0
+          "mergedCount": 2
         }
       ],
       "recentOccurrences": [
@@ -1874,28 +2045,53 @@
           "runAttempt": 1,
           "isFlaky": true,
           "prMerged": false
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
         }
       ]
     },
     {
       "name": "Test that creating a container from an authenticated image, with correct credentials works",
       "file": "k8s-guest-pull-image-authenticated.bats",
-      "totalFailures": 2,
+      "totalFailures": 4,
       "flakyCount": 2,
-      "mergedCount": 0,
+      "mergedCount": 2,
       "isConfirmedFlaky": true,
-      "mergedDespiteFailure": false,
-      "uniquePRs": 1,
+      "mergedDespiteFailure": true,
+      "uniquePRs": 2,
       "uniqueDates": [
-        "2026-01-27"
+        "2026-01-27",
+        "2026-01-23"
       ],
       "affectedJobs": [
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 2,
+          "count": 4,
           "flakyCount": 2,
-          "mergedCount": 0
+          "mergedCount": 2
         }
       ],
       "recentOccurrences": [
@@ -1922,28 +2118,53 @@
           "runAttempt": 1,
           "isFlaky": true,
           "prMerged": false
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
         }
       ]
     },
     {
       "name": "Test that creating a container from an authenticated image, with incorrect credentials fails",
       "file": "k8s-guest-pull-image-authenticated.bats",
-      "totalFailures": 2,
+      "totalFailures": 4,
       "flakyCount": 2,
-      "mergedCount": 0,
+      "mergedCount": 2,
       "isConfirmedFlaky": true,
-      "mergedDespiteFailure": false,
-      "uniquePRs": 1,
+      "mergedDespiteFailure": true,
+      "uniquePRs": 2,
       "uniqueDates": [
-        "2026-01-27"
+        "2026-01-27",
+        "2026-01-23"
       ],
       "affectedJobs": [
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 2,
+          "count": 4,
           "flakyCount": 2,
-          "mergedCount": 0
+          "mergedCount": 2
         }
       ],
       "recentOccurrences": [
@@ -1970,28 +2191,53 @@
           "runAttempt": 1,
           "isFlaky": true,
           "prMerged": false
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
         }
       ]
     },
     {
       "name": "Test that creating a container from an authenticated image, with correct credentials works (with initdata)",
       "file": "k8s-guest-pull-image-authenticated.bats",
-      "totalFailures": 2,
+      "totalFailures": 4,
       "flakyCount": 2,
-      "mergedCount": 0,
+      "mergedCount": 2,
       "isConfirmedFlaky": true,
-      "mergedDespiteFailure": false,
-      "uniquePRs": 1,
+      "mergedDespiteFailure": true,
+      "uniquePRs": 2,
       "uniqueDates": [
-        "2026-01-27"
+        "2026-01-27",
+        "2026-01-23"
       ],
       "affectedJobs": [
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 2,
+          "count": 4,
           "flakyCount": 2,
-          "mergedCount": 0
+          "mergedCount": 2
         }
       ],
       "recentOccurrences": [
@@ -2018,28 +2264,53 @@
           "runAttempt": 1,
           "isFlaky": true,
           "prMerged": false
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
         }
       ]
     },
     {
       "name": "Test that creating a container from an authenticated image, with incorrect credentials fails (with initdata)",
       "file": "k8s-guest-pull-image-authenticated.bats",
-      "totalFailures": 2,
+      "totalFailures": 4,
       "flakyCount": 2,
-      "mergedCount": 0,
+      "mergedCount": 2,
       "isConfirmedFlaky": true,
-      "mergedDespiteFailure": false,
-      "uniquePRs": 1,
+      "mergedDespiteFailure": true,
+      "uniquePRs": 2,
       "uniqueDates": [
-        "2026-01-27"
+        "2026-01-27",
+        "2026-01-23"
       ],
       "affectedJobs": [
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 2,
+          "count": 4,
           "flakyCount": 2,
-          "mergedCount": 0
+          "mergedCount": 2
         }
       ],
       "recentOccurrences": [
@@ -2066,28 +2337,53 @@
           "runAttempt": 1,
           "isFlaky": true,
           "prMerged": false
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
         }
       ]
     },
     {
       "name": "Create a pod from an unsigned image, on an insecureAcceptAnything registry works",
       "file": "k8s-guest-pull-image-signature.bats",
-      "totalFailures": 2,
+      "totalFailures": 4,
       "flakyCount": 2,
-      "mergedCount": 0,
+      "mergedCount": 2,
       "isConfirmedFlaky": true,
-      "mergedDespiteFailure": false,
-      "uniquePRs": 1,
+      "mergedDespiteFailure": true,
+      "uniquePRs": 2,
       "uniqueDates": [
-        "2026-01-27"
+        "2026-01-27",
+        "2026-01-23"
       ],
       "affectedJobs": [
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 2,
+          "count": 4,
           "flakyCount": 2,
-          "mergedCount": 0
+          "mergedCount": 2
         }
       ],
       "recentOccurrences": [
@@ -2114,28 +2410,53 @@
           "runAttempt": 1,
           "isFlaky": true,
           "prMerged": false
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
         }
       ]
     },
     {
       "name": "Create a pod from an unsigned image, on a 'restricted registry' is rejected",
       "file": "k8s-guest-pull-image-signature.bats",
-      "totalFailures": 2,
+      "totalFailures": 4,
       "flakyCount": 2,
-      "mergedCount": 0,
+      "mergedCount": 2,
       "isConfirmedFlaky": true,
-      "mergedDespiteFailure": false,
-      "uniquePRs": 1,
+      "mergedDespiteFailure": true,
+      "uniquePRs": 2,
       "uniqueDates": [
-        "2026-01-27"
+        "2026-01-27",
+        "2026-01-23"
       ],
       "affectedJobs": [
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 2,
+          "count": 4,
           "flakyCount": 2,
-          "mergedCount": 0
+          "mergedCount": 2
         }
       ],
       "recentOccurrences": [
@@ -2162,28 +2483,53 @@
           "runAttempt": 1,
           "isFlaky": true,
           "prMerged": false
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
         }
       ]
     },
     {
       "name": "Create a pod from a signed image, on a 'restricted registry' is successful",
       "file": "k8s-guest-pull-image-signature.bats",
-      "totalFailures": 2,
+      "totalFailures": 4,
       "flakyCount": 2,
-      "mergedCount": 0,
+      "mergedCount": 2,
       "isConfirmedFlaky": true,
-      "mergedDespiteFailure": false,
-      "uniquePRs": 1,
+      "mergedDespiteFailure": true,
+      "uniquePRs": 2,
       "uniqueDates": [
-        "2026-01-27"
+        "2026-01-27",
+        "2026-01-23"
       ],
       "affectedJobs": [
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 2,
+          "count": 4,
           "flakyCount": 2,
-          "mergedCount": 0
+          "mergedCount": 2
         }
       ],
       "recentOccurrences": [
@@ -2210,28 +2556,53 @@
           "runAttempt": 1,
           "isFlaky": true,
           "prMerged": false
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
         }
       ]
     },
     {
       "name": "Create a pod from a signed image, on a 'restricted registry', but with the wrong key is rejected",
       "file": "k8s-guest-pull-image-signature.bats",
-      "totalFailures": 2,
+      "totalFailures": 4,
       "flakyCount": 2,
-      "mergedCount": 0,
+      "mergedCount": 2,
       "isConfirmedFlaky": true,
-      "mergedDespiteFailure": false,
-      "uniquePRs": 1,
+      "mergedDespiteFailure": true,
+      "uniquePRs": 2,
       "uniqueDates": [
-        "2026-01-27"
+        "2026-01-27",
+        "2026-01-23"
       ],
       "affectedJobs": [
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 2,
+          "count": 4,
           "flakyCount": 2,
-          "mergedCount": 0
+          "mergedCount": 2
         }
       ],
       "recentOccurrences": [
@@ -2258,28 +2629,53 @@
           "runAttempt": 1,
           "isFlaky": true,
           "prMerged": false
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
         }
       ]
     },
     {
       "name": "Create a pod from an unsigned image, on an insecureAcceptAnything registry works (with initdata)",
       "file": "k8s-guest-pull-image-signature.bats",
-      "totalFailures": 2,
+      "totalFailures": 4,
       "flakyCount": 2,
-      "mergedCount": 0,
+      "mergedCount": 2,
       "isConfirmedFlaky": true,
-      "mergedDespiteFailure": false,
-      "uniquePRs": 1,
+      "mergedDespiteFailure": true,
+      "uniquePRs": 2,
       "uniqueDates": [
-        "2026-01-27"
+        "2026-01-27",
+        "2026-01-23"
       ],
       "affectedJobs": [
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 2,
+          "count": 4,
           "flakyCount": 2,
-          "mergedCount": 0
+          "mergedCount": 2
         }
       ],
       "recentOccurrences": [
@@ -2306,28 +2702,53 @@
           "runAttempt": 1,
           "isFlaky": true,
           "prMerged": false
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
         }
       ]
     },
     {
       "name": "Create a pod from an unsigned image, on a 'restricted registry' is rejected (with initdata)",
       "file": "k8s-guest-pull-image-signature.bats",
-      "totalFailures": 2,
+      "totalFailures": 4,
       "flakyCount": 2,
-      "mergedCount": 0,
+      "mergedCount": 2,
       "isConfirmedFlaky": true,
-      "mergedDespiteFailure": false,
-      "uniquePRs": 1,
+      "mergedDespiteFailure": true,
+      "uniquePRs": 2,
       "uniqueDates": [
-        "2026-01-27"
+        "2026-01-27",
+        "2026-01-23"
       ],
       "affectedJobs": [
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 2,
+          "count": 4,
           "flakyCount": 2,
-          "mergedCount": 0
+          "mergedCount": 2
         }
       ],
       "recentOccurrences": [
@@ -2354,28 +2775,53 @@
           "runAttempt": 1,
           "isFlaky": true,
           "prMerged": false
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
         }
       ]
     },
     {
       "name": "Create a pod from a signed image, on a 'restricted registry' is successful (with initdata)",
       "file": "k8s-guest-pull-image-signature.bats",
-      "totalFailures": 2,
+      "totalFailures": 4,
       "flakyCount": 2,
-      "mergedCount": 0,
+      "mergedCount": 2,
       "isConfirmedFlaky": true,
-      "mergedDespiteFailure": false,
-      "uniquePRs": 1,
+      "mergedDespiteFailure": true,
+      "uniquePRs": 2,
       "uniqueDates": [
-        "2026-01-27"
+        "2026-01-27",
+        "2026-01-23"
       ],
       "affectedJobs": [
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 2,
+          "count": 4,
           "flakyCount": 2,
-          "mergedCount": 0
+          "mergedCount": 2
         }
       ],
       "recentOccurrences": [
@@ -2402,28 +2848,53 @@
           "runAttempt": 1,
           "isFlaky": true,
           "prMerged": false
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
         }
       ]
     },
     {
       "name": "Create a pod from a signed image, on a 'restricted registry', but with the wrong key is rejected (with initdata)",
       "file": "k8s-guest-pull-image-signature.bats",
-      "totalFailures": 2,
+      "totalFailures": 4,
       "flakyCount": 2,
-      "mergedCount": 0,
+      "mergedCount": 2,
       "isConfirmedFlaky": true,
-      "mergedDespiteFailure": false,
-      "uniquePRs": 1,
+      "mergedDespiteFailure": true,
+      "uniquePRs": 2,
       "uniqueDates": [
-        "2026-01-27"
+        "2026-01-27",
+        "2026-01-23"
       ],
       "affectedJobs": [
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 2,
+          "count": 4,
           "flakyCount": 2,
-          "mergedCount": 0
+          "mergedCount": 2
         }
       ],
       "recentOccurrences": [
@@ -2450,28 +2921,53 @@
           "runAttempt": 1,
           "isFlaky": true,
           "prMerged": false
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
         }
       ]
     },
     {
       "name": "Unseal Env Secrets with CDH",
       "file": "k8s-sealed-secret.bats",
-      "totalFailures": 2,
+      "totalFailures": 4,
       "flakyCount": 2,
-      "mergedCount": 0,
+      "mergedCount": 2,
       "isConfirmedFlaky": true,
-      "mergedDespiteFailure": false,
-      "uniquePRs": 1,
+      "mergedDespiteFailure": true,
+      "uniquePRs": 2,
       "uniqueDates": [
-        "2026-01-27"
+        "2026-01-27",
+        "2026-01-23"
       ],
       "affectedJobs": [
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 2,
+          "count": 4,
           "flakyCount": 2,
-          "mergedCount": 0
+          "mergedCount": 2
         }
       ],
       "recentOccurrences": [
@@ -2498,28 +2994,53 @@
           "runAttempt": 1,
           "isFlaky": true,
           "prMerged": false
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
         }
       ]
     },
     {
       "name": "Unseal File Secrets with CDH",
       "file": "k8s-sealed-secret.bats",
-      "totalFailures": 2,
+      "totalFailures": 4,
       "flakyCount": 2,
-      "mergedCount": 0,
+      "mergedCount": 2,
       "isConfirmedFlaky": true,
-      "mergedDespiteFailure": false,
-      "uniquePRs": 1,
+      "mergedDespiteFailure": true,
+      "uniquePRs": 2,
       "uniqueDates": [
-        "2026-01-27"
+        "2026-01-27",
+        "2026-01-23"
       ],
       "affectedJobs": [
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-          "count": 2,
+          "count": 4,
           "flakyCount": 2,
-          "mergedCount": 0
+          "mergedCount": 2
         }
       ],
       "recentOccurrences": [
@@ -2546,28 +3067,60 @@
           "runAttempt": 1,
           "isFlaky": true,
           "prMerged": false
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
         }
       ]
     },
     {
       "name": "Empty dir volume when FSGroup is specified with non-root container",
       "file": "k8s-empty-dirs.bats",
-      "totalFailures": 2,
-      "flakyCount": 2,
-      "mergedCount": 0,
-      "isConfirmedFlaky": true,
-      "mergedDespiteFailure": false,
-      "uniquePRs": 1,
+      "totalFailures": 4,
+      "flakyCount": 0,
+      "mergedCount": 2,
+      "isConfirmedFlaky": false,
+      "mergedDespiteFailure": true,
+      "uniquePRs": 2,
       "uniqueDates": [
-        "2026-01-26"
+        "2026-01-26",
+        "2026-01-23"
       ],
       "affectedJobs": [
         {
           "name": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (devmapper, qemu, kubeadm)",
           "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-zvsi / run-k8s-tests (devmapper, qemu, kubeadm)",
           "count": 2,
-          "flakyCount": 2,
+          "flakyCount": 0,
           "mergedCount": 0
+        },
+        {
+          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "count": 2,
+          "flakyCount": 0,
+          "mergedCount": 2
         }
       ],
       "recentOccurrences": [
@@ -2580,7 +3133,7 @@
           "jobId": "61525964872",
           "runId": "21372510967",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": false
         },
         {
@@ -2592,20 +3145,44 @@
           "jobId": "61525964872",
           "runId": "21372510967",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": false
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
         }
       ]
     },
     {
       "name": "Check capabilities of pod",
       "file": "k8s-caps.bats",
-      "totalFailures": 2,
+      "totalFailures": 4,
       "flakyCount": 2,
-      "mergedCount": 0,
+      "mergedCount": 2,
       "isConfirmedFlaky": true,
-      "mergedDespiteFailure": false,
-      "uniquePRs": 1,
+      "mergedDespiteFailure": true,
+      "uniquePRs": 2,
       "uniqueDates": [
         "2026-01-23"
       ],
@@ -2616,9 +3193,40 @@
           "count": 2,
           "flakyCount": 2,
           "mergedCount": 0
+        },
+        {
+          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "count": 2,
+          "flakyCount": 0,
+          "mergedCount": 2
         }
       ],
       "recentOccurrences": [
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        },
         {
           "date": "2026-01-23",
           "prNumber": "12345",
@@ -2644,18 +3252,1554 @@
           "prMerged": false
         }
       ]
+    },
+    {
+      "name": "Test that creating a container from an encrypted image, with no decryption key fails",
+      "file": "k8s-guest-pull-image-encrypted.bats",
+      "totalFailures": 2,
+      "flakyCount": 0,
+      "mergedCount": 2,
+      "isConfirmedFlaky": false,
+      "mergedDespiteFailure": true,
+      "uniquePRs": 1,
+      "uniqueDates": [
+        "2026-01-23"
+      ],
+      "affectedJobs": [
+        {
+          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "count": 2,
+          "flakyCount": 0,
+          "mergedCount": 2
+        }
+      ],
+      "recentOccurrences": [
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        }
+      ]
+    },
+    {
+      "name": "Test that creating a container from an encrypted image, with incorrect decryption key fails",
+      "file": "k8s-guest-pull-image-encrypted.bats",
+      "totalFailures": 2,
+      "flakyCount": 0,
+      "mergedCount": 2,
+      "isConfirmedFlaky": false,
+      "mergedDespiteFailure": true,
+      "uniquePRs": 1,
+      "uniqueDates": [
+        "2026-01-23"
+      ],
+      "affectedJobs": [
+        {
+          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "count": 2,
+          "flakyCount": 0,
+          "mergedCount": 2
+        }
+      ],
+      "recentOccurrences": [
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        }
+      ]
+    },
+    {
+      "name": "Test that creating a container from an authenticated image, with no credentials fails",
+      "file": "k8s-guest-pull-image-authenticated.bats",
+      "totalFailures": 2,
+      "flakyCount": 0,
+      "mergedCount": 2,
+      "isConfirmedFlaky": false,
+      "mergedDespiteFailure": true,
+      "uniquePRs": 1,
+      "uniqueDates": [
+        "2026-01-23"
+      ],
+      "affectedJobs": [
+        {
+          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "count": 2,
+          "flakyCount": 0,
+          "mergedCount": 2
+        }
+      ],
+      "recentOccurrences": [
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        }
+      ]
+    },
+    {
+      "name": "Test that creating a container from an authenticated image, with no credentials fails (with initdata)",
+      "file": "k8s-guest-pull-image-authenticated.bats",
+      "totalFailures": 2,
+      "flakyCount": 0,
+      "mergedCount": 2,
+      "isConfirmedFlaky": false,
+      "mergedDespiteFailure": true,
+      "uniquePRs": 1,
+      "uniqueDates": [
+        "2026-01-23"
+      ],
+      "affectedJobs": [
+        {
+          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "count": 2,
+          "flakyCount": 0,
+          "mergedCount": 2
+        }
+      ],
+      "recentOccurrences": [
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        }
+      ]
+    },
+    {
+      "name": "Create a pod from an unsigned image, on a 'restricted registry' works if policy files isn't set",
+      "file": "k8s-guest-pull-image-signature.bats",
+      "totalFailures": 2,
+      "flakyCount": 0,
+      "mergedCount": 2,
+      "isConfirmedFlaky": false,
+      "mergedDespiteFailure": true,
+      "uniquePRs": 1,
+      "uniqueDates": [
+        "2026-01-23"
+      ],
+      "affectedJobs": [
+        {
+          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "count": 2,
+          "flakyCount": 0,
+          "mergedCount": 2
+        }
+      ],
+      "recentOccurrences": [
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        }
+      ]
+    },
+    {
+      "name": "Create a pod from an unsigned image, on a 'restricted registry' works if policy files isn't set (with initdata)",
+      "file": "k8s-guest-pull-image-signature.bats",
+      "totalFailures": 2,
+      "flakyCount": 0,
+      "mergedCount": 2,
+      "isConfirmedFlaky": false,
+      "mergedDespiteFailure": true,
+      "uniquePRs": 1,
+      "uniqueDates": [
+        "2026-01-23"
+      ],
+      "affectedJobs": [
+        {
+          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "count": 2,
+          "flakyCount": 0,
+          "mergedCount": 2
+        }
+      ],
+      "recentOccurrences": [
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        }
+      ]
+    },
+    {
+      "name": "Test we can pull an unencrypted image outside the guest with runc and then inside the guest successfully",
+      "file": "k8s-guest-pull-image.bats",
+      "totalFailures": 2,
+      "flakyCount": 0,
+      "mergedCount": 2,
+      "isConfirmedFlaky": false,
+      "mergedDespiteFailure": true,
+      "uniquePRs": 1,
+      "uniqueDates": [
+        "2026-01-23"
+      ],
+      "affectedJobs": [
+        {
+          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "count": 2,
+          "flakyCount": 0,
+          "mergedCount": 2
+        }
+      ],
+      "recentOccurrences": [
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        }
+      ]
+    },
+    {
+      "name": "Test we cannot pull an image that exceeds the memory limit inside the guest",
+      "file": "k8s-guest-pull-image.bats",
+      "totalFailures": 2,
+      "flakyCount": 0,
+      "mergedCount": 2,
+      "isConfirmedFlaky": false,
+      "mergedDespiteFailure": true,
+      "uniquePRs": 1,
+      "uniqueDates": [
+        "2026-01-23"
+      ],
+      "affectedJobs": [
+        {
+          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "count": 2,
+          "flakyCount": 0,
+          "mergedCount": 2
+        }
+      ],
+      "recentOccurrences": [
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        }
+      ]
+    },
+    {
+      "name": "Test unencrypted confidential container launch success and verify that we are running in a secure enclave.",
+      "file": "k8s-confidential.bats",
+      "totalFailures": 2,
+      "flakyCount": 0,
+      "mergedCount": 2,
+      "isConfirmedFlaky": false,
+      "mergedDespiteFailure": true,
+      "uniquePRs": 1,
+      "uniqueDates": [
+        "2026-01-23"
+      ],
+      "affectedJobs": [
+        {
+          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "count": 2,
+          "flakyCount": 0,
+          "mergedCount": 2
+        }
+      ],
+      "recentOccurrences": [
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        }
+      ]
+    },
+    {
+      "name": "Cannot Unseal Env Secrets with CDH without key",
+      "file": "k8s-sealed-secret.bats",
+      "totalFailures": 2,
+      "flakyCount": 0,
+      "mergedCount": 2,
+      "isConfirmedFlaky": false,
+      "mergedDespiteFailure": true,
+      "uniquePRs": 1,
+      "uniqueDates": [
+        "2026-01-23"
+      ],
+      "affectedJobs": [
+        {
+          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "count": 2,
+          "flakyCount": 0,
+          "mergedCount": 2
+        }
+      ],
+      "recentOccurrences": [
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        }
+      ]
+    },
+    {
+      "name": "Running with postStart and preStop handlers",
+      "file": "k8s-attach-handlers.bats",
+      "totalFailures": 2,
+      "flakyCount": 0,
+      "mergedCount": 2,
+      "isConfirmedFlaky": false,
+      "mergedDespiteFailure": true,
+      "uniquePRs": 1,
+      "uniqueDates": [
+        "2026-01-23"
+      ],
+      "affectedJobs": [
+        {
+          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "count": 2,
+          "flakyCount": 0,
+          "mergedCount": 2
+        }
+      ],
+      "recentOccurrences": [
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        }
+      ]
+    },
+    {
+      "name": "Block Storage Support",
+      "file": "k8s-block-volume.bats",
+      "totalFailures": 2,
+      "flakyCount": 0,
+      "mergedCount": 2,
+      "isConfirmedFlaky": false,
+      "mergedDespiteFailure": true,
+      "uniquePRs": 1,
+      "uniqueDates": [
+        "2026-01-23"
+      ],
+      "affectedJobs": [
+        {
+          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "count": 2,
+          "flakyCount": 0,
+          "mergedCount": 2
+        }
+      ],
+      "recentOccurrences": [
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        }
+      ]
+    },
+    {
+      "name": "ConfigMap for a pod",
+      "file": "k8s-configmap.bats",
+      "totalFailures": 2,
+      "flakyCount": 0,
+      "mergedCount": 2,
+      "isConfirmedFlaky": false,
+      "mergedDespiteFailure": true,
+      "uniquePRs": 1,
+      "uniqueDates": [
+        "2026-01-23"
+      ],
+      "affectedJobs": [
+        {
+          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "count": 2,
+          "flakyCount": 0,
+          "mergedCount": 2
+        }
+      ],
+      "recentOccurrences": [
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        }
+      ]
+    },
+    {
+      "name": "Copy file in a pod",
+      "file": "k8s-copy-file.bats",
+      "totalFailures": 2,
+      "flakyCount": 0,
+      "mergedCount": 2,
+      "isConfirmedFlaky": false,
+      "mergedDespiteFailure": true,
+      "uniquePRs": 1,
+      "uniqueDates": [
+        "2026-01-23"
+      ],
+      "affectedJobs": [
+        {
+          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "count": 2,
+          "flakyCount": 0,
+          "mergedCount": 2
+        }
+      ],
+      "recentOccurrences": [
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        }
+      ]
+    },
+    {
+      "name": "Copy from pod to host",
+      "file": "k8s-copy-file.bats",
+      "totalFailures": 2,
+      "flakyCount": 0,
+      "mergedCount": 2,
+      "isConfirmedFlaky": false,
+      "mergedDespiteFailure": true,
+      "uniquePRs": 1,
+      "uniqueDates": [
+        "2026-01-23"
+      ],
+      "affectedJobs": [
+        {
+          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "count": 2,
+          "flakyCount": 0,
+          "mergedCount": 2
+        }
+      ],
+      "recentOccurrences": [
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        }
+      ]
+    },
+    {
+      "name": "Credentials using secrets",
+      "file": "k8s-credentials-secrets.bats",
+      "totalFailures": 2,
+      "flakyCount": 0,
+      "mergedCount": 2,
+      "isConfirmedFlaky": false,
+      "mergedDespiteFailure": true,
+      "uniquePRs": 1,
+      "uniqueDates": [
+        "2026-01-23"
+      ],
+      "affectedJobs": [
+        {
+          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "count": 2,
+          "flakyCount": 0,
+          "mergedCount": 2
+        }
+      ],
+      "recentOccurrences": [
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        }
+      ]
+    },
+    {
+      "name": "Empty dir volumes",
+      "file": "k8s-empty-dirs.bats",
+      "totalFailures": 2,
+      "flakyCount": 0,
+      "mergedCount": 2,
+      "isConfirmedFlaky": false,
+      "mergedDespiteFailure": true,
+      "uniquePRs": 1,
+      "uniqueDates": [
+        "2026-01-23"
+      ],
+      "affectedJobs": [
+        {
+          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "count": 2,
+          "flakyCount": 0,
+          "mergedCount": 2
+        }
+      ],
+      "recentOccurrences": [
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        }
+      ]
+    },
+    {
+      "name": "Environment variables",
+      "file": "k8s-env.bats",
+      "totalFailures": 2,
+      "flakyCount": 0,
+      "mergedCount": 2,
+      "isConfirmedFlaky": false,
+      "mergedDespiteFailure": true,
+      "uniquePRs": 1,
+      "uniqueDates": [
+        "2026-01-23"
+      ],
+      "affectedJobs": [
+        {
+          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "count": 2,
+          "flakyCount": 0,
+          "mergedCount": 2
+        }
+      ],
+      "recentOccurrences": [
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        }
+      ]
+    },
+    {
+      "name": "Kubectl exec",
+      "file": "k8s-exec.bats",
+      "totalFailures": 2,
+      "flakyCount": 0,
+      "mergedCount": 2,
+      "isConfirmedFlaky": false,
+      "mergedDespiteFailure": true,
+      "uniquePRs": 1,
+      "uniqueDates": [
+        "2026-01-23"
+      ],
+      "affectedJobs": [
+        {
+          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "count": 2,
+          "flakyCount": 0,
+          "mergedCount": 2
+        }
+      ],
+      "recentOccurrences": [
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        }
+      ]
+    },
+    {
+      "name": "Test readonly volume for pods",
+      "file": "k8s-file-volume.bats",
+      "totalFailures": 2,
+      "flakyCount": 0,
+      "mergedCount": 2,
+      "isConfirmedFlaky": false,
+      "mergedDespiteFailure": true,
+      "uniquePRs": 1,
+      "uniqueDates": [
+        "2026-01-23"
+      ],
+      "affectedJobs": [
+        {
+          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "count": 2,
+          "flakyCount": 0,
+          "mergedCount": 2
+        }
+      ],
+      "recentOccurrences": [
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        }
+      ]
+    },
+    {
+      "name": "Validate Pod hostname",
+      "file": "k8s-hostname.bats",
+      "totalFailures": 2,
+      "flakyCount": 0,
+      "mergedCount": 2,
+      "isConfirmedFlaky": false,
+      "mergedDespiteFailure": true,
+      "uniquePRs": 1,
+      "uniqueDates": [
+        "2026-01-23"
+      ],
+      "affectedJobs": [
+        {
+          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "count": 2,
+          "flakyCount": 0,
+          "mergedCount": 2
+        }
+      ],
+      "recentOccurrences": [
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        }
+      ]
+    },
+    {
+      "name": "/dev hostPath volume bind mounts the guest device and skips virtio-fs",
+      "file": "k8s-hostpath-volume.bats",
+      "totalFailures": 2,
+      "flakyCount": 0,
+      "mergedCount": 2,
+      "isConfirmedFlaky": false,
+      "mergedDespiteFailure": true,
+      "uniquePRs": 1,
+      "uniqueDates": [
+        "2026-01-23"
+      ],
+      "affectedJobs": [
+        {
+          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "count": 2,
+          "flakyCount": 0,
+          "mergedCount": 2
+        }
+      ],
+      "recentOccurrences": [
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        }
+      ]
+    },
+    {
+      "name": "configmap update works, and preserves symlinks",
+      "file": "k8s-inotify.bats",
+      "totalFailures": 2,
+      "flakyCount": 0,
+      "mergedCount": 2,
+      "isConfirmedFlaky": false,
+      "mergedDespiteFailure": true,
+      "uniquePRs": 1,
+      "uniqueDates": [
+        "2026-01-23"
+      ],
+      "affectedJobs": [
+        {
+          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "count": 2,
+          "flakyCount": 0,
+          "mergedCount": 2
+        }
+      ],
+      "recentOccurrences": [
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        }
+      ]
+    },
+    {
+      "name": "Run a job to completion",
+      "file": "k8s-job.bats",
+      "totalFailures": 2,
+      "flakyCount": 0,
+      "mergedCount": 2,
+      "isConfirmedFlaky": false,
+      "mergedDespiteFailure": true,
+      "uniquePRs": 1,
+      "uniqueDates": [
+        "2026-01-23"
+      ],
+      "affectedJobs": [
+        {
+          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "count": 2,
+          "flakyCount": 0,
+          "mergedCount": 2
+        }
+      ],
+      "recentOccurrences": [
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        }
+      ]
+    },
+    {
+      "name": "Limit range for storage",
+      "file": "k8s-limit-range.bats",
+      "totalFailures": 2,
+      "flakyCount": 0,
+      "mergedCount": 2,
+      "isConfirmedFlaky": false,
+      "mergedDespiteFailure": true,
+      "uniquePRs": 1,
+      "uniqueDates": [
+        "2026-01-23"
+      ],
+      "affectedJobs": [
+        {
+          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "count": 2,
+          "flakyCount": 0,
+          "mergedCount": 2
+        }
+      ],
+      "recentOccurrences": [
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        }
+      ]
+    },
+    {
+      "name": "Liveness probe",
+      "file": "k8s-liveness-probes.bats",
+      "totalFailures": 2,
+      "flakyCount": 0,
+      "mergedCount": 2,
+      "isConfirmedFlaky": false,
+      "mergedDespiteFailure": true,
+      "uniquePRs": 1,
+      "uniqueDates": [
+        "2026-01-23"
+      ],
+      "affectedJobs": [
+        {
+          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "count": 2,
+          "flakyCount": 0,
+          "mergedCount": 2
+        }
+      ],
+      "recentOccurrences": [
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        }
+      ]
+    },
+    {
+      "name": "Liveness http probe",
+      "file": "k8s-liveness-probes.bats",
+      "totalFailures": 2,
+      "flakyCount": 0,
+      "mergedCount": 2,
+      "isConfirmedFlaky": false,
+      "mergedDespiteFailure": true,
+      "uniquePRs": 1,
+      "uniqueDates": [
+        "2026-01-23"
+      ],
+      "affectedJobs": [
+        {
+          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "count": 2,
+          "flakyCount": 0,
+          "mergedCount": 2
+        }
+      ],
+      "recentOccurrences": [
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        }
+      ]
+    },
+    {
+      "name": "Liveness tcp probe",
+      "file": "k8s-liveness-probes.bats",
+      "totalFailures": 2,
+      "flakyCount": 0,
+      "mergedCount": 2,
+      "isConfirmedFlaky": false,
+      "mergedDespiteFailure": true,
+      "uniquePRs": 1,
+      "uniqueDates": [
+        "2026-01-23"
+      ],
+      "affectedJobs": [
+        {
+          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "count": 2,
+          "flakyCount": 0,
+          "mergedCount": 2
+        }
+      ],
+      "recentOccurrences": [
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        }
+      ]
+    },
+    {
+      "name": "Running within memory constraints",
+      "file": "k8s-memory.bats",
+      "totalFailures": 2,
+      "flakyCount": 0,
+      "mergedCount": 2,
+      "isConfirmedFlaky": false,
+      "mergedDespiteFailure": true,
+      "uniquePRs": 1,
+      "uniqueDates": [
+        "2026-01-23"
+      ],
+      "affectedJobs": [
+        {
+          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "count": 2,
+          "flakyCount": 0,
+          "mergedCount": 2
+        }
+      ],
+      "recentOccurrences": [
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        }
+      ]
+    },
+    {
+      "name": "Nested mount of a secret volume in a configmap volume for a pod",
+      "file": "k8s-nested-configmap-secret.bats",
+      "totalFailures": 2,
+      "flakyCount": 0,
+      "mergedCount": 2,
+      "isConfirmedFlaky": false,
+      "mergedDespiteFailure": true,
+      "uniquePRs": 1,
+      "uniqueDates": [
+        "2026-01-23"
+      ],
+      "affectedJobs": [
+        {
+          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "count": 2,
+          "flakyCount": 0,
+          "mergedCount": 2
+        }
+      ],
+      "recentOccurrences": [
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        }
+      ]
+    },
+    {
+      "name": "Test OOM events for pods",
+      "file": "k8s-oom.bats",
+      "totalFailures": 2,
+      "flakyCount": 0,
+      "mergedCount": 2,
+      "isConfirmedFlaky": false,
+      "mergedDespiteFailure": true,
+      "uniquePRs": 1,
+      "uniqueDates": [
+        "2026-01-23"
+      ],
+      "affectedJobs": [
+        {
+          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "count": 2,
+          "flakyCount": 0,
+          "mergedCount": 2
+        }
+      ],
+      "recentOccurrences": [
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        }
+      ]
+    },
+    {
+      "name": "Pods establishing a VPN connection using openvpn",
+      "file": "k8s-openvpn.bats",
+      "totalFailures": 2,
+      "flakyCount": 0,
+      "mergedCount": 2,
+      "isConfirmedFlaky": false,
+      "mergedDespiteFailure": true,
+      "uniquePRs": 1,
+      "uniqueDates": [
+        "2026-01-23"
+      ],
+      "affectedJobs": [
+        {
+          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "count": 2,
+          "flakyCount": 0,
+          "mergedCount": 2
+        }
+      ],
+      "recentOccurrences": [
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        },
+        {
+          "date": "2026-01-23",
+          "prNumber": "12349",
+          "prTitle": "Revert \"ci: Ensure the KBS resources are created\"",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+          "jobId": "61298558856",
+          "runId": "21294580562",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        }
+      ]
     }
   ],
   "summary": {
-    "totalFailedTests": 27,
-    "confirmedFlaky": 24,
-    "mergedDespiteFailure": 0,
+    "totalFailedTests": 59,
+    "confirmedFlaky": 23,
+    "mergedDespiteFailure": 55,
     "mostAffectedJob": {
-      "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-      "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
-      "count": 48,
-      "flakyCount": 26,
-      "mergedCount": 0
+      "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+      "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+      "count": 150,
+      "flakyCount": 34,
+      "mergedCount": 110
     },
     "trend": [
       {
@@ -2692,7 +4836,7 @@
       },
       {
         "date": "2026-01-23",
-        "failures": 4
+        "failures": 114
       },
       {
         "date": "2026-01-24",
@@ -2717,17 +4861,17 @@
     ],
     "jobBreakdown": [
       {
+        "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+        "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
+        "count": 150,
+        "flakyCount": 34,
+        "mergedCount": 110
+      },
+      {
         "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
         "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
         "count": 48,
         "flakyCount": 26,
-        "mergedCount": 0
-      },
-      {
-        "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-        "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
-        "count": 40,
-        "flakyCount": 34,
         "mergedCount": 0
       },
       {
