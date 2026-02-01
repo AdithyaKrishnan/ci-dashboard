@@ -1,9 +1,9 @@
 {
-  "lastRefresh": "2026-02-01T12:36:12.769Z",
+  "lastRefresh": "2026-02-01T16:27:21.759Z",
   "periodDays": 14,
-  "totalFailures": 486,
+  "totalFailures": 482,
   "totalPRs": 6,
-  "confirmedFlakyCount": 34,
+  "confirmedFlakyCount": 33,
   "mergedDespiteFailureCount": 0,
   "failedTests": [
     {
@@ -7953,85 +7953,6 @@
       ]
     },
     {
-      "name": "Test we can pull an image inside the guest using trusted storage",
-      "file": "k8s-guest-pull-image.bats",
-      "totalFailures": 4,
-      "flakyCount": 4,
-      "mergedCount": 0,
-      "isConfirmedFlaky": true,
-      "mergedDespiteFailure": false,
-      "uniquePRs": 1,
-      "uniqueDates": [
-        "2026-01-29"
-      ],
-      "affectedJobs": [
-        {
-          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev, nydus, guest-pull)",
-          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev, nydus, guest-pull)",
-          "count": 2,
-          "flakyCount": 2,
-          "mergedCount": 0
-        },
-        {
-          "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
-          "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
-          "count": 2,
-          "flakyCount": 2,
-          "mergedCount": 0
-        }
-      ],
-      "recentOccurrences": [
-        {
-          "date": "2026-01-29",
-          "prNumber": "12396",
-          "prTitle": "runtime(-rs): rootfs: Use dm-mod.create kernel parameters for dm-verity protected root filesystems",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev, nydus, guest-pull)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev, nydus, guest-pull)",
-          "jobId": "62026241736",
-          "runId": "21494650240",
-          "runAttempt": 3,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-29",
-          "prNumber": "12396",
-          "prTitle": "runtime(-rs): rootfs: Use dm-mod.create kernel parameters for dm-verity protected root filesystems",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev, nydus, guest-pull)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev, nydus, guest-pull)",
-          "jobId": "62026241736",
-          "runId": "21494650240",
-          "runAttempt": 3,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-29",
-          "prNumber": "12396",
-          "prTitle": "runtime(-rs): rootfs: Use dm-mod.create kernel parameters for dm-verity protected root filesystems",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
-          "jobId": "62026241793",
-          "runId": "21494650240",
-          "runAttempt": 3,
-          "isFlaky": true,
-          "prMerged": false
-        },
-        {
-          "date": "2026-01-29",
-          "prNumber": "12396",
-          "prTitle": "runtime(-rs): rootfs: Use dm-mod.create kernel parameters for dm-verity protected root filesystems",
-          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
-          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
-          "jobId": "62026241793",
-          "runId": "21494650240",
-          "runAttempt": 3,
-          "isFlaky": true,
-          "prMerged": false
-        }
-      ]
-    },
-    {
       "name": "Empty dir volume when FSGroup is specified with non-root container",
       "file": "k8s-empty-dirs.bats",
       "totalFailures": 2,
@@ -8225,14 +8146,14 @@
     }
   ],
   "summary": {
-    "totalFailedTests": 54,
-    "confirmedFlaky": 34,
+    "totalFailedTests": 53,
+    "confirmedFlaky": 33,
     "mergedDespiteFailure": 0,
     "mostAffectedJob": {
       "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev, nydus, guest-pull)",
       "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev, nydus, guest-pull)",
-      "count": 100,
-      "flakyCount": 2,
+      "count": 98,
+      "flakyCount": 0,
       "mergedCount": 0
     },
     "trend": [
@@ -8278,7 +8199,7 @@
       },
       {
         "date": "2026-01-29",
-        "failures": 390
+        "failures": 386
       },
       {
         "date": "2026-01-30",
@@ -8297,8 +8218,8 @@
       {
         "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev, nydus, guest-pull)",
         "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev, nydus, guest-pull)",
-        "count": 100,
-        "flakyCount": 2,
+        "count": 98,
+        "flakyCount": 0,
         "mergedCount": 0
       },
       {
@@ -8339,8 +8260,8 @@
       {
         "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
         "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
-        "count": 14,
-        "flakyCount": 2,
+        "count": 12,
+        "flakyCount": 0,
         "mergedCount": 0
       },
       {
