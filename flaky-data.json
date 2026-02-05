@@ -1,9 +1,9 @@
 {
-  "lastRefresh": "2026-02-04T20:30:41.118Z",
+  "lastRefresh": "2026-02-05T01:17:02.839Z",
   "periodDays": 14,
   "totalFailures": 392,
-  "totalPRs": 12,
-  "confirmedFlakyCount": 4,
+  "totalPRs": 13,
+  "confirmedFlakyCount": 3,
   "mergedDespiteFailureCount": 2,
   "failedTests": [
     {
@@ -14,7 +14,7 @@
       "mergedCount": 0,
       "isConfirmedFlaky": false,
       "mergedDespiteFailure": false,
-      "uniquePRs": 10,
+      "uniquePRs": 11,
       "uniqueDates": [
         "2026-02-04",
         "2026-02-03"
@@ -196,25 +196,25 @@
         },
         {
           "date": "2026-02-04",
-          "prNumber": "12396",
-          "prTitle": "runtime(-rs): rootfs: Use dm-mod.create kernel parameters for dm-verity protected root filesystems",
+          "prNumber": "12386",
+          "prTitle": "genpolicy: support multiple NVIDIA GPU resource keys via allowlist in vfio settings",
           "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
           "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
-          "jobId": "62521067886",
-          "runId": "21681347155",
-          "runAttempt": 1,
+          "jobId": "62533401612",
+          "runId": "21675986346",
+          "runAttempt": 2,
           "isFlaky": false,
           "prMerged": false
         },
         {
           "date": "2026-02-04",
-          "prNumber": "12396",
-          "prTitle": "runtime(-rs): rootfs: Use dm-mod.create kernel parameters for dm-verity protected root filesystems",
+          "prNumber": "12386",
+          "prTitle": "genpolicy: support multiple NVIDIA GPU resource keys via allowlist in vfio settings",
           "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
           "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
-          "jobId": "62521067886",
-          "runId": "21681347155",
-          "runAttempt": 1,
+          "jobId": "62533401612",
+          "runId": "21675986346",
+          "runAttempt": 2,
           "isFlaky": false,
           "prMerged": false
         },
@@ -2284,9 +2284,9 @@
       "name": "Test we can pull an image inside the guest using trusted storage",
       "file": "k8s-guest-pull-image.bats",
       "totalFailures": 6,
-      "flakyCount": 4,
+      "flakyCount": 0,
       "mergedCount": 0,
-      "isConfirmedFlaky": true,
+      "isConfirmedFlaky": false,
       "mergedDespiteFailure": false,
       "uniquePRs": 2,
       "uniqueDates": [
@@ -2298,14 +2298,14 @@
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
           "count": 4,
-          "flakyCount": 2,
+          "flakyCount": 0,
           "mergedCount": 0
         },
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev, nydus, guest-pull)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev, nydus, guest-pull)",
           "count": 2,
-          "flakyCount": 2,
+          "flakyCount": 0,
           "mergedCount": 0
         }
       ],
@@ -2343,7 +2343,7 @@
           "jobId": "62387204182",
           "runId": "21641609041",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": false
         },
         {
@@ -2355,7 +2355,7 @@
           "jobId": "62387204182",
           "runId": "21641609041",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": false
         },
         {
@@ -2367,7 +2367,7 @@
           "jobId": "62387204219",
           "runId": "21641609041",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": false
         },
         {
@@ -2379,7 +2379,7 @@
           "jobId": "62387204219",
           "runId": "21641609041",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": false
         }
       ]
@@ -5913,7 +5913,7 @@
       "name": "Verify nginx connectivity between pods",
       "file": "k8s-nginx-connectivity.bats",
       "totalFailures": 4,
-      "flakyCount": 4,
+      "flakyCount": 2,
       "mergedCount": 0,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": false,
@@ -5926,7 +5926,7 @@
           "name": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu-runtime-rs, kubeadm)",
           "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu-runtime-rs, kubeadm)",
           "count": 4,
-          "flakyCount": 4,
+          "flakyCount": 2,
           "mergedCount": 0
         }
       ],
@@ -5964,7 +5964,7 @@
           "jobId": "62386236881",
           "runId": "21641609041",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": false
         },
         {
@@ -5976,7 +5976,7 @@
           "jobId": "62386236881",
           "runId": "21641609041",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": false
         }
       ]
@@ -7232,7 +7232,7 @@
   ],
   "summary": {
     "totalFailedTests": 75,
-    "confirmedFlaky": 4,
+    "confirmedFlaky": 3,
     "mergedDespiteFailure": 2,
     "mostAffectedJob": {
       "name": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (ubuntu, dragonball, small)",
@@ -7242,10 +7242,6 @@
       "mergedCount": 0
     },
     "trend": [
-      {
-        "date": "2026-01-22",
-        "failures": 0
-      },
       {
         "date": "2026-01-23",
         "failures": 0
@@ -7297,6 +7293,10 @@
       {
         "date": "2026-02-04",
         "failures": 340
+      },
+      {
+        "date": "2026-02-05",
+        "failures": 0
       }
     ],
     "jobBreakdown": [
@@ -7325,7 +7325,7 @@
         "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
         "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
         "count": 70,
-        "flakyCount": 2,
+        "flakyCount": 0,
         "mergedCount": 0
       },
       {
