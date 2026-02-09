@@ -1,10 +1,10 @@
 {
-  "lastRefresh": "2026-02-08T20:23:27.053Z",
+  "lastRefresh": "2026-02-09T01:22:34.985Z",
   "periodDays": 14,
-  "totalFailures": 96,
+  "totalFailures": 98,
   "totalPRs": 16,
   "confirmedFlakyCount": 11,
-  "mergedDespiteFailureCount": 0,
+  "mergedDespiteFailureCount": 1,
   "failedTests": [
     {
       "name": "SMB share supports extended attributes (xattr) with getfattr",
@@ -1071,25 +1071,50 @@
     {
       "name": "Check the number vcpus are correctly allocated to the sandbox",
       "file": "k8s-sandbox-vcpus-allocation.bats",
-      "totalFailures": 6,
+      "totalFailures": 8,
       "flakyCount": 0,
-      "mergedCount": 0,
+      "mergedCount": 2,
       "isConfirmedFlaky": false,
-      "mergedDespiteFailure": false,
-      "uniquePRs": 2,
+      "mergedDespiteFailure": true,
+      "uniquePRs": 3,
       "uniqueDates": [
+        "2026-02-08",
         "2026-02-06"
       ],
       "affectedJobs": [
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
-          "count": 6,
+          "count": 8,
           "flakyCount": 0,
-          "mergedCount": 0
+          "mergedCount": 2
         }
       ],
       "recentOccurrences": [
+        {
+          "date": "2026-02-08",
+          "prNumber": "12464",
+          "prTitle": "runtime-rs: use FIRMWARETDVFPATH like Go runtime",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
+          "jobId": "62907542488",
+          "runId": "21804973588",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        },
+        {
+          "date": "2026-02-08",
+          "prNumber": "12464",
+          "prTitle": "runtime-rs: use FIRMWARETDVFPATH like Go runtime",
+          "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
+          "jobDisplayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
+          "jobId": "62907542488",
+          "runId": "21804973588",
+          "runAttempt": 1,
+          "isFlaky": false,
+          "prMerged": true
+        },
         {
           "date": "2026-02-06",
           "prNumber": "12461",
@@ -1710,7 +1735,7 @@
   "summary": {
     "totalFailedTests": 14,
     "confirmedFlaky": 11,
-    "mergedDespiteFailure": 0,
+    "mergedDespiteFailure": 1,
     "mostAffectedJob": {
       "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter (qemu-coco-dev, erofs, default)",
       "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee-with-erofs-snapshotter (qemu-coco-dev, erofs, default)",
@@ -1719,10 +1744,6 @@
       "mergedCount": 0
     },
     "trend": [
-      {
-        "date": "2026-01-26",
-        "failures": 0
-      },
       {
         "date": "2026-01-27",
         "failures": 0
@@ -1773,6 +1794,10 @@
       },
       {
         "date": "2026-02-08",
+        "failures": 2
+      },
+      {
+        "date": "2026-02-09",
         "failures": 0
       }
     ],
@@ -1790,6 +1815,13 @@
         "count": 10,
         "flakyCount": 2,
         "mergedCount": 0
+      },
+      {
+        "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
+        "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
+        "count": 10,
+        "flakyCount": 0,
+        "mergedCount": 2
       },
       {
         "name": "kata-containers-ci-on-push / run-k8s-tests-on-aks / run-k8s-tests (cbl-mariner, clh, small, containerd)",
@@ -1810,13 +1842,6 @@
         "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-arm64 / run-k8s-tests-on-arm64 (qemu, kubeadm)",
         "count": 8,
         "flakyCount": 8,
-        "mergedCount": 0
-      },
-      {
-        "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
-        "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
-        "count": 8,
-        "flakyCount": 0,
         "mergedCount": 0
       },
       {
