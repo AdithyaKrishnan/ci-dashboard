@@ -1,5 +1,5 @@
 {
-  "lastRefresh": "2026-02-13T04:55:34.448Z",
+  "lastRefresh": "2026-02-13T07:01:05.728Z",
   "sections": [
     {
       "id": "nvidia-gpu",
@@ -19,7 +19,7 @@
           "isRequired": true,
           "duration": "9m 37s",
           "lastFailure": "Never",
-          "lastSuccess": "4h ago",
+          "lastSuccess": "6h ago",
           "weatherHistory": [
             {
               "date": "2026-02-04T00:00:00.000Z",
@@ -136,7 +136,7 @@
           ],
           "isRequired": true,
           "duration": "9m 48s",
-          "lastFailure": "4h ago",
+          "lastFailure": "6h ago",
           "lastSuccess": "Yesterday",
           "weatherHistory": [
             {
@@ -446,7 +446,7 @@
           "isRequired": true,
           "duration": "59m 16s",
           "lastFailure": "Never",
-          "lastSuccess": "4h ago",
+          "lastSuccess": "6h ago",
           "weatherHistory": [
             {
               "date": "2026-02-04T00:00:00.000Z",
@@ -563,7 +563,7 @@
           "isRequired": false,
           "duration": "46m 51s",
           "lastFailure": "6 days ago",
-          "lastSuccess": "2h ago",
+          "lastSuccess": "4h ago",
           "weatherHistory": [
             {
               "date": "2026-02-04T00:00:00.000Z",
@@ -673,13 +673,13 @@
           "name": "Intel TDX with nydus snapshotter",
           "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
           "fullName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
-          "status": "not_run",
+          "status": "failed",
           "categories": [
             "tee"
           ],
           "isRequired": false,
-          "duration": "N/A",
-          "lastFailure": "23h ago",
+          "duration": "57m 45s",
+          "lastFailure": "1h ago",
           "lastSuccess": "Never",
           "weatherHistory": [
             {
@@ -1575,15 +1575,23 @@
             },
             {
               "date": "2026-02-13T00:00:00.000Z",
-              "status": "none",
-              "runId": null,
-              "jobId": null,
-              "duration": null,
-              "failureStep": null,
-              "failureDetails": null
+              "status": "failed",
+              "runId": "21969626823",
+              "jobId": "63469565988",
+              "duration": "57m 45s",
+              "failureStep": "Run tests",
+              "failureDetails": {
+                "failures": [],
+                "stats": {
+                  "total": 254,
+                  "passed": 254,
+                  "failed": 0,
+                  "skipped": 0
+                }
+              }
             }
           ],
-          "failureCount": 6,
+          "failureCount": 7,
           "failedTestsInWeather": [
             {
               "name": "Check the number vcpus are correctly allocated to the sandbox",
@@ -2144,7 +2152,10 @@
           "setupRetry": false,
           "runId": "21969626823",
           "jobId": "63469565988",
-          "error": null,
+          "error": {
+            "step": "Run tests",
+            "output": "View full log on GitHub for details"
+          },
           "maintainers": [
             "@mythi"
           ]
@@ -2163,7 +2174,7 @@
           "isRequired": true,
           "duration": "23m 7s",
           "lastFailure": "4 days ago",
-          "lastSuccess": "3h ago",
+          "lastSuccess": "5h ago",
           "weatherHistory": [
             {
               "date": "2026-02-04T00:00:00.000Z",
@@ -2280,7 +2291,7 @@
           ],
           "isRequired": true,
           "duration": "9m 48s",
-          "lastFailure": "4h ago",
+          "lastFailure": "6h ago",
           "lastSuccess": "Yesterday",
           "weatherHistory": [
             {
@@ -2582,7 +2593,7 @@
           "isRequired": false,
           "duration": "42m 35s",
           "lastFailure": "Never",
-          "lastSuccess": "4h ago",
+          "lastSuccess": "6h ago",
           "weatherHistory": [
             {
               "date": "2026-02-04T00:00:00.000Z",
@@ -2699,7 +2710,7 @@
           "isRequired": true,
           "duration": "56m 33s",
           "lastFailure": "2/4/2026",
-          "lastSuccess": "4h ago",
+          "lastSuccess": "6h ago",
           "weatherHistory": [
             {
               "date": "2026-02-04T00:00:00.000Z",
@@ -2851,7 +2862,7 @@
           "isRequired": false,
           "duration": "17m 19s",
           "lastFailure": "2/4/2026",
-          "lastSuccess": "4h ago",
+          "lastSuccess": "6h ago",
           "weatherHistory": [
             {
               "date": "2026-02-04T00:00:00.000Z",
@@ -2967,9 +2978,9 @@
             "ibm"
           ],
           "isRequired": false,
-          "duration": "0m 7s",
-          "lastFailure": "23h ago",
-          "lastSuccess": "Yesterday",
+          "duration": "0m 4s",
+          "lastFailure": "1h ago",
+          "lastSuccess": "2 days ago",
           "weatherHistory": [
             {
               "date": "2026-02-04T00:00:00.000Z",
@@ -3054,20 +3065,20 @@
             },
             {
               "date": "2026-02-13T00:00:00.000Z",
-              "status": "none",
-              "runId": null,
-              "jobId": null,
-              "duration": null,
-              "failureStep": null,
+              "status": "failed",
+              "runId": "21975790830",
+              "jobId": "63487127753",
+              "duration": "0m 4s",
+              "failureStep": "Fetch a test result for {{ matrix.test_title }}",
               "failureDetails": null
             }
           ],
-          "failureCount": 1,
+          "failureCount": 2,
           "failedTestsInWeather": [],
           "retried": 0,
           "setupRetry": false,
-          "runId": "21934742035",
-          "jobId": "63346419545",
+          "runId": "21975790830",
+          "jobId": "63487127753",
           "error": {
             "step": "Fetch a test result for {{ matrix.test_title }}",
             "output": "View full log on GitHub for details"
@@ -3081,15 +3092,15 @@
           "name": "CC Secure Execution E2E tests - Go (s390x)",
           "jobName": "check-internal-test-result (cc-se-e2e-tests-go)",
           "fullName": "check-internal-test-result (cc-se-e2e-tests-go)",
-          "status": "failed",
+          "status": "passed",
           "categories": [
             "tee",
             "ibm"
           ],
           "isRequired": false,
-          "duration": "3m 25s",
-          "lastFailure": "23h ago",
-          "lastSuccess": "Yesterday",
+          "duration": "0m 12s",
+          "lastFailure": "Yesterday",
+          "lastSuccess": "1h ago",
           "weatherHistory": [
             {
               "date": "2026-02-04T00:00:00.000Z",
@@ -3174,10 +3185,10 @@
             },
             {
               "date": "2026-02-13T00:00:00.000Z",
-              "status": "none",
-              "runId": null,
-              "jobId": null,
-              "duration": null,
+              "status": "passed",
+              "runId": "21975790830",
+              "jobId": "63487127703",
+              "duration": "0m 12s",
               "failureStep": null,
               "failureDetails": null
             }
@@ -3186,12 +3197,9 @@
           "failedTestsInWeather": [],
           "retried": 0,
           "setupRetry": false,
-          "runId": "21934742035",
-          "jobId": "63346419587",
-          "error": {
-            "step": "Fetch a test result for {{ matrix.test_title }}",
-            "output": "View full log on GitHub for details"
-          },
+          "runId": "21975790830",
+          "jobId": "63487127703",
+          "error": null,
           "maintainers": [
             "@BbolroC"
           ]
@@ -3207,9 +3215,9 @@
             "ibm"
           ],
           "isRequired": false,
-          "duration": "0m 7s",
+          "duration": "0m 8s",
           "lastFailure": "Never",
-          "lastSuccess": "23h ago",
+          "lastSuccess": "1h ago",
           "weatherHistory": [
             {
               "date": "2026-02-04T00:00:00.000Z",
@@ -3294,10 +3302,10 @@
             },
             {
               "date": "2026-02-13T00:00:00.000Z",
-              "status": "none",
-              "runId": null,
-              "jobId": null,
-              "duration": null,
+              "status": "passed",
+              "runId": "21975790830",
+              "jobId": "63487127700",
+              "duration": "0m 8s",
               "failureStep": null,
               "failureDetails": null
             }
@@ -3306,8 +3314,8 @@
           "failedTestsInWeather": [],
           "retried": 0,
           "setupRetry": false,
-          "runId": "21934742035",
-          "jobId": "63346419542",
+          "runId": "21975790830",
+          "jobId": "63487127700",
           "error": null,
           "maintainers": [
             "@BbolroC"
@@ -3330,9 +3338,9 @@
             "ibm"
           ],
           "isRequired": false,
-          "duration": "0m 7s",
+          "duration": "0m 8s",
           "lastFailure": "Never",
-          "lastSuccess": "23h ago",
+          "lastSuccess": "1h ago",
           "weatherHistory": [
             {
               "date": "2026-02-04T00:00:00.000Z",
@@ -3417,10 +3425,10 @@
             },
             {
               "date": "2026-02-13T00:00:00.000Z",
-              "status": "none",
-              "runId": null,
-              "jobId": null,
-              "duration": null,
+              "status": "passed",
+              "runId": "21975790830",
+              "jobId": "63487127701",
+              "duration": "0m 8s",
               "failureStep": null,
               "failureDetails": null
             }
@@ -3429,8 +3437,8 @@
           "failedTestsInWeather": [],
           "retried": 0,
           "setupRetry": false,
-          "runId": "21934742035",
-          "jobId": "63346419544",
+          "runId": "21975790830",
+          "jobId": "63487127701",
           "error": null,
           "maintainers": [
             "@BbolroC"
@@ -3447,9 +3455,9 @@
             "ibm"
           ],
           "isRequired": false,
-          "duration": "0m 7s",
-          "lastFailure": "23h ago",
-          "lastSuccess": "Yesterday",
+          "duration": "0m 4s",
+          "lastFailure": "1h ago",
+          "lastSuccess": "2 days ago",
           "weatherHistory": [
             {
               "date": "2026-02-04T00:00:00.000Z",
@@ -3534,20 +3542,20 @@
             },
             {
               "date": "2026-02-13T00:00:00.000Z",
-              "status": "none",
-              "runId": null,
-              "jobId": null,
-              "duration": null,
-              "failureStep": null,
+              "status": "failed",
+              "runId": "21975790830",
+              "jobId": "63487127753",
+              "duration": "0m 4s",
+              "failureStep": "Fetch a test result for {{ matrix.test_title }}",
               "failureDetails": null
             }
           ],
-          "failureCount": 1,
+          "failureCount": 2,
           "failedTestsInWeather": [],
           "retried": 0,
           "setupRetry": false,
-          "runId": "21934742035",
-          "jobId": "63346419545",
+          "runId": "21975790830",
+          "jobId": "63487127753",
           "error": {
             "step": "Fetch a test result for {{ matrix.test_title }}",
             "output": "View full log on GitHub for details"
@@ -3561,15 +3569,15 @@
           "name": "CC Secure Execution E2E tests (Go)",
           "jobName": "check-internal-test-result (cc-se-e2e-tests-go)",
           "fullName": "check-internal-test-result (cc-se-e2e-tests-go)",
-          "status": "failed",
+          "status": "passed",
           "categories": [
             "tee",
             "ibm"
           ],
           "isRequired": false,
-          "duration": "3m 25s",
-          "lastFailure": "23h ago",
-          "lastSuccess": "Yesterday",
+          "duration": "0m 12s",
+          "lastFailure": "Yesterday",
+          "lastSuccess": "1h ago",
           "weatherHistory": [
             {
               "date": "2026-02-04T00:00:00.000Z",
@@ -3654,10 +3662,10 @@
             },
             {
               "date": "2026-02-13T00:00:00.000Z",
-              "status": "none",
-              "runId": null,
-              "jobId": null,
-              "duration": null,
+              "status": "passed",
+              "runId": "21975790830",
+              "jobId": "63487127703",
+              "duration": "0m 12s",
               "failureStep": null,
               "failureDetails": null
             }
@@ -3666,12 +3674,9 @@
           "failedTestsInWeather": [],
           "retried": 0,
           "setupRetry": false,
-          "runId": "21934742035",
-          "jobId": "63346419587",
-          "error": {
-            "step": "Fetch a test result for {{ matrix.test_title }}",
-            "output": "View full log on GitHub for details"
-          },
+          "runId": "21975790830",
+          "jobId": "63487127703",
+          "error": null,
           "maintainers": [
             "@BbolroC"
           ]
@@ -3687,9 +3692,9 @@
             "ibm"
           ],
           "isRequired": false,
-          "duration": "0m 7s",
+          "duration": "0m 8s",
           "lastFailure": "Never",
-          "lastSuccess": "23h ago",
+          "lastSuccess": "1h ago",
           "weatherHistory": [
             {
               "date": "2026-02-04T00:00:00.000Z",
@@ -3774,10 +3779,10 @@
             },
             {
               "date": "2026-02-13T00:00:00.000Z",
-              "status": "none",
-              "runId": null,
-              "jobId": null,
-              "duration": null,
+              "status": "passed",
+              "runId": "21975790830",
+              "jobId": "63487127700",
+              "duration": "0m 8s",
               "failureStep": null,
               "failureDetails": null
             }
@@ -3786,8 +3791,8 @@
           "failedTestsInWeather": [],
           "retried": 0,
           "setupRetry": false,
-          "runId": "21934742035",
-          "jobId": "63346419542",
+          "runId": "21975790830",
+          "jobId": "63487127700",
           "error": null,
           "maintainers": [
             "@BbolroC"
@@ -3806,15 +3811,15 @@
         "name": "check-internal-test-result (cc-se-e2e-tests-go)",
         "jobName": "check-internal-test-result (cc-se-e2e-tests-go)",
         "fullName": "check-internal-test-result (cc-se-e2e-tests-go)",
-        "status": "failed",
+        "status": "passed",
         "categories": [
           "tee",
           "ibm"
         ],
         "isRequired": false,
-        "duration": "3m 25s",
-        "lastFailure": "23h ago",
-        "lastSuccess": "Yesterday",
+        "duration": "0m 12s",
+        "lastFailure": "Yesterday",
+        "lastSuccess": "1h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -3899,10 +3904,10 @@
           },
           {
             "date": "2026-02-13T00:00:00.000Z",
-            "status": "none",
-            "runId": null,
-            "jobId": null,
-            "duration": null,
+            "status": "passed",
+            "runId": "21975790830",
+            "jobId": "63487127703",
+            "duration": "0m 12s",
             "failureStep": null,
             "failureDetails": null
           }
@@ -3911,12 +3916,9 @@
         "failedTestsInWeather": [],
         "retried": 0,
         "setupRetry": false,
-        "runId": "21934742035",
-        "jobId": "63346419587",
-        "error": {
-          "step": "Fetch a test result for {{ matrix.test_title }}",
-          "output": "View full log on GitHub for details"
-        },
+        "runId": "21975790830",
+        "jobId": "63487127703",
+        "error": null,
         "maintainers": [
           "@BbolroC"
         ]
@@ -3932,9 +3934,9 @@
           "ibm"
         ],
         "isRequired": false,
-        "duration": "0m 7s",
+        "duration": "0m 8s",
         "lastFailure": "Never",
-        "lastSuccess": "23h ago",
+        "lastSuccess": "1h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -4019,10 +4021,10 @@
           },
           {
             "date": "2026-02-13T00:00:00.000Z",
-            "status": "none",
-            "runId": null,
-            "jobId": null,
-            "duration": null,
+            "status": "passed",
+            "runId": "21975790830",
+            "jobId": "63487127700",
+            "duration": "0m 8s",
             "failureStep": null,
             "failureDetails": null
           }
@@ -4031,8 +4033,8 @@
         "failedTestsInWeather": [],
         "retried": 0,
         "setupRetry": false,
-        "runId": "21934742035",
-        "jobId": "63346419542",
+        "runId": "21975790830",
+        "jobId": "63487127700",
         "error": null,
         "maintainers": [
           "@BbolroC"
@@ -4049,9 +4051,9 @@
           "ibm"
         ],
         "isRequired": false,
-        "duration": "0m 7s",
-        "lastFailure": "23h ago",
-        "lastSuccess": "Yesterday",
+        "duration": "0m 4s",
+        "lastFailure": "1h ago",
+        "lastSuccess": "2 days ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -4136,20 +4138,20 @@
           },
           {
             "date": "2026-02-13T00:00:00.000Z",
-            "status": "none",
-            "runId": null,
-            "jobId": null,
-            "duration": null,
-            "failureStep": null,
+            "status": "failed",
+            "runId": "21975790830",
+            "jobId": "63487127753",
+            "duration": "0m 4s",
+            "failureStep": "Fetch a test result for {{ matrix.test_title }}",
             "failureDetails": null
           }
         ],
-        "failureCount": 1,
+        "failureCount": 2,
         "failedTestsInWeather": [],
         "retried": 0,
         "setupRetry": false,
-        "runId": "21934742035",
-        "jobId": "63346419545",
+        "runId": "21975790830",
+        "jobId": "63487127753",
         "error": {
           "step": "Fetch a test result for {{ matrix.test_title }}",
           "output": "View full log on GitHub for details"
@@ -4168,9 +4170,9 @@
           "ibm"
         ],
         "isRequired": false,
-        "duration": "0m 7s",
+        "duration": "0m 8s",
         "lastFailure": "Never",
-        "lastSuccess": "23h ago",
+        "lastSuccess": "1h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -4255,10 +4257,10 @@
           },
           {
             "date": "2026-02-13T00:00:00.000Z",
-            "status": "none",
-            "runId": null,
-            "jobId": null,
-            "duration": null,
+            "status": "passed",
+            "runId": "21975790830",
+            "jobId": "63487127701",
+            "duration": "0m 8s",
             "failureStep": null,
             "failureDetails": null
           }
@@ -4267,8 +4269,8 @@
         "failedTestsInWeather": [],
         "retried": 0,
         "setupRetry": false,
-        "runId": "21934742035",
-        "jobId": "63346419544",
+        "runId": "21975790830",
+        "jobId": "63487127701",
         "error": null,
         "maintainers": [
           "@BbolroC"
@@ -4286,7 +4288,7 @@
         "isRequired": true,
         "duration": "0m 37s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -4407,7 +4409,7 @@
         "isRequired": false,
         "duration": "1m 13s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -4528,7 +4530,7 @@
         "isRequired": false,
         "duration": "0m 57s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -4651,7 +4653,7 @@
         "isRequired": true,
         "duration": "1m 4s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -4774,7 +4776,7 @@
         "isRequired": true,
         "duration": "1m 13s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -4897,7 +4899,7 @@
         "isRequired": false,
         "duration": "1m 19s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -5020,7 +5022,7 @@
         "isRequired": true,
         "duration": "1m 11s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -5143,7 +5145,7 @@
         "isRequired": true,
         "duration": "9m 35s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -5387,7 +5389,7 @@
         "isRequired": true,
         "duration": "1m 4s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -5511,7 +5513,7 @@
         "isRequired": true,
         "duration": "1m 28s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -5757,7 +5759,7 @@
         "isRequired": true,
         "duration": "1m 4s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -5880,7 +5882,7 @@
         "isRequired": true,
         "duration": "1m 16s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -6004,7 +6006,7 @@
         "isRequired": true,
         "duration": "1m 18s",
         "lastFailure": "2 days ago",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -6127,7 +6129,7 @@
         "isRequired": false,
         "duration": "1m 2s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -6248,7 +6250,7 @@
         "isRequired": false,
         "duration": "1m 8s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -6371,7 +6373,7 @@
         "isRequired": true,
         "duration": "1m 0s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -6495,7 +6497,7 @@
         "isRequired": true,
         "duration": "1m 26s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -6618,7 +6620,7 @@
         "isRequired": false,
         "duration": "1m 15s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -6741,7 +6743,7 @@
         "isRequired": true,
         "duration": "0m 59s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -6983,7 +6985,7 @@
         "isRequired": false,
         "duration": "1m 19s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -7104,7 +7106,7 @@
         "isRequired": false,
         "duration": "1m 34s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -7225,7 +7227,7 @@
         "isRequired": false,
         "duration": "1m 18s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -7348,7 +7350,7 @@
         "isRequired": false,
         "duration": "1m 27s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -7471,7 +7473,7 @@
         "isRequired": false,
         "duration": "1m 26s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -7592,7 +7594,7 @@
         "isRequired": false,
         "duration": "1m 6s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -7713,7 +7715,7 @@
         "isRequired": false,
         "duration": "1m 45s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -7836,7 +7838,7 @@
         "isRequired": false,
         "duration": "1m 12s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -7959,7 +7961,7 @@
         "isRequired": false,
         "duration": "1m 22s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -8080,7 +8082,7 @@
         "isRequired": false,
         "duration": "1m 17s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -8203,7 +8205,7 @@
         "isRequired": true,
         "duration": "1m 8s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -8326,7 +8328,7 @@
         "isRequired": true,
         "duration": "1m 9s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -8449,7 +8451,7 @@
         "isRequired": true,
         "duration": "1m 6s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -8572,7 +8574,7 @@
         "isRequired": true,
         "duration": "0m 59s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -8695,7 +8697,7 @@
         "isRequired": true,
         "duration": "1m 20s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -8818,7 +8820,7 @@
         "isRequired": true,
         "duration": "1m 3s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -8941,7 +8943,7 @@
         "isRequired": true,
         "duration": "1m 25s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -9064,7 +9066,7 @@
         "isRequired": true,
         "duration": "0m 12s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -9306,7 +9308,7 @@
         "isRequired": false,
         "duration": "0m 5s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -9429,7 +9431,7 @@
         "isRequired": false,
         "duration": "0m 6s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -9550,7 +9552,7 @@
         "isRequired": false,
         "duration": "0m 3s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -9796,7 +9798,7 @@
         "isRequired": false,
         "duration": "0m 6s",
         "lastFailure": "5 days ago",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -9917,7 +9919,7 @@
         "isRequired": false,
         "duration": "0m 6s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -10159,7 +10161,7 @@
         "isRequired": false,
         "duration": "0m 4s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -10280,7 +10282,7 @@
         "isRequired": false,
         "duration": "0m 56s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -10401,7 +10403,7 @@
         "isRequired": false,
         "duration": "1m 10s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -10522,7 +10524,7 @@
         "isRequired": false,
         "duration": "1m 3s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -10643,7 +10645,7 @@
         "isRequired": false,
         "duration": "1m 3s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -10764,7 +10766,7 @@
         "isRequired": false,
         "duration": "1m 16s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -10885,7 +10887,7 @@
         "isRequired": false,
         "duration": "9m 56s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -11006,7 +11008,7 @@
         "isRequired": false,
         "duration": "1m 2s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -11129,7 +11131,7 @@
         "isRequired": false,
         "duration": "0m 52s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -11250,7 +11252,7 @@
         "isRequired": false,
         "duration": "1m 31s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -11371,7 +11373,7 @@
         "isRequired": false,
         "duration": "0m 58s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -11492,7 +11494,7 @@
         "isRequired": false,
         "duration": "1m 1s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -11613,7 +11615,7 @@
         "isRequired": false,
         "duration": "1m 15s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -11734,7 +11736,7 @@
         "isRequired": false,
         "duration": "1m 13s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -11857,7 +11859,7 @@
         "isRequired": false,
         "duration": "1m 5s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -11978,7 +11980,7 @@
         "isRequired": false,
         "duration": "1m 1s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -12101,7 +12103,7 @@
         "isRequired": false,
         "duration": "1m 14s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -12222,7 +12224,7 @@
         "isRequired": false,
         "duration": "7m 59s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -12343,7 +12345,7 @@
         "isRequired": false,
         "duration": "0m 33s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -12464,7 +12466,7 @@
         "isRequired": false,
         "duration": "0m 3s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -12587,7 +12589,7 @@
         "isRequired": false,
         "duration": "0m 4s",
         "lastFailure": "5 days ago",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -12708,7 +12710,7 @@
         "isRequired": false,
         "duration": "0m 4s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -12829,7 +12831,7 @@
         "isRequired": false,
         "duration": "2m 46s",
         "lastFailure": "2/5/2026",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -12950,7 +12952,7 @@
         "isRequired": false,
         "duration": "1m 20s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -13071,7 +13073,7 @@
         "isRequired": false,
         "duration": "2m 13s",
         "lastFailure": "2/6/2026",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -13192,7 +13194,7 @@
         "isRequired": false,
         "duration": "1m 26s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -13434,7 +13436,7 @@
         "isRequired": false,
         "duration": "2m 9s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -13555,7 +13557,7 @@
         "isRequired": false,
         "duration": "1m 10s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -13676,7 +13678,7 @@
         "isRequired": false,
         "duration": "0m 48s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -13918,7 +13920,7 @@
         "isRequired": false,
         "duration": "0m 3s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -14041,7 +14043,7 @@
         "isRequired": false,
         "duration": "1m 10s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -14165,7 +14167,7 @@
         "isRequired": false,
         "duration": "1m 9s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -14288,7 +14290,7 @@
         "isRequired": false,
         "duration": "8m 23s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -14534,7 +14536,7 @@
         "isRequired": false,
         "duration": "1m 11s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -14657,7 +14659,7 @@
         "isRequired": false,
         "duration": "1m 14s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -14780,7 +14782,7 @@
         "isRequired": false,
         "duration": "1m 11s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -14903,7 +14905,7 @@
         "isRequired": false,
         "duration": "1m 23s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -15026,7 +15028,7 @@
         "isRequired": false,
         "duration": "1m 25s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -15149,7 +15151,7 @@
         "isRequired": false,
         "duration": "1m 30s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -15272,7 +15274,7 @@
         "isRequired": false,
         "duration": "1m 44s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -15395,7 +15397,7 @@
         "isRequired": false,
         "duration": "1m 32s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -15518,7 +15520,7 @@
         "isRequired": false,
         "duration": "1m 21s",
         "lastFailure": "Never",
-        "lastSuccess": "3h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -15641,7 +15643,7 @@
         "isRequired": false,
         "duration": "0m 38s",
         "lastFailure": "Never",
-        "lastSuccess": "3h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -15764,7 +15766,7 @@
         "isRequired": false,
         "duration": "0m 4s",
         "lastFailure": "Never",
-        "lastSuccess": "3h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -15888,7 +15890,7 @@
         "isRequired": false,
         "duration": "0m 2s",
         "lastFailure": "Never",
-        "lastSuccess": "3h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -16011,7 +16013,7 @@
         "isRequired": false,
         "duration": "0m 2s",
         "lastFailure": "Never",
-        "lastSuccess": "3h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -16132,7 +16134,7 @@
         "isRequired": false,
         "duration": "0m 34s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -16376,7 +16378,7 @@
         "isRequired": true,
         "duration": "8m 12s",
         "lastFailure": "2/4/2026",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -16618,7 +16620,7 @@
         "isRequired": false,
         "duration": "4m 35s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -16860,7 +16862,7 @@
         "isRequired": false,
         "duration": "8m 7s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -17106,7 +17108,7 @@
         "isRequired": false,
         "duration": "7m 8s",
         "lastFailure": "Never",
-        "lastSuccess": "3h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -17471,7 +17473,7 @@
         "isRequired": true,
         "duration": "3m 15s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -17594,7 +17596,7 @@
         "isRequired": true,
         "duration": "4m 13s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -17717,7 +17719,7 @@
         "isRequired": true,
         "duration": "3m 19s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -17840,7 +17842,7 @@
         "isRequired": true,
         "duration": "3m 46s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -17963,7 +17965,7 @@
         "isRequired": true,
         "duration": "4m 44s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -18086,7 +18088,7 @@
         "isRequired": true,
         "duration": "3m 25s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -18209,7 +18211,7 @@
         "isRequired": true,
         "duration": "4m 12s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -18332,7 +18334,7 @@
         "isRequired": true,
         "duration": "3m 29s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -18455,7 +18457,7 @@
         "isRequired": true,
         "duration": "3m 41s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -18578,7 +18580,7 @@
         "isRequired": true,
         "duration": "4m 31s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -18701,7 +18703,7 @@
         "isRequired": true,
         "duration": "4m 46s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -18822,7 +18824,7 @@
         "isRequired": false,
         "duration": "1m 11s",
         "lastFailure": "6 days ago",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -18945,7 +18947,7 @@
         "isRequired": true,
         "duration": "1m 7s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -19068,7 +19070,7 @@
         "isRequired": true,
         "duration": "1m 14s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -19191,7 +19193,7 @@
         "isRequired": true,
         "duration": "1m 58s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -19314,7 +19316,7 @@
         "isRequired": true,
         "duration": "1m 48s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -19437,7 +19439,7 @@
         "isRequired": true,
         "duration": "0m 57s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -19560,7 +19562,7 @@
         "isRequired": true,
         "duration": "0m 56s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -19683,7 +19685,7 @@
         "isRequired": true,
         "duration": "1m 6s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -19804,7 +19806,7 @@
         "isRequired": false,
         "duration": "0m 51s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -19927,7 +19929,7 @@
         "isRequired": true,
         "duration": "1m 27s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -20050,7 +20052,7 @@
         "isRequired": true,
         "duration": "1m 50s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -20173,7 +20175,7 @@
         "isRequired": true,
         "duration": "1m 46s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -20294,7 +20296,7 @@
         "isRequired": false,
         "duration": "0m 51s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -20905,7 +20907,7 @@
         "isRequired": false,
         "duration": "3m 23s",
         "lastFailure": "Never",
-        "lastSuccess": "3h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -21028,7 +21030,7 @@
         "isRequired": false,
         "duration": "4m 6s",
         "lastFailure": "Never",
-        "lastSuccess": "3h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -21272,7 +21274,7 @@
         "isRequired": true,
         "duration": "4m 12s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -21395,7 +21397,7 @@
         "isRequired": true,
         "duration": "3m 51s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -21518,7 +21520,7 @@
         "isRequired": true,
         "duration": "4m 11s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -21641,7 +21643,7 @@
         "isRequired": true,
         "duration": "4m 37s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -21764,7 +21766,7 @@
         "isRequired": true,
         "duration": "5m 3s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -21887,7 +21889,7 @@
         "isRequired": true,
         "duration": "4m 25s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -22010,7 +22012,7 @@
         "isRequired": true,
         "duration": "3m 59s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -22133,7 +22135,7 @@
         "isRequired": true,
         "duration": "4m 44s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -22256,7 +22258,7 @@
         "isRequired": true,
         "duration": "4m 34s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -22379,7 +22381,7 @@
         "isRequired": true,
         "duration": "4m 6s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -22626,7 +22628,7 @@
         "isRequired": true,
         "duration": "5m 49s",
         "lastFailure": "Never",
-        "lastSuccess": "3h ago",
+        "lastSuccess": "5h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -22749,7 +22751,7 @@
         "isRequired": false,
         "duration": "6m 5s",
         "lastFailure": "Never",
-        "lastSuccess": "3h ago",
+        "lastSuccess": "5h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -23112,7 +23114,7 @@
         "isRequired": false,
         "duration": "3m 37s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -23356,7 +23358,7 @@
         "isRequired": true,
         "duration": "16m 12s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -23479,7 +23481,7 @@
         "isRequired": true,
         "duration": "52m 10s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -23602,7 +23604,7 @@
         "isRequired": true,
         "duration": "52m 38s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -23725,7 +23727,7 @@
         "isRequired": true,
         "duration": "15m 32s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -23847,7 +23849,7 @@
         ],
         "isRequired": true,
         "duration": "27m 40s",
-        "lastFailure": "4h ago",
+        "lastFailure": "6h ago",
         "lastSuccess": "Yesterday",
         "weatherHistory": [
           {
@@ -23973,7 +23975,7 @@
         "isRequired": true,
         "duration": "16m 17s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -24096,7 +24098,7 @@
         "isRequired": true,
         "duration": "27m 13s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -24218,7 +24220,7 @@
         ],
         "isRequired": true,
         "duration": "16m 35s",
-        "lastFailure": "4h ago",
+        "lastFailure": "6h ago",
         "lastSuccess": "Yesterday",
         "weatherHistory": [
           {
@@ -24342,7 +24344,7 @@
         "isRequired": true,
         "duration": "27m 46s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -24465,7 +24467,7 @@
         "isRequired": true,
         "duration": "15m 53s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -24588,7 +24590,7 @@
         "isRequired": true,
         "duration": "28m 54s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -24711,7 +24713,7 @@
         "isRequired": true,
         "duration": "15m 24s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -24834,7 +24836,7 @@
         "isRequired": true,
         "duration": "23m 10s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -25078,7 +25080,7 @@
         "isRequired": true,
         "duration": "18m 36s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -25199,7 +25201,7 @@
         "isRequired": false,
         "duration": "12m 36s",
         "lastFailure": "2 days ago",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -25446,7 +25448,7 @@
         ],
         "isRequired": true,
         "duration": "9m 48s",
-        "lastFailure": "4h ago",
+        "lastFailure": "6h ago",
         "lastSuccess": "Yesterday",
         "weatherHistory": [
           {
@@ -25749,7 +25751,7 @@
         "isRequired": true,
         "duration": "9m 37s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -25984,7 +25986,7 @@
         "isRequired": false,
         "duration": "16m 36s",
         "lastFailure": "Yesterday",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -26233,7 +26235,7 @@
         "isRequired": true,
         "duration": "16m 32s",
         "lastFailure": "Never",
-        "lastSuccess": "3h ago",
+        "lastSuccess": "5h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -26358,7 +26360,7 @@
         "isRequired": true,
         "duration": "23m 7s",
         "lastFailure": "4 days ago",
-        "lastSuccess": "3h ago",
+        "lastSuccess": "5h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -26475,7 +26477,7 @@
         "isRequired": false,
         "duration": "13m 44s",
         "lastFailure": "Never",
-        "lastSuccess": "3h ago",
+        "lastSuccess": "5h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -26721,7 +26723,7 @@
         "isRequired": false,
         "duration": "42m 35s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -26838,7 +26840,7 @@
         "isRequired": true,
         "duration": "59m 16s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -26956,7 +26958,7 @@
         "isRequired": true,
         "duration": "56m 33s",
         "lastFailure": "2/4/2026",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -27108,7 +27110,7 @@
         "isRequired": false,
         "duration": "17m 19s",
         "lastFailure": "2/4/2026",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -27225,7 +27227,7 @@
         "isRequired": false,
         "duration": "46m 51s",
         "lastFailure": "6 days ago",
-        "lastSuccess": "2h ago",
+        "lastSuccess": "4h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -27335,13 +27337,13 @@
         "name": "run-k8s-tests-on-tee (tdx, qemu-tdx)",
         "jobName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
         "fullName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
-        "status": "not_run",
+        "status": "failed",
         "categories": [
           "tee"
         ],
         "isRequired": false,
-        "duration": "N/A",
-        "lastFailure": "23h ago",
+        "duration": "57m 45s",
+        "lastFailure": "1h ago",
         "lastSuccess": "Never",
         "weatherHistory": [
           {
@@ -28237,15 +28239,23 @@
           },
           {
             "date": "2026-02-13T00:00:00.000Z",
-            "status": "none",
-            "runId": null,
-            "jobId": null,
-            "duration": null,
-            "failureStep": null,
-            "failureDetails": null
+            "status": "failed",
+            "runId": "21969626823",
+            "jobId": "63469565988",
+            "duration": "57m 45s",
+            "failureStep": "Run tests",
+            "failureDetails": {
+              "failures": [],
+              "stats": {
+                "total": 254,
+                "passed": 254,
+                "failed": 0,
+                "skipped": 0
+              }
+            }
           }
         ],
-        "failureCount": 6,
+        "failureCount": 7,
         "failedTestsInWeather": [
           {
             "name": "Check the number vcpus are correctly allocated to the sandbox",
@@ -28806,7 +28816,10 @@
         "setupRetry": false,
         "runId": "21969626823",
         "jobId": "63469565988",
-        "error": null,
+        "error": {
+          "step": "Run tests",
+          "output": "View full log on GitHub for details"
+        },
         "maintainers": [
           "@mythi"
         ]
@@ -28944,7 +28957,7 @@
         "isRequired": true,
         "duration": "7m 14s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -29067,7 +29080,7 @@
         "isRequired": true,
         "duration": "8m 32s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -29190,7 +29203,7 @@
         "isRequired": true,
         "duration": "5m 52s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -29313,7 +29326,7 @@
         "isRequired": true,
         "duration": "9m 7s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -29557,7 +29570,7 @@
         "isRequired": true,
         "duration": "2m 9s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -29685,7 +29698,7 @@
         "status": "passed",
         "duration": "5m 7s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -29794,7 +29807,7 @@
         "status": "passed",
         "duration": "5m 49s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -29903,7 +29916,7 @@
         "status": "passed",
         "duration": "5m 11s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -30012,7 +30025,7 @@
         "status": "passed",
         "duration": "6m 17s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -30121,7 +30134,7 @@
         "status": "passed",
         "duration": "5m 20s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -30230,7 +30243,7 @@
         "status": "passed",
         "duration": "5m 4s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -30339,7 +30352,7 @@
         "status": "passed",
         "duration": "4m 29s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -30448,7 +30461,7 @@
         "status": "passed",
         "duration": "4m 57s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -30557,7 +30570,7 @@
         "status": "passed",
         "duration": "2m 56s",
         "lastFailure": "2 days ago",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -30666,7 +30679,7 @@
         "status": "passed",
         "duration": "3m 25s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -30775,7 +30788,7 @@
         "status": "passed",
         "duration": "3m 0s",
         "lastFailure": "2 days ago",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -30884,7 +30897,7 @@
         "status": "passed",
         "duration": "4m 35s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -30993,7 +31006,7 @@
         "status": "passed",
         "duration": "3m 47s",
         "lastFailure": "2 days ago",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -31102,7 +31115,7 @@
         "status": "passed",
         "duration": "5m 37s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -31211,7 +31224,7 @@
         "status": "passed",
         "duration": "4m 3s",
         "lastFailure": "2 days ago",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -31320,7 +31333,7 @@
         "status": "passed",
         "duration": "5m 26s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -31429,7 +31442,7 @@
         "status": "passed",
         "duration": "4m 58s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -31538,7 +31551,7 @@
         "status": "passed",
         "duration": "3m 20s",
         "lastFailure": "2 days ago",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -31647,7 +31660,7 @@
         "status": "passed",
         "duration": "4m 35s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -31756,7 +31769,7 @@
         "status": "passed",
         "duration": "3m 13s",
         "lastFailure": "2 days ago",
-        "lastSuccess": "3h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -31865,7 +31878,7 @@
         "status": "passed",
         "duration": "4m 58s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -31974,7 +31987,7 @@
         "status": "passed",
         "duration": "4m 42s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -32083,7 +32096,7 @@
         "status": "passed",
         "duration": "4m 35s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -32192,7 +32205,7 @@
         "status": "passed",
         "duration": "5m 14s",
         "lastFailure": "2/6/2026",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -32301,7 +32314,7 @@
         "status": "passed",
         "duration": "6m 23s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -32410,7 +32423,7 @@
         "status": "passed",
         "duration": "6m 9s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -32519,7 +32532,7 @@
         "status": "passed",
         "duration": "6m 22s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -32628,7 +32641,7 @@
         "status": "passed",
         "duration": "5m 26s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -32737,7 +32750,7 @@
         "status": "passed",
         "duration": "5m 32s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -32846,7 +32859,7 @@
         "status": "passed",
         "duration": "4m 58s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -32955,7 +32968,7 @@
         "status": "passed",
         "duration": "5m 59s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -33064,7 +33077,7 @@
         "status": "passed",
         "duration": "6m 9s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -33173,7 +33186,7 @@
         "status": "passed",
         "duration": "5m 50s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -33282,7 +33295,7 @@
         "status": "passed",
         "duration": "5m 16s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -33391,7 +33404,7 @@
         "status": "passed",
         "duration": "4m 52s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -33500,7 +33513,7 @@
         "status": "passed",
         "duration": "3m 3s",
         "lastFailure": "2 days ago",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -33609,7 +33622,7 @@
         "status": "passed",
         "duration": "4m 18s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -33718,7 +33731,7 @@
         "status": "passed",
         "duration": "3m 46s",
         "lastFailure": "Yesterday",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -33827,7 +33840,7 @@
         "status": "passed",
         "duration": "4m 34s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -33936,7 +33949,7 @@
         "status": "passed",
         "duration": "3m 42s",
         "lastFailure": "2 days ago",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -34045,7 +34058,7 @@
         "status": "passed",
         "duration": "4m 34s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -34154,7 +34167,7 @@
         "status": "passed",
         "duration": "4m 3s",
         "lastFailure": "2 days ago",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -34263,7 +34276,7 @@
         "status": "passed",
         "duration": "4m 59s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -34372,7 +34385,7 @@
         "status": "passed",
         "duration": "5m 7s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -34481,7 +34494,7 @@
         "status": "passed",
         "duration": "3m 24s",
         "lastFailure": "2 days ago",
-        "lastSuccess": "3h ago",
+        "lastSuccess": "5h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -34590,7 +34603,7 @@
         "status": "passed",
         "duration": "4m 21s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -34699,7 +34712,7 @@
         "status": "passed",
         "duration": "3m 14s",
         "lastFailure": "2 days ago",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -34808,7 +34821,7 @@
         "status": "passed",
         "duration": "3m 57s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -34917,7 +34930,7 @@
         "status": "passed",
         "duration": "4m 16s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -35026,7 +35039,7 @@
         "status": "passed",
         "duration": "4m 15s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -35135,7 +35148,7 @@
         "status": "passed",
         "duration": "4m 50s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -35244,7 +35257,7 @@
         "status": "passed",
         "duration": "6m 53s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -35353,7 +35366,7 @@
         "status": "passed",
         "duration": "6m 34s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -35462,7 +35475,7 @@
         "status": "passed",
         "duration": "7m 25s",
         "lastFailure": "Never",
-        "lastSuccess": "4h ago",
+        "lastSuccess": "6h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -35578,9 +35591,9 @@
         "jobName": "e2e / E2E tests on libvirt for the amd64 architecture (helm) / Libvirt e2e tests: (ubuntu-24.04, containerd, mkosi: true, helm",
         "fullName": "e2e / E2E tests on libvirt for the amd64 architecture (helm) / Libvirt e2e tests: (ubuntu-24.04, containerd, mkosi: true, helm",
         "status": "passed",
-        "duration": "30m 42s",
+        "duration": "30m 29s",
         "lastFailure": "Never",
-        "lastSuccess": "23h ago",
+        "lastSuccess": "1h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -35665,18 +35678,18 @@
           },
           {
             "date": "2026-02-13T00:00:00.000Z",
-            "status": "none",
-            "runId": null,
-            "jobId": null,
-            "duration": null,
+            "status": "passed",
+            "runId": "21975208171",
+            "jobId": "63485853970",
+            "duration": "30m 29s",
             "failureStep": null,
             "failureDetails": null
           }
         ],
         "failureCount": 0,
         "retried": 0,
-        "runId": "21934120211",
-        "jobId": "63345166307",
+        "runId": "21975208171",
+        "jobId": "63485853970",
         "sourceRepo": "confidential-containers/cloud-api-adaptor",
         "maintainers": [],
         "error": null
@@ -35687,9 +35700,9 @@
         "jobName": "e2e / E2E tests on libvirt for the amd64 architecture (kustomize) / Libvirt e2e tests: (ubuntu-24.04, containerd, mkosi: true, kustomize",
         "fullName": "e2e / E2E tests on libvirt for the amd64 architecture (kustomize) / Libvirt e2e tests: (ubuntu-24.04, containerd, mkosi: true, kustomize",
         "status": "passed",
-        "duration": "31m 36s",
+        "duration": "33m 46s",
         "lastFailure": "Never",
-        "lastSuccess": "23h ago",
+        "lastSuccess": "1h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -35774,18 +35787,18 @@
           },
           {
             "date": "2026-02-13T00:00:00.000Z",
-            "status": "none",
-            "runId": null,
-            "jobId": null,
-            "duration": null,
+            "status": "passed",
+            "runId": "21975208171",
+            "jobId": "63485853992",
+            "duration": "33m 46s",
             "failureStep": null,
             "failureDetails": null
           }
         ],
         "failureCount": 0,
         "retried": 0,
-        "runId": "21934120211",
-        "jobId": "63345166270",
+        "runId": "21975208171",
+        "jobId": "63485853992",
         "sourceRepo": "confidential-containers/cloud-api-adaptor",
         "maintainers": [],
         "error": null
@@ -36014,9 +36027,9 @@
         "jobName": "e2e / E2E tests on libvirt for the s390x architecture (helm) / Libvirt e2e tests: (s390x-large, containerd, mkosi: true, helm",
         "fullName": "e2e / E2E tests on libvirt for the s390x architecture (helm) / Libvirt e2e tests: (s390x-large, containerd, mkosi: true, helm",
         "status": "passed",
-        "duration": "28m 57s",
+        "duration": "28m 45s",
         "lastFailure": "2/5/2026",
-        "lastSuccess": "23h ago",
+        "lastSuccess": "1h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -36101,18 +36114,18 @@
           },
           {
             "date": "2026-02-13T00:00:00.000Z",
-            "status": "none",
-            "runId": null,
-            "jobId": null,
-            "duration": null,
+            "status": "passed",
+            "runId": "21975208171",
+            "jobId": "63486262773",
+            "duration": "28m 45s",
             "failureStep": null,
             "failureDetails": null
           }
         ],
         "failureCount": 1,
         "retried": 0,
-        "runId": "21934120211",
-        "jobId": "63345241079",
+        "runId": "21975208171",
+        "jobId": "63486262773",
         "sourceRepo": "confidential-containers/cloud-api-adaptor",
         "maintainers": [],
         "error": null
@@ -36123,9 +36136,9 @@
         "jobName": "e2e / E2E tests on libvirt for the s390x architecture (kustomize) / Libvirt e2e tests: (s390x-large, containerd, mkosi: true, kustomize",
         "fullName": "e2e / E2E tests on libvirt for the s390x architecture (kustomize) / Libvirt e2e tests: (s390x-large, containerd, mkosi: true, kustomize",
         "status": "passed",
-        "duration": "28m 44s",
+        "duration": "29m 37s",
         "lastFailure": "Never",
-        "lastSuccess": "23h ago",
+        "lastSuccess": "1h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -36210,18 +36223,18 @@
           },
           {
             "date": "2026-02-13T00:00:00.000Z",
-            "status": "none",
-            "runId": null,
-            "jobId": null,
-            "duration": null,
+            "status": "passed",
+            "runId": "21975208171",
+            "jobId": "63486262772",
+            "duration": "29m 37s",
             "failureStep": null,
             "failureDetails": null
           }
         ],
         "failureCount": 0,
         "retried": 0,
-        "runId": "21934120211",
-        "jobId": "63345241080",
+        "runId": "21975208171",
+        "jobId": "63486262772",
         "sourceRepo": "confidential-containers/cloud-api-adaptor",
         "maintainers": [],
         "error": null
@@ -36450,9 +36463,9 @@
         "jobName": "e2e / aws (crio, helm, ubuntu, generic, amd64) / AWS e2e tests: (onprem, crio, helm)",
         "fullName": "e2e / aws (crio, helm, ubuntu, generic, amd64) / AWS e2e tests: (onprem, crio, helm)",
         "status": "passed",
-        "duration": "33m 34s",
-        "lastFailure": "2 days ago",
-        "lastSuccess": "Yesterday",
+        "duration": "34m 11s",
+        "lastFailure": "3 days ago",
+        "lastSuccess": "1h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -36564,18 +36577,18 @@
           },
           {
             "date": "2026-02-13T00:00:00.000Z",
-            "status": "none",
-            "runId": null,
-            "jobId": null,
-            "duration": null,
+            "status": "passed",
+            "runId": "21975208171",
+            "jobId": "63486287910",
+            "duration": "34m 11s",
             "failureStep": null,
             "failureDetails": null
           }
         ],
         "failureCount": 1,
         "retried": 0,
-        "runId": "21893277349",
-        "jobId": "63204713241",
+        "runId": "21975208171",
+        "jobId": "63486287910",
         "sourceRepo": "confidential-containers/cloud-api-adaptor",
         "maintainers": [],
         "error": null
@@ -36588,7 +36601,7 @@
         "status": "passed",
         "duration": "0m 4s",
         "lastFailure": "Never",
-        "lastSuccess": "Yesterday",
+        "lastSuccess": "1h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -36673,18 +36686,18 @@
           },
           {
             "date": "2026-02-13T00:00:00.000Z",
-            "status": "none",
-            "runId": null,
-            "jobId": null,
-            "duration": null,
+            "status": "passed",
+            "runId": "21975208171",
+            "jobId": "63486280900",
+            "duration": "0m 4s",
             "failureStep": null,
             "failureDetails": null
           }
         ],
         "failureCount": 0,
         "retried": 0,
-        "runId": "21893277349",
-        "jobId": "63204707155",
+        "runId": "21975208171",
+        "jobId": "63486280900",
         "sourceRepo": "confidential-containers/cloud-api-adaptor",
         "maintainers": [],
         "error": null
@@ -36695,9 +36708,9 @@
         "jobName": "e2e / aws (crio, kustomize, ubuntu, generic, amd64) / AWS e2e tests: (onprem, crio, kustomize)",
         "fullName": "e2e / aws (crio, kustomize, ubuntu, generic, amd64) / AWS e2e tests: (onprem, crio, kustomize)",
         "status": "passed",
-        "duration": "39m 17s",
-        "lastFailure": "6 days ago",
-        "lastSuccess": "Yesterday",
+        "duration": "39m 34s",
+        "lastFailure": "2/6/2026",
+        "lastSuccess": "1h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -36782,18 +36795,18 @@
           },
           {
             "date": "2026-02-13T00:00:00.000Z",
-            "status": "none",
-            "runId": null,
-            "jobId": null,
-            "duration": null,
+            "status": "passed",
+            "runId": "21975208171",
+            "jobId": "63486284951",
+            "duration": "39m 34s",
             "failureStep": null,
             "failureDetails": null
           }
         ],
         "failureCount": 0,
         "retried": 0,
-        "runId": "21893277349",
-        "jobId": "63204713157",
+        "runId": "21975208171",
+        "jobId": "63486284951",
         "sourceRepo": "confidential-containers/cloud-api-adaptor",
         "maintainers": [],
         "error": null
@@ -36804,9 +36817,9 @@
         "jobName": "e2e / aws (crio, kustomize, ubuntu, generic, amd64) / Check AWS credentials",
         "fullName": "e2e / aws (crio, kustomize, ubuntu, generic, amd64) / Check AWS credentials",
         "status": "passed",
-        "duration": "0m 4s",
+        "duration": "0m 2s",
         "lastFailure": "Never",
-        "lastSuccess": "Yesterday",
+        "lastSuccess": "1h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -36891,18 +36904,18 @@
           },
           {
             "date": "2026-02-13T00:00:00.000Z",
-            "status": "none",
-            "runId": null,
-            "jobId": null,
-            "duration": null,
+            "status": "passed",
+            "runId": "21975208171",
+            "jobId": "63486280906",
+            "duration": "0m 2s",
             "failureStep": null,
             "failureDetails": null
           }
         ],
         "failureCount": 0,
         "retried": 0,
-        "runId": "21893277349",
-        "jobId": "63204707151",
+        "runId": "21975208171",
+        "jobId": "63486280906",
         "sourceRepo": "confidential-containers/cloud-api-adaptor",
         "maintainers": [],
         "error": null
@@ -36913,9 +36926,9 @@
         "jobName": "e2e / caa_image_amd64 / build and push (dev, linux/amd64)",
         "fullName": "e2e / caa_image_amd64 / build and push (dev, linux/amd64)",
         "status": "passed",
-        "duration": "4m 54s",
+        "duration": "4m 33s",
         "lastFailure": "Never",
-        "lastSuccess": "23h ago",
+        "lastSuccess": "2h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -37000,18 +37013,18 @@
           },
           {
             "date": "2026-02-13T00:00:00.000Z",
-            "status": "none",
-            "runId": null,
-            "jobId": null,
-            "duration": null,
+            "status": "passed",
+            "runId": "21975208171",
+            "jobId": "63485347617",
+            "duration": "4m 33s",
             "failureStep": null,
             "failureDetails": null
           }
         ],
         "failureCount": 0,
         "retried": 0,
-        "runId": "21934120211",
-        "jobId": "63344543456",
+        "runId": "21975208171",
+        "jobId": "63485347617",
         "sourceRepo": "confidential-containers/cloud-api-adaptor",
         "maintainers": [],
         "error": null
@@ -37022,9 +37035,9 @@
         "jobName": "e2e / caa_image_amd64 / build and push (release, linux/amd64)",
         "fullName": "e2e / caa_image_amd64 / build and push (release, linux/amd64)",
         "status": "passed",
-        "duration": "3m 56s",
+        "duration": "3m 20s",
         "lastFailure": "Never",
-        "lastSuccess": "23h ago",
+        "lastSuccess": "2h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -37109,18 +37122,18 @@
           },
           {
             "date": "2026-02-13T00:00:00.000Z",
-            "status": "none",
-            "runId": null,
-            "jobId": null,
-            "duration": null,
+            "status": "passed",
+            "runId": "21975208171",
+            "jobId": "63485347614",
+            "duration": "3m 20s",
             "failureStep": null,
             "failureDetails": null
           }
         ],
         "failureCount": 0,
         "retried": 0,
-        "runId": "21934120211",
-        "jobId": "63344543446",
+        "runId": "21975208171",
+        "jobId": "63485347614",
         "sourceRepo": "confidential-containers/cloud-api-adaptor",
         "maintainers": [],
         "error": null
@@ -37131,9 +37144,9 @@
         "jobName": "e2e / caa_image_s390x / build and push (dev, linux/s390x)",
         "fullName": "e2e / caa_image_s390x / build and push (dev, linux/s390x)",
         "status": "passed",
-        "duration": "7m 15s",
+        "duration": "6m 2s",
         "lastFailure": "Never",
-        "lastSuccess": "23h ago",
+        "lastSuccess": "2h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -37218,18 +37231,18 @@
           },
           {
             "date": "2026-02-13T00:00:00.000Z",
-            "status": "none",
-            "runId": null,
-            "jobId": null,
-            "duration": null,
+            "status": "passed",
+            "runId": "21975208171",
+            "jobId": "63485347601",
+            "duration": "6m 2s",
             "failureStep": null,
             "failureDetails": null
           }
         ],
         "failureCount": 0,
         "retried": 0,
-        "runId": "21934120211",
-        "jobId": "63344543451",
+        "runId": "21975208171",
+        "jobId": "63485347601",
         "sourceRepo": "confidential-containers/cloud-api-adaptor",
         "maintainers": [],
         "error": null
@@ -37240,9 +37253,9 @@
         "jobName": "e2e / caa_image_s390x / build and push (release, linux/s390x)",
         "fullName": "e2e / caa_image_s390x / build and push (release, linux/s390x)",
         "status": "passed",
-        "duration": "4m 39s",
+        "duration": "4m 10s",
         "lastFailure": "Never",
-        "lastSuccess": "23h ago",
+        "lastSuccess": "2h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -37327,18 +37340,18 @@
           },
           {
             "date": "2026-02-13T00:00:00.000Z",
-            "status": "none",
-            "runId": null,
-            "jobId": null,
-            "duration": null,
+            "status": "passed",
+            "runId": "21975208171",
+            "jobId": "63485347580",
+            "duration": "4m 10s",
             "failureStep": null,
             "failureDetails": null
           }
         ],
         "failureCount": 0,
         "retried": 0,
-        "runId": "21934120211",
-        "jobId": "63344543461",
+        "runId": "21975208171",
+        "jobId": "63485347580",
         "sourceRepo": "confidential-containers/cloud-api-adaptor",
         "maintainers": [],
         "error": null
@@ -37349,9 +37362,9 @@
         "jobName": "e2e / docker (crio, helm, fedora, docker, amd64) / Docker e2e tests: (crio, helm)",
         "fullName": "e2e / docker (crio, helm, fedora, docker, amd64) / Docker e2e tests: (crio, helm)",
         "status": "passed",
-        "duration": "14m 53s",
+        "duration": "14m 12s",
         "lastFailure": "Never",
-        "lastSuccess": "23h ago",
+        "lastSuccess": "1h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -37436,18 +37449,18 @@
           },
           {
             "date": "2026-02-13T00:00:00.000Z",
-            "status": "none",
-            "runId": null,
-            "jobId": null,
-            "duration": null,
+            "status": "passed",
+            "runId": "21975208171",
+            "jobId": "63485853980",
+            "duration": "14m 12s",
             "failureStep": null,
             "failureDetails": null
           }
         ],
         "failureCount": 0,
         "retried": 0,
-        "runId": "21934120211",
-        "jobId": "63345166273",
+        "runId": "21975208171",
+        "jobId": "63485853980",
         "sourceRepo": "confidential-containers/cloud-api-adaptor",
         "maintainers": [],
         "error": null
@@ -37458,9 +37471,9 @@
         "jobName": "e2e / docker (crio, kustomize, fedora, docker, amd64) / Docker e2e tests: (crio, kustomize)",
         "fullName": "e2e / docker (crio, kustomize, fedora, docker, amd64) / Docker e2e tests: (crio, kustomize)",
         "status": "passed",
-        "duration": "17m 1s",
+        "duration": "16m 1s",
         "lastFailure": "6 days ago",
-        "lastSuccess": "23h ago",
+        "lastSuccess": "1h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -37572,18 +37585,18 @@
           },
           {
             "date": "2026-02-13T00:00:00.000Z",
-            "status": "none",
-            "runId": null,
-            "jobId": null,
-            "duration": null,
+            "status": "passed",
+            "runId": "21975208171",
+            "jobId": "63485853974",
+            "duration": "16m 1s",
             "failureStep": null,
             "failureDetails": null
           }
         ],
         "failureCount": 1,
         "retried": 0,
-        "runId": "21934120211",
-        "jobId": "63345166297",
+        "runId": "21975208171",
+        "jobId": "63485853974",
         "sourceRepo": "confidential-containers/cloud-api-adaptor",
         "maintainers": [],
         "error": null
@@ -37594,9 +37607,9 @@
         "jobName": "e2e / image / build and push (dev, linux/amd64)",
         "fullName": "e2e / image / build and push (dev, linux/amd64)",
         "status": "passed",
-        "duration": "4m 40s",
+        "duration": "5m 2s",
         "lastFailure": "Never",
-        "lastSuccess": "23h ago",
+        "lastSuccess": "2h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -37681,18 +37694,18 @@
           },
           {
             "date": "2026-02-13T00:00:00.000Z",
-            "status": "none",
-            "runId": null,
-            "jobId": null,
-            "duration": null,
+            "status": "passed",
+            "runId": "21975208171",
+            "jobId": "63485347588",
+            "duration": "5m 2s",
             "failureStep": null,
             "failureDetails": null
           }
         ],
         "failureCount": 0,
         "retried": 0,
-        "runId": "21934120211",
-        "jobId": "63344543444",
+        "runId": "21975208171",
+        "jobId": "63485347588",
         "sourceRepo": "confidential-containers/cloud-api-adaptor",
         "maintainers": [],
         "error": null
@@ -37703,9 +37716,9 @@
         "jobName": "e2e / image / build and push (release, linux/amd64,linux/s390x,linux/ppc64le)",
         "fullName": "e2e / image / build and push (release, linux/amd64,linux/s390x,linux/ppc64le)",
         "status": "passed",
-        "duration": "14m 42s",
+        "duration": "9m 51s",
         "lastFailure": "Never",
-        "lastSuccess": "23h ago",
+        "lastSuccess": "2h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -37790,18 +37803,18 @@
           },
           {
             "date": "2026-02-13T00:00:00.000Z",
-            "status": "none",
-            "runId": null,
-            "jobId": null,
-            "duration": null,
+            "status": "passed",
+            "runId": "21975208171",
+            "jobId": "63485347624",
+            "duration": "9m 51s",
             "failureStep": null,
             "failureDetails": null
           }
         ],
         "failureCount": 0,
         "retried": 0,
-        "runId": "21934120211",
-        "jobId": "63344543443",
+        "runId": "21975208171",
+        "jobId": "63485347624",
         "sourceRepo": "confidential-containers/cloud-api-adaptor",
         "maintainers": [],
         "error": null
@@ -37921,9 +37934,9 @@
         "jobName": "e2e / libvirt (containerd, ubuntu, generic, amd64) / Libvirt e2e tests: (ubuntu-24.04, containerd, mkosi: false, kustomize",
         "fullName": "e2e / libvirt (containerd, ubuntu, generic, amd64) / Libvirt e2e tests: (ubuntu-24.04, containerd, mkosi: false, kustomize",
         "status": "passed",
-        "duration": "32m 58s",
+        "duration": "33m 22s",
         "lastFailure": "Never",
-        "lastSuccess": "Yesterday",
+        "lastSuccess": "1h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -38008,18 +38021,18 @@
           },
           {
             "date": "2026-02-13T00:00:00.000Z",
-            "status": "none",
-            "runId": null,
-            "jobId": null,
-            "duration": null,
+            "status": "passed",
+            "runId": "21975208171",
+            "jobId": "63486280907",
+            "duration": "33m 22s",
             "failureStep": null,
             "failureDetails": null
           }
         ],
         "failureCount": 0,
         "retried": 0,
-        "runId": "21893277349",
-        "jobId": "63204707159",
+        "runId": "21975208171",
+        "jobId": "63486280907",
         "sourceRepo": "confidential-containers/cloud-api-adaptor",
         "maintainers": [],
         "error": null
@@ -38030,9 +38043,9 @@
         "jobName": "e2e / libvirt (crio, ubuntu, generic, amd64) / Libvirt e2e tests: (ubuntu-24.04, crio, mkosi: false, kustomize",
         "fullName": "e2e / libvirt (crio, ubuntu, generic, amd64) / Libvirt e2e tests: (ubuntu-24.04, crio, mkosi: false, kustomize",
         "status": "passed",
-        "duration": "34m 23s",
+        "duration": "34m 38s",
         "lastFailure": "Never",
-        "lastSuccess": "Yesterday",
+        "lastSuccess": "1h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -38117,18 +38130,18 @@
           },
           {
             "date": "2026-02-13T00:00:00.000Z",
-            "status": "none",
-            "runId": null,
-            "jobId": null,
-            "duration": null,
+            "status": "passed",
+            "runId": "21975208171",
+            "jobId": "63486280895",
+            "duration": "34m 38s",
             "failureStep": null,
             "failureDetails": null
           }
         ],
         "failureCount": 0,
         "retried": 0,
-        "runId": "21893277349",
-        "jobId": "63204707157",
+        "runId": "21975208171",
+        "jobId": "63486280895",
         "sourceRepo": "confidential-containers/cloud-api-adaptor",
         "maintainers": [],
         "error": null
@@ -38141,7 +38154,7 @@
         "status": "passed",
         "duration": "0m 4s",
         "lastFailure": "Never",
-        "lastSuccess": "23h ago",
+        "lastSuccess": "2h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -38226,18 +38239,18 @@
           },
           {
             "date": "2026-02-13T00:00:00.000Z",
-            "status": "none",
-            "runId": null,
-            "jobId": null,
-            "duration": null,
+            "status": "passed",
+            "runId": "21975208171",
+            "jobId": "63485347553",
+            "duration": "0m 4s",
             "failureStep": null,
             "failureDetails": null
           }
         ],
         "failureCount": 0,
         "retried": 0,
-        "runId": "21934120211",
-        "jobId": "63344543430",
+        "runId": "21975208171",
+        "jobId": "63485347553",
         "sourceRepo": "confidential-containers/cloud-api-adaptor",
         "maintainers": [],
         "error": null
@@ -38248,9 +38261,9 @@
         "jobName": "e2e / podvm / Create pod vm image (ubuntu, amd64, generic)",
         "fullName": "e2e / podvm / Create pod vm image (ubuntu, amd64, generic)",
         "status": "passed",
-        "duration": "10m 47s",
+        "duration": "10m 24s",
         "lastFailure": "Never",
-        "lastSuccess": "23h ago",
+        "lastSuccess": "2h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -38335,18 +38348,18 @@
           },
           {
             "date": "2026-02-13T00:00:00.000Z",
-            "status": "none",
-            "runId": null,
-            "jobId": null,
-            "duration": null,
+            "status": "passed",
+            "runId": "21975208171",
+            "jobId": "63485643662",
+            "duration": "10m 24s",
             "failureStep": null,
             "failureDetails": null
           }
         ],
         "failureCount": 0,
         "retried": 0,
-        "runId": "21934120211",
-        "jobId": "63344882167",
+        "runId": "21975208171",
+        "jobId": "63485643662",
         "sourceRepo": "confidential-containers/cloud-api-adaptor",
         "maintainers": [],
         "error": null
@@ -38357,9 +38370,9 @@
         "jobName": "e2e / podvm / Create pod vm image (ubuntu, arm64, generic)",
         "fullName": "e2e / podvm / Create pod vm image (ubuntu, arm64, generic)",
         "status": "passed",
-        "duration": "10m 26s",
+        "duration": "10m 27s",
         "lastFailure": "Never",
-        "lastSuccess": "23h ago",
+        "lastSuccess": "2h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -38444,18 +38457,18 @@
           },
           {
             "date": "2026-02-13T00:00:00.000Z",
-            "status": "none",
-            "runId": null,
-            "jobId": null,
-            "duration": null,
+            "status": "passed",
+            "runId": "21975208171",
+            "jobId": "63485643661",
+            "duration": "10m 27s",
             "failureStep": null,
             "failureDetails": null
           }
         ],
         "failureCount": 0,
         "retried": 0,
-        "runId": "21934120211",
-        "jobId": "63344882199",
+        "runId": "21975208171",
+        "jobId": "63485643661",
         "sourceRepo": "confidential-containers/cloud-api-adaptor",
         "maintainers": [],
         "error": null
@@ -38465,10 +38478,10 @@
         "name": "e2e / podvm / Create pod vm image (ubuntu, s390x, generic)",
         "jobName": "e2e / podvm / Create pod vm image (ubuntu, s390x, generic)",
         "fullName": "e2e / podvm / Create pod vm image (ubuntu, s390x, generic)",
-        "status": "failed",
-        "duration": "17m 16s",
-        "lastFailure": "23h ago",
-        "lastSuccess": "Yesterday",
+        "status": "passed",
+        "duration": "7m 39s",
+        "lastFailure": "Yesterday",
+        "lastSuccess": "2h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -38553,24 +38566,21 @@
           },
           {
             "date": "2026-02-13T00:00:00.000Z",
-            "status": "none",
-            "runId": null,
-            "jobId": null,
-            "duration": null,
+            "status": "passed",
+            "runId": "21975208171",
+            "jobId": "63485643680",
+            "duration": "7m 39s",
             "failureStep": null,
             "failureDetails": null
           }
         ],
         "failureCount": 1,
         "retried": 0,
-        "runId": "21934120211",
-        "jobId": "63344882163",
+        "runId": "21975208171",
+        "jobId": "63485643680",
         "sourceRepo": "confidential-containers/cloud-api-adaptor",
         "maintainers": [],
-        "error": {
-          "step": "Build and push",
-          "output": "View full log on GitHub for details"
-        }
+        "error": null
       },
       {
         "id": "e2e---podvm-binaries---create-pod-vm-binaries-image--ubuntu--amd64-",
@@ -38578,9 +38588,9 @@
         "jobName": "e2e / podvm_binaries / Create pod vm binaries image (ubuntu, amd64)",
         "fullName": "e2e / podvm_binaries / Create pod vm binaries image (ubuntu, amd64)",
         "status": "passed",
-        "duration": "2m 25s",
+        "duration": "2m 8s",
         "lastFailure": "Never",
-        "lastSuccess": "23h ago",
+        "lastSuccess": "2h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -38665,18 +38675,18 @@
           },
           {
             "date": "2026-02-13T00:00:00.000Z",
-            "status": "none",
-            "runId": null,
-            "jobId": null,
-            "duration": null,
+            "status": "passed",
+            "runId": "21975208171",
+            "jobId": "63485508150",
+            "duration": "2m 8s",
             "failureStep": null,
             "failureDetails": null
           }
         ],
         "failureCount": 0,
         "retried": 0,
-        "runId": "21934120211",
-        "jobId": "63344711142",
+        "runId": "21975208171",
+        "jobId": "63485508150",
         "sourceRepo": "confidential-containers/cloud-api-adaptor",
         "maintainers": [],
         "error": null
@@ -38687,9 +38697,9 @@
         "jobName": "e2e / podvm_binaries / Create pod vm binaries image (ubuntu, arm64)",
         "fullName": "e2e / podvm_binaries / Create pod vm binaries image (ubuntu, arm64)",
         "status": "passed",
-        "duration": "2m 42s",
+        "duration": "2m 17s",
         "lastFailure": "Never",
-        "lastSuccess": "23h ago",
+        "lastSuccess": "2h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -38774,18 +38784,18 @@
           },
           {
             "date": "2026-02-13T00:00:00.000Z",
-            "status": "none",
-            "runId": null,
-            "jobId": null,
-            "duration": null,
+            "status": "passed",
+            "runId": "21975208171",
+            "jobId": "63485508121",
+            "duration": "2m 17s",
             "failureStep": null,
             "failureDetails": null
           }
         ],
         "failureCount": 0,
         "retried": 0,
-        "runId": "21934120211",
-        "jobId": "63344711145",
+        "runId": "21975208171",
+        "jobId": "63485508121",
         "sourceRepo": "confidential-containers/cloud-api-adaptor",
         "maintainers": [],
         "error": null
@@ -38796,9 +38806,9 @@
         "jobName": "e2e / podvm_binaries / Create pod vm binaries image (ubuntu, s390x)",
         "fullName": "e2e / podvm_binaries / Create pod vm binaries image (ubuntu, s390x)",
         "status": "passed",
-        "duration": "2m 34s",
+        "duration": "2m 11s",
         "lastFailure": "Never",
-        "lastSuccess": "23h ago",
+        "lastSuccess": "2h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -38883,18 +38893,18 @@
           },
           {
             "date": "2026-02-13T00:00:00.000Z",
-            "status": "none",
-            "runId": null,
-            "jobId": null,
-            "duration": null,
+            "status": "passed",
+            "runId": "21975208171",
+            "jobId": "63485508095",
+            "duration": "2m 11s",
             "failureStep": null,
             "failureDetails": null
           }
         ],
         "failureCount": 0,
         "retried": 0,
-        "runId": "21934120211",
-        "jobId": "63344711137",
+        "runId": "21975208171",
+        "jobId": "63485508095",
         "sourceRepo": "confidential-containers/cloud-api-adaptor",
         "maintainers": [],
         "error": null
@@ -38905,9 +38915,9 @@
         "jobName": "e2e / podvm_builder / Create pod vm builder image (ubuntu, ubuntu-24.04)",
         "fullName": "e2e / podvm_builder / Create pod vm builder image (ubuntu, ubuntu-24.04)",
         "status": "passed",
-        "duration": "2m 51s",
+        "duration": "2m 46s",
         "lastFailure": "Never",
-        "lastSuccess": "23h ago",
+        "lastSuccess": "2h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -38992,18 +39002,18 @@
           },
           {
             "date": "2026-02-13T00:00:00.000Z",
-            "status": "none",
-            "runId": null,
-            "jobId": null,
-            "duration": null,
+            "status": "passed",
+            "runId": "21975208171",
+            "jobId": "63485347572",
+            "duration": "2m 46s",
             "failureStep": null,
             "failureDetails": null
           }
         ],
         "failureCount": 0,
         "retried": 0,
-        "runId": "21934120211",
-        "jobId": "63344543454",
+        "runId": "21975208171",
+        "jobId": "63485347572",
         "sourceRepo": "confidential-containers/cloud-api-adaptor",
         "maintainers": [],
         "error": null
@@ -39014,9 +39024,9 @@
         "jobName": "e2e / podvm_mkosi_amd64 / Build mkosi image for amd64",
         "fullName": "e2e / podvm_mkosi_amd64 / Build mkosi image for amd64",
         "status": "passed",
-        "duration": "10m 12s",
+        "duration": "8m 24s",
         "lastFailure": "Never",
-        "lastSuccess": "23h ago",
+        "lastSuccess": "2h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -39101,18 +39111,18 @@
           },
           {
             "date": "2026-02-13T00:00:00.000Z",
-            "status": "none",
-            "runId": null,
-            "jobId": null,
-            "duration": null,
+            "status": "passed",
+            "runId": "21975208171",
+            "jobId": "63485347582",
+            "duration": "8m 24s",
             "failureStep": null,
             "failureDetails": null
           }
         ],
         "failureCount": 0,
         "retried": 0,
-        "runId": "21934120211",
-        "jobId": "63344543449",
+        "runId": "21975208171",
+        "jobId": "63485347582",
         "sourceRepo": "confidential-containers/cloud-api-adaptor",
         "maintainers": [],
         "error": null
@@ -39123,9 +39133,9 @@
         "jobName": "e2e / podvm_mkosi_s390x / Build mkosi image for s390x",
         "fullName": "e2e / podvm_mkosi_s390x / Build mkosi image for s390x",
         "status": "passed",
-        "duration": "11m 25s",
+        "duration": "15m 13s",
         "lastFailure": "2/6/2026",
-        "lastSuccess": "23h ago",
+        "lastSuccess": "2h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -39210,18 +39220,18 @@
           },
           {
             "date": "2026-02-13T00:00:00.000Z",
-            "status": "none",
-            "runId": null,
-            "jobId": null,
-            "duration": null,
+            "status": "passed",
+            "runId": "21975208171",
+            "jobId": "63485347586",
+            "duration": "15m 13s",
             "failureStep": null,
             "failureDetails": null
           }
         ],
         "failureCount": 0,
         "retried": 0,
-        "runId": "21934120211",
-        "jobId": "63344543448",
+        "runId": "21975208171",
+        "jobId": "63485347586",
         "sourceRepo": "confidential-containers/cloud-api-adaptor",
         "maintainers": [],
         "error": null
@@ -39232,9 +39242,9 @@
         "jobName": "e2e / prep_install",
         "fullName": "e2e / prep_install",
         "status": "passed",
-        "duration": "0m 8s",
+        "duration": "0m 6s",
         "lastFailure": "Never",
-        "lastSuccess": "23h ago",
+        "lastSuccess": "2h ago",
         "weatherHistory": [
           {
             "date": "2026-02-04T00:00:00.000Z",
@@ -39319,18 +39329,18 @@
           },
           {
             "date": "2026-02-13T00:00:00.000Z",
-            "status": "none",
-            "runId": null,
-            "jobId": null,
-            "duration": null,
+            "status": "passed",
+            "runId": "21975208171",
+            "jobId": "63485347546",
+            "duration": "0m 6s",
             "failureStep": null,
             "failureDetails": null
           }
         ],
         "failureCount": 0,
         "retried": 0,
-        "runId": "21934120211",
-        "jobId": "63344543420",
+        "runId": "21975208171",
+        "jobId": "63485347546",
         "sourceRepo": "confidential-containers/cloud-api-adaptor",
         "maintainers": [],
         "error": null
