@@ -1,10 +1,10 @@
 {
-  "lastRefresh": "2026-02-14T16:25:21.576Z",
+  "lastRefresh": "2026-02-14T20:22:13.375Z",
   "periodDays": 14,
   "totalFailures": 90,
-  "totalPRs": 16,
+  "totalPRs": 15,
   "confirmedFlakyCount": 21,
-  "mergedDespiteFailureCount": 2,
+  "mergedDespiteFailureCount": 3,
   "failedTests": [
     {
       "name": "Successful deployment with auto-generated policy and container image volumes",
@@ -557,7 +557,7 @@
       "name": "setup_file failed",
       "file": "k8s-nvidia-nim.bats",
       "totalFailures": 8,
-      "flakyCount": 6,
+      "flakyCount": 4,
       "mergedCount": 4,
       "isConfirmedFlaky": true,
       "mergedDespiteFailure": true,
@@ -570,7 +570,7 @@
           "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
           "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
           "count": 8,
-          "flakyCount": 6,
+          "flakyCount": 4,
           "mergedCount": 4
         }
       ],
@@ -584,7 +584,7 @@
           "jobId": "63543302179",
           "runId": "21991406521",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         },
         {
@@ -596,7 +596,7 @@
           "jobId": "63543302179",
           "runId": "21991406521",
           "runAttempt": 1,
-          "isFlaky": true,
+          "isFlaky": false,
           "prMerged": true
         },
         {
@@ -678,9 +678,9 @@
       "file": "k8s-shared-volume.bats",
       "totalFailures": 4,
       "flakyCount": 0,
-      "mergedCount": 0,
+      "mergedCount": 2,
       "isConfirmedFlaky": false,
-      "mergedDespiteFailure": false,
+      "mergedDespiteFailure": true,
       "uniquePRs": 2,
       "uniqueDates": [
         "2026-02-14",
@@ -692,7 +692,7 @@
           "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
           "count": 2,
           "flakyCount": 0,
-          "mergedCount": 0
+          "mergedCount": 2
         },
         {
           "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (qemu-coco-dev-runtime-rs, nydus, guest-pull)",
@@ -713,7 +713,7 @@
           "runId": "22016266614",
           "runAttempt": 2,
           "isFlaky": false,
-          "prMerged": false
+          "prMerged": true
         },
         {
           "date": "2026-02-14",
@@ -725,7 +725,7 @@
           "runId": "22016266614",
           "runAttempt": 2,
           "isFlaky": false,
-          "prMerged": false
+          "prMerged": true
         },
         {
           "date": "2026-02-13",
@@ -1844,7 +1844,7 @@
   "summary": {
     "totalFailedTests": 27,
     "confirmedFlaky": 21,
-    "mergedDespiteFailure": 2,
+    "mergedDespiteFailure": 3,
     "mostAffectedJob": {
       "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (experimental-force-guest-pull, qemu-coco-dev)",
       "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-coco-nontee (experimental-force-guest-pull, qemu-coco-dev)",
@@ -1929,7 +1929,7 @@
         "name": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
         "displayName": "kata-containers-ci-on-push / run-k8s-tests-on-nvidia-gpu / run-nvidia-gpu-snp-tests-on-amd64",
         "count": 8,
-        "flakyCount": 6,
+        "flakyCount": 4,
         "mergedCount": 4
       },
       {
@@ -1937,7 +1937,7 @@
         "displayName": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (tdx, qemu-tdx)",
         "count": 6,
         "flakyCount": 0,
-        "mergedCount": 0
+        "mergedCount": 2
       },
       {
         "name": "kata-containers-ci-on-push / run-kata-coco-tests / run-k8s-tests-on-tee (sev-snp, qemu-snp)",
